@@ -1,8 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Default.astro';
+import {config} from '../../package.json';
 ---
 
 <Layout title="すごわか">
-  <h1>すごわか</h1>
+  <h1 class="font-bold">すごくわかる著作権と授業</h1>
+  <p>このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。</p>
+  <div class="grid">
+    <a href={`${config.base}/introduction/`} class="bg-white">
+      <h2>はいめに</h2>
+      <p>本書の読み方、キャラクターや著者の紹介です。</p>
+    </a>
+  </div>
 </Layout>

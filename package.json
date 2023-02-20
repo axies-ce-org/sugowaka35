@@ -5,6 +5,11 @@
   "engines": {
     "node": ">= 16"
   },
+  "config": {
+    "base": "/sugowaka35",
+    "outDir": "./static",
+    "trailingSlash": "always"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
