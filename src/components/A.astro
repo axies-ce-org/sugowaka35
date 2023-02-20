@@ -1,0 +1,21 @@
+---
+import path from 'path';
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'a'>
+
+const { href: to, ...attrs } = Astro.props;
+
+const href = (() => {
+  if ( typeof to === 'string' && to.startsWith('/')) {
+    const from = new URL(Astro.request.url).pathname;
+    return path.relative(from, to)
+  }
+
+  return to;
+})()
+---
+
+<a href={href} {...attrs}>
+  <slot />
+</a>
