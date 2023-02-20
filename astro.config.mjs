@@ -11,5 +11,4 @@ export default defineConfig({
   build: {
     assets: 'assets',
   },
-  integrations: [tailwind()],
 });
