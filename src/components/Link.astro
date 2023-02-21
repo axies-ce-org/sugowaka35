@@ -1,19 +1,17 @@
 ---
-import path from 'path';
 import type { HTMLAttributes } from 'astro/types'
+import { getRelativePath } from '../libs/getRelativePath';
 
-type Props = HTMLAttributes<'link'>
+interface Props extends HTMLAttributes<'link'> {
+  href: string;
+};
 
 const { href: _href, ...attrs } = Astro.props;
 
-const href = (() => {
-  if ( typeof _href === 'string' && _href.startsWith('/')) {
-    const current = new URL(Astro.request.url).pathname;
-    return path.relative(current, _href)
-  }
-
-  return _href;
-})()
+const href = getRelativePath({
+  from: new URL(Astro.request.url).pathname,
+  to: _href,
+})
 ---
 
 <link href={href} {...attrs} />
