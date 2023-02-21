@@ -12,12 +12,17 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── components/
 │   │   └── Header.astro
 │   │   └── Footer.astro
+│   │   └── ...
 │   ├── layouts/
 │   │   └── Default.astro
 │   │   └── Page.astro
-│   └── pages/
-│       └── index.astro
-│       └── ...
+│   ├── pages/
+│   │   └── index.astro
+│   │   └── ...
+│   ├── scripts/
+│   │   └── index.ts
+│   └── styles/
+│       └── index.css
 └── package.json
 ```
 
