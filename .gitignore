@@ -1,3 +1,6 @@
+# stylesheet for dev
+public/assets/main.css
+
 # build output
 static/
 dist/

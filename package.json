@@ -6,7 +6,7 @@
     "node": ">= 16"
   },
   "scripts": {
-    "tailwind": "tailwindcss -i ./src/styles/index.css -o ./public/assets/index.css",
+    "tailwind": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/main.css",
     "dev:tailwind": "npm run tailwind -- --watch",
     "dev:astro": "astro dev",
     "dev": "run-p dev:*",
