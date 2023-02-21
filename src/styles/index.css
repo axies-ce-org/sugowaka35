@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section-content {
+	@apply leading-relaxed text-stone-700;
+
+	h3 {
+		@apply bg-orange-600 text-white rounded text-2xl leading-normal py-2 px-4;
+	}
+
+	h4 {
+		@apply text-orange-600 text-2xl leading-relaxed;
+	}
+}

@@ -6,7 +6,7 @@
     "node": ">= 16"
   },
   "scripts": {
-    "tailwind": "tailwindcss -i ./src/styles/index.css -o ./public/assets/main.css",
+    "tailwind": "postcss ./src/styles/index.css -o ./public/assets/main.css",
     "ts": "tsc ./src/scripts/index.ts --outFile ./public/assets/main.js",
     "dev:tailwind": "npm run tailwind -- --watch",
     "dev:ts": "npm run ts -- --watch",
@@ -33,8 +33,11 @@
   "devDependencies": {
     "@types/node": "^18.14.0",
     "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.15",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-nesting": "^11.2.1",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",
     "tailwindcss": "^3.2.7"
