@@ -1,8 +1,8 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:astro/recommended', 'plugin:tailwindcss/recommended'],
-  plugins: ['tailwindcss'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:tailwindcss/recommended', 'plugin:astro/recommended'],
+  plugins: ['@typescript-eslint', 'tailwindcss'],
   overrides: [
     {
       files: ['*.astro'],

@@ -8,9 +8,7 @@
   "scripts": {
     "tailwind": "postcss ./src/styles/index.css -o ./public/assets/main.css",
     "ts": "tsc ./src/scripts/index.ts --outFile ./public/assets/main.js",
-    "lint": "eslint --ext .js,.astro src",
-    "lint:debug": "eslint --ext .js,.astro src --debug",
-    "lint:fix": "eslint --ext .js,.astro src --fix",
+    "lint": "eslint src",
     "dev:tailwind": "npm run tailwind -- --watch",
     "dev:ts": "npm run ts -- --watch",
     "dev:astro": "astro dev",
@@ -35,6 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.15",
