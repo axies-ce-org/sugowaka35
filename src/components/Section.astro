@@ -8,7 +8,7 @@ type Props = {
 const {number, title, description} = Astro.props;
 ---
 
-<section class="bg-white rounded-2xl overflow-hidden">
+<section class="overflow-hidden rounded-2xl bg-white">
   <div class="flex gap-10 bg-orange-200 p-10">
     <div>
       <p class="bg-orange-600 text-white">section</p>
@@ -20,7 +20,7 @@ const {number, title, description} = Astro.props;
       {description && <p>{description}</p>}
     </div>
   </div>
-  <div class="p-10 section-content">
+  <div class="section-content p-10">
     <slot />
   </div>
 </section>

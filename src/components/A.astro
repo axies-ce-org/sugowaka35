@@ -1,17 +1,17 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
+import type { HTMLAttributes } from 'astro/types';
 import { getRelativePath } from '../libs/getRelativePath';
 
 interface Props extends HTMLAttributes<'a'> {
   href: string;
-};
+}
 
 const { href: _href, ...attrs } = Astro.props;
 
 const href = getRelativePath({
   from: new URL(Astro.request.url).pathname,
   to: _href,
-})
+});
 ---
 
 <a href={href} {...attrs}>
