@@ -66,7 +66,9 @@ const Chapter = [
                   <div class="flex flex-col gap-1 md:gap-0 font-medium">
                     <span class="text-5xl leading-none md:text-[80px] md:leading-none text-orange-600">{('00'+(i+1)).slice(-2)}</span>
                     <div class="flex gap-2">
-                      <h3 class="text-2xl md:text-[32px] text-stone-800 leading-normal md:leading-normal grow">{title}</h3>
+                      <h3 class="text-2xl md:text-[32px] text-stone-800 leading-normal md:leading-normal grow">
+                        {title.split('\n').map(t => (<>{t}<br /></>))}
+                      </h3>
                       <img src="http://via.placeholder.com/36x36" alt="" class="w-8 h-8 md:w-9 md:h-9 mt-0.5 md:mt-2" />
                     </div>
                   </div>
