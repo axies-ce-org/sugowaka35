@@ -2,7 +2,19 @@
 import A from './A.astro';
 ---
 
-<footer class="mt-10 bg-orange-300">
-  <A href="/">すごくわかる著作権と授業</A>
-  <p>このウェブサイトの内容は <a href="https://github.com/axies-ce/sugowaka35">GitHub</a> で公開しています。</p>
+<footer class="mt-10 bg-orange-300 flex flex-col md:flex-row gap-4 items-center md:justify-between px-4 pt-6 pb-7 md:p-10">
+  <A href="/">
+    <img src="http://via.placeholder.com/233x37" alt="すごくわかる著作権と授業" />
+  </A>
+  <div class="flex flex-col gap-3 justify-center md:items-end md:gap-2">
+    <p class="text-xs leading-relaxed md:text-sm md:leading-relaxed">
+      このウェブサイトの内容は
+      <a href="https://github.com/axies-ce/sugowaka35" class="underline">GitHub</a>
+      で公開しています。
+    </p>
+    <div class="flex gap-3 md:gap-4 justify-center">
+      <img src="http://via.placeholder.com/55x19" alt="CC" />
+      <img src="http://via.placeholder.com/52x16" alt="AXIES" />
+    </div>
+  </div>
 </footer>
