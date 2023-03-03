@@ -1,15 +1,81 @@
 ---
 import A from '../components/A.astro';
 import Layout from '../layouts/Default.astro';
+const Chapter = [
+  {
+    title: '著作権法とは',
+    text: '著作権法の目的について説明します。著作権法は単に権利を保護する ためだけに法律が書かれているのではないことを理解しましょう。',
+    href: '/basis',
+    src: 'http://via.placeholder.com/520x275',
+  },
+  {
+    title: '授業における著作権',
+    text: '授業で第三者の著作物を扱う際に、どんな法律上のきまりがあるか、その内容や用 語の定義、および授業で著作物を扱う際のフローについて説明します。',
+    href: '/basis',
+    src: 'http://via.placeholder.com/520x275',
+  },
+  {
+    title: '授業における\n著作物利用Q&A',
+    text: '授業で第三者の著作物を扱う際の具体的な事例について、Q&A 形式 で説明を行います。',
+    href: '/basis',
+    src: 'http://via.placeholder.com/520x275',
+  },
+  {
+    title: '許諾の取り方',
+    text: '保護期間や利用条件などで自由に利用できない場合、かつ権利制限を適用できない場合に著作権者の許諾が必要となります。',
+    href: '/basis',
+    src: 'http://via.placeholder.com/520x275',
+  },
+]
 ---
 
 <Layout title="すごわか">
-  <h1 class="font-bold">すごくわかる著作権と授業</h1>
-  <p>このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。</p>
-  <div class="grid">
-    <A href="/introduction" class="bg-white">
-      <h2>はいめに</h2>
-      <p>本書の読み方、キャラクターや著者の紹介です。</p>
-    </A>
+  <div class="pb-6 md:pb-10">
+    <div class="mx-auto text-center">
+      <h1 class="font-bold">
+        <img src="http://via.placeholder.com/758x320" alt="すごくわかる著作権と授業" class="inline-block">
+      </h1>
+      <div class="inline-block mt-3 md:mt-[30px]"><img src="http://via.placeholder.com/544x254" alt=""></div>
+    </div>
+    <div class="px-4 md:px-0 max-w-[920px] mt-6 md:mt-10 mx-auto md:w-[90%]">
+      <p class="text-base leading-relaxed">このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。</p>
+      <div class="grid gap-6 md:gap-10 md:grid-cols-2 mt-6 md:mt-10">
+        <A href="/introduction" class="bg-white p-4 md:p-10 rounded-2xl flex gap-2 items-center">
+          <div class="grow">
+            <h2 class="text-lg md:text-2xl text-stone-800 font-medium leading-normal md:leading-normal">はじめに</h2>
+            <p class="mt-1 md:mt-2 text-sm leading-relaxed">本書の読み方、キャラクターや著者の紹介です。</p>
+          </div>
+          <img src="http://via.placeholder.com/36x36" alt="" class="w-8 h-8 md:w-9 md:h-9" />
+        </A>
+        <A href="/introduction" class="bg-white p-4 md:p-10 rounded-2xl flex gap-2 items-center">
+          <div class="grow">
+            <h2 class="text-lg md:text-2xl text-stone-800 font-medium leading-normal md:leading-normal">資料集・索引</h2>
+            <p class="mt-1 md:mt-2 text-sm leading-relaxed">著作権を知るための資料集、用語の索引です。</p>
+          </div>
+          <img src="http://via.placeholder.com/36x36" alt="" class="w-8 h-8 md:w-9 md:h-9" />
+        </A>
+      </div>
+      <ul class="flex flex-col mt-6 md:mt-10 gap-6 md:gap-10">
+        {Chapter.map(({title, text, href, src}, i) => {
+          return (
+            <li>
+              <A href={href} class="flex flex-col gap-6 md:flex-row md:gap-10 p-4 bg-white rounded-2xl md:p-10">
+                <div class="flex flex-col gap-2 md:gap-4">
+                  <div class="flex flex-col gap-1 md:gap-0 font-medium">
+                    <span class="text-5xl leading-none md:text-[80px] md:leading-none text-orange-600">{('00'+(i+1)).slice(-2)}</span>
+                    <div class="flex gap-2">
+                      <h3 class="text-2xl md:text-[32px] text-stone-800 leading-normal md:leading-normal grow">{title}</h3>
+                      <img src="http://via.placeholder.com/36x36" alt="" class="w-8 h-8 md:w-9 md:h-9 mt-0.5 md:mt-2" />
+                    </div>
+                  </div>
+                  <p>{text}</p>
+                </div>
+                <img src={src} alt="" class="md:max-w-[50%] object-contain">
+              </A>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   </div>
 </Layout>
