@@ -6,6 +6,7 @@ import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
 import Example from '../../components/Example.astro';
 import Quiz from '../../components/Quiz.astro';
+import Table from '../../components/Table.astro';
 import Page from '../../layouts/Page.astro';
 ---
 
@@ -114,11 +115,11 @@ import Page from '../../layouts/Page.astro';
         },
         {
           speaker: '大院',
-          text: 'でも、キャンバスに描かれた絵は盗まれたらわかるんじゃないか ?',
+          text: 'でも、キャンバスに描かれた絵は盗まれたらわかるんじゃないか?',
         },
         {
           speaker: '隅木',
-          text: '絵は確かに著作物ですが、「物」としての側面と「情報」としての側面があります。著作物というと「物」だと思うかもしれませんが、著作物は「情報」なんです。つまり、著作物(情報)が有体物(絵)に乗っかっているわけです*1。その絵で、勝手にポストカードなどのグッズを作られて売られてしまったら困りますよね。たとえ、正当に絵を買ったとしても、それは物としての権利、所有権をもらっただけです。もとの絵を描いた人の情報に対する権利は、そのまま描いた人に残っています。',
+          text: '絵は確かに著作物ですが、「物」としての側面と「情報」としての側面があります。著作物というと「物」だと思うかもしれませんが、著作物は「情報」なんです。つまり、著作物(情報)が有体物(絵)に乗っかっているわけです。その絵で、勝手にポストカードなどのグッズを作られて売られてしまったら困りますよね。たとえ、正当に絵を買ったとしても、それは物としての権利、所有権をもらっただけです。もとの絵を描いた人の情報に対する権利は、そのまま描いた人に残っています。',
         },
         {
           speaker: '大院',
@@ -179,7 +180,20 @@ import Page from '../../layouts/Page.astro';
       ]}
     />
     <p>著作物の例としては以下のようなものがあります(10条1項)</p>
-    <div>表</div>
+    <table>
+      <tr class="border border-stone-800 bg-orange-600 text-white flex font-bold text-left md:text-center">
+        <th class="py-1 px-1.5 md:p-2 w-[100px] md:w-60">テスト</th>
+        <th class="py-1 px-1.5 md:p-2 border-stone-800 border-l grow">テスト</th>
+      </tr>
+      <tr class="border border-t-0 border-stone-800 flex">
+        <td class="py-1 px-1.5 md:px-2 w-[100px] md:w-60">テスト</td>
+        <td class="py-1 px-1.5 md:px-2 border-stone-800 border-l grow">テスト</td>
+      </tr>
+      <tr class="border border-t-0 border-stone-800 flex bg-orange-100">
+        <td class="py-1 px-1.5 md:px-2 w-[100px] md:w-60">テスト</td>
+        <td class="py-1 px-1.5 md:px-2 border-stone-800 border-l grow">テスト</td>
+      </tr>
+    </table>
     <p>このほかに次のような著作物もあります（11条、12条、12条の2）</p>
     <div>表</div>
     <p>編集物は、素材の選択や配列に創作性があると、著作物となります。全体としても編集著作物として保護されますが、辞典や雑誌など中身の1つ1つの記事を利用する際には、個々の記事も著作物であるため、それぞれの著作権者の許諾が必要となります。</p>
@@ -236,7 +250,7 @@ import Page from '../../layouts/Page.astro';
               },
               {
                 speaker: '隅木',
-                text: 'いいえ、抽象的な設定だけでは著作物にはあたりません。例えば、最近、主人公 が異世界に飛ばされて、そこで活躍するような小説、漫画、アニメがありますが、 異世界に飛ばされるという程度の設定自体はアイデアの範囲であって著作権はな いので、このような設定で新たに小説を書いても著作権侵害にはならないのです。?',
+                text: 'いいえ、抽象的な設定だけでは著作物にはあたりません。例えば、最近、主人公 が異世界に飛ばされて、そこで活躍するような小説、漫画、アニメがありますが、 異世界に飛ばされるという程度の設定自体はアイデアの範囲であって著作権はな いので、このような設定で新たに小説を書いても著作権侵害にはならないのです。',
               },
             ],
          },

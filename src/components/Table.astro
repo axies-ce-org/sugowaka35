@@ -1,0 +1,28 @@
+---
+type Props = {
+  thead: {
+    th: string;
+  }[];
+  tbody: {
+    tr: {
+      td: string;
+    }[]
+  }[]
+}
+
+const {thead, tbody} = Astro.props;
+---
+<table>
+  <tr class="border border-stone-800 bg-orange-600 text-white flex font-bold text-left md:text-center">
+    <th class="py-1 px-1.5 md:p-2 w-[100px] md:w-60">テスト</th>
+    <th class="py-1 px-1.5 md:p-2 border-stone-800 border-l grow">テスト</th>
+  </tr>
+  <tr class="border border-t-0 border-stone-800 flex">
+    <td class="py-1 px-1.5 md:px-2 w-[100px] md:w-60">テスト</td>
+    <td class="py-1 px-1.5 md:px-2 border-stone-800 border-l grow">テスト</td>
+  </tr>
+  <tr class="border border-t-0 border-stone-800 flex bg-orange-100">
+    <td class="py-1 px-1.5 md:px-2 w-[100px] md:w-60">テスト</td>
+    <td class="py-1 px-1.5 md:px-2 border-stone-800 border-l grow">テスト</td>
+  </tr>
+</table>
