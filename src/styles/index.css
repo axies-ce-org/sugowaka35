@@ -6,10 +6,10 @@
 	@apply leading-relaxed text-stone-700;
 
 	h3 {
-		@apply bg-orange-600 text-white rounded text-2xl leading-normal py-2 px-4;
+		@apply bg-orange-600 text-white text-xl md:text-2xl font-medium leading-normal md:leading-normal py-2 px-3 md:px-4 rounded;
 	}
 
 	h4 {
-		@apply text-orange-600 text-2xl leading-relaxed;
+		@apply text-orange-600 text-lg md:text-2xl font-bold leading-relaxed md:leading-relaxed;
 	}
 }

@@ -1,5 +1,7 @@
 ---
 import Section from '../../components/Section.astro';
+import Clause from '../../components/Clause.astro';
+import Point from '../../components/Point.astro';
 import Page from '../../layouts/Page.astro';
 ---
 
@@ -7,20 +9,32 @@ import Page from '../../layouts/Page.astro';
   <Section
     number="01"
     title="著作権法とは"
-    description="この SECTION では、著作権法の目的について説明します。著作権法は単に権利を保護する ためだけに法律が書かれているのではないことを理解しましょう。"
+    description="このSECTION では、著作権法の目的について説明します。著作権法は単に権利を保護するためだけに法律が書かれているのではないことを理解しましょう。"
   >
     <h3>著作権法とは</h3>
     <h4>著作権法</h4>
-    <p>著作権については「著作権法」で定めています。著作権法の第 1 条に、法律の目的 が書いてあります。</p>
+    <p>著作権については「著作権法」で定めています。著作権法の第1条に、法律の目的が書いてあります。</p>
+    <Clause article={2} paragraph={1} item={1}>
+      この法律は、著作物並びに実演、レコード、放送及び有線放送に関し著作者の権利及びこれに隣接する権利を定め、これらの文化的所産の公正な利用に留意しつつ、著作者等の権利の保護を図り、もつて文化の発展に寄与することを目的とする。
+    </Clause>
+    <div>bubble</div>
+    <Point>
+      著作権法の目的は著作者の権利の保護と著作物の公正な利用をもって文化の発展に寄与すること。
+    </Point>
+    <img src="http://via.placeholder.com/680x353" alt="">
+    <p>著作権法では、「著作物とはどういうものか」「著作権とはどういう権利か(作者の保護)」「どういう場合に著作権が制限されるのか(公正な利用とはなにか)」を決めています。</p>
+    <div>bubble</div>
   </Section>
 
   <Section
     number="02"
-    title="著作権法とは"
-    description="この SECTION では、著作権法の目的について説明します。著作権法は単に権利を保護する ためだけに法律が書かれているのではないことを理解しましょう。"
+    title="著作物とは"
+    description="このSECTIONでは、著作権法で定義する「著作物」がどういうものであるかを説明します。"
   >
-    <h3>h3 見出し</h3>
-    <h4>h4 見出し</h4>
-    <p>著作権については「著作権法」で定めています。著作権法の第 1 条に、法律の目的 が書いてあります。</p>
+    <h3>著作物の定義</h3>
+    <p>著作権法では「著作物」が保護されます。著作物とは、以下のように定義されています。</p>
+    <Clause article={2} paragraph={1} item={1}>
+      思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
+    </Clause>
   </Section>
 </Page>
