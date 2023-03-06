@@ -1,0 +1,33 @@
+---
+type Props = {
+  title: string;
+  list?: {
+    item: string
+  }[]
+}
+
+const {title, list} = Astro.props;
+---
+
+<div>
+  <dt class="border-red-600 border-t-2 border-b bg-orange-50 py-5 md:p-6">
+    <div class="font-bold leading-normal text-lg md:text-2xl md:leading-normal flex gap-2.5 md:gap-10 pl-1.5 pr-2 md:p-0">
+      <span class="text-[40px] md:text-[56px] font-medium leading-none md:leading-none text-orange-600">Q</span>
+      {title}
+    </div>
+    {list && (
+      <ul class="mt-3 md:mt-2 px-3 md:px-0 md:ml-[83px] font-bold">
+        {list.map(({item}) => {
+          return (
+            <li>
+              {item}
+            </li>
+          )
+        })}
+      </ul>
+    )}
+  </dt>
+  <dd class="bg-amber-100 pl-2 pr-3 py-4 md:p-6">
+    <slot />
+  </dd>
+</div>

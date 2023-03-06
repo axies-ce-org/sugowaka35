@@ -5,6 +5,7 @@ import Point from '../../components/Point.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
 import Example from '../../components/Example.astro';
+import Quiz from '../../components/Quiz.astro';
 import Page from '../../layouts/Page.astro';
 ---
 
@@ -218,5 +219,96 @@ import Page from '../../layouts/Page.astro';
         },
       ]}
     />
+    <Quiz title="では、ここでクイズです。下記のものは著作権法で保護される著作物でしょうか?" list={[
+      {item: '（１）ファンタジー小説の設定'},
+      {item: '（２）親戚の子にせがまれて、メモ用紙にさらっと描いた猫の絵'},
+      {item: '（３）アニメのキャラクターの名前'},
+      {item: '（４）学生のレポートに書かれたグラフ'},
+    ]}>
+      <div class="flex flex-col gap-8 md:gap-12">
+        {[
+          {
+            title: '（１）ファンタジー小説の設定',
+            bubble: [
+              {
+                speaker: '小中',
+                text: '小説は著作物だから、設定も著作物かな?',
+              },
+              {
+                speaker: '隅木',
+                text: 'いいえ、抽象的な設定だけでは著作物にはあたりません。例えば、最近、主人公 が異世界に飛ばされて、そこで活躍するような小説、漫画、アニメがありますが、 異世界に飛ばされるという程度の設定自体はアイデアの範囲であって著作権はな いので、このような設定で新たに小説を書いても著作権侵害にはならないのです。?',
+              },
+            ],
+         },
+          {
+            title: '（２）親戚の子にせがまれて、メモ用紙にさらっと描いた猫の絵 ',
+            bubble: [
+              {
+                speaker: '大院',
+                text: (
+                  <>
+                    メモ用紙に描いたようなものは、
+                    <a href="#" class="text-orange-500 font-bold inline group pl-[15px] md:pl-4">
+                      <span class="underline group-hover:no-underline">すぐ捨てるだろうし著作物じゃない</span>
+                    </a>んじゃないか?
+                  </>
+                ),
+              },
+              {
+                speaker: '隅木',
+                text: 'いえ、いつ捨てるかは、著作権法上は問題ではなく、描いた時点で「表現されたもの」なので著作物となります',
+              },
+            ],
+         },
+        {
+          title: '（３）アニメのキャラクターの名前 ',
+          bubble: [
+            {
+              speaker: '小中',
+              text: 'これはきっと著作物ですよ!',
+            },
+            {
+              speaker: '隅木',
+              text: (
+                <>
+                  はずれです。これは著作物にはあたりません。小中さんのお名前も著作物 にはなりません。色々な考え方がありえますが、「文芸、学術、美術又は 音楽の範囲に属するもの」に当たらない、創作性がないといった整理になると思います。ただし、
+                  <a href="#" class="text-orange-500 font-bold inline group pl-[15px] md:pl-4">
+                    <span class="underline group-hover:no-underline">キャラクターの絵は著作物になります。</span>
+                  </a>
+                </>
+              ),
+            },
+          ],
+         },
+        {
+          title: '（４）学生のレポートに書かれたグラフ',
+          bubble: [
+            {
+              speaker: '大院',
+              text: 'グラフは著作物じゃないな。単なるデータは著作物じゃないし、データをグラフにしただけだったら、創作性はないんじゃないかな?',
+            },
+            {
+              speaker: '隅木',
+              text: 'Excelなどで誰が描いても同じようなグラフになる場合は、創作性がなく、著作物にならない可能性が高いです。ですが、例えばビール消費量とかのグラフで、棒グラフをビールジョッキの絵にしているなど、表現上の工夫をしている場合は、創作性が認められて著作物になる可能性があります。',
+            },
+          ],
+         },
+        ].map(({title, bubble}) => {
+          return (
+            <dl>
+              <dt class="p-1 bg-orange-600 text-white rounded md:px-2">{title}</dt>
+              <dd class="flex flex-col gap-3 mt-4 md:gap-[19px] md:mt-[19px]">
+                {bubble.map(({speaker, text}) => {
+                  return (
+                    <Bubble speaker={speaker}>{text}</Bubble>
+                  )
+                })}
+              </dd>
+            </dl>
+          )
+        })
+        }
+      </div>
+    </Quiz>
   </Section>
 </Page>

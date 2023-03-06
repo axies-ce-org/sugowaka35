@@ -11,5 +11,5 @@ const {speaker} = Astro.props;
     <img src={speaker === '小中' ? 'http://via.placeholder.com/48x48' : speaker === '隅木' ? 'http://via.placeholder.com/48x48' : 'http://via.placeholder.com/48x48'} alt="" />
     <p class="font-bold text-[11px] leading-relaxed">{speaker}</p>
   </dt>
-  <dd class="p-2 bg-white rounded-lg md:p-4 relative before:content-[''] before:border-r-[15px] before:border-y-[6px] before:border-y-transparent md:before:border-r-[20px] md:before:border-y-[8px] before:absolute before:top-4 before:left-[-15px] before:border-r-white md:before:-left-5 before:block grow"><slot /></dd>
+  <dd class="p-2 bg-white rounded-lg md:p-4 relative before:content-[''] before:border-r-[15px] before:border-y-[6px] before:border-y-transparent md:before:border-r-[20px] md:before:border-y-[8px] before:absolute before:top-4 before:left-[-15px] before:border-r-white md:before:-left-5 before:block grow h-fit"><slot /></dd>
 </dl>
