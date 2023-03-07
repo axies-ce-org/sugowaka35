@@ -6,6 +6,9 @@ module.exports = {
       lineHeight: {
         relaxed: 1.75,
       },
+      fontFamily: {
+        noto: ['"Noto Sans JP"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
