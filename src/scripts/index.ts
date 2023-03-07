@@ -5,7 +5,9 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
     e.preventDefault();
     let href = smoothScrollTrigger[i].getAttribute('href');
       let targetElement = document.getElementById(href.replace('#', ''));
-    const target = targetElement.getBoundingClientRect().top;
+    const rect = targetElement.getBoundingClientRect().top;
+    const offset = window.pageYOffset;
+    const target = rect + offset - 40;
     window.scrollTo({
       top: target,
       behavior: 'smooth',
@@ -13,7 +15,7 @@ for (let i = 0; i < smoothScrollTrigger.length; i++) {
   });
 }
 
-export {}
+export{}
 
 // ハンバーガー
 const ham = document.querySelector('#js-hamburger');
