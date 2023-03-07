@@ -1,29 +1,62 @@
 ---
 type Props = {
-  title?: string;
-  type?: string;
-  list: {
-    item: string
-    list?: {
+  content: {
+    title?: string;
+    type?: string;
+    href?: string;
+    list: {
       item: string
-    }
+      list?: {
+        item: string
+      }
+    }[]
   }[]
 }
 
-const {title, type, list} = Astro.props;
+const {content} = Astro.props;
 ---
+<div class="py-4 md:py-6 border-y border-orange-500 flex flex-col gap-3 md:gap-6">
+  {content.map(({title, type, href, list}) => {
+    const listStyle = `${type === "disc" ? "list-disc" : "list-decimal"} pl-[15px] md:pl-4`
 
-<dl class="py-4 md:py-6 border-y border-orange-500">
-  {title && (<dt class="font-bold">{title}</dt>)}
-  <dd class="mt-3 md:mt-6">
-    <ul class={`${type === "disc" ? "list-disc" : "list-decimal"} pl-[15px] md:pl-4`}>
-      {list.map(({item}) => {
-        return (
-          <li>
-            {item}
-          </li>
-        )
-      })}
-    </ul>
-  </dd>
-</dl>
+    return (
+      title && <h5 class="font-bold text-orange-500 text-[15px] leading-normal md:text-base md:leading-normal">{title}</h5>
+
+      <ul class={listStyle}>
+        {list.map(({item, list}) => {
+          return (
+            <li>
+              {href ? (
+                <a href={href} class="text-orange-500">
+                  {item}
+                  {list && (
+                    <ul class={listSyle}>
+                      {list.map(({item}) => {
+                        return (
+                          <li>{item}</li>
+                        )
+                      })}
+                    </ul>
+                  )}
+                  </a>
+              ) : (
+                  <>
+                    {item}
+                    {list && (
+                      <ul class={listSyle}>
+                        {list.map(({item}) => {
+                          return (
+                            <li>{item}</li>
+                          )
+                        })}
+                      </ul>
+                    )}
+                  </>
+              )}
+            </li>
+          )
+        })}
+      </ul>
+  )
+  })}
+</div>
