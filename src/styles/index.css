@@ -12,4 +12,8 @@
 	h4 {
 		@apply text-orange-600 text-lg md:text-2xl font-bold leading-relaxed md:leading-relaxed;
 	}
+
+	dd {
+		@apply h-fit;
+	}
 }
