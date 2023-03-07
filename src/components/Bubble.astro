@@ -7,7 +7,7 @@ const {speaker} = Astro.props;
 ---
 
 <dl class="flex gap-[19px] md:gap-7">
-  <dt class="text-center w-[36px] minw-[36px] md:w-[48px] md:min-w-[48px]">
+  <dt class="text-center w-[36px] min-w-[36px] md:w-[48px] md:min-w-[48px]">
     <img src={speaker === '小中' ? '/assets/images/konaka.png' : speaker === '隅木' ? '/assets/images/sumiki.png' : '/assets/images/daiin.png'} alt="" />
     <p class="font-bold text-[11px] leading-relaxed">{speaker}</p>
   </dt>

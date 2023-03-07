@@ -7,6 +7,7 @@ import Bubble from '../../components/Bubble.astro';
 import Example from '../../components/Example.astro';
 import Quiz from '../../components/Quiz.astro';
 import Table from '../../components/Table.astro';
+import PopupButton from '../../components/PopupButton.astro';
 import Page from '../../layouts/Page.astro';
 ---
 
@@ -83,9 +84,7 @@ import Page from '../../layouts/Page.astro';
           text: (
             <>
               白黒つけられるところはつけておきたいですよね。先生方が参考にできるものはいろいろあります。この本の副題にある
-              <a href="#" class="text-orange-500 font-bold inline group pl-[15px] md:pl-4">
-                <span class="underline group-hover:no-underline">「改正著作権法第35条運用指針」</span>
-              </a>もそのうちの1つです。
+              <PopupButton href="/">「改正著作権法第35条運用指針」</PopupButton>もそのうちの1つです。
             </>),
         },
       ].map(({speaker, text}) => {
@@ -262,9 +261,7 @@ import Page from '../../layouts/Page.astro';
                 text: (
                   <>
                     メモ用紙に描いたようなものは、
-                    <a href="#" class="text-orange-500 font-bold inline group pl-[15px] md:pl-4">
-                      <span class="underline group-hover:no-underline">すぐ捨てるだろうし著作物じゃない</span>
-                    </a>んじゃないか?
+                    <PopupButton href="/">すぐ捨てるだろうし著作物じゃない</PopupButton>んじゃないか?
                   </>
                 ),
               },
@@ -286,9 +283,7 @@ import Page from '../../layouts/Page.astro';
               text: (
                 <>
                   はずれです。これは著作物にはあたりません。小中さんのお名前も著作物 にはなりません。色々な考え方がありえますが、「文芸、学術、美術又は 音楽の範囲に属するもの」に当たらない、創作性がないといった整理になると思います。ただし、
-                  <a href="#" class="text-orange-500 font-bold inline group pl-[15px] md:pl-4">
-                    <span class="underline group-hover:no-underline">キャラクターの絵は著作物になります。</span>
-                  </a>
+                    <PopupButton href="/">キャラクターの絵は著作物になります。</PopupButton>
                 </>
               ),
             },
