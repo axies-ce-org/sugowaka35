@@ -1,6 +1,5 @@
 ---
 ---
-
 <>
   <header class="border-t-4 border-t-orange-400">
     <div class="md:mx-auto md:max-w-[1160px] p-4 md:px-10 flex justify-between w-full md:pb-0">
@@ -9,12 +8,12 @@
       </a>
     </div>
   </header>
-  <button class="fixed top-4 right-4 flex flex-col md:hidden text-[10px] leading-none gap-1.5">
-    <div class="w-6 flex flex-col gap-1">
-      <span class="bg-black h-px w-full"></span>
-      <span class="bg-black h-px w-full"></span>
-      <span class="bg-black h-px w-full"></span>
-    </div>
+  <button id="js-hamburger" class="fixed top-4 right-4 flex transition-colors duration-200 flex-col md:hidden text-[10px] leading-none gap-1.5 z-40">
+    <ul class="w-6 flex flex-col gap-1">
+      <li class="bg-black h-px w-full transition-transform duration-300"></li>
+      <li class="bg-black h-px w-full transition-transform duration-300"></li>
+      <li class="bg-black h-px w-full transition-transform duration-300"></li>
+    </ul>
     目次
   </button>
 </>

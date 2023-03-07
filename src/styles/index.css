@@ -39,3 +39,22 @@
 		@apply h-fit;
 	}
 }
+#js-nav.active {
+	@apply translate-x-0;
+}
+
+#js-hamburger.active {
+	@apply text-transparent;
+
+	ul {
+		li:first-of-type {
+			@apply translate-y-[5px] scale-[1.06] rotate-45;
+		}
+		li:nth-of-type(2) {
+			@apply scale-0;
+		}
+		li:last-of-type {
+			@apply translate-y-[-5px] scale-[1.06] -rotate-45;
+		}
+	}
+}
