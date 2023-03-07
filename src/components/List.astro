@@ -5,9 +5,9 @@ type Props = {
     type?: string;
     href?: string;
     list: {
-      item: string
-      list?: {
-        item: string
+      item: string;
+      list2?: {
+        item2: string
       }
     }[]
   }[]
@@ -20,43 +20,49 @@ const {content} = Astro.props;
     const listStyle = `${type === "disc" ? "list-disc" : "list-decimal"} pl-[15px] md:pl-4`
 
     return (
-      title && <h5 class="font-bold text-orange-500 text-[15px] leading-normal md:text-base md:leading-normal">{title}</h5>
+        <>
+          {title && (<h5 class="font-bold text-orange-500 text-[15px] leading-normal md:text-base md:leading-normal">{title}</h5>)}
 
-      <ul class={listStyle}>
-        {list.map(({item, list}) => {
-          return (
-            <li>
-              {href ? (
-                <a href={href} class="text-orange-500">
-                  {item}
-                  {list && (
-                    <ul class={listSyle}>
-                      {list.map(({item}) => {
-                        return (
-                          <li>{item}</li>
-                        )
-                      })}
-                    </ul>
-                  )}
-                  </a>
-              ) : (
-                  <>
+          <ul class={listStyle}>
+            {href ? (
+              list.map(({item, list2}) => {
+                return (
+                  <li>
+                    <a href={href} class="text-orange-500">
+                      {item}
+                      {list2 && (
+                        <ul class={listSyle}>
+                          {list2.map(({item2}) => {
+                            return (
+                              <li>{item2}</li>
+                            )
+                          })}
+                        </ul>
+                      )}
+                    </a>
+                  </li>
+                )
+              })
+            ) : (
+              list.map(({item, list2}) => {
+                return (
+                  <li>
                     {item}
-                    {list && (
+                    {list2 && (
                       <ul class={listSyle}>
-                        {list.map(({item}) => {
+                        {list2.map(({item2}) => {
                           return (
-                            <li>{item}</li>
+                            <li>{item2}</li>
                           )
                         })}
                       </ul>
                     )}
-                  </>
-              )}
-            </li>
-          )
-        })}
-      </ul>
-  )
-  })}
+                  </li>
+                )
+              })
+            )}
+          </ul>
+        </>
+    )}
+  )}
 </div>
