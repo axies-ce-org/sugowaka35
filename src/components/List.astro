@@ -1,6 +1,7 @@
 ---
 type Props = {
-  title: string;
+  title?: string;
+  type?: string;
   list: {
     item: string
     list?: {
@@ -9,13 +10,13 @@ type Props = {
   }[]
 }
 
-const {title, list} = Astro.props;
+const {title, type, list} = Astro.props;
 ---
 
 <dl class="py-4 md:py-6 border-y border-orange-500">
-  <dt class="font-bold">{title}</dt>
+  {title && (<dt class="font-bold">{title}</dt>)}
   <dd class="mt-3 md:mt-6">
-    <ul class="list-disc pl-[15px] md:pl-4">
+    <ul class={`${type === "disc" ? "list-disc" : "list-decimal"} pl-[15px] md:pl-4`}>
       {list.map(({item}) => {
         return (
           <li>

@@ -4,7 +4,7 @@ import Clause from '../../components/Clause.astro';
 import Point from '../../components/Point.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
-import Example from '../../components/Example.astro';
+import List from '../../components/List.astro';
 import Quiz from '../../components/Quiz.astro';
 import Table from '../../components/Table.astro';
 import Popup from '../../components/Popup.astro';
@@ -169,8 +169,9 @@ import Page from '../../layouts/Page.astro';
     <Point>
       思想や感情を創作的に表現したものでないと「著作物」ではない
     </Point>
-    <Example
+    <List
       title="著作権法上の著作物でないものの例"
+      type="disc"
       list={[
         {
           item: '頭の中で考えただけのもの(アイデア):小説のストーリーも考えただけでは保 護されません。小説として表現されたものが保護されます。',
@@ -269,8 +270,9 @@ import Page from '../../layouts/Page.astro';
       }
     </SpeechBubbles>
     <p>以下のものは著作物にあたるものの、国民に周知し広く利用してもらう目的で作成されるので、許諾なく利用できます（13条）。</p>
-    <Example
+    <List
       title="許諾なく利用できる著作物の例"
+      type="disc"
       list={[
         {
           item: '憲法その他の法令',
@@ -378,5 +380,42 @@ import Page from '../../layouts/Page.astro';
         }
       </div>
     </Quiz>
+  </Section>
+
+  <Section
+    id="cr_author"
+    number="03"
+    title="著作者とは"
+    description="このSECTIONでは、著作権法で定義する「著作者」について説明します。個人1人だけでなく、法人著作や共同著作者などもあることを理解しましょう。"
+  >
+    <h3>著作者の定義</h3>
+    <p>著作権法の2条1項2号に、著作者について定義されています。</p>
+    <Clause article={2} paragraph={1} item={2}>著作者　著作物を創作する者をいう。</Clause>
+    <p>著作物がなにかについては、前のSECTIONで学びました。それらを創作する者が「著作者」となります。</p>
+    <p>著作者となるのはプロのクリエイターだけではありません。幼稚園児や小学生が、絵を描けば、その絵の著作者となります。手紙を書けば、書いた人が手紙の著作者です。もし、イラストやプログラムなどの著作物の作成を外注した場合、実際にその著作物を作成した外注先が著作者になります。</p>
+    <Point>著作者は著作物を創作した者であって、プロかアマチュアか、子どもか大人かは関係しない！</Point>
+    <SpeechBubbles>
+      {[
+        {
+          speaker: '小中',
+          text: 'この前、親戚の幼稚園の子が描いた絵を写真に撮ってSNSにアップしちゃいましたけど……',
+        },
+        {
+          speaker: '隅木',
+          text: '幼稚園のお子さんでも著作者ですね。ただ、幼稚園のお子さんには判断できないと思いますから、保護者さんの許諾をとりましょう。',
+        },
+        {
+          speaker: '小中',
+          text: 'うぅ……あれは、やらかしだったんですね……すみません……',
+        },
+      ].map(({speaker, text}) => {
+        return (
+          <Bubble speaker={speaker}>{text}</Bubble>
+        )
+      })
+      }
+    </SpeechBubbles>
+    <h4>著作者と著作権者</h4>
+    <p>「著作者」は著作物を創作した者で、「著作権者」は著作権を持っている者を指します。基本的に「著作者＝著作権者」になります。しかし、次の SECTION（P19）で説明しますが、財産権としての著作権は譲渡したり相続したりできるので、「著作者≠著作権者」になることもあります。著作物を利用する際に許諾を求める先は、以下のようになります。</p>
   </Section>
 </Page>
