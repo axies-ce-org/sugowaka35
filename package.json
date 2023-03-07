@@ -6,18 +6,10 @@
     "node": ">= 16"
   },
   "scripts": {
-    "tailwind": "postcss ./src/styles/index.css -o ./public/assets/main.css",
-    "ts": "tsc ./src/scripts/index.ts --outFile ./public/assets/main.js",
     "lint": "eslint src",
-    "dev:tailwind": "npm run tailwind -- --watch",
-    "dev:ts": "npm run ts -- --watch",
-    "dev:astro": "astro dev",
-    "dev": "run-p dev:*",
+    "dev": "astro dev",
     "start": "npm run dev",
-    "build:tailwind": "npm run tailwind -- --minify",
-    "build:ts": "npm run ts",
-    "build:astro": "astro build",
-    "build": "run-p build:*",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "run-s build deploy:*",
@@ -29,21 +21,17 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
-    "astro": "^2.0.14"
+    "astro": "^2.0.18",
+    "astro-relative-links": "^0.2.5"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
-    "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.15",
     "eslint": "^8.35.0",
     "eslint-plugin-astro": "^0.23.0",
     "eslint-plugin-tailwindcss": "^3.10.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "postcss-nesting": "^11.2.1",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",
     "tailwindcss": "^3.2.7"
