@@ -40,7 +40,7 @@
 	}
 }
 #js-nav.active {
-	@apply translate-x-0;
+	@apply -translate-x-full;
 }
 
 #js-hamburger.active {

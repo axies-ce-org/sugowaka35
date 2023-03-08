@@ -16,3 +16,11 @@ item.forEach(function (button) {
     nav.classList.remove('active');
   })
 });
+
+window.addEventListener('resize', function(){
+  const smWindowSize = 768;
+  if (window.innerWidth < smWindowSize){
+    ham.classList.remove('active');
+    nav.classList.remove('active');
+  }
+});
