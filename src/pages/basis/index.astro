@@ -29,34 +29,41 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '小中',
           text: '著作権法って著作物をつくった人の権利を守る法律なんですよね。',
+          feLevel: '2',
         },
         {
           speaker: '隅木',
           text: 'それは正しいのですが、もう1つ大事な役割があります。それは著作物の公正な利用です。つまり、ある程度自由に使える範囲を決めて、みんなが著作物を利用しやすくするということです。',
+          feLevel: '2',
         },
         {
           speaker: '大院',
           text: 'ガチガチに権利を守りすぎると著作物が利用されにくくなるし、あまり自由にすると権利が守られなくなるし......',
+          feLevel: '5',
         },
         {
           speaker: '隅木',
           text: 'この権利の保護と公正な利用のバランスが難しいですね。',
+          feLevel: '4',
         },
         {
           speaker: '小中',
           text: '文化の発展って具体的にはどういうことでしょう?',
+          feLevel: '3',
         },
         {
           speaker: '隅木',
           text: '著作権法でいう文化の発展は、要するに多様な表現物が生まれることです。特許が扱う技術の分野は、極端に言ってしまえば1つの技術になってもよいわけです。例えば、値段が同じなら、誰もが一番持続時間の長い電池を使いたいですよね。でも、著作物はそうではない。Mr.Childrenの曲があるから、Perfumeの曲がなくてもよいとは思わないでしょ。',
+          feLevel: '2',
         },
         {
           speaker: '小中',
           text: 'なるほど。色々な表現が生まれることで豊かな社会になっていく、という考え方なんですね。日々多くの人が著作物を創っていて、登録の手続も必要ないから、たくさんの著作物が生まれやすくなる制度になっているんですね。',
+          feLevel: '1',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
@@ -71,14 +78,17 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '小中',
           text: 'でも、法律って難しくてよくわからないです...... 具体的に書いてないところも多いし。',
+          feLevel: '4',
         },
         {
           speaker: '隅木',
           text: '法律ではあえて抽象的に規定していて、解釈の余地があるから、人によっては違う意見が出ることもあります。判決が出ないとわからないこともあるんですよね。',
+          feLevel: '4',
         },
         {
           speaker: '大院',
           text: 'すぐには、はっきり白黒つけられないこともあるってことだ。',
+          feLevel: '3',
         },
         {
           speaker: '隅木',
@@ -90,10 +100,11 @@ import Page from '../../layouts/Page.astro';
               </Popup>
               もそのうちの1つです。
             </>),
+          feLevel: '2',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
@@ -112,26 +123,31 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '小中',
           text: '著作物って使っても減るわけじゃないですよね?',
+          feLevel: '3',
         },
         {
           speaker: '隅木',
           text: 'そうです。例えば、車は盗まれたらなくなってしまうので、すぐわかります。でも、文章は盗まれてもなくならないので、悪用されてもすぐにはわからないことがほとんどです。こういう無形の情報のうち、文化の発展に寄与する情報が著作物です。',
+          feLevel: '2',
         },
         {
           speaker: '大院',
           text: 'でも、キャンバスに描かれた絵は盗まれたらわかるんじゃないか?',
+          feLevel: '4',
         },
         {
           speaker: '隅木',
           text: '絵は確かに著作物ですが、「物」としての側面と「情報」としての側面があります。著作物というと「物」だと思うかもしれませんが、著作物は「情報」なんです。つまり、著作物(情報)が有体物(絵)に乗っかっているわけです。その絵で、勝手にポストカードなどのグッズを作られて売られてしまったら困りますよね。たとえ、正当に絵を買ったとしても、それは物としての権利、所有権をもらっただけです。もとの絵を描いた人の情報に対する権利は、そのまま描いた人に残っています。',
+          feLevel: '2',
         },
         {
           speaker: '大院',
           text: 'なるほど、所有してるのとは別ってことだな。',
+          feLevel: '1',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
@@ -146,22 +162,26 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '小中',
           text: 'わたしのクラスの生徒の身長・体重一覧の表は、表現したものなので著作物ですか?',
+          feLevel: '2',
        },
         {
           speaker: '隅木',
           text: 'いいえ、単なるデータは思想・感情ではないので、著作物にあたりません。',
+          feLevel: '2',
         },
         {
           speaker: '大院',
           text: '料理のレシピには著作権がないって、よく聞くよ。',
+          feLevel: '2',
         },
         {
           speaker: '隅木',
           text: '表現したものでないといけないので、アイデア自体は著作物にはあたりません。頭の中で考えてただけでは保護されないんです。レシピというアイデアそのものは著作物ではありませんが、それが本とかWeb記事とかになっている場合に、その写真や文章が著作物になることがあるので、注意は必要です。',
+          feLevel: '2',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
@@ -261,14 +281,16 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '大院',
           text: 'データは著作物じゃないのに、データベースは著作物なのか。',
+          feLevel: '5',
        },
         {
           speaker: '隅木',
           text: '例えば、他のデータベースでは調べられないような情報を検索できたり、同じ情報を検索するのでもキーワードの選定などに工夫があったりする場合に著作物性が認められることがあります。',
+          feLevel: '4',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
@@ -310,10 +332,12 @@ import Page from '../../layouts/Page.astro';
               {
                 speaker: '小中',
                 text: '小説は著作物だから、設定も著作物かな?',
+                feLevel: '2',
               },
               {
                 speaker: '隅木',
                 text: 'いいえ、抽象的な設定だけでは著作物にはあたりません。例えば、最近、主人公が異世界に飛ばされて、そこで活躍するような小説、漫画、アニメがありますが、異世界に飛ばされるという程度の設定自体はアイデアの範囲であって著作権はないので、このような設定で新たに小説を書いても著作権侵害にはならないのです。',
+                feLevel: '4',
               },
             ],
          },
@@ -331,10 +355,12 @@ import Page from '../../layouts/Page.astro';
                     んじゃないか?
                   </>
                 ),
+                feLevel: '4',
               },
               {
                 speaker: '隅木',
                 text: 'いえ、いつ捨てるかは、著作権法上は問題ではなく、描いた時点で「表現されたもの」なので著作物となります',
+                feLevel: '3',
               },
             ],
          },
@@ -344,6 +370,7 @@ import Page from '../../layouts/Page.astro';
             {
               speaker: '小中',
               text: 'これはきっと著作物ですよ!',
+                feLevel: '1',
             },
             {
               speaker: '隅木',
@@ -355,6 +382,7 @@ import Page from '../../layouts/Page.astro';
                   </Popup>
                 </>
               ),
+                feLevel: '4',
             },
           ],
          },
@@ -364,10 +392,12 @@ import Page from '../../layouts/Page.astro';
             {
               speaker: '大院',
               text: 'グラフは著作物じゃないな。単なるデータは著作物じゃないし、データをグラフにしただけだったら、創作性はないんじゃないかな?',
+                feLevel: '3',
             },
             {
               speaker: '隅木',
               text: 'Excelなどで誰が描いても同じようなグラフになる場合は、創作性がなく、著作物にならない可能性が高いです。ですが、例えばビール消費量とかのグラフで、棒グラフをビールジョッキの絵にしているなど、表現上の工夫をしている場合は、創作性が認められて著作物になる可能性があります。',
+              feLevel: '2',
             },
           ],
          },
@@ -376,9 +406,9 @@ import Page from '../../layouts/Page.astro';
             <dl>
               <dt class="p-1 bg-orange-600 text-white rounded md:px-2">{title}</dt>
               <dd class="flex flex-col gap-3 mt-4 md:gap-[19px] md:mt-[19px]">
-                {bubble.map(({speaker, text}) => {
+                {bubble.map(({speaker, text, feLevel}) => {
                   return (
-                    <Bubble speaker={speaker}>{text}</Bubble>
+                    <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
                   )
                 })}
               </dd>
@@ -407,18 +437,21 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '小中',
           text: 'この前、親戚の幼稚園の子が描いた絵を写真に撮ってSNSにアップしちゃいましたけど……',
+          feLevel: '2',
         },
         {
           speaker: '隅木',
           text: '幼稚園のお子さんでも著作者ですね。ただ、幼稚園のお子さんには判断できないと思いますから、保護者さんの許諾をとりましょう。',
+          feLevel: '2',
         },
         {
           speaker: '小中',
           text: 'うぅ……あれは、やらかしだったんですね……すみません……',
+          feLevel: '4',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
@@ -493,18 +526,21 @@ import Page from '../../layouts/Page.astro';
         {
           speaker: '大院',
           text: 'おれが大学で使う授業のために、作ったスライドも職務著作になるのか？',
+          feLevel: '5',
         },
         {
           speaker: '隅木',
           text: '個別の授業で作成する場合は、公表するときも大学の名前でなくて、先生のお名前で出されますよね。「（4）『公表』する場合に法人等の著作名義で公表するものであること」が該当しないので、著作者は大院先生になると思います',
+          feLevel: '2',
         },
         {
           speaker: '大院',
           text: '安心した。',
+          feLevel: '1',
         },
-      ].map(({speaker, text}) => {
+      ].map(({speaker, text, feLevel}) => {
         return (
-          <Bubble speaker={speaker}>{text}</Bubble>
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
         )
       })
       }
