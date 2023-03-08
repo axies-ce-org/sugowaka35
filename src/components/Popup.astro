@@ -18,7 +18,7 @@ const {id, popup, type} = Astro.props;
         </header>
         <div class="bg-white rounded-2xl p-6 text-center">
           <main class="modal__content" id={`modal-${id}-content`}>
-            <p class="text-left">{popup}</p>
+            <p class="text-left break-words">{popup}</p>
           </main>
           <footer class="mt-4 md:mt-6 inline-block">
             <button class="text-white bg-neutral-500 py-1 px-4 text-base leading-normal rounded-lg" data-micromodal-close aria-label="Close this dialog window">閉じる</button>
