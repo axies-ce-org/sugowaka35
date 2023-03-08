@@ -6,7 +6,6 @@ import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
 import ListArea from '../../components/ListArea.astro';
 import Quiz from '../../components/Quiz.astro';
-import Table from '../../components/Table.astro';
 import Popup from '../../components/Popup.astro';
 import Page from '../../layouts/Page.astro';
 ---
@@ -224,73 +223,107 @@ import Page from '../../layouts/Page.astro';
     <p>
       著作物の例としては以下のようなものがあります(10条1項)
     </p>
-    <Table
-        thead={[
-          {th: '種類'},
-          {th: '例'},
-        ]}
-        tbody={[
-          {tr: [
-            {td: '言語の著作物'},
-            {td: '講演、論文、レポート、作文、小説、脚本、詩歌、俳句、落語、漫才など'},
-          ]},
-          {tr: [
-            {td: '音楽の著作物'},
-            {td: '曲、楽曲を伴う歌詞など'},
-          ]},
-          {tr: [
-            {td: '舞踊、無言劇の著作物'},
-            {td: '日本舞踊、バレエ、ダンス、舞踏、パントマイムなどの振り付け'},
-          ]},
-          {tr: [
-            {td: '美術の著作物'},
-            {td: '絵画、版画、彫刻、マンガ、書、舞台装置、生け花など(茶碗、壺、刀剣等の美術工芸品も含む)'},
-          ]},
-          {tr: [
-            {td: '建築の著作物'},
-            {td: '宮殿、凱旋門、庭園、塔などの建築物(鑑賞性が必要)'},
-          ]},
-          {tr: [
-            {td: '地図、図形の著作物'},
-            {td: '地図、学術的な図面、図表、設計図、立体模型、地球儀など'},
-          ]},
-          {tr: [
-            {td: '映画の著作物'},
-            {td: '劇場用映画、アニメ、ビデオ、YouTube動画、TikTok 動画、ゲームソフトの映像部分などの「録画されている動く影像」'},
-          ]},
-          {tr: [
-            {td: '写真の著作物'},
-            {td: '肖像写真、風景写真、記録写真、広告写真など'},
-          ]},
-          {tr: [
-            {td: 'プログラムの著作物'},
-            {td: 'オペレーティング・システム(OS)、アプリケーション・ソフト、家電製品用のプログラムなど'},
-          ]},
-        ]}
-    />
+    <table>
+      <thead>
+        <tr>
+          <th class="w-[31.4%] min-w-[31.4%] md:w-[35.3%] md:min-w-[35.3%] grow-0">
+            種類
+          </th>
+          <th class="grow">例</th>
+        </tr>
+      </thead>
+      <tbody>{[
+        [
+          {td: '言語の著作物'},
+          {td: '講演、論文、レポート、作文、小説、脚本、詩歌、俳句、落語、漫才など'},
+        ],
+        [
+          {td: '音楽の著作物'},
+          {td: '曲、楽曲を伴う歌詞など'},
+        ],
+        [
+          {td: '舞踊、無言劇の著作物'},
+          {td: '日本舞踊、バレエ、ダンス、舞踏、パントマイムなどの振り付け'},
+        ],
+        [
+          {td: '美術の著作物'},
+          {td: '絵画、版画、彫刻、マンガ、書、舞台装置、生け花など(茶碗、壺、刀剣等の美術工芸品も含む)'},
+        ],
+        [
+          {td: '建築の著作物'},
+          {td: '宮殿、凱旋門、庭園、塔などの建築物(鑑賞性が必要)'},
+        ],
+        [
+          {td: '地図、図形の著作物'},
+          {td: '地図、学術的な図面、図表、設計図、立体模型、地球儀など'},
+        ],
+        [
+          {td: '映画の著作物'},
+          {td: '劇場用映画、アニメ、ビデオ、YouTube動画、TikTok 動画、ゲームソフトの映像部分などの「録画されている動く影像」'},
+        ],
+        [
+          {td: '写真の著作物'},
+          {td: '肖像写真、風景写真、記録写真、広告写真など'},
+        ],
+        [
+          {td: 'プログラムの著作物'},
+          {td: 'オペレーティング・システム(OS)、アプリケーション・ソフト、家電製品用のプログラムなど'},
+        ],
+      ].map((item) => {
+        return (
+          <tr>
+            {item.map(({td}) => {
+              return (
+                <td class="first-of-type:w-[31.4%] first-of-type:min-w-[31.4%] first-of-type:md:w-[35.3%] first-of-type:md:min-w-[35.3%] first-of-type:grow-0">
+                  {td}
+                </td>
+              )
+            })}
+          </tr>
+        )
+      })}
+      </tbody>
+    </table>
     <p>
       このほかに次のような著作物もあります（11条、12条、12条の2）
     </p>
-    <Table
-        thead={[
-          {th: '種類'},
-          {th: '例'},
-        ]}
-        tbody={[
-          {tr: [
-            {td: '二次的著作物'},
-            {td: '上表の著作物を翻訳、編曲、変形、翻案し、作成した著作物'},
-          ]},
-          {tr: [
-            {td: '編集著作物'},
-            {td: '百科事典、辞書、新聞、雑誌、詩集など'},
-          ]},
-          {tr: [
-            {td: 'データベースの著作物'},
-            {td: 'コンピュータで検索可能な形態をとった百科事典、辞書など'},
-          ]},
-        ]}
-    />
+    <table>
+      <thead>
+        <tr>
+          <th class="w-[31.4%] min-w-[31.4%] md:w-[35.3%] md:min-w-[35.3%] bgrow-0">
+            種類
+          </th>
+          <th class="grow">例</th>
+        </tr>
+      </thead>
+      <tbody>{[
+        [
+          {td: '二次的著作物'},
+          {td: '上表の著作物を翻訳、編曲、変形、翻案し、作成した著作物'},
+        ],
+        [
+          {td: '編集著作物'},
+          {td: '百科事典、辞書、新聞、雑誌、詩集など'},
+        ],
+        [
+          {td: 'データベースの著作物'},
+          {td: 'コンピュータで検索可能な形態をとった百科事典、辞書など'},
+        ],
+      ].map((item) => {
+        return (
+          <tr>
+            {item.map(({td}) => {
+              return (
+                <td class="first-of-type:w-[31.4%] first-of-type:min-w-[31.4%] first-of-type:md:w-[35.3%] first-of-type:md:min-w-[35.3%] first-of-type:grow-0">
+                  {td}
+                </td>
+              )
+            })}
+          </tr>
+        )
+      })}
+      </tbody>
+    </table>
     <p>
       編集物は、素材の選択や配列に創作性があると、著作物となります。全体としても編集著作物として保護されますが、
       辞典や雑誌など中身の1つ1つの記事を利用する際には、個々の記事も著作物であるため、それぞれの著作権者の許諾が必要となります。
@@ -1338,10 +1371,12 @@ import Page from '../../layouts/Page.astro';
     <p>
       本書も「CC BY 4.0」で公開しています（P63にこのマークがついています）【01】。
     </p>
-    <p>
-      【01】クリエイティブ・コモンズ（CC BY 4.0）の表記
-    </p>
-    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
+    <div>
+      <figcaption>
+        【01】クリエイティブ・コモンズ（CC BY 4.0）の表記
+      </figcaption>
+      <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
+    </div>
     <p>
       これは「表示」というもので、「原作者のクレジット（氏名、作品タイトルなど）を表示すれば」、
       改変も営利目的利用もOKとなります。
@@ -1354,11 +1389,53 @@ import Page from '../../layouts/Page.astro';
       CCではBYを必ずつけることになっています。
       その他に【02】を組み合わせて、作者が希望する条件を提示することができます。
     </p>
-    <p>
-      【02】クリエイティブ・コモンズの表記例
-    </p>
-    <div class="bg-cyan-400 p-10">
-      テーブル要素・要検討
+    <div>
+      <figcaption>
+        【02】クリエイティブ・コモンズの表記例
+      </figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th class="w-[20%] min-w-[20%] grow-0">
+              表示
+            </th>
+            <th class="w-[20%] min-w-[20%] grow-0">
+              意味
+            </th>
+            <th class="grow">概要</th>
+          </tr>
+        </thead>
+        <tbody>{[
+          [
+            {td: 'SA'},
+            {td: '継承'},
+            {td: '改変した場合、元の作品と同じ CC ライセンスをつけることが条件'},
+          ],
+          [
+            {td: 'ND'},
+            {td: '改変禁止'},
+            {td: '改変をしないことが条件'},
+          ],
+          [
+            {td: 'NC'},
+            {td: '非営利'},
+            {td: '非営利であることが条件'},
+          ],
+        ].map((item) => {
+          return (
+            <tr>
+              {item.map(({td}) => {
+                return (
+                  <td class="w-[20%] min-w-[20%] grow-0 last-of-type:w-full last-of-type:grow">
+                    {td}
+                  </td>
+                )
+              })}
+            </tr>
+          )
+        })}
+        </tbody>
+      </table>
     </div>
     <p>
       例えば、CC-BY-ND-NCの場合は、「クレジット表示、改変禁止、非営利」であれば、利用できることになります。全部で6通りの方法があります。

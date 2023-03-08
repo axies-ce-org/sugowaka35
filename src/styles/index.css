@@ -43,6 +43,7 @@
 		@apply h-fit;
 	}
 
+	/* --- list styles --- */
 	ul, ol {
 		@apply pl-[15px] md:pl-4;
 
@@ -60,6 +61,33 @@
 	ol {
 		@apply list-decimal;
 	}
+	/* --- /list styles --- */
+
+	/* --- table styles --- */
+	table {
+		@apply w-full;
+		thead {
+			tr {
+				@apply border border-stone-800 bg-orange-600 text-white
+				flex font-bold text-left md:text-center;
+
+				th {
+					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l first-of-type:border-0;
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				@apply border border-t-0 border-stone-800 flex even:bg-orange-100;
+
+				td {
+					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l grow first-of-type:border-0;
+				}
+			}
+		}
+	}
+	/* --- /table styles --- */
 }
 #js-nav.active {
 	@apply -translate-x-full;
