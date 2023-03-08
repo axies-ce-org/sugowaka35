@@ -1,3 +1,5 @@
+import MicroModal from 'micromodal';
+
 // ハンバーガー
 const ham = document.querySelector('#js-hamburger');
 const nav = document.querySelector('#js-nav');
@@ -24,3 +26,10 @@ window.addEventListener('resize', function(){
     nav.classList.remove('active');
   }
 });
+
+
+MicroModal.init({
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true
+});
+
