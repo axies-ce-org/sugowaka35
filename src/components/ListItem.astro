@@ -1,0 +1,40 @@
+---
+type Props = {
+  href?: string;
+  list?: {
+    item2: string;
+  }[]
+}
+
+const {href, list} = Astro.props;
+---
+<li>
+  {href ? (
+    <a href={href} class="text-orange-500 block">
+      <slot/>
+      {list && (
+          <ul>
+            {list.map(({item2}) => {
+              return (
+                <li>{item2}</li>
+              )
+            })}
+          </ul>
+      ) }
+    </a>
+  ) : (
+    <>
+      <slot/>
+      {list && (
+          <ul>
+            {list.map(({item2}) => {
+              return (
+                <li>{item2}</li>
+              )
+            })}
+          </ul>
+      ) }
+    </>
+  )}
+</li>
+

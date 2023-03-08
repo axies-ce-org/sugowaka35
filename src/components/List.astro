@@ -1,68 +1,15 @@
 ---
 type Props = {
-  content: {
-    title?: string;
-    type?: string;
-    href?: string;
-    list: {
-      item: string;
-      list2?: {
-        item2: string
-      }
-    }[]
-  }[]
+  title?: string;
+  type?: string;
 }
 
-const {content} = Astro.props;
+const {title, type} = Astro.props;
 ---
-<div class="py-4 md:py-6 border-y border-orange-500 flex flex-col gap-3 md:gap-6">
-  {content.map(({title, type, href, list}) => {
-    const listStyle = `${type === "disc" ? "list-disc" : "list-decimal"} pl-[15px] md:pl-4`
+<>
+  {title && (<h5 class="font-bold text-orange-500 text-[15px] leading-normal md:text-base md:leading-normal">{title}</h5>)}
 
-    return (
-        <>
-          {title && (<h5 class="font-bold text-orange-500 text-[15px] leading-normal md:text-base md:leading-normal">{title}</h5>)}
-
-          <ul class={listStyle}>
-            {href ? (
-              list.map(({item, list2}) => {
-                return (
-                  <li>
-                    <a href={href} class="text-orange-500">
-                      {item}
-                      {list2 && (
-                        <ul class={listSyle}>
-                          {list2.map(({item2}) => {
-                            return (
-                              <li>{item2}</li>
-                            )
-                          })}
-                        </ul>
-                      )}
-                    </a>
-                  </li>
-                )
-              })
-            ) : (
-              list.map(({item, list2}) => {
-                return (
-                  <li>
-                    {item}
-                    {list2 && (
-                      <ul class={listSyle}>
-                        {list2.map(({item2}) => {
-                          return (
-                            <li>{item2}</li>
-                          )
-                        })}
-                      </ul>
-                    )}
-                  </li>
-                )
-              })
-            )}
-          </ul>
-        </>
-    )}
-  )}
-</div>
+  <ul class={`${type === "ol" ? "list-decimal" : "list-disc"} pl-[15px] md:pl-4`}>
+    <slot />
+  </ul>
+</>
