@@ -35,8 +35,30 @@
 		@apply text-orange-600 text-lg md:text-2xl font-bold leading-relaxed md:leading-relaxed;
 	}
 
+	h5 {
+		@apply font-bold text-orange-500 text-[15px] leading-normal md:text-base md:leading-normal;
+	}
+
 	dd {
 		@apply h-fit;
+	}
+
+	ul, ol {
+		@apply pl-[15px] md:pl-4;
+
+		li {
+			a {
+				@apply text-orange-500 block;
+			}
+		}
+	}
+
+	ul {
+		@apply list-disc;
+	}
+
+	ol {
+		@apply list-decimal;
 	}
 }
 #js-nav.active {
