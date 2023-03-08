@@ -2,10 +2,10 @@
 type Props = {
   id: string;
   popup: string;
-  type?: string;
+  word?: string;
 }
 
-const {id, popup, type} = Astro.props;
+const {id, popup, word} = Astro.props;
 ---
 <>
   <div class="hidden micromodal-slide absolute" id={`modal-${id}`} aria-hidden="true">
@@ -13,12 +13,17 @@ const {id, popup, type} = Astro.props;
       <div class="modal__container w-full max-w-[340px] md:max-w-[480px] relative z-40 px-4 md:px-0" role="dialog" aria-modal="true" aria-labelledby={`modal-${id}-title`}>
         <header class="bg-orange-600 px-4 py-0.5 rounded-t-lg md:px-4 md:py-1 ml-3 md:ml-4 inline-block">
           <h2 class="text-white modal__title uppercase font-medium text-sm md:text-base leading-normal md:leading-normal" id={`modal-${id}-title`}>
-            {type === 'word' ? 'Word' : 'Memo'}
+            {word ? 'Word' : 'Memo'}
           </h2>
         </header>
         <div class="bg-white rounded-2xl p-6 text-center">
-          <main class="modal__content" id={`modal-${id}-content`}>
-            <p class="text-left break-words">{popup}</p>
+          <main class="modal__content text-left break-words" id={`modal-${id}-content`}>
+            {word && (
+              <div class="font-bold text-orange-600 pb-2 border-b border-orange-500 mb-2">
+                <p>{word}</p>
+              </div>
+            )}
+            <p>{popup.split('\n').map(t => (<>{t}<br /></>))}</p>
           </main>
           <footer class="mt-4 md:mt-6 inline-block">
             <button class="text-white bg-neutral-500 py-1 px-4 text-base leading-normal rounded-lg" data-micromodal-close aria-label="Close this dialog window">閉じる</button>
