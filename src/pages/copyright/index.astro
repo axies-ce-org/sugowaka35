@@ -4,7 +4,7 @@ import Point from '../../components/Point.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
 import ListArea from '../../components/ListArea.astro';
-import Quiz from '../../components/Quiz.astro';
+import ImgCaption from '../../components/ImgCaption.astro';
 import Popup from '../../components/Popup.astro';
 import Page from '../../layouts/Page.astro';
 ---
@@ -74,12 +74,12 @@ import Page from '../../layouts/Page.astro';
       P26で、利用可能な著作物や「権利制限」について説明しました。
       授業で第三者の著作物を扱う時は、【01】のフロー図のような確認が必要となります。
     </p>
-    <div>
+    <ImgCaption>
       <figcaption>
         【01】授業で著作物を扱う時のフロー図
       </figcaption>
       <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
-    </div>
+    </ImgCaption>
     <p>
       権利制限規定がたくさんありますが、授業では「引用（32条1項）」
       「学校その他の教育機関における複製等（35条）」
@@ -234,10 +234,10 @@ import Page from '../../layouts/Page.astro';
       })}
     </SpeechBubbles>
 
-    <div>
+    <ImgCaption>
       <figcaption>【01】引用と転載の違い</figcaption>
       <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
-    </div>
+    </ImgCaption>
 
     <SpeechBubbles>
       {[
@@ -312,10 +312,10 @@ import Page from '../../layouts/Page.astro';
         )
       })}
     </SpeechBubbles>
-    <div>
+    <ImgCaption>
       <figcaption>【02】画像の引用例</figcaption>
       <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
-    </div>
+    </ImgCaption>
     <SpeechBubbles>
       {[
         {
@@ -452,10 +452,10 @@ import Page from '../../layouts/Page.astro';
       著作権法はよく改正されるのですが、2018年には35条とそれに関する箇所の改正があり、大きな制度変更がありました【01】 。
       具体的には補償金制度が導入されたのです。
     </p>
-    <div>
+    <ImgCaption>
       <figcaption>【01】旧35条と改正35条</figcaption>
       <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
-    </div>
+    </ImgCaption>
     <p>
       旧35条では、第三者の著作物を授業で扱う際、以下の取り扱いになっていました。
     </p>
@@ -526,37 +526,131 @@ import Page from '../../layouts/Page.astro';
       ためです。
     </div>
 
-    <div>
+    <ImgCaption>
       <figcaption>【02】公衆送信の許諾</figcaption>
-      <table>
+      <table class="text-[13px] md:text-sm leading-tight md:leading-tight">
         <thead>
-          <tr>
-            <th class="w-[20%] min-w-[20%] grow-0"></th>
-            <th class="grow"></th>
-          </tr>
+          {[
+            [
+              {
+                th: '授業形態',
+                colspan: '2',
+              },
+              {
+                th: '授業時間内の参加場所',
+                colspan: '2',
+              },
+              {th: '資料配布※2'},
+              {th: '公の伝達'},
+              {
+                th: '資料公衆送信',
+                rowspan: '2',
+              },
+              {
+                th: '授業映像公衆送信',
+                rowspan: '2',
+              },
+            ],
+            [
+              {th: '教室内'},
+              {th: '教室内'},
+              {th: '授業時間内'},
+              {th: '授業時間外'},
+              {th: '同時中継'},
+              {th: '録画'},
+            ],
+          ].map((item) => {
+            return (
+                <tr>
+                  {item.map(({th, rowspan, colspan}) => {
+                    return(
+                      <th rowspan={rowspan} colspan={colspan}>
+                        {th}
+                      </th>
+                    )
+                  })}
+                </tr>
+              )
+            })
+          }
         </thead>
-        <tbody>{[
-          [
-            {td: ''},
-            {td: ''},
-          ],
-        ].map((item) => {
-          return (
-            <tr>
-              {item.map(({td}) => {
-                return (
-                  <td class="w-[20%] min-w-[20%] grow-0 last-of-type:w-full last-of-type:grow">
-                    {td}
-                  </td>
-                )
-              })}
-            </tr>
-          )})}
+        <tbody>
+          {[
+            [
+              {td: '従来教室授業'},
+              {td: '対面'},
+              {td: '◎'},
+              {td: '○※1'},
+              {td: '○'},
+              {td: '○'},
+              {td: '-'},
+              {td: '○'},
+            ],
+            [
+              {
+                td: '遠隔合同授業等',
+                rowspan: '2',
+              },
+              {td: '対面'},
+              {td: '◎'},
+              {td: '○※1'},
+              {td: '○'},
+              {td: '○'},
+              {td: '-'},
+              {td: '○'},
+            ],
+            [
+              {td: '遠隔'},
+              {td: '-'},
+              {td: '-'},
+              {td: '◎'},
+              {td: '○'},
+              {td: '◎'},
+              {td: '○'},
+            ],
+            [
+              {td: 'スタジオ型授業'},
+              {td: '遠隔'},
+              {td: '-'},
+              {td: '-'},
+              {td: '○'},
+              {td: '○'},
+              {td: '○'},
+              {td: '○'},
+            ],
+            [
+              {td: 'オンデマンド型授業'},
+              {td: '-'},
+              {td: '-'},
+              {td: '-'},
+              {td: '-'},
+              {td: '○ '},
+              {td: '-'},
+              {td: '○'},
+            ],
+          ].map((item) => {
+            return (
+                <tr class="[&:nth-child(2)]:!bg-white [&:first-child]:!bg-orange-100">
+                  {item.map(({td, rowspan}) => {
+                    return(
+                      <td class="first-of-type:text-left texet-center" rowspan={rowspan}>
+                        {td}
+                      </td>
+                    )
+                  })}
+                </tr>
+              )
+            })
+          }
         </tbody>
       </table>
-      <figcaption>◎：改正前から許諾なく無償でOK　◯：改正後補償金支払いにより許諾なくOK（※1は補償金不要）</figcaption>
-      <figcaption>※2 プリントやUSBメモリでの配布、AirDropなど教室内で閉じた通信による配布</figcaption>
-    </div>
+      <figcaption>
+        ◎：改正前から許諾なく無償でOK　◯：改正後補償金支払いにより許諾なくOK（※1は補償金不要）
+      </figcaption>
+      <figcaption>
+        ※2 プリントやUSBメモリでの配布、AirDropなど教室内で閉じた通信による配布
+      </figcaption>
+    </ImgCaption>
     <div>
       <Popup
         id="c2s3_3"
@@ -572,10 +666,10 @@ import Page from '../../layouts/Page.astro';
       これに対して、「同時中継遠隔授業」は、教員と生徒がいる主会場の教室で行われている授業を
       リアルタイム配信し、自宅などの副会場で生徒だけでも受講できるようにしたものです【03】 。
     </p>
-    <div>
+    <ImgCaption>
       <figcaption>【03】遠隔授業形態の分類</figcaption>
       <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
-    </div>
+    </ImgCaption>
     <Point>
       補償金を支払うことで、許諾なく公衆送信できる場面が増えた！
     </Point>

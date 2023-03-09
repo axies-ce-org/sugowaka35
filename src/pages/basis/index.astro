@@ -6,6 +6,7 @@ import Bubble from '../../components/Bubble.astro';
 import ListArea from '../../components/ListArea.astro';
 import Quiz from '../../components/Quiz.astro';
 import Popup from '../../components/Popup.astro';
+import ImgCaption from '../../components/ImgCaption.astro';
 import Page from '../../layouts/Page.astro';
 ---
 
@@ -1370,12 +1371,12 @@ import Page from '../../layouts/Page.astro';
     <p>
       本書も「CC BY 4.0」で公開しています（P63にこのマークがついています）【01】。
     </p>
-    <div>
+    <ImgCaption>
       <figcaption>
         【01】クリエイティブ・コモンズ（CC BY 4.0）の表記
       </figcaption>
       <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
-    </div>
+    </ImgCaption>
     <p>
       これは「表示」というもので、「原作者のクレジット（氏名、作品タイトルなど）を表示すれば」、
       改変も営利目的利用もOKとなります。
@@ -1388,7 +1389,7 @@ import Page from '../../layouts/Page.astro';
       CCではBYを必ずつけることになっています。
       その他に【02】を組み合わせて、作者が希望する条件を提示することができます。
     </p>
-    <div>
+    <ImgCaption>
       <figcaption>
         【02】クリエイティブ・コモンズの表記例
       </figcaption>
@@ -1435,7 +1436,7 @@ import Page from '../../layouts/Page.astro';
         })}
         </tbody>
       </table>
-    </div>
+    </ImgCaption>
     <p>
       例えば、CC-BY-ND-NCの場合は、「クレジット表示、改変禁止、非営利」であれば、利用できることになります。全部で6通りの方法があります。
     </p>

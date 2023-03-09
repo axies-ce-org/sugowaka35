@@ -69,20 +69,20 @@
 		thead {
 			tr {
 				@apply border border-stone-800 bg-orange-600 text-white
-				flex font-bold text-left md:text-center;
+				font-bold text-left md:text-center;
 
 				th {
-					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l first-of-type:border-0;
+					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l;
 				}
 			}
 		}
 
 		tbody {
 			tr {
-				@apply border border-t-0 border-stone-800 flex even:bg-orange-100;
+				@apply border border-t-0 border-stone-800 even:bg-orange-100;
 
 				td {
-					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l grow first-of-type:border-0;
+					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l;
 				}
 			}
 		}
@@ -90,7 +90,7 @@
 	/* --- /table styles --- */
 
 	figcaption {
-		@apply text-[13px] md:text-sm leading-relaxed md:leading-relaxed;
+		@apply text-[13px] md:text-sm leading-normal md:leading-normal;
 	}
 }
 #js-nav.active {
