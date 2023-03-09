@@ -119,7 +119,12 @@ import Page from '../../layouts/Page.astro';
       まず文化庁の
       <Popup
         id="c4s1_1"
-        popup="文化庁「著作物の正しい利用方法」\n https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html">
+        popup={[
+          {
+            text: "文化庁「著作物の正しい利用方法」",
+            href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html",
+          },
+      ]}>
         「著作物の正しい利用方法」
       </Popup>
       のページを見て、窓口がないか調べてみましょう。
@@ -131,14 +136,24 @@ import Page from '../../layouts/Page.astro';
       そこで、まずは
       <Popup
         id="c4s1_2"
-        popup="JASRAC作品ベータベース検索サービス「J-WID」\n https://www2.jasrac.or.jp/eJwid/">
+        popup={[
+          {
+            text: "JASRAC作品ベータベース検索サービス「J-WID」",
+            href: "https://www2.jasrac.or.jp/eJwid/",
+          },
+      ]}>
         JASRACの作品ベータベース検索サービス
       </Popup>
       で、利用したい楽曲があるか検索してみましょう。
       もし JASRAC で検索して見つからない場合は、
       <Popup
         id="c4s1_3"
-        popup="NexTone作品検索データベース\n https://search.nex-tone.co.jp/">
+        popup={[
+          {
+            text: "NexTone作品検索データベース",
+            href: "https://search.nex-tone.co.jp/",
+          },
+      ]}>
         NexToneの作品検索データベース
       </Popup>
       で調べてみましょう。
@@ -156,13 +171,23 @@ import Page from '../../layouts/Page.astro';
       費用がかかることがあるので、料金は確認しましょう。
       <Popup
         id="c4s1_4"
-        popup="JASRAC「使用料計算シミュレーション」\n https://www.jasrac.or.jp/info/create/calculation/simulation.html">
+        popup={[
+          {
+            text: "JASRAC「使用料計算シミュレーション」",
+            href: "https://www.jasrac.or.jp/info/create/calculation/simulation.html",
+          },
+      ]}>
         JASRAC
       </Popup>
       や
       <Popup
         id="c4s1_5"
-        popup="NexTone「使用料シミュレーション」\n https://sim.nex-tone.co.jp/">
+        popup={[
+          {
+            text: "NexTone「使用料シミュレーション」",
+            href: "https://sim.nex-tone.co.jp/",
+          },
+      ]}>
         NexTone
       </Popup>
       は使用料計算シミュレーションができます。

@@ -1,7 +1,10 @@
 ---
 type Props = {
   id: string;
-  popup: string;
+  popup: {
+    text: string;
+    href?: string;
+  }[];
   word?: string;
 }
 
@@ -23,7 +26,20 @@ const {id, popup, word} = Astro.props;
                 <p>{word}</p>
               </div>
             )}
-            <p>{popup.split('\n').map(t => (<>{t}<br /></>))}</p>
+              {popup.map(({text, href}) => {
+                return (
+                  <div>
+                    <p>
+                      {text.split('\n').map(t => (<>{t}<br /></>))}
+                    </p>
+                    {href && (
+                      <a href={href} target="_blank" rel="noopener noreferrer" class="underline text-orange-600">
+                        {href}
+                      </a>
+                    )}
+                  </div>
+                )
+              })}
           </main>
           <footer class="mt-4 md:mt-6 inline-block">
             <button class="text-white bg-neutral-500 py-1 px-4 text-base leading-normal rounded-lg" data-micromodal-close aria-label="Close this dialog window">閉じる</button>
