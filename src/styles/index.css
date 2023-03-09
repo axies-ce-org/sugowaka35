@@ -88,6 +88,10 @@
 		}
 	}
 	/* --- /table styles --- */
+
+	figcaption {
+		@apply text-[13px] md:text-sm leading-relaxed md:leading-relaxed;
+	}
 }
 #js-nav.active {
 	@apply -translate-x-full;
