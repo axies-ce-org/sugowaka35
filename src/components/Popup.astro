@@ -28,7 +28,7 @@ const {id, popup, word} = Astro.props;
             )}
               {popup.map(({text, href}) => {
                 return (
-                  <div>
+                  <div class="mt-3 md:mt-4 first-of-type:mt-0">
                     <p>
                       {text.split('\n').map(t => (<>{t}<br /></>))}
                     </p>
