@@ -1,0 +1,106 @@
+---
+import Section from '../../components/Section.astro';
+import Clause from '../../components/Clause.astro';
+import Point from '../../components/Point.astro';
+import SpeechBubbles from '../../components/SpeechBubbles.astro';
+import Bubble from '../../components/Bubble.astro';
+import ListArea from '../../components/ListArea.astro';
+import Quiz from '../../components/Quiz.astro';
+import Popup from '../../components/Popup.astro';
+import Page from '../../layouts/Page.astro';
+---
+
+<Page title="授業における著作権">
+  <Section
+    id="class"
+    number="01"
+    title="授業と著作物"
+    description="ここでは授業で第三者の著作物を扱う際に、どんな法律上のきまりがあるか、その内容や用語の定義、および授業で著作物を扱う際のフローについて説明します。"
+  >
+    <SpeechBubbles>
+      {[
+        {
+          speaker: '隅木',
+          text: '授業で第三者の著作物を扱うのは、どういう場面がありますか？',
+          feLevel: '3',
+        },
+        {
+          speaker: '小中',
+          text: 'プリントに文章とかイラスト使ったり……',
+          feLevel: '3',
+        },
+        {
+          speaker: '大院',
+          text: 'おれは、授業で見せるスライドの中で使うことあるな。後はLMS（Learning Management System：学習支援システム）で、資料配布したり。',
+          feLevel: '2',
+        },
+        {
+          speaker: '隅木',
+          text: '小中先生は板書したり、読み聞かせしたりもありますよね。',
+          feLevel: '2',
+        },
+        {
+          speaker: '小中',
+          text: 'あ、それも著作権が関係するんですか？',
+          feLevel: '2',
+        },
+        {
+          speaker: '隅木',
+          text: '板書は複製権、読み聞かせは口述権、LMSで資料を配布するのは複製権と公衆送信権が関係あります。',
+          feLevel: '2',
+        },
+        {
+          speaker: '大院',
+          text: 'CHAPTER1（P20）で、Webサイトを見ながら操作をするのは公の伝達だと言われた。',
+          feLevel: '4',
+        },
+        {
+          speaker: '隅木',
+          text: 'それもありますね。あと、授業でなにかの映像を流すこともあると思いますが、それは上映権になります。',
+          feLevel: '4',
+        },
+        {
+          speaker: '小中',
+          text: 'いろいろな権利が関係あるのですね。',
+          feLevel: '3',
+        },
+      ].map(({speaker, text, feLevel}) => {
+        return (
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
+        )
+      })
+      }
+    </SpeechBubbles>
+    <p>
+      P26で、利用可能な著作物や「権利制限」について説明しました。
+      授業で第三者の著作物を扱う時は、【01】のフロー図のような確認が必要となります。
+    </p>
+    <div>
+      <figcaption>
+        【01】授業で著作物を扱う時のフロー図
+      </figcaption>
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+    </div>
+    <p>
+      権利制限規定がたくさんありますが、授業では「引用（32条1項）」
+      「学校その他の教育機関における複製等（35条）」
+      「営利を目的としない上映等（38条）」をおさえておくとよいでしょう。
+    </p>
+    <p>
+      先程の例で言うと、授業で読み聞かせたり、映像を見せたりするのは、
+      38条を適用できる場合が多いと考えられます。
+    </p>
+    <p>
+      32条と35条について、以降で詳しく説明します。
+    </p>
+    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+  </Section>
+
+  <Section
+    id="quote"
+    number="02"
+    title="引用（32条1項）"
+    description="このSECTIONでは、著作権法で定められている「引用」について説明します。著作権法上の「引用」は決まりごとが多く説明がたくさんありますが、がんばって読んでみてください。"
+  >
+  </Section>
+</Page>
