@@ -1,6 +1,5 @@
 ---
 import Section from '../../components/Section.astro';
-import Clause from '../../components/Clause.astro';
 import Point from '../../components/Point.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
@@ -26,10 +25,10 @@ import Page from '../../layouts/Page.astro';
     <p>
       著作権については「著作権法」で定めています。著作権法の第1条に、法律の目的が書いてあります。
     </p>
-    <Clause article={2} paragraph={1} item={1}>
+    <Point type="simple" title="第1条（目的）">
       この法律は、著作物並びに実演、レコード、放送及び有線放送に関し著作者の権利及びこれに隣接する権利を定め、
       これらの文化的所産の公正な利用に留意しつつ、著作者等の権利の保護を図り、もつて文化の発展に寄与することを目的とする。
-    </Clause>
+    </Point>
     <SpeechBubbles>
       {[
         {
@@ -167,9 +166,9 @@ import Page from '../../layouts/Page.astro';
     <p>
       著作権法では「著作物」が保護されます。著作物とは、以下のように定義されています。
     </p>
-    <Clause article={2} paragraph={1} item={1}>
+    <Point type="simple" title="2条1項1号">
       思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
-    </Clause>
+    </Point>
     <SpeechBubbles>
       {[
         {
@@ -492,9 +491,9 @@ import Page from '../../layouts/Page.astro';
     <p>
       著作権法の2条1項2号に、著作者について定義されています。
     </p>
-    <Clause article={2} paragraph={1} item={2}>
+    <Point type="simple" title="2条1項2号">
       著作者　著作物を創作する者をいう。
-    </Clause>
+    </Point>
     <p>
       著作物がなにかについては、前のSECTIONで学びました。それらを創作する者が「著作者」となります。
     </p>

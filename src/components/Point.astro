@@ -1,14 +1,20 @@
 ---
 type Props = {
   type?: string;
+  title?: string;
 }
 
-const {type} = Astro.props;
+const {type, title} = Astro.props;
 ---
 
 <div>
   {type !== 'simple' && (<div class="text-white bg-orange-600 uppercase font-medium text-sm md:text-base leading-normal md:leading-normal px-4 py-0.5 rounded-t-lg md:px-4 md:py-1 ml-3 md:ml-4 inline-block">Point</div>)}
   <div class="bg-stone-100 rounded-2xl p-3 md:p-4">
+    {title && (
+      <dt class="text-orange-600 text-base leading-relaxed font-bold">
+        {title}
+      </dt>
+    )}
     <slot />
   </div>
 </div>

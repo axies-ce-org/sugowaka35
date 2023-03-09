@@ -1,6 +1,5 @@
 ---
 import Section from '../../components/Section.astro';
-import Clause from '../../components/Clause.astro';
 import Point from '../../components/Point.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
@@ -102,5 +101,37 @@ import Page from '../../layouts/Page.astro';
     title="引用（32条1項）"
     description="このSECTIONでは、著作権法で定められている「引用」について説明します。著作権法上の「引用」は決まりごとが多く説明がたくさんありますが、がんばって読んでみてください。"
   >
+    <h3>引用とは</h3>
+    <SpeechBubbles>
+      {[
+        {
+          speaker: '隅木',
+          text: '引用って聞いた時にどんなイメージですか？',
+          feLevel: '2',
+        },
+        {
+          speaker: '大院',
+          text: 'よそから引っ張ってきてたら引用かな。転載のことかな？',
+          feLevel: '2',
+        },
+        {
+          speaker: '小中',
+          text: '要約したりもあるような？',
+          feLevel: '3',
+        },
+        {
+          speaker: '隅木',
+          text: '広義で言う「引用」って、人によって違うんですよね。ここで説明するのは、あくまでも著作権法上の「引用」となります。広義で使われている「引用」という言葉とは、意味合いが異なりますので注意が必要です',
+          feLevel: '2',
+        },
+      ].map(({speaker, text, feLevel}) => {
+        return (
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
+        )
+      })}
+    </SpeechBubbles>
+    <p>
+      著作権法の32条1項には以下のように書かれています。
+    </p>
   </Section>
 </Page>
