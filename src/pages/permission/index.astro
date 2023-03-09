@@ -1,0 +1,215 @@
+---
+import Section from '../../components/Section.astro';
+import Point from '../../components/Point.astro';
+import SpeechBubbles from '../../components/SpeechBubbles.astro';
+import Bubble from '../../components/Bubble.astro';
+import ListArea from '../../components/ListArea.astro';
+import ImgCaption from '../../components/ImgCaption.astro';
+import Popup from '../../components/Popup.astro';
+import Page from '../../layouts/Page.astro';
+---
+
+<Page title="許諾の取り方">
+  <Section
+    id="get_permission"
+    number="01"
+    title="利用許諾の取り方"
+    description="保護期間や利用条件などで自由に利用できない場合、かつ権利制限を適用できない場合に著作権者の許諾が必要となります。本CHAPTERでは許諾のとり方について説明します。"
+  >
+    <h3>
+      許諾を取る手順
+    </h3>
+    <p>
+      P31でフロー図をお見せしました。その内容を改めて確認しましょう。
+    </p>
+    <p>
+      「許諾をとる or あきらめる」となった場合に、あきらめる時は第三者の著作物の部分を削除したり、代替物がないか探して差し替えたりする方法があります。
+    </p>
+    <p>
+      以下は「許諾をとる」を選んだ場合の説明になります。
+    </p>
+
+    <h4>
+      Step1：著作者・著作権者が誰なのかを調べる
+    </h4>
+    <SpeechBubbles>
+      {[
+        {
+          speaker: '隅木',
+          text: (
+            <>
+              先生方にお願いしたいのは、第三者の著作物を利用する際は、出典を記録してほしいということです。<br/>
+              1つの教材の中で複数使用している場合には、教材ごとの出典リストを作成しておくことが望ましいです。
+            </>
+          ),
+          feLevel: '2',
+        },
+        {
+          speaker: '大院',
+          text: 'そんなのいちいち作ってないよ。',
+          feLevel: '5',
+        },
+        {
+          speaker: '隅木',
+          text: '教室で授業をしてる分には35 条が適用できるので大丈夫です。ただ、例えば大院先生の授業を録画して、大学のホームページで公開することになった場合、誰でも見られる状態なので35条は適用できません。引用が適用できればいいのですが、難しい場合もあると思います。',
+          feLevel: '2',
+        },
+        {
+          speaker: '小中',
+          text: '出典リストがあれば、それを元に許諾をとれるということですね。',
+          feLevel: '1',
+        },
+        {
+          speaker: '隅木',
+          text: 'そうなのです。逆にそれがないと、その写真やイラストや文章をどこから引っ張ってきたのか調べることから始めないといけないことになります。',
+          feLevel: '2',
+        },
+        {
+          speaker: '大院',
+          text: 'それはめんどくさいな。',
+          feLevel: '5',
+        },
+        {
+          speaker: '隅木',
+          text: (
+            <>
+              引用を適用する場合も出所の明示が必要ですよね。
+              最近では学外に教育活動を発信することも多いと思いますので、
+              そういう場合に備えて必ず出典は記録しておいてください。<br/>
+              また、Webサイトから複製した場合は、それが孫引きでないかの注意も必要です。
+            </>
+          ),
+          feLevel: '2',
+        },
+        {
+          speaker: '大院',
+          text: '孫引き？',
+          feLevel: '4',
+        },
+        {
+          speaker: '隅木',
+          text: (
+            <>
+              つまり先生が見たサイトが、その画像などを他のサイトから複製して掲載している場合があるのです。<br/>
+              その場合は、元のサイトを見て、著作者、著作権者がだれなのか、
+              ライセンス元の表記があるのかなどを確認しないといけないですね。
+            </>
+          ),
+          feLevel: '2',
+        },
+        {
+          speaker: '小中',
+          text: 'ああ、それはありそうですね。気をつけなくちゃ。',
+          feLevel: '3',
+        },
+      ].map(({speaker, text, feLevel}) => {
+        return (
+          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
+        )
+      })}
+    </SpeechBubbles>
+
+    <h4>
+      Step2：窓口がないかを調べる
+    </h4>
+    <p>
+      著作権の利用許諾については、窓口を設けているところが多数あります。
+    </p>
+    <div>
+      まず文化庁の
+      <Popup
+        id="c4s1_1"
+        popup="文化庁「著作物の正しい利用方法」\n https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html">
+        「著作物の正しい利用方法」
+      </Popup>
+      のページを見て、窓口がないか調べてみましょう。
+    </div>
+    <p>
+      例えば、音楽の著作権は集中管理団体であるJASRACやNexToneが管理している場合が多いのですが、そうでないこともあります。
+    </p>
+    <div>
+      そこで、まずは
+      <Popup
+        id="c4s1_2"
+        popup="JASRAC作品ベータベース検索サービス「J-WID」\n https://www2.jasrac.or.jp/eJwid/">
+        JASRACの作品ベータベース検索サービス
+      </Popup>
+      で、利用したい楽曲があるか検索してみましょう。
+      もし JASRAC で検索して見つからない場合は、
+      <Popup
+        id="c4s1_3"
+        popup="NexTone作品検索データベース\n https://search.nex-tone.co.jp/">
+        NexToneの作品検索データベース
+      </Popup>
+      で調べてみましょう。
+    </div>
+    <p>
+      例えば、Official髭男dismの楽曲はデータベースで検索するとJASRACではなく、
+      NexTone が管理していることがわかります。この場合は NexTone に許諾を申請することになります。
+    </p>
+
+    <h4>
+      Step3：許諾依頼をする
+    </h4>
+    <div>
+      窓口がある場合には、窓口から利用許諾申請をしましょう。窓口は、Webフォームになっているところも多いです。
+      費用がかかることがあるので、料金は確認しましょう。
+      <Popup
+        id="c4s1_4"
+        popup="JASRAC「使用料計算シミュレーション」\n https://www.jasrac.or.jp/info/create/calculation/simulation.html">
+        JASRAC
+      </Popup>
+      や
+      <Popup
+        id="c4s1_5"
+        popup="NexTone「使用料シミュレーション」\n https://sim.nex-tone.co.jp/">
+        NexTone
+      </Popup>
+      は使用料計算シミュレーションができます。
+    </div>
+    <p>
+      計算シミュレーションがない場合は、使用料規程を読んだり、見積もりをとったりして確認しましょう。
+    </p>
+    <p>
+      窓口がない場合は、著作者、著作権者に直接連絡して、許諾をとります【01】。
+    </p>
+    <ImgCaption>
+      <figcaption>【01】許諾のフロー</figcaption>
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+    </ImgCaption>
+    <p>
+      後で権利者と認識がずれてトラブルにならないよう、なるべく文書で記録に残るようにしておきましょう。
+      最低限、以下のことを記載しておく必要があります。
+    </p>
+    <ListArea>
+      <ul>
+        <li>
+          利用する著作物
+        </li>
+        <li>
+          利用者
+        </li>
+        <li>
+          利用目的（具体的に）
+        </li>
+        <li>
+          利用方法（具体的に）<br/>
+          例：約 100 人が観客の文化祭で、入場料は取らないが、客演の俳優に報酬を支払う。
+          あなたの小説を元にこちらで作成した脚本を使用したい。
+        </li>
+        <li>
+          利用の期間
+        </li>
+        <li>
+          利用の範囲：著作物の全部なのか、一部であればどの箇所なのか
+        </li>
+        <li>
+          対価：使用料がかかるのであれば金額と支払方法
+        </li>
+      </ul>
+    </ListArea>
+    <p>
+      教育利用の場合には、使用料が安かったり無料だったりすることもあるので、とりあえず問い合わせてみることをお勧めします。
+    </p>
+  </Section>
+</Page>
