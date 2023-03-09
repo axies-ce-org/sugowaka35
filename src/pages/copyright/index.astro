@@ -510,7 +510,11 @@ import Page from '../../layouts/Page.astro';
             <li>
               <Popup
                 id="c2s3_1"
-                popup="島並良、上野達弘、横山久芳『 著作権法入門〔第3版〕』（有斐閣、2021）198頁。">
+                popup={[
+                    {
+                      text: "島並良、上野達弘、横山久芳『 著作権法入門〔第3版〕』（有斐閣、2021）198頁。",
+                    }
+                  ]}>
                 少なくとも主会場に教員と生徒、遠隔地の副会場に生徒がいることが前提とされる授業で、
                 遠隔会議システムなどを利用して、離れた会場へ同時中継すること
               </Popup>
@@ -552,7 +556,11 @@ import Page from '../../layouts/Page.astro';
       これは、2018年の著作権法改正前に無償でできた利用については引き続き無償にするため、
       <Popup
         id="c2s3_2"
-        popup="「公衆送信」と「公の伝達」の用語について、P19の4で説明しています。さらに『運用指針』による用語定義と具体例を、この後のP40で説明しています。">
+        popup={[
+            {
+              text: "「公衆送信」と「公の伝達」の用語について、P19の4で説明しています。さらに『運用指針』による用語定義と具体例を、この後のP40で説明しています。",
+            }
+          ]}>
         改正後の公衆送信にも無償でできる利用が残された
       </Popup>
       ためです。
@@ -686,7 +694,11 @@ import Page from '../../layouts/Page.astro';
     <div>
       <Popup
         id="c2s3_3"
-        popup="運用指針25ページ">
+        popup={[
+            {
+              text: "運用指針25ページ",
+            }
+          ]}>
         文化庁の整理
       </Popup>
       に従って、本冊子では、「遠隔合同授業」には2つの形態が含まれるため「遠隔合同授業等」とします。
@@ -716,7 +728,12 @@ import Page from '../../layouts/Page.astro';
       この補償金を収集、管理、分配するのは、
       <Popup
         id="c2s3_4"
-        popup="SARTRAS \n https://sartras.or.jp/">
+        popup={[
+            {
+              text: "SARTRAS",
+              href: "https://sartras.or.jp/"
+            }
+          ]}>
         「SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）」
       </Popup>
       という団体で、「サートラス」と読みます。
@@ -737,7 +754,12 @@ import Page from '../../layouts/Page.astro';
               先生の著作物が授業での公衆送信で使われた場合に、
               <Popup
                 id="c2s3_5"
-                popup="SARTRASの分配金のページ \n https://sartras.or.jp/bunpai/">
+                popup={[
+                    {
+                      text: "SARTRASの分配金のページ",
+                      href: "https://sartras.or.jp/bunpai/"
+                    }
+                  ]}>
                 集められた補償金から先生にお金が分配されます。
               </Popup>
             </>
@@ -770,7 +792,12 @@ import Page from '../../layouts/Page.astro';
       これを
       <Popup
         id="c2s3_6"
-        popup="著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム） \n https://forum.sartras.or.jp/">
+        popup={[
+            {
+              text: "著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）",
+              href: "https://forum.sartras.or.jp/"
+            }
+          ]}>
         「著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）」
       </Popup>
       と言います（以下、「フォーラム」と略します）。
