@@ -16,7 +16,7 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
 // 現在位置によるスタイルの違いも実装予定
 ---
 <li
-  class={`${sub && href === new URL(Astro.request.url).pathname && "relative before:absolute before:content-[''] before:bg-stone-200 before:w-px before:h-[calc(100%-32px)] before:top-[14.5px] before:left-[7.5px]"} md:border-0 border-b border-stone-200 last-of-type:border-0`}>
+  class={`${sub && href === new URL(Astro.request.url).pathname && "relative before:absolute before:content-[''] before:bg-stone-200 before:w-px before:h-[calc(100%-32px)] before:top-5 md:before:top-[14.5px] before:left-[7.5px]"} md:border-0 border-b border-stone-200 last-of-type:border-0`}>
   <a
     href={href}
     class={`${activeClassA} flex py-3 pr-2 gap-2.5 before:content-[''] before:rounded-full before:border before:border-white before:w-[11px] before:h-[11px] before:min-w-[11px] before:min-h-[11px] before:block before:mt-[6.5px] before:mx-[2.5px] md:px-0 ${sub || 'md:before:hidden'}`} {...attrs}>
@@ -32,7 +32,7 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
       {sub.map(({section, id}) => {
         return (
           <li
-            class="last-of-type:after:content-[''] last-of-type:after:bg-white last-of-type:after:absolute last-of-type:after:w-px last-of-type:after:h-8 last-of-type:after:left-[7.5px] last-of-type:after:top-[13.75px] relative">
+            class="last-of-type:after:content-[''] last-of-type:after:bg-white last-of-type:after:absolute last-of-type:after:w-px last-of-type:after:h-4 md:last-of-type:after:h-8 last-of-type:after:left-[7.5px] last-of-type:after:top-5 md:last-of-type:after:top-[13.75px] relative">
             <a
               href={href+id}
               class="text-sm font-normal py-3 md:py-1.5 pr-2 flex gap-2.5 before:rounded-full before:bg-stone-500 before:border before:border-white before:w-[9px] before:h-[9px] before:min-w-[9px] before:min-h-[9px] before:block before:mt-[6.75px] before:mx-[3.5px] before:z-30 md:leading-relaxed">
