@@ -148,8 +148,671 @@ import Page from '../../layouts/Page.astro';
     description=""
   >
     <h3>
+      英数
+    </h3>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '35条改正',
+          item: [{
+            text: "35条改正",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'SARTRAS',
+          item: [{
+            text: "SARTRAS",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'SARTRASライセンス',
+          item: [{
+            text: "SARTRASライセンス",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'TRIPS協定',
+          item: [{
+            text: "TRIPS協定",
+            href: "/",
+            memo: "",
+          }],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h3>
       五十音
     </h3>
+
+    <h4>
+      あ行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '引用',
+          item: [{
+            text: "引用",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '営利を目的としない上演等',
+          item: [{
+            text: "営利を目的としない上演等",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '演奏権',
+          item: [{
+            text: "演奏権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '遠隔合同授業',
+          item: [{
+            text: "遠隔合同授業",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'オーバーライド問題',
+          item: [{
+            text: "オーバーライド問題",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'オーファンワークス',
+          item: [{
+            text: "オーファンワークス",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '公に伝える権利',
+          item: [{
+            text: "公に伝える権利",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '公の伝達権',
+          item: [
+              {
+                text: "公の伝達権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公の伝達権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公の伝達権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公の伝達権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公の伝達権",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: 'オンデマンド型授業',
+          item: [{
+            text: "オンデマンド型授業",
+            href: "/",
+            memo: "",
+          }],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h4>
+      か行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '改正著作権法第35条運用指針',
+          item: [
+              {
+                text: "改正著作権法第35条運用指針",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "改正著作権法第35条運用指針",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '教科用図書等への掲載',
+          item: [{
+            text: "教科用図書等への掲載",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '共同著作者（物）',
+          item: [
+              {
+                text: "共同著作者（物）",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "共同著作者（物）",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '共有著作権',
+          item: [{
+            text: "共有著作権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '許諾なく利用できる著作物の例',
+          item: [{
+            text: "許諾なく利用できる著作物の例",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'クリエイティブ・コモンズ・ライセンス',
+          item: [{
+            text: "クリエイティブ・コモンズ・ライセンス",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '権利制限規定',
+          item: [
+              {
+                text: "権利制限規定",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "権利制限規定",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "権利制限規定",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '公衆送信権',
+          item: [
+              {
+                text: "公衆送信権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公衆送信権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公衆送信権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公衆送信権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公衆送信権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公衆送信権",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '口述権',
+          item: [{
+            text: "口述権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '公衆送信の許諾',
+          item: [{
+            text: "公衆送信の許諾",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '公表権',
+          item: [
+              {
+                text: "公表権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "公表権",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: 'コピーする権利',
+          item: [{
+            text: "コピーする権利",
+            href: "/",
+            memo: "",
+          }],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h4>
+      さ行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '試験問題としての複製等',
+          item: [{
+            text: "試験問題としての複製等",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '私的使用のための複製',
+          item: [{
+            text: "私的使用のための複製",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '氏名表示権',
+          item: [
+              {
+                text: "氏名表示権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "氏名表示権",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '授業で著作物を扱う際の権利制限',
+          item: [{
+            text: "授業で著作物を扱う際の権利制限",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '授業目的公衆送信補償金制度',
+          item: [{
+            text: "授業目的公衆送信補償金制度",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '上映権',
+          item: [
+              {
+                text: "上映権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "上映権",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '上演権',
+          item: [{
+            text: "上演権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '譲渡権',
+          item: [{
+            text: "譲渡権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '職務著作',
+          item: [{
+            text: "職務著作",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '親告罪',
+          item: [{
+            text: "親告罪",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: 'スタジオ型授業',
+          item: [{
+            text: "スタジオ型授業",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '戦時加算制度',
+          item: [{
+            text: "戦時加算制度",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '送信可能化権',
+          item: [
+              {
+                text: "送信可能化権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "送信可能化権",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "送信可能化権",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h4>
+      た行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '貸与権',
+          item: [{
+            text: "貸与権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作権者',
+          item: [{
+            text: "著作権者",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作権者不明の場合の裁定補償金金額シミュレーションシステム',
+          item: [{
+            text: "著作権者不明の場合の裁定補償金金額シミュレーションシステム",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作権フリー',
+          item: [{
+            text: "著作権フリー",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作権法改正',
+          item: [{
+            text: "著作権法改正",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作権法上の著作物ではないものの例',
+          item: [{
+            text: "著作権法上の著作物ではないものの例",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作財産権',
+          item: [{
+            text: "著作財産権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作者',
+          item: [{
+            text: "著作者",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作者人格権',
+          item: [{
+            text: "著作者人格権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作物の教育利用に関する関係者フォーラム',
+          item: [{
+            text: "著作物の教育利用に関する関係者フォーラム",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '著作物の種類',
+          item: [
+              {
+                text: "著作物の種類",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "著作物の種類",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '著作隣接権',
+          item: [{
+            text: "著作隣接権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '展示権',
+          item: [{
+            text: "展示権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '同一性保持権',
+          item: [{
+            text: "同一性保持権",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '図書館等における複製',
+          item: [{
+            text: "図書館等における複製",
+            href: "/",
+            memo: "",
+          }],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h4>
+      な行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '二次的著作物',
+          item: [
+              {
+                text: "二次的著作物",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "二次的著作物",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "二次的著作物",
+                href: "/",
+                memo: "",
+            },
+              {
+                text: "二次的著作物",
+                href: "/",
+                memo: "",
+            },
+          ],
+        },
+        {
+          text: '二次的著作物の利用に関する原著作者の権利',
+          item: [{
+            text: "二次的著作物の利用に関する原著作者の権利",
+            href: "/",
+            memo: "",
+          }],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
     <h4>
       は行
     </h4>
@@ -224,6 +887,68 @@ import Page from '../../layouts/Page.astro';
                 memo: "（1章 section4）",
             },
           ],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h4>
+      ま行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: '無方式主義',
+          item: [{
+            text: "無方式主義",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '名誉声望権',
+          item: [{
+            text: "名誉声望権",
+            href: "/",
+            memo: "",
+          }],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
+    </div>
+
+    <h4>
+      ら行
+    </h4>
+    <div class="flex flex-col gap-2">
+      {[
+        {
+          text: 'ライセンス',
+          item: [{
+            text: "ライセンス",
+            href: "/",
+            memo: "",
+          }],
+        },
+        {
+          text: '利用条件',
+          item: [{
+            text: "利用条件",
+            href: "/",
+            memo: "",
+          }],
         },
       ].map(({text, item}) => {
         return (
