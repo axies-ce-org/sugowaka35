@@ -36,7 +36,7 @@
 	}
 
 	h5 {
-		@apply font-bold text-orange-500 text-3.75 leading-normal md:text-base md:leading-normal;
+		@apply font-bold text-orange-600 text-3.75 leading-normal md:text-base md:leading-normal;
 	}
 
 	dd {

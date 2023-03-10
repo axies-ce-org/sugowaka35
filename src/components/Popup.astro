@@ -33,7 +33,7 @@ const {id, popup, word} = Astro.props;
                       {text.split('\n').map(t => (<>{t}<br /></>))}
                     </p>
                     {href && (
-                      <a href={href} target="_blank" rel="noopener noreferrer" class="underline text-orange-600">
+                      <a href={href} target="_blank" rel="noopener noreferrer" class="underline text-orange-500">
                         {href}
                       </a>
                     )}
@@ -49,7 +49,7 @@ const {id, popup, word} = Astro.props;
     </div>
   </div>
 
-  <div role="button" data-micromodal-trigger={`modal-${id}`} class="inline text-orange-500 font-bold group cursor-pointer">
+  <div role="button" data-micromodal-trigger={`modal-${id}`} class="inline text-orange-600 font-bold group cursor-pointer">
     <img src="/assets/images/question.svg" alt="" class="inline mb-0.5" />
     <span class="underline group-hover:no-underline">
       <slot />
