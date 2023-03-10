@@ -385,7 +385,7 @@ import Page from '../../layouts/Page.astro';
       {item: '（３）アニメのキャラクターの名前'},
       {item: '（４）学生のレポートに書かれたグラフ'},
     ]}>
-      <div class="flex flex-col gap-8 md:gap-12">
+      <div class="flex flex-col">
         {[
           {
             title: '（１）ファンタジー小説の設定',
@@ -477,7 +477,7 @@ import Page from '../../layouts/Page.astro';
          },
         ].map(({title, bubble}) => {
           return (
-            <dl>
+            <dl class="pl-2 pr-3 py-4 md:p-6">
               <dt class="p-1 bg-orange-600 text-white rounded md:px-2">{title}</dt>
               <dd class="flex flex-col gap-3 mt-4 md:gap-[19px] md:mt-[19px]">
                 {bubble.map(({speaker, text, feLevel}) => {
