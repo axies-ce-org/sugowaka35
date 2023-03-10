@@ -17,7 +17,19 @@ const {title, number, list, level} = Astro.props;
       <span class="text-[40px] md:text-[56px] font-medium leading-none md:leading-none text-orange-600">
         Q{number && number}
       </span>
-      {title}
+      <div class="flex flex-col gap-2">
+        {title}
+        {level && (
+          <ul class="flex gap-2 text-3.25 leading-normal md:text-sm md:leading-relaxed font-bold !p-0">
+            <li class={`px-1.5 md:px-2 rounded list-none ${level === "both" || level === "low" ? "bg-orange-600 text-white" : "bg-white border-slate-300 border text-slate-300"}`}>
+              初等・中等
+            </li>
+            <li class={`px-1.5 md:px-2 rounded list-none ${level === "both" || level === "high" ? "bg-orange-600 text-white" : "bg-white border-slate-300 border text-slate-300"}`}>
+              高等
+            </li>
+          </ul>
+        )}
+      </div>
     </div>
     {list && (
       <ul class="mt-3 md:mt-2 px-3 md:px-0 md:ml-[83px] font-bold">
@@ -28,16 +40,6 @@ const {title, number, list, level} = Astro.props;
             </li>
           )
         })}
-      </ul>
-    )}
-    {level && (
-      <ul class="flex gap-2 text-3.25 leading-normal md:text-sm md:leading-relaxed font-bold ml-[54px] md:ml-[102px] mt-2">
-        <li class={`px-1.5 md:px-2 rounded list-none ${level === "both" || level === "low" ? "bg-orange-600 text-white" : "bg-white border-slate-300 border text-slate-300"}`}>
-          初等・中等
-        </li>
-        <li class={`px-1.5 md:px-2 rounded list-none ${level === "both" || level === "high" ? "bg-orange-600 text-white" : "bg-white border-slate-300 border text-slate-300"}`}>
-          高等
-        </li>
       </ul>
     )}
   </dt>
