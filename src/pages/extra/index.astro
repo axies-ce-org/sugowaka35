@@ -154,86 +154,85 @@ import Page from '../../layouts/Page.astro';
       は行
     </h4>
     <div class="flex flex-col gap-2">
-      <IndexItem
-        item={[
-          {
+      {[
+        {
+          text: '罰則規定',
+          item: [{
             text: "罰則規定",
             href: "/",
             memo: "（1章 section4）",
-         },
-        ]}>
-        罰則規定
-      </IndexItem>
-      <IndexItem
-        item={[
-          {
+          }],
+        },
+        {
+          text: 'パブリックドメイン',
+          item: [{
             text: "パブリックドメイン",
             href: "/",
             memo: "（1章 section4）",
-         },
-        ]}>
-        パブリックドメイン
-      </IndexItem>
-      <IndexItem
-        item={[
-          {
+          }],
+        },
+        {
+          text: '万国著作権条約',
+          item: [{
             text: "海外の著作物を授業で扱う場合に注意する点は?",
             href: "/",
             memo: "（3章 section1）",
-         },
-        ]}>
-        万国著作権条約
-      </IndexItem>
-      <IndexItem
-        item={[
-          {
+          }],
+        },
+        {
+          text: '頒布権',
+          item: [{
             text: "著作権(著作財産権)",
             href: "/",
             memo: "（1章 section4）",
-         },
-        ]}>
-        頒布権
-      </IndexItem>
-      <IndexItem
-        item={[
-          {
+          }],
+        },
+        {
+          text: '非親告罪',
+          item: [{
             text: "罰則規定",
             href: "/",
             memo: "（3章 section1）",
-         },
-        ]}>
-        非親告罪
-      </IndexItem>
-      <IndexItem
-        item={[
-          {
-            text: "著作権(著作財産権)",
-            href: "/",
-            memo: "（1章 section4）",
-         },
-          {
-            text: "授業で扱う著作物",
-            href: "/",
-            memo: "（3章 section1）",
-         },
-          {
-            text: "授業で著作物を扱う際の権利制限",
-            href: "/",
-            memo: "（1章 section4）",
-         },
-          {
-            text: "複製(運用指針 5 ページ)",
-            href: "/",
-            memo: "（3章 section1）",
-         },
-          {
-            text: "複製・公衆送信・伝達の態様",
-            href: "/",
-            memo: "（1章 section4）",
-         },
-        ]}>
-        複製(権)
-      </IndexItem>
+          }],
+        },
+        {
+          text: '複製(権)',
+          item: [
+              {
+                text: "著作権(著作財産権)",
+                href: "/",
+                memo: "（1章 section4）",
+            },
+              {
+                text: "授業で扱う著作物",
+                href: "/",
+                memo: "（3章 section1）",
+            },
+              {
+                text: "授業で著作物を扱う際の権利制限",
+                href: "/",
+                memo: "（1章 section4）",
+            },
+              {
+                text: "複製(運用指針 5 ページ)",
+                href: "/",
+                memo: "（3章 section1）",
+            },
+              {
+                text: "複製・公衆送信・伝達の態様",
+                href: "/",
+                memo: "（1章 section4）",
+            },
+          ],
+        },
+      ].map(({text, item}) => {
+        return (
+        <IndexItem
+          item={item}>
+          {text}
+        </IndexItem>
+        )
+      })}
     </div>
   </Section>
 
