@@ -5,9 +5,10 @@ type Props = {
   list?: {
     item: string
   }[]
+  level?: string;
 }
 
-const {title, number, list} = Astro.props;
+const {title, number, list, level} = Astro.props;
 ---
 
 <div id={number && `q${number}`}>
@@ -27,6 +28,16 @@ const {title, number, list} = Astro.props;
             </li>
           )
         })}
+      </ul>
+    )}
+    {level && (
+      <ul class="flex gap-2 text-3.25 leading-normal md:text-sm md:leading-relaxed font-bold ml-[54px] md:ml-[102px] mt-2">
+        <li class={`px-1.5 md:px-2 rounded list-none ${level === "both" || level === "low" ? "bg-orange-600 text-white" : "bg-white border-slate-300 border text-slate-300"}`}>
+          初等・中等
+        </li>
+        <li class={`px-1.5 md:px-2 rounded list-none ${level === "both" || level === "high" ? "bg-orange-600 text-white" : "bg-white border-slate-300 border text-slate-300"}`}>
+          高等
+        </li>
       </ul>
     )}
   </dt>

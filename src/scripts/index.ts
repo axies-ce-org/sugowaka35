@@ -32,4 +32,3 @@ MicroModal.init({
   awaitOpenAnimation: true,
   awaitCloseAnimation: true
 });
-

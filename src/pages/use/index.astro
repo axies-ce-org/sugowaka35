@@ -13,7 +13,23 @@ import Quiz from '../../components/Quiz.astro';
     title="授業における著作物利用Q&A"
     description="このCHAPTERでは、授業で第三者の著作物を扱う際の具体的な事例について、Q&A形式で説明を行います。"
   >
-    <Quiz title="学校を紹介した新聞記事をWebサイトで紹介しても大丈夫？" number="1">
+
+  <ul class="flex gap-2 md:gap-5 flex-col md:flex-row text-3.25 leading-normal md:text-sm md:leading-relaxed font-bold !p-0 !md:p-0">
+    <li class="list-none flex gap-2">
+      <span class="px-1.5 md:px-2 rounded bg-orange-600 text-white whitespace-nowrap h-fit">
+        初等・中等
+      </span>
+        小学校・中学校・高校などでありそうな事例
+    </li>
+    <li class="list-none flex gap-2">
+      <span class="px-1.5 md:px-2 rounded bg-orange-600 text-white whitespace-nowrap h-fit">
+        高等
+      </span>
+        大学や高専などでありそうな事例
+    </li>
+  </ul>
+
+    <Quiz title="学校を紹介した新聞記事をWebサイトで紹介しても大丈夫？" number="1" level="both">
       <SpeechBubbles>
         {[
           {
@@ -34,7 +50,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="共同で作成した教材は作成に関わった教員なら使える？" number="2">
+    <Quiz title="共同で作成した教材は作成に関わった教員なら使える？" number="2" level="both">
       <SpeechBubbles>
         {[
           {
@@ -76,7 +92,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="著作物を複製して他の教員に提供しても大丈夫？" number="3">
+    <Quiz title="著作物を複製して他の教員に提供しても大丈夫？" number="3" level="both">
       <SpeechBubbles>
         {[
           {
@@ -119,7 +135,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="卒業した学生の作文やレポートを授業で紹介したい。" number="4">
+    <Quiz title="卒業した学生の作文やレポートを授業で紹介したい。" number="4" level="both">
       <SpeechBubbles>
         {[
           {
@@ -161,7 +177,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="違法な著作物を授業で紹介しても大丈夫？" number="5">
+    <Quiz title="違法な著作物を授業で紹介しても大丈夫？" number="5" level="high">
       <SpeechBubbles>
         {[
           {
@@ -197,7 +213,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="授業で映画を上映できる？" number="6">
+    <Quiz title="授業で映画を上映できる？" number="6" level="both">
       <SpeechBubbles>
         {[
           {
@@ -250,7 +266,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="読み聞かせの動画をインターネット上に公開しても大丈夫？" number="7">
+    <Quiz title="読み聞かせの動画をインターネット上に公開しても大丈夫？" number="7" level="low">
       <SpeechBubbles>
         {[
           {
@@ -271,7 +287,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="楽曲を練習しやすく編曲すると問題ある？" number="8">
+    <Quiz title="楽曲を練習しやすく編曲すると問題ある？" number="8" level="low">
       <SpeechBubbles>
         {[
           {
@@ -302,7 +318,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="給食の時間に録画したテレビ番組を流したい。" number="9">
+    <Quiz title="給食の時間に録画したテレビ番組を流したい。" number="9" level="low">
       <SpeechBubbles>
         {[
           {
@@ -337,7 +353,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="海外の著作物を授業で扱う場合に注意する点は？" number="10">
+    <Quiz title="海外の著作物を授業で扱う場合に注意する点は？" number="10" level="both">
       <SpeechBubbles>
         {[
           {
@@ -390,7 +406,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="ビブリオバトルを行う場合に注意するポイントとは？" number="11">
+    <Quiz title="ビブリオバトルを行う場合に注意するポイントとは？" number="11" level="high">
       <SpeechBubbles>
         {[
           {
@@ -453,7 +469,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="TAが去年のテスト問題を学生に配布したい。" number="12">
+    <Quiz title="TAが去年のテスト問題を学生に配布したい。" number="12" level="high">
       <SpeechBubbles>
         {[
           {
@@ -510,7 +526,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="本登録していない学生は「授業を受ける者」に該当する？" number="13">
+    <Quiz title="本登録していない学生は「授業を受ける者」に該当する？" number="13" level="high">
       <SpeechBubbles>
         {[
           {
@@ -531,7 +547,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="論文をコピーして学生に配布するのは問題ない？" number="14">
+    <Quiz title="論文をコピーして学生に配布するのは問題ない？" number="14" level="high">
       <SpeechBubbles>
         {[
           {
@@ -571,7 +587,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="論文を丸ごと学生に配布しても大丈夫？" number="15">
+    <Quiz title="論文を丸ごと学生に配布しても大丈夫？" number="15" level="high">
       <SpeechBubbles>
         {[
           {
@@ -618,7 +634,7 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="履修期間を過ぎた後でも教材は使える？" number="16">
+    <Quiz title="履修期間を過ぎた後でも教材は使える？" number="16" level="high">
       <SpeechBubbles>
         {[
           {

@@ -8,7 +8,22 @@ import MenuItem from "./MenuItem.astro"
       <MenuItem href="/introduction">
         はじめに
       </MenuItem>
-      <MenuItem href="/extra">
+      <MenuItem
+        href="/extra"
+        sub={[
+          {
+            section: "著作権を知るための資料集",
+            id: "#data",
+          },
+          {
+            section: "索引",
+            id: "#index",
+          },
+          {
+            section: "おわりに",
+            id: "#afterword",
+          },
+        ]}>
         資料集・索引
       </MenuItem>
       <MenuItem
