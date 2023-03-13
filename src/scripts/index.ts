@@ -15,7 +15,7 @@ document.querySelector('.sub-menu').insertAdjacentHTML('afterbegin', toc);
 window.addEventListener('scroll', function() {
   let scroll = window.scrollY;  //スクロール量を取得
   let hight = window.innerHeight; //画面の高さを取得
-  let offset = 200;
+  let offset = 500;
   const toc_completed = document.getElementById('fixed-toc');
   headings.forEach(function(heading, index) {
       let i = index + 1;

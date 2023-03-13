@@ -2,7 +2,7 @@
 type Props = {
   id: string;
   popup: {
-    text: string;
+    text?: string;
     href?: string;
   }[];
   word?: string;
@@ -29,9 +29,11 @@ const {id, popup, word} = Astro.props;
               {popup.map(({text, href}) => {
                 return (
                   <div class="mt-3 md:mt-4 first-of-type:mt-0">
-                    <p>
-                      {text.split('\n').map(t => (<>{t}<br /></>))}
-                    </p>
+                    {text && (
+                      <p>
+                        {text.split('\n').map(t => (<>{t}<br /></>))}
+                      </p>
+                    )}
                     {href && (
                       <a href={href} target="_blank" rel="noopener noreferrer" class="underline text-orange-500">
                         {href}
