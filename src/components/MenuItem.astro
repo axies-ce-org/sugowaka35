@@ -28,19 +28,7 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
     </div>
   </a>
   {sub && href === new URL(Astro.request.url).pathname && (
-    <ul>
-      {sub.map(({section, id}) => {
-        return (
-          <li
-            class="last-of-type:after:content-[''] last-of-type:after:bg-white last-of-type:after:absolute last-of-type:after:w-px last-of-type:after:h-4 md:last-of-type:after:h-8 last-of-type:after:left-[7.5px] last-of-type:after:top-5 md:last-of-type:after:top-[13.75px] relative">
-            <a
-              href={href+id}
-              class="text-sm font-normal py-3 md:py-1.5 pr-2 flex gap-2.5 before:rounded-full before:bg-stone-500 before:border before:border-white before:w-[9px] before:h-[9px] before:min-w-[9px] before:min-h-[9px] before:block before:mt-[6.75px] before:mx-[3.5px] before:z-30 md:leading-relaxed">
-              {section}
-            </a>
-          </li>
-        )
-      })}
-    </ul>
+    <div class="sub-menu">
+    </div>
   )}
 </li>
