@@ -12,8 +12,6 @@ interface Props extends HTMLAttributes<'a'> {
 const { href, sub, ...attrs } = Astro.props;
 
 const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange-600 before:bg-orange-500 md:py-2 before:z-30' : 'before:bg-stone-500 md:py-1 md:before:hidden';
-
-// 現在位置によるスタイルの違いも実装予定
 ---
 <li
   class={`${sub && href === new URL(Astro.request.url).pathname && "relative before:absolute before:content-[''] before:bg-stone-200 before:w-px before:h-[calc(100%-32px)] before:top-5 md:before:top-[14.5px] before:left-[7.5px]"} md:border-0 border-b border-stone-200 last-of-type:border-0`}>
