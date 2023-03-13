@@ -3,21 +3,17 @@ import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {
   href: string;
-  sub?: {
-    section: string;
-    id: string;
-  }[]
 }
 
-const { href, sub, ...attrs } = Astro.props;
+const { href, ...attrs } = Astro.props;
 
 const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange-600 before:bg-orange-500 md:py-2 before:z-30' : 'before:bg-stone-500 md:py-1 md:before:hidden';
 ---
 <li
-  class={`${sub && href === new URL(Astro.request.url).pathname && "relative before:absolute before:content-[''] before:bg-stone-200 before:w-px before:h-[calc(100%-32px)] before:top-5 md:before:top-[14.5px] before:left-[7.5px]"} md:border-0 border-b border-stone-200 last-of-type:border-0`}>
+  class={`${href === new URL(Astro.request.url).pathname && "relative before:absolute before:content-[''] before:bg-stone-200 before:w-px before:h-[calc(100%-32px)] before:top-5 md:before:top-[14.5px] before:left-[7.5px]"} md:border-0 border-b border-stone-200 last-of-type:border-0`}>
   <a
     href={href}
-    class={`${activeClassA} flex py-3 pr-2 gap-2.5 before:content-[''] before:rounded-full before:border before:border-white before:w-[11px] before:h-[11px] before:min-w-[11px] before:min-h-[11px] before:block before:mt-[6.5px] before:mx-[2.5px] md:px-0 ${sub || 'md:before:hidden'}`} {...attrs}>
+    class={`${activeClassA} flex py-3 pr-2 gap-2.5 before:content-[''] before:rounded-full before:border before:border-white before:w-[11px] before:h-[11px] before:min-w-[11px] before:min-h-[11px] before:block before:mt-[6.5px] before:mx-[2.5px] md:px-0`} {...attrs}>
     <div class="flex items-center w-full">
       <p class="flex-1">
         <slot />
@@ -25,7 +21,7 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
       <img src="/assets/images/chevron-right.svg" alt="" class={`md:hidden ${href === new URL(Astro.request.url).pathname && "hidden"}`} />
     </div>
   </a>
-  {sub && href === new URL(Astro.request.url).pathname && (
+  {href === new URL(Astro.request.url).pathname && (
     <div class="sub-menu">
     </div>
   )}
