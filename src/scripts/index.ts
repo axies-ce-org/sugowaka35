@@ -5,7 +5,7 @@ const headings = document.querySelectorAll('.section-title');
 let toc = '<ul id="fixed-toc">';
 
 headings.forEach(function(heading, i) {
-  heading.id = 'heading-0' + (i + 1);
+  heading.id = 'sec-0' + (i + 1);
   let id = heading.id;
   toc = toc + '<li><a href="#' + id + '">' + heading.textContent + '</a></li>';
 });
