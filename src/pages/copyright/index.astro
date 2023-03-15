@@ -549,7 +549,7 @@ import Page from '../../layouts/Page.astro';
 
     <ImgCaption id="ref15">
       <figcaption>【01】公衆送信の許諾</figcaption>
-      <table class="text-3.25 md:text-sm leading-tight md:leading-tight">
+      <table class="text-3.25 leading-tight md:text-sm md:leading-tight">
         <thead>
           {[
             [
@@ -651,10 +651,10 @@ import Page from '../../layouts/Page.astro';
             ],
           ].map((item) => {
             return (
-                <tr class="[&:nth-child(2)]:!bg-white [&:first-child]:!bg-orange-100">
+                <tr class="[&:first-child]:!bg-orange-100 [&:nth-child(2)]:!bg-white">
                   {item.map(({td, rowspan}) => {
                     return(
-                      <td class="first-of-type:text-left texet-center" rowspan={rowspan}>
+                      <td class="text-center first-of-type:text-left" rowspan={rowspan}>
                         {td}
                       </td>
                     )

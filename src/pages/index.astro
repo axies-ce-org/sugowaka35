@@ -29,7 +29,7 @@ const Chapter = [
 ---
 
 <Layout title="すごわか">
-  <div class="pb-16 md:pb-20 bg-orange-200">
+  <div class="bg-orange-200 pb-16 md:pb-20">
     <div class="mx-auto text-center">
       <h1 class="font-bold">
         <img src="/assets/images/title.png"
@@ -38,82 +38,82 @@ const Chapter = [
           decoding="async"
         />
       </h1>
-      <div class="inline-block mt-3 md:mt-[30px]">
+      <div class="mt-3 inline-block md:mt-[30px]">
         <img
           src="/assets/images/kv.png"
           alt=""
-          class="max-w-[71.4%] mx-auto md:max-w-[544px]"
+          class="mx-auto max-w-[71.4%] md:max-w-[544px]"
           decoding="async"
         />
       </div>
     </div>
-    <div class="px-4 md:px-0 max-w-[920px] mt-6 md:mt-10 mx-auto md:w-[90%]">
+    <div class="mx-auto mt-6 max-w-[920px] px-4 md:mt-10 md:w-[90%] md:px-0">
       <p class="text-base leading-relaxed">
         このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。
         このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。
       </p>
-      <div class="grid gap-6 md:gap-10 md:grid-cols-2 mt-6 md:mt-10">
+      <div class="mt-6 grid gap-6 md:mt-10 md:grid-cols-2 md:gap-10">
         <a
           href="/introduction"
-          class="bg-white p-4 md:p-10 rounded-2xl flex gap-2 items-center hover:opacity-95 group transition-opacity">
+          class="group flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:p-10">
           <div class="grow">
-            <h2 class="text-lg md:text-2xl text-stone-800 font-medium leading-normal md:leading-normal">
+            <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
               はじめに
             </h2>
-            <p class="mt-1 md:mt-2 text-sm leading-relaxed">
+            <p class="mt-1 text-sm leading-relaxed md:mt-2">
               本書の読み方、キャラクターや著者の紹介です。
             </p>
           </div>
           <img
             src="/assets/images/arrow-circle.svg"
             alt=""
-            class="w-8 h-8 md:w-9 md:h-9 group-hover:translate-x-2 transition-transform duration-200"
+            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
           />
         </a>
         <a
           href="/extra"
-          class="bg-white p-4 md:p-10 rounded-2xl flex gap-2 items-center hover:opacity-95 group transition-opacity">
+          class="group flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:p-10">
           <div class="grow">
-            <h2 class="text-lg md:text-2xl text-stone-800 font-medium leading-normal md:leading-normal">
+            <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
               資料集・索引
             </h2>
-            <p class="mt-1 md:mt-2 text-sm leading-relaxed">
+            <p class="mt-1 text-sm leading-relaxed md:mt-2">
               著作権を知るための資料集、用語の索引です。
             </p>
           </div>
           <img
             src="/assets/images/arrow-circle.svg"
             alt=""
-            class="w-8 h-8 md:w-9 md:h-9 group-hover:translate-x-2 transition-transform duration-200"
+            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
           />
         </a>
       </div>
-      <ul class="flex flex-col mt-6 md:mt-10 gap-6 md:gap-10">
+      <ul class="mt-6 flex flex-col gap-6 md:mt-10 md:gap-10">
         {Chapter.map(({title, text, href, src}, i) => {
           return (
             <li>
               <a
                 href={href}
-                class="flex flex-col gap-6 md:flex-row md:gap-10 p-4 bg-white rounded-2xl md:p-10 hover:opacity-95 group transition-opacity">
+                class="group flex flex-col gap-6 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:flex-row md:gap-10 md:p-10">
                 <div class="flex flex-col gap-2 md:gap-4">
-                  <div class="flex flex-col gap-1 md:gap-0 font-medium">
-                    <span class="text-5xl leading-none md:text-[80px] md:leading-none text-orange-600">
+                  <div class="flex flex-col gap-1 font-medium md:gap-0">
+                    <span class="text-5xl leading-none text-orange-600 md:text-[80px] md:leading-none">
                       {('00'+(i+1)).slice(-2)}
                     </span>
                     <div class="flex gap-2">
-                      <h3 class="text-2xl md:text-[32px] text-stone-800 leading-normal md:leading-normal grow">
+                      <h3 class="grow text-2xl leading-normal text-stone-800 md:text-[32px] md:leading-normal">
                         {title.split('\n').map(t => (<>{t}<br /></>))}
                       </h3>
                       <img
                         src="/assets/images/arrow-circle.svg"
                         alt=""
-                        class="w-8 h-8 md:w-9 md:h-9 mt-0.5 md:mt-2 group-hover:translate-x-2 transition-transform duration-200"
+                        class="mt-0.5 h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:mt-2 md:h-9 md:w-9"
                       />
                     </div>
                   </div>
                   <p>{text}</p>
                 </div>
-                <img src={src} alt="" class="md:max-w-[50%] object-contain" />
+                <img src={src} alt="" class="object-contain md:max-w-[50%]" />
               </a>
             </li>
           )
