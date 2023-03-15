@@ -6,24 +6,24 @@ let toc = '<ul id="fixed-toc">';
 
 headings.forEach(function(heading, i) {
   heading.id = 'sec-0' + (i + 1);
-  let id = heading.id;
+  const id = heading.id;
   toc = toc + '<li><a href="#' + id + '">' + heading.textContent + '</a></li>';
 });
 toc = toc + '</ul>';
 document.querySelector('.sub-menu').insertAdjacentHTML('afterbegin', toc);
 
 window.addEventListener('scroll', function() {
-  let scroll = window.scrollY;  //スクロール量を取得
-  let hight = window.innerHeight; //画面の高さを取得
-  let offset = 500;
+  const scroll = window.scrollY;  //スクロール量を取得
+  const hight = window.innerHeight; //画面の高さを取得
+  const offset = 500;
   const toc_completed = document.getElementById('fixed-toc');
   headings.forEach(function(heading, index) {
-      let i = index + 1;
-      let target = document.querySelector('#fixed-toc li:nth-of-type(' + i + ') > a');
-      let pos = heading.getBoundingClientRect().top + scroll; //見出しの位置
+      const i = index + 1;
+      const target = document.querySelector('#fixed-toc li:nth-of-type(' + i + ') > a');
+      const pos = heading.getBoundingClientRect().top + scroll; //見出しの位置
       if (scroll > pos - hight + offset) {  //スクロール量が見出しを超えた
           if (headings[index + 1] !== undefined) {  //次の見出しがある＝最後の見出しではない
-              let next_pos = headings[index + 1].getBoundingClientRect().top + scroll;  //次の見出しの位置
+              const next_pos = headings[index + 1].getBoundingClientRect().top + scroll;  //次の見出しの位置
               if (scroll > next_pos - hight + offset) { //スクロール量が次の見出しも超えている
                   target.classList.remove('current');
               } else if (target.classList.contains('current') == true) {  //すでにcurrentがついている
