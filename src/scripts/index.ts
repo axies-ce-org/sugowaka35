@@ -2,15 +2,16 @@ import MicroModal from 'micromodal';
 
 // サイドバー ハイライト
 const headings = document.querySelectorAll('.section-title');
-let toc = '<ul id="fixed-toc">';
+document.querySelector('.sub-menu').insertAdjacentHTML('afterbegin', '<ul id="fixed-toc">');
+
+let list = ''
 
 headings.forEach(function(heading, i) {
   heading.id = 'sec-0' + (i + 1);
   const id = heading.id;
-  toc = toc + '<li><a href="#' + id + '">' + heading.textContent + '</a></li>';
+  list = list + '<li><a href="#' + id + '">' + heading.textContent + '</a></li>'
 });
-toc = toc + '</ul>';
-document.querySelector('.sub-menu').insertAdjacentHTML('afterbegin', toc);
+document.querySelector('#fixed-toc').insertAdjacentHTML('afterbegin', list + '</ul>');
 
 window.addEventListener('scroll', function() {
   const scroll = window.scrollY;  //スクロール量を取得
