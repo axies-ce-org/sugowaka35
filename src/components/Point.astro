@@ -2,12 +2,13 @@
 type Props = {
   type?: string;
   title?: string;
+  id?: string;
 }
 
-const {type, title} = Astro.props;
+const {type, title, id} = Astro.props;
 ---
 
-<div>
+<div id={id}>
   {type !== 'simple' && (<div class="text-white bg-orange-600 uppercase font-medium text-sm md:text-base leading-normal md:leading-normal px-4 py-0.5 rounded-t-lg md:px-4 md:py-1 ml-3 md:ml-4 inline-block">Point</div>)}
   <div class="bg-stone-100 rounded-2xl p-3 md:p-4">
     {title && (

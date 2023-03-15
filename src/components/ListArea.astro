@@ -1,5 +1,10 @@
 ---
+type Props = {
+  id ?: string;
+}
+
+const {id} = Astro.props;
 ---
-<div class="py-4 md:py-6 border-y border-orange-500 flex flex-col gap-3 md:gap-6">
+<div id={id} class="py-4 md:py-6 border-y border-orange-500 flex flex-col gap-3 md:gap-6">
   <slot />
 </div>

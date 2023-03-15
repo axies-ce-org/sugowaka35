@@ -1,5 +1,10 @@
 ---
+type Props = {
+  id ?: string;
+}
+
+const {id} = Astro.props;
 ---
-<div class="flex flex-col gap-1 md:gap-1.5">
+<div id={id} class="flex flex-col gap-1 md:gap-1.5">
   <slot />
 </div>
