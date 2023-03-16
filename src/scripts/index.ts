@@ -2,7 +2,8 @@ import MicroModal from 'micromodal';
 
 // サイドバー ハイライト
 const headings = document.querySelectorAll('.section-title');
-document.querySelector('.sub-menu').insertAdjacentHTML('afterbegin', '<ul id="fixed-toc">');
+const subMenu = document.querySelector('.sub-menu');
+subMenu.insertAdjacentHTML('afterbegin', '<ul id="fixed-toc">');
 
 let list = ''
 
@@ -11,13 +12,14 @@ headings.forEach(function(heading, i) {
   const id = heading.id;
   list = list + '<li><a href="#' + id + '">' + heading.textContent + '</a></li>'
 });
-document.querySelector('#fixed-toc').insertAdjacentHTML('afterbegin', list + '</ul>');
+const toc_completed = document.getElementById('fixed-toc');
+toc_completed.insertAdjacentHTML('afterbegin', list);
+toc_completed.insertAdjacentHTML('afterend', '</ul>');
 
 window.addEventListener('scroll', function() {
   const scroll = window.scrollY;  //スクロール量を取得
   const hight = window.innerHeight; //画面の高さを取得
   const offset = 500;
-  const toc_completed = document.getElementById('fixed-toc');
   headings.forEach(function(heading, index) {
       const i = index + 1;
       const target = document.querySelector('#fixed-toc li:nth-of-type(' + i + ') > a');

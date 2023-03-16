@@ -1,9 +1,12 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import { log } from 'console';
 
 interface Props extends HTMLAttributes<'a'> {
   href: string;
 }
+
+const isBasis = Astro.url.pathname === '/basis'
 
 const { href, ...attrs } = Astro.props;
 
@@ -25,4 +28,9 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
     <div class="sub-menu">
     </div>
   )}
+  <!-- {!isBasis && (
+    <div class="sub-menu">
+      basis
+    </div>
+  )} -->
 </li>
