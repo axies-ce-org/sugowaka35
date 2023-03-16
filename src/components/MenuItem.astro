@@ -21,7 +21,7 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
       <p class="flex-1">
         <slot />
       </p>
-      <img src="/assets/images/chevron-right.svg" alt="" class={`md:hidden ${href === new URL(Astro.request.url).pathname && "hidden"}`} />
+      <img src="/assets/images/chevron-right.svg" alt="" class={`md:hidden ${href === new URL(Astro.request.url).pathname && "hidden"}`}  decoding="async"/>
     </div>
   </a>
   {href === new URL(Astro.request.url).pathname && (

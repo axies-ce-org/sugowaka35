@@ -18,12 +18,14 @@ import Page from '../../templates/Page.astro';
     わたしたちの周りには、たくさんの著作物があり、これらは著作権法で保護されています。しかし、著作権法は身近なことに関する法律であるわりに、知られていないことや、勘違いされていることなどが多々あります。
   </p>
   <div>
-    そこで、この改正の後、著作権の権利者側と教育機関側が協力して、35条のガイドラインを作ることになりました。それが「
-    <a href="https://sartras.or.jp/unyoshishin/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">
-      改正著作権法第35条運用指針
-    </a>
-    」というもので、SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）
-    という管理団体のサイトに掲載されています。
+    <p class="inline">
+      そこで、この改正の後、著作権の権利者側と教育機関側が協力して、35条のガイドラインを作ることになりました。それが「
+      <a href="https://sartras.or.jp/unyoshishin/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">
+        改正著作権法第35条運用指針
+      </a>
+      」というもので、SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）
+      という管理団体のサイトに掲載されています。
+    </p>
   </div>
   <p>
     このウェブサイトは、その運用指針をさらにわかりやすく説明しようとするものです。主に教育機関で授業をされている先生方に向けて書きました。著作権の基本的な知識や、授業で著作物を取り扱う際にできること、できないこと、気をつけなければならないことなどについて、より理解を深め、授業に役立てていただれければ幸いです。
@@ -38,7 +40,7 @@ import Page from '../../templates/Page.astro';
     <div class="grid grid-cols-3 gap-2 md:gap-6">
       <dl class="text-center">
         <div>
-          <img src="http://via.placeholder.com/200x200" alt="" loading="lazy" />
+          <img src="http://via.placeholder.com/200x200" alt="" loading="lazy" decoding="async" />
         </div>
         <dt class="mt-4 font-bold">
           小中（こなか）先生
@@ -49,7 +51,7 @@ import Page from '../../templates/Page.astro';
       </dl>
       <dl class="text-center">
         <div>
-          <img src="http://via.placeholder.com/200x200" alt="" loading="lazy" />
+          <img src="http://via.placeholder.com/200x200" alt="" loading="lazy" decoding="async" />
         </div>
         <dt class="mt-4 font-bold">
           大院（だいいん）先生
@@ -60,7 +62,7 @@ import Page from '../../templates/Page.astro';
       </dl>
       <dl class="text-center">
         <div>
-          <img src="http://via.placeholder.com/200x200" alt="" loading="lazy" />
+          <img src="http://via.placeholder.com/200x200" alt="" loading="lazy" decoding="async" />
         </div>
         <dt class="mt-4 font-bold">
           隅木（すみき）先生
@@ -78,21 +80,23 @@ import Page from '../../templates/Page.astro';
     description=""
   >
     <div>
-      本ウェブサイトで参照している法律の条文は、「
-      <a href="https://elaws.e-gov.go.jp/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">
-        e-Gov法令検索 https://elaws.e-gov.go.jp/
-      </a>
-        」で確認することができます。法律では2項以下がある場合でも
-      <Popup
-        id="c1s1_1"
-        popup={[
-          {
-            text: "法制執務・法令用語研究会『条文の読み方〔第2版〕』（有斐閣、2021）71頁参照",
-          }
-        ]}>
-        条名の下から始まる段落が1項であることは明らかなため、付番されません
-      </Popup>
-      。もっとも、本ウェブサイトでは読みやすくするため、条文番号を示すときにも、条文を引用するときにも、1項を付番します。
+      <p class="inline">
+        本ウェブサイトで参照している法律の条文は、「
+        <a href="https://elaws.e-gov.go.jp/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">
+          e-Gov法令検索 https://elaws.e-gov.go.jp/
+        </a>
+          」で確認することができます。法律では2項以下がある場合でも
+        <Popup
+          id="c1s1_1"
+          popup={[
+            {
+              text: "法制執務・法令用語研究会『条文の読み方〔第2版〕』（有斐閣、2021）71頁参照",
+            }
+          ]}>
+          条名の下から始まる段落が1項であることは明らかなため、付番されません
+        </Popup>
+        。もっとも、本ウェブサイトでは読みやすくするため、条文番号を示すときにも、条文を引用するときにも、1項を付番します。
+      </p>
     </div>
 
     <div class="flex flex-col gap-2">

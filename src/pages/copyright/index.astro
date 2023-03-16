@@ -79,7 +79,7 @@ import Page from '../../templates/Page.astro';
       <figcaption>
         授業で著作物を扱う時のフロー図
       </figcaption>
-      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
     <p>
       権利制限規定がたくさんありますが、授業では「引用（32条1項）」「学校その他の教育機関における複製等（35条）」「営利を目的としない上映等（38条）」をおさえておくとよいでしょう。
@@ -90,7 +90,7 @@ import Page from '../../templates/Page.astro';
     <p>
       32条と35条について、以降で詳しく説明します。
     </p>
-    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
   </Section>
 
   <Section
@@ -250,7 +250,7 @@ import Page from '../../templates/Page.astro';
 
     <ImgCaption>
       <figcaption>【01】引用と転載の違い</figcaption>
-      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
 
     <SpeechBubbles>
@@ -336,7 +336,7 @@ import Page from '../../templates/Page.astro';
     </SpeechBubbles>
     <ImgCaption>
       <figcaption>画像の引用例</figcaption>
-      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
     <SpeechBubbles>
       {[
@@ -398,7 +398,7 @@ import Page from '../../templates/Page.astro';
     <Point>
       著作権法の「引用」は、条件をすべて守らなければいけない。
     </Point>
-    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
   </Section>
 
   <Section
@@ -468,7 +468,7 @@ import Page from '../../templates/Page.astro';
     </p>
     <ImgCaption>
       <figcaption>旧35条と改正35条</figcaption>
-      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
     <p>
       旧35条では、第三者の著作物を授業で扱う際、以下の取り扱いになっていました。
@@ -534,17 +534,19 @@ import Page from '../../templates/Page.astro';
       やや難しいのは、公衆送信のすべてについて補償金が必要とされているわけではない点です。公衆送信のなかでもいわゆる遠隔合同授業等で行われる場合は補償金の支払いなく無償、無許諾で利用できます（35条3項）。
     </p>
     <div>
-      これは、2018年の著作権法改正前に無償でできた利用については引き続き無償にするため、
-      <Popup
-        id="c2s3_2"
-        popup={[
-            {
-              text: "「公衆送信」と「公の伝達」の用語について、「1章 section04 著作権とは」で説明しています。さらに『運用指針』による用語定義と具体例を、この後の「section04 改正著作権法第35条運用指針」で説明しています。",
-            }
-          ]}>
-        改正後の公衆送信にも無償でできる利用が残された
-      </Popup>
-      ためです。
+      <p class="inline">
+        これは、2018年の著作権法改正前に無償でできた利用については引き続き無償にするため、
+        <Popup
+          id="c2s3_2"
+          popup={[
+              {
+                text: "「公衆送信」と「公の伝達」の用語について、「1章 section04 著作権とは」で説明しています。さらに『運用指針』による用語定義と具体例を、この後の「section04 改正著作権法第35条運用指針」で説明しています。",
+              }
+            ]}>
+          改正後の公衆送信にも無償でできる利用が残された
+        </Popup>
+        ためです。
+      </p>
     </div>
 
     <ImgCaption id="ref15">
@@ -673,23 +675,25 @@ import Page from '../../templates/Page.astro';
       </figcaption>
     </ImgCaption>
     <div>
-      <Popup
-        id="c2s3_3"
-        popup={[
-            {
-              text: "運用指針25ページ",
-            }
-          ]}>
-        文化庁の整理
-      </Popup>
-      に従って、本ウェブサイトでは、「遠隔合同授業」には2つの形態が含まれるため「遠隔合同授業等」とします。「遠隔合同授業等」には「同時中継合同授業」と「同時中継遠隔授業」があります。
+      <p class="inline">
+        <Popup
+          id="c2s3_3"
+          popup={[
+              {
+                text: "運用指針25ページ",
+              }
+            ]}>
+          文化庁の整理
+        </Popup>
+        に従って、本ウェブサイトでは、「遠隔合同授業」には2つの形態が含まれるため「遠隔合同授業等」とします。「遠隔合同授業等」には「同時中継合同授業」と「同時中継遠隔授業」があります。
+      </p>
     </div>
     <p>
       この違いは、副会場に教員がいるか否かです。つまり、「同時中継合同授業」は、それぞれに教員と学生がいる複数の会場を双方向通信できる形で繋いで行うタイプの授業を言います。これに対して、「同時中継遠隔授業」は、教員と生徒がいる主会場の教室で行われている授業をリアルタイム配信し、自宅などの副会場で生徒だけでも受講できるようにしたものです 。
     </p>
     <ImgCaption>
       <figcaption>遠隔授業形態の分類</figcaption>
-      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
     <Point>
       補償金を支払うことで、許諾なく公衆送信できる場面が増えた！
@@ -698,18 +702,20 @@ import Page from '../../templates/Page.astro';
       補償金は、公衆送信を行った著作物の著作権者に支払われるべきなのですが、現場の教員や学生が著作権者を探して直接支払うことは実質不可能です。なので、補償金を取りまとめる管理団体を作り、そこにまとめて支払い、そこから著作権者へ分配することになっています。この仕組みを「授業目的公衆送信補償金制度」と呼んでいます。補償金をまとめて支払うのも、教育機関の設置者が行いますので、先生方1人ひとりが支払う必要はありません（104条の11）。設置者というのは、市立小学校だったらその市、県立高校であればその県、大学であれば、国立大学法人や学校法人、ということになります。
     </p>
     <div>
-      この補償金を収集、管理、分配するのは、「
-      <Popup
-        id="c2s3_4"
-        popup={[
-            {
-              text: "SARTRAS",
-              href: "https://sartras.or.jp/"
-            }
-          ]}>
-        SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）
-      </Popup>
-      」という団体で、「サートラス」と読みます。
+      <p class="inline">
+        この補償金を収集、管理、分配するのは、「
+        <Popup
+          id="c2s3_4"
+          popup={[
+              {
+                text: "SARTRAS",
+                href: "https://sartras.or.jp/"
+              }
+            ]}>
+          SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）
+        </Popup>
+        」という団体で、「サートラス」と読みます。
+      </p>
     </div>
 
     <SpeechBubbles>
@@ -761,18 +767,20 @@ import Page from '../../templates/Page.astro';
       })}
     </SpeechBubbles>
     <div id="ref29">
-      35条が改正された時に、権利者側と教育機関側の人が集まって、35条の運用について考える会議が設置されました。これを「
-      <Popup
-        id="c2s3_6"
-        popup={[
-            {
-              text: "著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）",
-              href: "https://forum.sartras.or.jp/"
-            }
-          ]}>
-        著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）
-      </Popup>
-      」と言います（以下、「フォーラム」と略します）。
+      <p class="inline">
+        35条が改正された時に、権利者側と教育機関側の人が集まって、35条の運用について考える会議が設置されました。これを「
+        <Popup
+          id="c2s3_6"
+          popup={[
+              {
+                text: "著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）",
+                href: "https://forum.sartras.or.jp/"
+              }
+            ]}>
+          著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）
+        </Popup>
+        」と言います（以下、「フォーラム」と略します）。
+      </p>
     </div>
     <p>
       「1章 section01 著作権法とは」でも説明したように、権利保護と公正な利用のバランスが難しいので、両者の意見を出し合いながら、共通認識を決めましょうということになったのです。
@@ -780,7 +788,7 @@ import Page from '../../templates/Page.astro';
     <p>
       法律の有識者の方々もメンバーとして参加し、法律的な判断についてアドバイスをおこなっています。
     </p>
-    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
   </Section>
 
   <Section
@@ -792,28 +800,30 @@ import Page from '../../templates/Page.astro';
       改正著作権法第35条運用指針について
     </h3>
     <div>
-      さきほど説明したフォーラムで、授業における著作物の運用についてまとめたものが「運用指針」です。本ウェブサイトでは
-      <Popup
-        id="c2s4_1"
-        popup={[
-            {
-              text: "SARTRAS「改正著作権法35条運用指針について」",
-              href: "https://sartras.or.jp/unyoshishin/",
-            }
-          ]}>
-        「改正著作権法第35条運用指針令和3（2021）年度版」（2020年12月）
-      </Popup>
-      に基づいて、わかりやすく説明をします。これは、
-      <Popup
-        id="c2s4_2"
-        popup={[
-            {
-              text: "「改正著作権法第35条運用指針（令和3（2021）年度版）特別活動追補版」（2021年11月）も公開されています。",
-            }
-          ]}>
-        SARTRASのページで全文が読めます
-      </Popup>
-      。また、PDFファイルをダウンロードすることも可能です。「改正著作権法第35条運用指針」は2020年度に初めて公開され、2021年度に改訂されています。この内容について、現在もフォーラムで話し合いがおこなわれているので、今後も改訂される可能性があります。常に最新版をチェックするようにしましょう。
+      <p class="inline">
+        さきほど説明したフォーラムで、授業における著作物の運用についてまとめたものが「運用指針」です。本ウェブサイトでは
+        <Popup
+          id="c2s4_1"
+          popup={[
+              {
+                text: "SARTRAS「改正著作権法35条運用指針について」",
+                href: "https://sartras.or.jp/unyoshishin/",
+              }
+            ]}>
+          「改正著作権法第35条運用指針令和3（2021）年度版」（2020年12月）
+        </Popup>
+        に基づいて、わかりやすく説明をします。これは、
+        <Popup
+          id="c2s4_2"
+          popup={[
+              {
+                text: "「改正著作権法第35条運用指針（令和3（2021）年度版）特別活動追補版」（2021年11月）も公開されています。",
+              }
+            ]}>
+          SARTRASのページで全文が読めます
+        </Popup>
+        。また、PDFファイルをダウンロードすることも可能です。「改正著作権法第35条運用指針」は2020年度に初めて公開され、2021年度に改訂されています。この内容について、現在もフォーラムで話し合いがおこなわれているので、今後も改訂される可能性があります。常に最新版をチェックするようにしましょう。
+      </p>
     </div>
     <p>
       なお、本ウェブサイトでは、簡単に「運用指針」と略して記載します。また、本ウェブサイトは2021年度版の運用指針をもとに説明します。
@@ -822,7 +832,7 @@ import Page from '../../templates/Page.astro';
       <figcaption>
         35条運用指針
       </figcaption>
-      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
 
     <h3>
@@ -1325,17 +1335,19 @@ import Page from '../../templates/Page.astro';
       一方、長編映画や小説などをまるごと全部複製・公衆送信することは、利益を不当に害する可能性が高いです。相当程度に入手困難かつ、合理的な手段で利用許諾を得ることができない著作物であれば、全部も可能となる場合もあり、個別に判断することが必要と考えられます。
     </p>
     <div>
-      大学の授業やゼミなどで、論文を読む場合は一般的には一報すべてを読むことが多いでしょう。一方、論文は専門的であるが故にその対象読者は限られているので、
-      <Popup
-        id="c2s4_9"
-        popup={[
-            {
-              text: "必要な論文が、大学で契約している電子ジャーナル、著者のサイト、機関リポジトリなどで無償でアクセスできるようになっている場合は、そのリンクを学生に提示しましょう。リンクの提示は複製にも公衆送信にもあたらないので問題になりません。",
-            }
-          ]}>
-        授業で複製・公衆送信を行う場合には著作権者の利益を不当に害することがないか
-      </Popup>
-      よく検討する必要があります（3章 Q14、Q15）。
+      <p class="inline">
+        大学の授業やゼミなどで、論文を読む場合は一般的には一報すべてを読むことが多いでしょう。一方、論文は専門的であるが故にその対象読者は限られているので、
+        <Popup
+          id="c2s4_9"
+          popup={[
+              {
+                text: "必要な論文が、大学で契約している電子ジャーナル、著者のサイト、機関リポジトリなどで無償でアクセスできるようになっている場合は、そのリンクを学生に提示しましょう。リンクの提示は複製にも公衆送信にもあたらないので問題になりません。",
+              }
+            ]}>
+          授業で複製・公衆送信を行う場合には著作権者の利益を不当に害することがないか
+        </Popup>
+        よく検討する必要があります（3章 Q14、Q15）。
+      </p>
     </div>
 
     <h4>
@@ -1358,17 +1370,19 @@ import Page from '../../templates/Page.astro';
       また、父兄参観や研究授業での教員参観などで学生と同一の資料を送信する場合、参観人数分を加えても、「必要と認められる限度」とされています。この場合には、利益を不当に害するものではないでしょう。
     </p>
     <div>
-      映画やテレビ番組の録画を教室で上映することは、非営利無償の上映にあたり許諾不要でおこなえます（38条1項）。しかし、動画の複製をつくって学生の人数分配布したり、オンデマンドでいつでも視聴できるようにしたりすることは、
-      <Popup
-        id="c2s4_10"
-        popup={[
-            {
-              text: "動画ファイルそのものでなく、それを視聴させている授業風景を録画したものをあとから視聴できるようにすることについては、動画ファイルの視聴と代替性はないので、著作権者の利益を不当に害する可能性は低いと考えられます。",
-            }
-          ]}>
-        著作権者の利益を不当に害する可能性が高い
-      </Popup>
-      と考えられます。
+      <p class="inline">
+        映画やテレビ番組の録画を教室で上映することは、非営利無償の上映にあたり許諾不要でおこなえます（38条1項）。しかし、動画の複製をつくって学生の人数分配布したり、オンデマンドでいつでも視聴できるようにしたりすることは、
+        <Popup
+          id="c2s4_10"
+          popup={[
+              {
+                text: "動画ファイルそのものでなく、それを視聴させている授業風景を録画したものをあとから視聴できるようにすることについては、動画ファイルの視聴と代替性はないので、著作権者の利益を不当に害する可能性は低いと考えられます。",
+              }
+            ]}>
+          著作権者の利益を不当に害する可能性が高い
+        </Popup>
+        と考えられます。
+      </p>
     </div>
 
     <h4 id="ref7">
@@ -1381,17 +1395,19 @@ import Page from '../../templates/Page.astro';
       著作物を製本して長期間保存できるような形で複製したり、画像や音声を単独で鑑賞可能なほど高品質なファイルとして複製したりするなど、複製物を単体で他の用途にも転用できるような形で作成することは、著作権者の利益を不当に害する可能性が高いと考えられます。
     </p>
     <div>
-      公衆送信をする場合に、受信できる人は授業をする人と受ける人に限定されるべきです。例えば学生が世界に情報発信をすることが、授業に必要な活動であったとしても、そこに
-      <Popup
-        id="c2s4_11"
-        popup={[
-            {
-              text: "もちろん32条の「引用」が適用できれば問題ないです。",
-            }
-          ]}>
-        35条適用の著作物を含めることは、著作権者の利益を不当に害することとなる可能性が高い
-      </Popup>
-      と考えられます。
+      <p class="inline">
+        公衆送信をする場合に、受信できる人は授業をする人と受ける人に限定されるべきです。例えば学生が世界に情報発信をすることが、授業に必要な活動であったとしても、そこに
+        <Popup
+          id="c2s4_11"
+          popup={[
+              {
+                text: "もちろん32条の「引用」が適用できれば問題ないです。",
+              }
+            ]}>
+          35条適用の著作物を含めることは、著作権者の利益を不当に害することとなる可能性が高い
+        </Popup>
+        と考えられます。
+      </p>
     </div>
     <p>
       基本的な考え方は以上です。以下に例をまとめます。
@@ -1509,6 +1525,6 @@ import Page from '../../templates/Page.astro';
         )
       })}
     </SpeechBubbles>
-    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x500" alt="" loading="lazy" decoding="async" />
   </Section>
 </Page>

@@ -9,7 +9,7 @@ const {speaker, feLevel} = Astro.props;
 
 <dl class="flex gap-[19px] md:gap-7">
   <dt class="w-[36px] min-w-[36px] text-center md:w-[48px] md:min-w-[48px]">
-    <img src={speaker === '小中' ? `/assets/images/konaka-fe${feLevel}.png` : speaker === '隅木' ? `/assets/images/sumiki-fe${feLevel}.png` : `/assets/images/daiin-fe${feLevel}.png`} alt="" />
+    <img src={speaker === '小中' ? `/assets/images/konaka-fe${feLevel}.png` : speaker === '隅木' ? `/assets/images/sumiki-fe${feLevel}.png` : `/assets/images/daiin-fe${feLevel}.png`} alt="" decoding="async" />
     <p class="text-[11px] font-bold leading-relaxed">{speaker}</p>
   </dt>
   <dd class="relative grow rounded-lg bg-white p-2 before:absolute before:top-4 before:left-[-15px] before:block before:border-y-[6px] before:border-r-[15px] before:border-y-transparent before:border-r-white before:content-[''] md:p-4 md:before:-left-5 md:before:border-y-[8px] md:before:border-r-[20px]"><slot /></dd>

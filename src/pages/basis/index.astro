@@ -75,7 +75,7 @@ import Page from '../../templates/Page.astro';
     <Point>
       著作権法の目的は著作者の権利の保護と著作物の公正な利用をもって文化の発展に寄与すること。
     </Point>
-    <img src="/assets/images/img-01.png" alt="" loading="lazy" />
+    <img src="/assets/images/img-01.png" alt="" loading="lazy" decoding="async" />
     <p>
       著作権法では、「著作物とはどういうものか」「著作権とはどういう権利か（作者の保護）」「どういう場合に著作権が制限されるのか（公正な利用とはなにか）」を決めています。
     </p>
@@ -179,7 +179,7 @@ import Page from '../../templates/Page.astro';
       })
       }
     </SpeechBubbles>
-    <img src="/assets/images/img-01-2.png" alt="" loading="lazy" />
+    <img src="/assets/images/img-01-2.png" alt="" loading="lazy" decoding="async" />
     <p>
       著作権法では「著作物」が保護されます。著作物とは、以下のように定義されています。
     </p>
@@ -581,7 +581,7 @@ import Page from '../../templates/Page.astro';
     <p>
       著作者人格権と著作権（財産権）については次のsectionで説明します。
     </p>
-    <img src="http://via.placeholder.com/1000x200" alt="ダミー" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x200" alt="ダミー" loading="lazy" decoding="async" />
     <h4 id="ref20">
       職務著作（法人著作）
     </h4>
@@ -953,16 +953,18 @@ import Page from '../../templates/Page.astro';
       著作権（著作財産権）
     </h3>
     <div>
-      <Popup
-        id="s4_5"
-        popup={[
-          {
-            text: "著作物を見る、聴く、読むなどの知覚、享受行為自体については著作権者が把握することは困難であることから、著作権の対象となっておらず、その一歩手前の行為を著作権の対象としています（岡本薫『著作権の考え方』（岩波新書、2003）160頁以下参照）。",
-          }
-        ]}>
-        財産権としての著作権
-      </Popup>
-    には以下のようなものがあります。
+      <p>
+        <Popup
+          id="s4_5"
+          popup={[
+            {
+              text: "著作物を見る、聴く、読むなどの知覚、享受行為自体については著作権者が把握することは困難であることから、著作権の対象となっておらず、その一歩手前の行為を著作権の対象としています（岡本薫『著作権の考え方』（岩波新書、2003）160頁以下参照）。",
+            }
+          ]}>
+          財産権としての著作権
+        </Popup>
+      には以下のようなものがあります。
+      </p>
     </div>
     <ListArea>
       <ul>
@@ -1053,50 +1055,56 @@ import Page from '../../templates/Page.astro';
       })
       }
     </SpeechBubbles>
-    <img src="http://via.placeholder.com/1000x200" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x200" alt="" loading="lazy" decoding="async" />
     <p id="ref13">
       「section04 著作権とは」で説明したとおり、複製権なら「勝手に複製されない権利」となります。財産権としての著作権は、譲渡したり、相続したりすることが可能です（61条1項）。
     </p>
     <div>
-      例えば、「ズッコケ三人組」シリーズの作者である
-      <Popup
-        id="s4_7"
-        popup={[
-          {
-            text: "全著作権を寄付『ズッコケ三人組』那須正幹さんの児童文学への願い」毎日新聞（2022年10月5日）",
-            href: "https://mainichi.jp/articles/20221004/k00/00m/040/188000c",
-          }
-        ]}>
-        那須正幹さんは、遺言で全作品の著作権を文学団体に譲渡（遺贈）した
-      </Popup>
-      と報道されています。
+      <p class="inline">
+        例えば、「ズッコケ三人組」シリーズの作者である
+        <Popup
+          id="s4_7"
+          popup={[
+            {
+              text: "全著作権を寄付『ズッコケ三人組』那須正幹さんの児童文学への願い」毎日新聞（2022年10月5日）",
+              href: "https://mainichi.jp/articles/20221004/k00/00m/040/188000c",
+            }
+          ]}>
+          那須正幹さんは、遺言で全作品の著作権を文学団体に譲渡（遺贈）した
+        </Popup>
+        と報道されています。
+      </p>
     </div>
     <div>
-      「翻案」は、著作権法独特の言い回しかと思いますが、
-      <Popup
-        id="s4_8"
-        popup={[
-          {
-            text: "便宜的に翻訳、編曲、変形も含めて二次的著作物を作成する行為のことを「翻案」と呼ぶこともあります。",
-          }
-        ]}>
-        脚色や映画化などにより二次的著作物を作成する行為
-      </Popup>
-      のことです。
+      <p class="inline">
+        「翻案」は、著作権法独特の言い回しかと思いますが、
+        <Popup
+          id="s4_8"
+          popup={[
+            {
+              text: "便宜的に翻訳、編曲、変形も含めて二次的著作物を作成する行為のことを「翻案」と呼ぶこともあります。",
+            }
+          ]}>
+          脚色や映画化などにより二次的著作物を作成する行為
+        </Popup>
+        のことです。
+      </p>
     </div>
     <div>
-      「公衆送信権」「送信可能化権」も耳慣れない言葉かもしれません。公衆送信権は、公衆（不特定の者、特定多数の者）に著作物を送信する権利です。例えば、公衆送信のうち、自動公衆送信は、Webサイトに載せて多数の人に閲覧させたり、SNSに投稿して多数の人に見せたりすることなどを指します。送信可能化は、送信したか否かにかかわらず、
-      <Popup
-        id="s4_9"
-        popup={[
-          {
-            text: "23条1項括弧書き",
-          }
-        ]}
-      >
-        著作物をサーバ等にアップロードして、自動公衆送信が可能な状態にする
-      </Popup>
-      ことを指します。
+      <p class="inline">
+        「公衆送信権」「送信可能化権」も耳慣れない言葉かもしれません。公衆送信権は、公衆（不特定の者、特定多数の者）に著作物を送信する権利です。例えば、公衆送信のうち、自動公衆送信は、Webサイトに載せて多数の人に閲覧させたり、SNSに投稿して多数の人に見せたりすることなどを指します。送信可能化は、送信したか否かにかかわらず、
+        <Popup
+          id="s4_9"
+          popup={[
+            {
+              text: "23条1項括弧書き",
+            }
+          ]}
+        >
+          著作物をサーバ等にアップロードして、自動公衆送信が可能な状態にする
+        </Popup>
+        ことを指します。
+      </p>
     </div>
     <SpeechBubbles>
       {[
@@ -1173,18 +1181,20 @@ import Page from '../../templates/Page.astro';
       著作隣接権者としては、以下のような人たちがいます。
     </p>
     <div>
-      それぞれどのような権利があるか、
-      <Popup
-        id="c4_11"
-        popup={[
-          {
-            text: "文化庁テキスト「8. 著作隣接権」",
-            href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/93736501_07.pdf",
-          }
-      ]}>
-        文化庁のテキスト
-      </Popup>
-      などをご参照ください。
+      <p class="inline">
+        それぞれどのような権利があるか、
+        <Popup
+          id="c4_11"
+          popup={[
+            {
+              text: "文化庁テキスト「8. 著作隣接権」",
+              href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/93736501_07.pdf",
+            }
+        ]}>
+          文化庁のテキスト
+        </Popup>
+        などをご参照ください。
+      </p>
     </div>
     <ListArea>
       <ul>
@@ -1236,24 +1246,26 @@ import Page from '../../templates/Page.astro';
       })
       }
     </SpeechBubbles>
-    <img src="http://via.placeholder.com/1000x200" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/1000x200" alt="" loading="lazy" decoding="async" />
 
     <h3 id="ref23">
       保護期間
     </h3>
     <div>
-      著作権は永遠に存続するのではなく、
-      <Popup
-        id="s4_12"
-        word="戦時加算制度"
-        popup={[
-          {
-            text: "著作権の保護期間については、第二次世界大戦中は著作権が保護されていなかったとして、1941年12月7日（開戦前日）に連合国及び連合国民が日本で著作権を有していたもの、1941年12月8日（日本が参戦した日）から、当該連合国について平和条約が発効した日の前日（例えばアメリカ合衆国であれば1952年4月27日）までに著作権を取得したものに関して保護期間を加算するルールがあります。",
-          }
-      ]}>
-      保護される期間
-    </Popup>
-      が決まっています。
+      <p class="inline">
+        著作権は永遠に存続するのではなく、
+        <Popup
+          id="s4_12"
+          word="戦時加算制度"
+          popup={[
+            {
+              text: "著作権の保護期間については、第二次世界大戦中は著作権が保護されていなかったとして、1941年12月7日（開戦前日）に連合国及び連合国民が日本で著作権を有していたもの、1941年12月8日（日本が参戦した日）から、当該連合国について平和条約が発効した日の前日（例えばアメリカ合衆国であれば1952年4月27日）までに著作権を取得したものに関して保護期間を加算するルールがあります。",
+            }
+        ]}>
+        保護される期間
+      </Popup>
+        が決まっています。
+      </p>
     </div>
     <ListArea>
       <h5>
@@ -1369,17 +1381,19 @@ import Page from '../../templates/Page.astro';
       パブリックドメイン
     </h3>
     <div>
-      パブリックドメイン（public domain）は、公有という意味です。
-      <Popup
-        id="s4_15"
-        popup={[
-          {
-            text: "正確に言うと、パブリックドメインになれば、著作者の人格的利益を侵害しない限り、著作権の対象となっていた行為を自由にすることができます（最判昭和59年1月20日判時1107号127頁〔顔真卿事件〕）。\n\n 死後の著作者人格権の保護期間には限定がなく、理論上は永久に存続します。そのため、著作者の死後70年間が経過したパブリックドメインとなった作品も理論的には保護されます。\n\n しかし、この死後の著作者人格権に関する請求ができるのは、死亡した著作者の「配偶者、子、父母、孫、祖父母又は兄弟姉妹」、つまり、二親等までとなっています（著作権法116条1項）。したがって、これらの者が死亡すれば請求権者がいなくなることで事実上、著作者の死後の著作者人格権の保護も終了します。\n 中山信弘『著作権法〔第3版〕』（有斐閣、2020）652頁参照。",
-          }
-      ]}>
-      著作権者の許諾なく、誰でも自由に利用できます
-    </Popup>
-      。以下のようなものが該当します。
+      <p class="inline">
+        パブリックドメイン（public domain）は、公有という意味です。
+        <Popup
+          id="s4_15"
+          popup={[
+            {
+              text: "正確に言うと、パブリックドメインになれば、著作者の人格的利益を侵害しない限り、著作権の対象となっていた行為を自由にすることができます（最判昭和59年1月20日判時1107号127頁〔顔真卿事件〕）。\n\n 死後の著作者人格権の保護期間には限定がなく、理論上は永久に存続します。そのため、著作者の死後70年間が経過したパブリックドメインとなった作品も理論的には保護されます。\n\n しかし、この死後の著作者人格権に関する請求ができるのは、死亡した著作者の「配偶者、子、父母、孫、祖父母又は兄弟姉妹」、つまり、二親等までとなっています（著作権法116条1項）。したがって、これらの者が死亡すれば請求権者がいなくなることで事実上、著作者の死後の著作者人格権の保護も終了します。\n 中山信弘『著作権法〔第3版〕』（有斐閣、2020）652頁参照。",
+            }
+        ]}>
+        著作権者の許諾なく、誰でも自由に利用できます
+      </Popup>
+        。以下のようなものが該当します。
+      </p>
     </div>
     <ListArea>
       <ul>
@@ -1458,22 +1472,24 @@ import Page from '../../templates/Page.astro';
       最近、いろいろなところでお目にかかるイラストに「いらすとや」さんがあります。
     </p>
     <div>
-      「いらすとや」さんのホームページにいくと「
-      <Popup
-        id="c4_16"
-        popup={[
-          {
-            text: "いらすとや\n「ご利用について」",
-            href: "https://www.irasutoya.com/p/terms.html",
-          },
-          {
-            text: "「よくあるご質問」",
-            href: "https://www.irasutoya.com/p/faq.html",
-          },
-      ]}>
-        ご利用について
-      </Popup>
-      」と書かれているページがあるので、確認してみましょう。
+      <p class="inline">
+        「いらすとや」さんのホームページにいくと「
+        <Popup
+          id="c4_16"
+          popup={[
+            {
+              text: "いらすとや\n「ご利用について」",
+              href: "https://www.irasutoya.com/p/terms.html",
+            },
+            {
+              text: "「よくあるご質問」",
+              href: "https://www.irasutoya.com/p/faq.html",
+            },
+        ]}>
+          ご利用について
+        </Popup>
+        」と書かれているページがあるので、確認してみましょう。
+      </p>
     </div>
     <Point type="simple">
       当サイトで配布している素材は規約の範囲内であれば、個人、法人、商用、非商用問わず無料でご利用頂けます。
@@ -1488,18 +1504,20 @@ import Page from '../../templates/Page.astro';
       このようなイラスト素材や、写真素材を提供するサイトなどは、「利用について」「利用条件」「ライセンス」などの名前のところに、利用条件が書かれていることが多いので、よく確認してから使うようにしましょう。
     </p>
     <div>
-      みなさんがよく利用されているであろう
-      <Popup
-        id="c4_17"
-        popup={[
-          {
-            text: "Googleマップ\n「一般的なガイドライン」",
-            href: "https://www.google.com/intl/ja/permissions/geoguidelines/",
-          },
-      ]}>
-        「Googleマップ」もクレジット表記を必須としています
-      </Popup>
-      。すでに表示されているクレジット表記を消して利用することは、契約違反や権利侵害となる可能性がありますので、注意しましょう。
+      <p class="inline">
+        みなさんがよく利用されているであろう
+        <Popup
+          id="c4_17"
+          popup={[
+            {
+              text: "Googleマップ\n「一般的なガイドライン」",
+              href: "https://www.google.com/intl/ja/permissions/geoguidelines/",
+            },
+        ]}>
+          「Googleマップ」もクレジット表記を必須としています
+        </Popup>
+        。すでに表示されているクレジット表記を消して利用することは、契約違反や権利侵害となる可能性がありますので、注意しましょう。
+      </p>
     </div>
 
     <h4 id="ref11">
@@ -1515,7 +1533,7 @@ import Page from '../../templates/Page.astro';
       <figcaption>
         クリエイティブ・コモンズ（CC BY 4.0）の表記
       </figcaption>
-      <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
+      <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" decoding="async" />
     </ImgCaption>
     <p>
       これは「表示」というもので、「原作者のクレジット（氏名、作品タイトルなど）を表示すれば」、改変も営利目的利用もOKとなります。
@@ -1578,42 +1596,46 @@ import Page from '../../templates/Page.astro';
       例えば、CC-BY-ND-NCの場合は、「クレジット表示、改変禁止、非営利」であれば、利用できることになります。全部で6通りの方法があります。
     </p>
     <div>
-      CC0もあり、これは権利の放棄を表明しているものです。
-      <Popup
-        id="c4_18"
-        popup={[
-          {
-            text: "「CC0について ― “いかなる権利も保有しない”」",
-            href: "https://creativecommons.jp/sciencecommons/aboutcc0/",
-          },
-      ]}>
-        CC0がついている著作物は自由に利用
-      </Popup>
-      することができます。
+      <p class="inline">
+        CC0もあり、これは権利の放棄を表明しているものです。
+        <Popup
+          id="c4_18"
+          popup={[
+            {
+              text: "「CC0について ― “いかなる権利も保有しない”」",
+              href: "https://creativecommons.jp/sciencecommons/aboutcc0/",
+            },
+        ]}>
+          CC0がついている著作物は自由に利用
+        </Popup>
+        することができます。
+      </p>
     </div>
     <div>
-      詳しくは
-      <Popup
-        id="c4_19"
-        popup={[
-          {
-            text: "クリエイティブ・コモンズ・ジャパン",
-            href: "https://creativecommons.jp/licenses/",
-          },
-      ]}>
-        クリエイティブ・コモンズ
-      </Popup>
-      の
-      <Popup
-        id="c4_20"
-        popup={[
-          {
-            text: "東京地判令和3年10月12日（令和3（ワ）5285）〔flickr 投稿写真事件〕では、クリエイティブ・コモンズ・ライセンス（BY-SA）の下でflickrに投稿された原告（写真家）の写真を著作者のクレジットを表示せずに被告が自身のウェブサイトに利用した行為について、裁判所は公衆送信権、氏名表示権侵害にあたると判断しています。",
-          },
-      ]}>
-        サイトをご参照
-      </Popup>
-      ください。
+      <p class="inline">
+        詳しくは
+        <Popup
+          id="c4_19"
+          popup={[
+            {
+              text: "クリエイティブ・コモンズ・ジャパン",
+              href: "https://creativecommons.jp/licenses/",
+            },
+        ]}>
+          クリエイティブ・コモンズ
+        </Popup>
+        の
+        <Popup
+          id="c4_20"
+          popup={[
+            {
+              text: "東京地判令和3年10月12日（令和3（ワ）5285）〔flickr 投稿写真事件〕では、クリエイティブ・コモンズ・ライセンス（BY-SA）の下でflickrに投稿された原告（写真家）の写真を著作者のクレジットを表示せずに被告が自身のウェブサイトに利用した行為について、裁判所は公衆送信権、氏名表示権侵害にあたると判断しています。",
+            },
+        ]}>
+          サイトをご参照
+        </Popup>
+        ください。
+      </p>
     </div>
     <Point>
       ライセンスの確認は必ずしましょう！
@@ -1647,7 +1669,7 @@ import Page from '../../templates/Page.astro';
       })
       }
     </SpeechBubbles>
-    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" decoding="async" />
 
     <h3 id="ref12">
       権利制限
@@ -1656,17 +1678,19 @@ import Page from '../../templates/Page.astro';
       「section01 著作権法とは」で説明したように、著作権法は、著作者の権利の保護だけではなく、著作物の「公正な利用」も考えて、文化を発展させることを目的としています。
     </p>
     <div>
-      著作権法は、この「公正な利用」を促進するために著作権者の許可なく著作物を利用できる場面を規定していて、これらを「
-      <Popup
-        id="c4_21"
-        popup={[
-          {
-            text: "著作権の権利制限は著作者人格権に影響を及ぼすものと解釈してはならないため（50条）、著作者人格権への配慮は必要となりますので、注意しましょう。",
-          },
-      ]}>
-        権利制限規定
-      </Popup>
-      」と呼んでいます。著作権者の権利を制限して、公正な利用の範囲を定める条文になります。
+      <p class="inline">
+        著作権法は、この「公正な利用」を促進するために著作権者の許可なく著作物を利用できる場面を規定していて、これらを「
+        <Popup
+          id="c4_21"
+          popup={[
+            {
+              text: "著作権の権利制限は著作者人格権に影響を及ぼすものと解釈してはならないため（50条）、著作者人格権への配慮は必要となりますので、注意しましょう。",
+            },
+        ]}>
+          権利制限規定
+        </Popup>
+        」と呼んでいます。著作権者の権利を制限して、公正な利用の範囲を定める条文になります。
+      </p>
     </div>
     <p>
       権利制限規定はたくさんありますが、本ウェブサイトを読んでくださってるみなさんに関係ありそうな規定をいくつか以下にあげます。これらにあてはまる場合には、著作権者の許諾がなくても利用できます。
@@ -1916,7 +1940,7 @@ import Page from '../../templates/Page.astro';
     <Point>
       権利制限は、著作者の権利を制限することで、公正な利用を促進しようとするもの。
     </Point>
-    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" decoding="async" />
     <p>
       以下の2つは、特に授業でよく使う権利制限規定なので、CHAPTER2で詳しく説明します。
     </p>
@@ -1992,6 +2016,6 @@ import Page from '../../templates/Page.astro';
     <p>
       一方で、コミケなどで販売されている同人誌などの二次的著作物については、親告罪のままになっています。
     </p>
-    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" />
+    <img src="http://via.placeholder.com/500x200" alt="" loading="lazy" decoding="async" />
   </Section>
 </Page>
