@@ -66,6 +66,15 @@
 	/* --- table styles --- */
 	table {
 		@apply w-full;
+		tr {
+
+			&.2col {
+
+				td {
+					@apply first-of-type:w-[31.4%] first-of-type:min-w-[31.4%] first-of-type:grow-0 first-of-type:md:w-[35.3%] first-of-type:md:min-w-[35.3%] grow;
+				}
+			}
+		}
 		thead {
 			tr {
 				@apply border border-stone-800 bg-orange-600 text-white
