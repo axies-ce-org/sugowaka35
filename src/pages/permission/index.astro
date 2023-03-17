@@ -31,62 +31,36 @@ import Page from '../../templates/Page.astro';
       Step1：著作者・著作権者が誰なのかを調べる
     </h4>
     <SpeechBubbles>
-      {[
-        {
-          speaker: '隅木',
-          text: '先生方にお願いしたいのは、第三者の著作物を利用する際は、出典を記録してほしいということです。\n1つの教材の中で複数使用している場合には、教材ごとの出典リストを作成しておくことが望ましいです。',
-          feLevel: '2',
-        },
-        {
-          speaker: '大院',
-          text: 'そんなのいちいち作ってないよ。',
-          feLevel: '5',
-        },
-        {
-          speaker: '隅木',
-          text: '教室で授業をしてる分には35条が適用できるので大丈夫です。ただ、例えば大院先生の授業を録画して、大学のホームページで公開することになった場合、誰でも見られる状態なので35条は適用できません。引用が適用できればいいのですが、難しい場合もあると思います。',
-          feLevel: '2',
-        },
-        {
-          speaker: '小中',
-          text: '出典リストがあれば、それを元に許諾をとれるということですね。',
-          feLevel: '1',
-        },
-        {
-          speaker: '隅木',
-          text: 'そうなのです。逆にそれがないと、その写真やイラストや文章をどこから引っ張ってきたのか調べることから始めないといけないことになります。',
-          feLevel: '2',
-        },
-        {
-          speaker: '大院',
-          text: 'それはめんどくさいな。',
-          feLevel: '5',
-        },
-        {
-          speaker: '隅木',
-          text: '引用を適用する場合も出所の明示が必要ですよね。最近では学外に教育活動を発信することも多いと思いますので、そういう場合に備えて必ず出典は記録しておいてください。\nまた、Webサイトから複製した場合は、それが孫引きでないかの注意も必要です。',
-          feLevel: '2',
-        },
-        {
-          speaker: '大院',
-          text: '孫引き？',
-          feLevel: '4',
-        },
-        {
-          speaker: '隅木',
-          text: 'つまり先生が見たサイトが、その画像などを他のサイトから複製して掲載している場合があるのです。\nその場合は、元のサイトを見て、著作者、著作権者がだれなのか、ライセンス元の表記があるのかなどを確認しないといけないですね。',
-          feLevel: '2',
-        },
-        {
-          speaker: '小中',
-          text: 'ああ、それはありそうですね。気をつけなくちゃ。',
-          feLevel: '3',
-        },
-      ].map(({speaker, text, feLevel}) => {
-        return (
-          <Bubble speaker={speaker} feLevel={feLevel}>{text}</Bubble>
-        )
-      })}
+      <Bubble speaker='隅木' feLevel='2'>
+        先生方にお願いしたいのは、第三者の著作物を利用する際は、出典を記録してほしいということです。<br />1つの教材の中で複数使用している場合には、教材ごとの出典リストを作成しておくことが望ましいです。
+      </Bubble>
+      <Bubble speaker='大院' feLevel='5'>
+        そんなのいちいち作ってないよ。
+      </Bubble>
+      <Bubble speaker='隅木' feLevel='2'>
+        教室で授業をしてる分には35条が適用できるので大丈夫です。ただ、例えば大院先生の授業を録画して、大学のホームページで公開することになった場合、誰でも見られる状態なので35条は適用できません。引用が適用できればいいのですが、難しい場合もあると思います。
+      </Bubble>
+      <Bubble speaker='小中' feLevel='1'>
+        出典リストがあれば、それを元に許諾をとれるということですね。
+      </Bubble>
+      <Bubble speaker='隅木' feLevel='2'>
+        そうなのです。逆にそれがないと、その写真やイラストや文章をどこから引っ張ってきたのか調べることから始めないといけないことになります。
+      </Bubble>
+      <Bubble speaker='大院' feLevel='5'>
+        それはめんどくさいな。
+      </Bubble>
+      <Bubble speaker='隅木' feLevel='2'>
+        引用を適用する場合も出所の明示が必要ですよね。最近では学外に教育活動を発信することも多いと思いますので、そういう場合に備えて必ず出典は記録しておいてください。<br />また、Webサイトから複製した場合は、それが孫引きでないかの注意も必要です。
+      </Bubble>
+      <Bubble speaker='大院' feLevel='4'>
+        孫引き？
+      </Bubble>
+      <Bubble speaker='隅木' feLevel='2'>
+        つまり先生が見たサイトが、その画像などを他のサイトから複製して掲載している場合があるのです。<br />その場合は、元のサイトを見て、著作者、著作権者がだれなのか、ライセンス元の表記があるのかなどを確認しないといけないですね。
+      </Bubble>
+      <Bubble speaker='小中' feLevel='3'>
+        ああ、それはありそうですね。気をつけなくちゃ。
+      </Bubble>
     </SpeechBubbles>
 
     <h4>
@@ -97,18 +71,12 @@ import Page from '../../templates/Page.astro';
     </p>
     <div>
       <p class="inline">
-        まず文化庁の「
-        <Popup
-          id="c4s1_1"
-          popup={[
-            {
-              text: "文化庁「著作物の正しい利用方法」",
-              href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html",
-            },
-        ]}>
-          著作物の正しい利用方法
-        </Popup>
-        」のページを見て、窓口がないか調べてみましょう。
+        まず文化庁の「<Popup id="c4s1_1" popup={[
+          {
+            text: "文化庁「著作物の正しい利用方法」",
+            href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html",
+          },
+        ]}>著作物の正しい利用方法</Popup>」のページを見て、窓口がないか調べてみましょう。
       </p>
     </div>
     <p>
@@ -116,29 +84,17 @@ import Page from '../../templates/Page.astro';
     </p>
     <div>
       <p class="inline">
-        そこで、まずは
-        <Popup
-          id="c4s1_2"
-          popup={[
-            {
-              text: "JASRAC作品ベータベース検索サービス「J-WID」",
-              href: "https://www2.jasrac.or.jp/eJwid/",
-            },
-        ]}>
-          JASRACの作品ベータベース検索サービス
-        </Popup>
-        で、利用したい楽曲があるか検索してみましょう。もしJASRACで検索して見つからない場合は、
-        <Popup
-          id="c4s1_3"
-          popup={[
-            {
-              text: "NexTone作品検索データベース",
-              href: "https://search.nex-tone.co.jp/",
-            },
-        ]}>
-          NexToneの作品検索データベース
-        </Popup>
-        で調べてみましょう。
+        そこで、まずは<Popup id="c4s1_2" popup={[
+          {
+            text: "JASRAC作品ベータベース検索サービス「J-WID」",
+            href: "https://www2.jasrac.or.jp/eJwid/",
+          },
+        ]}>JASRACの作品ベータベース検索サービス</Popup>で、利用したい楽曲があるか検索してみましょう。もしJASRACで検索して見つからない場合は、<Popup id="c4s1_3" popup={[
+          {
+            text: "NexTone作品検索データベース",
+            href: "https://search.nex-tone.co.jp/",
+          },
+        ]}>NexToneの作品検索データベース</Popup>で調べてみましょう。
       </p>
     </div>
     <p>
@@ -150,29 +106,17 @@ import Page from '../../templates/Page.astro';
     </h4>
     <div>
       <p class="inline">
-        窓口がある場合には、窓口から利用許諾申請をしましょう。窓口は、Webフォームになっているところも多いです。費用がかかることがあるので、料金は確認しましょう。
-        <Popup
-          id="c4s1_4"
-          popup={[
-            {
-              text: "JASRAC「使用料計算シミュレーション」",
-              href: "https://www.jasrac.or.jp/info/create/calculation/simulation.html",
-            },
-        ]}>
-          JASRAC
-        </Popup>
-        や
-        <Popup
-          id="c4s1_5"
-          popup={[
-            {
-              text: "NexTone「使用料シミュレーション」",
-              href: "https://sim.nex-tone.co.jp/",
-            },
-        ]}>
-          NexTone
-        </Popup>
-        は使用料計算シミュレーションができます。
+        窓口がある場合には、窓口から利用許諾申請をしましょう。窓口は、Webフォームになっているところも多いです。費用がかかることがあるので、料金は確認しましょう。<Popup id="c4s1_4" popup={[
+          {
+            text: "JASRAC「使用料計算シミュレーション」",
+            href: "https://www.jasrac.or.jp/info/create/calculation/simulation.html",
+          },
+        ]}>JASRAC</Popup>や<Popup id="c4s1_5" popup={[
+          {
+            text: "NexTone「使用料シミュレーション」",
+            href: "https://sim.nex-tone.co.jp/",
+          },
+        ]}>NexTone</Popup>は使用料計算シミュレーションができます。
       </p>
     </div>
     <p>
@@ -225,60 +169,36 @@ import Page from '../../templates/Page.astro';
     </p>
     <div>
       <p class="inline">
-        著作権法では、文化庁長官の裁定を受け、かつ、補償金を払って、その著作物を利用できる規定（著作権者不明等の場合の裁定制度）があります（67条）。
-        <Popup
-          id="c4s1_6"
-          popup={[
-            {
-              text: "著作権法67条1項・103条",
-            }
-          ]}>
-           著作隣接権者が不明の場合も、同じく裁定制度の対象
-        </Popup>
-        になっています。
+        著作権法では、文化庁長官の裁定を受け、かつ、補償金を払って、その著作物を利用できる規定（著作権者不明等の場合の裁定制度）があります（67条）。<Popup id="c4s1_6" popup={[
+          {
+            text: "著作権法67条1項・103条",
+          }
+        ]}>著作隣接権者が不明の場合も、同じく裁定制度の対象</Popup>になっています。
       </p>
     </div>
     <div>
       <p class="inline">
-        著作権者不明の著作物を「
-        <Popup
-          id="c4s1_7"
-          popup={[
-            {
-              text: "オーファンワークス\n実証事業実行委員会",
-              href: "https://jrrc.or.jp/orphanworks/about/committee/",
-            }
-          ]}>
-          オーファンワークス
-        </Popup>
-        」と言います。権利者団体等で構成されたオーファンワークス実証事業実行委員会が、「
-        <Popup
-          id="c4s1_8"
-          popup={[
-            {
-              text: "著作権者不明等著作物裁定申請書作成ガイド",
-              href: "https://jrrc.or.jp/orphanworks/about/saitei_guide2021/",
-            }
-          ]}>
-        著作権者不明等著作物裁定申請書作成ガイド
-        </Popup>
-        」を公開しているので参照してください。
+        著作権者不明の著作物を「<Popup id="c4s1_7" popup={[
+          {
+            text: "オーファンワークス\n実証事業実行委員会",
+            href: "https://jrrc.or.jp/orphanworks/about/committee/",
+          }
+        ]}>オーファンワークス</Popup>」と言います。権利者団体等で構成されたオーファンワークス実証事業実行委員会が、「<Popup id="c4s1_8" popup={[
+          {
+            text: "著作権者不明等著作物裁定申請書作成ガイド",
+            href: "https://jrrc.or.jp/orphanworks/about/saitei_guide2021/",
+          }
+        ]}>著作権者不明等著作物裁定申請書作成ガイド</Popup>」を公開しているので参照してください。
       </p>
     </div>
     <div>
       <p class="inline">
-        申請には、権利者捜し広告掲載費用(通常8,250円)と裁定申請手数料(通常6,900円)に加え、裁定補償金額が必要です。補償金の金額については、文化庁の
-        <Popup
-          id="c4s1_9"
-          popup={[
-            {
-              text: "文化庁「著作権者不明の場合の裁定補償金金額シミュレーションシステム」",
-              href: "https://www.bunka.go.jp/saiteisimulation/",
-            }
-          ]}>
-          裁定補償金金額シミュレーションシステム
-        </Popup>
-        がありますので、参考にしてください。
+        申請には、権利者捜し広告掲載費用（通常8,250円）と裁定申請手数料（通常6,900円）に加え、裁定補償金額が必要です。補償金の金額については、文化庁の<Popup id="c4s1_9" popup={[
+          {
+            text: "文化庁「著作権者不明の場合の裁定補償金金額シミュレーションシステム」",
+            href: "https://www.bunka.go.jp/saiteisimulation/",
+          }
+        ]}>裁定補償金金額シミュレーションシステム</Popup>がありますので、参考にしてください。
       </p>
     </div>
   </Section>
