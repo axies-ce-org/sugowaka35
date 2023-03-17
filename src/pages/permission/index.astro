@@ -5,6 +5,7 @@ import Bubble from '../../components/Bubble.astro';
 import ListArea from '../../components/ListArea.astro';
 import ImgCaption from '../../components/ImgCaption.astro';
 import Popup from '../../components/Popup.astro';
+import PopupParagraph from '../../components/PopupParagraph.astro';
 import Page from '../../templates/Page.astro';
 ---
 
@@ -69,34 +70,30 @@ import Page from '../../templates/Page.astro';
     <p>
       著作権の利用許諾については、窓口を設けているところが多数あります。
     </p>
-    <div>
-      <p class="inline">
-        まず文化庁の「<Popup id="c4s1_1" popup={[
-          {
-            text: "文化庁「著作物の正しい利用方法」",
-            href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html",
-          },
-        ]}>著作物の正しい利用方法</Popup>」のページを見て、窓口がないか調べてみましょう。
-      </p>
-    </div>
+    <PopupParagraph>
+      まず文化庁の「<Popup id="c4s1_1" popup={[
+        {
+          text: "文化庁「著作物の正しい利用方法」",
+          href: "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/riyohoho.html",
+        },
+      ]}>著作物の正しい利用方法</Popup>」のページを見て、窓口がないか調べてみましょう。
+    </PopupParagraph>
     <p>
       例えば、音楽の著作権は集中管理団体であるJASRACやNexToneが管理している場合が多いのですが、そうでないこともあります。
     </p>
-    <div>
-      <p class="inline">
-        そこで、まずは<Popup id="c4s1_2" popup={[
-          {
-            text: "JASRAC作品ベータベース検索サービス「J-WID」",
-            href: "https://www2.jasrac.or.jp/eJwid/",
-          },
-        ]}>JASRACの作品ベータベース検索サービス</Popup>で、利用したい楽曲があるか検索してみましょう。もしJASRACで検索して見つからない場合は、<Popup id="c4s1_3" popup={[
-          {
-            text: "NexTone作品検索データベース",
-            href: "https://search.nex-tone.co.jp/",
-          },
-        ]}>NexToneの作品検索データベース</Popup>で調べてみましょう。
-      </p>
-    </div>
+    <PopupParagraph>
+      そこで、まずは<Popup id="c4s1_2" popup={[
+        {
+          text: "JASRAC作品ベータベース検索サービス「J-WID」",
+          href: "https://www2.jasrac.or.jp/eJwid/",
+        },
+      ]}>JASRACの作品ベータベース検索サービス</Popup>で、利用したい楽曲があるか検索してみましょう。もしJASRACで検索して見つからない場合は、<Popup id="c4s1_3" popup={[
+        {
+          text: "NexTone作品検索データベース",
+          href: "https://search.nex-tone.co.jp/",
+        },
+      ]}>NexToneの作品検索データベース</Popup>で調べてみましょう。
+    </PopupParagraph>
     <p>
       例えば、Official髭男dismの楽曲はデータベースで検索するとJASRACではなく、NexToneが管理していることがわかります。この場合はNexToneに許諾を申請することになります。
     </p>
@@ -104,21 +101,19 @@ import Page from '../../templates/Page.astro';
     <h4>
       Step3：許諾依頼をする
     </h4>
-    <div>
-      <p class="inline">
-        窓口がある場合には、窓口から利用許諾申請をしましょう。窓口は、Webフォームになっているところも多いです。費用がかかることがあるので、料金は確認しましょう。<Popup id="c4s1_4" popup={[
-          {
-            text: "JASRAC「使用料計算シミュレーション」",
-            href: "https://www.jasrac.or.jp/info/create/calculation/simulation.html",
-          },
-        ]}>JASRAC</Popup>や<Popup id="c4s1_5" popup={[
-          {
-            text: "NexTone「使用料シミュレーション」",
-            href: "https://sim.nex-tone.co.jp/",
-          },
-        ]}>NexTone</Popup>は使用料計算シミュレーションができます。
-      </p>
-    </div>
+    <PopupParagraph>
+      窓口がある場合には、窓口から利用許諾申請をしましょう。窓口は、Webフォームになっているところも多いです。費用がかかることがあるので、料金は確認しましょう。<Popup id="c4s1_4" popup={[
+        {
+          text: "JASRAC「使用料計算シミュレーション」",
+          href: "https://www.jasrac.or.jp/info/create/calculation/simulation.html",
+        },
+      ]}>JASRAC</Popup>や<Popup id="c4s1_5" popup={[
+        {
+          text: "NexTone「使用料シミュレーション」",
+          href: "https://sim.nex-tone.co.jp/",
+        },
+      ]}>NexTone</Popup>は使用料計算シミュレーションができます。
+    </PopupParagraph>
     <p>
       計算シミュレーションがない場合は、使用料規程を読んだり、見積もりをとったりして確認しましょう。
     </p>
@@ -167,39 +162,33 @@ import Page from '../../templates/Page.astro';
     <p>
       一生懸命調べたのだけれど、どうしても著作権者が誰なのかわからないこともあります。
     </p>
-    <div>
-      <p class="inline">
-        著作権法では、文化庁長官の裁定を受け、かつ、補償金を払って、その著作物を利用できる規定（著作権者不明等の場合の裁定制度）があります（67条）。<Popup id="c4s1_6" popup={[
-          {
-            text: "著作権法67条1項・103条",
-          }
-        ]}>著作隣接権者が不明の場合も、同じく裁定制度の対象</Popup>になっています。
-      </p>
-    </div>
-    <div>
-      <p class="inline">
-        著作権者不明の著作物を「<Popup id="c4s1_7" popup={[
-          {
-            text: "オーファンワークス\n実証事業実行委員会",
-            href: "https://jrrc.or.jp/orphanworks/about/committee/",
-          }
-        ]}>オーファンワークス</Popup>」と言います。権利者団体等で構成されたオーファンワークス実証事業実行委員会が、「<Popup id="c4s1_8" popup={[
-          {
-            text: "著作権者不明等著作物裁定申請書作成ガイド",
-            href: "https://jrrc.or.jp/orphanworks/about/saitei_guide2021/",
-          }
-        ]}>著作権者不明等著作物裁定申請書作成ガイド</Popup>」を公開しているので参照してください。
-      </p>
-    </div>
-    <div>
-      <p class="inline">
-        申請には、権利者捜し広告掲載費用（通常8,250円）と裁定申請手数料（通常6,900円）に加え、裁定補償金額が必要です。補償金の金額については、文化庁の<Popup id="c4s1_9" popup={[
-          {
-            text: "文化庁「著作権者不明の場合の裁定補償金金額シミュレーションシステム」",
-            href: "https://www.bunka.go.jp/saiteisimulation/",
-          }
-        ]}>裁定補償金金額シミュレーションシステム</Popup>がありますので、参考にしてください。
-      </p>
-    </div>
+    <PopupParagraph>
+      著作権法では、文化庁長官の裁定を受け、かつ、補償金を払って、その著作物を利用できる規定（著作権者不明等の場合の裁定制度）があります（67条）。<Popup id="c4s1_6" popup={[
+        {
+          text: "著作権法67条1項・103条",
+        }
+      ]}>著作隣接権者が不明の場合も、同じく裁定制度の対象</Popup>になっています。
+    </PopupParagraph>
+    <PopupParagraph>
+      著作権者不明の著作物を「<Popup id="c4s1_7" popup={[
+        {
+          text: "オーファンワークス\n実証事業実行委員会",
+          href: "https://jrrc.or.jp/orphanworks/about/committee/",
+        }
+      ]}>オーファンワークス</Popup>」と言います。権利者団体等で構成されたオーファンワークス実証事業実行委員会が、「<Popup id="c4s1_8" popup={[
+        {
+          text: "著作権者不明等著作物裁定申請書作成ガイド",
+          href: "https://jrrc.or.jp/orphanworks/about/saitei_guide2021/",
+        }
+      ]}>著作権者不明等著作物裁定申請書作成ガイド</Popup>」を公開しているので参照してください。
+    </PopupParagraph>
+    <PopupParagraph>
+      申請には、権利者捜し広告掲載費用（通常8,250円）と裁定申請手数料（通常6,900円）に加え、裁定補償金額が必要です。補償金の金額については、文化庁の<Popup id="c4s1_9" popup={[
+        {
+          text: "文化庁「著作権者不明の場合の裁定補償金金額シミュレーションシステム」",
+          href: "https://www.bunka.go.jp/saiteisimulation/",
+        }
+      ]}>裁定補償金金額シミュレーションシステム</Popup>がありますので、参考にしてください。
+    </PopupParagraph>
   </Section>
 </Page>

@@ -1,0 +1,12 @@
+---
+type Props = {
+  id?: string;
+}
+
+const {id} = Astro.props;
+
+---
+
+<div id={id}>
+  <p class="inline-block"><slot /></p>
+</div>
