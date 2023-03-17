@@ -35,6 +35,7 @@
 	>.list-area,
 	>.img-caption,
 	>.quiz,
+	>.point,
 	>.popup-paragraph {
 		@apply my-5 md:my-6;
 	}

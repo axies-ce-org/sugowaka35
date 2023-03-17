@@ -8,7 +8,7 @@ type Props = {
 const {type, title, id} = Astro.props;
 ---
 
-<div id={id}>
+<div id={id} class="point">
   {type !== 'simple' && (<div class="ml-3 inline-block rounded-t-lg bg-orange-600 px-4 py-0.5 text-sm font-medium uppercase leading-normal text-white md:ml-4 md:px-4 md:py-1 md:text-base md:leading-normal">Point</div>)}
   <div class="rounded-2xl bg-stone-100 p-3 md:p-4">
     {title && (
