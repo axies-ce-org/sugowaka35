@@ -66,15 +66,6 @@
 	/* --- table styles --- */
 	table {
 		@apply w-full;
-		tr {
-
-			&.2col {
-
-				td {
-					@apply first-of-type:w-[31.4%] first-of-type:min-w-[31.4%] first-of-type:grow-0 first-of-type:md:w-[35.3%] first-of-type:md:min-w-[35.3%] grow;
-				}
-			}
-		}
 		thead {
 			tr {
 				@apply border border-stone-800 bg-orange-600 text-white
@@ -93,6 +84,21 @@
 				td {
 					@apply py-1 px-1.5 md:p-2 border-stone-800 border-l;
 				}
+			}
+		}
+
+		.col-2 {
+
+			th,
+			td {
+				@apply first-of-type:w-[31.4%] first-of-type:min-w-[31.4%] first-of-type:grow-0 md:first-of-type:w-[35.3%] md:first-of-type:min-w-[35.3%] grow;
+			}
+		}
+
+		.col-3 {
+			th,
+			td {
+				@apply w-[20%] min-w-[20%] grow-0 last-of-type:w-full last-of-type:grow;
 			}
 		}
 	}
