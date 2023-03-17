@@ -22,12 +22,10 @@ jobs:
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           `echo git remote -v`
-          `echo git status --short`
-          `echo git diff --shortstat`
           if (git diff --shortstat | grep '[0-9]'); then \
-            `echo git status`; \
             git add -A; \
             git commit -m "テスト GitHub Actions からプッシュ"; \
+            `echo git log`; \
             git push origin HEAD:${GITHUB_REF}; \
           fi
         env:
