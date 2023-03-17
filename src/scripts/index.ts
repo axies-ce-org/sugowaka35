@@ -1,7 +1,7 @@
 import MicroModal from 'micromodal';
 
 // サイドバー ハイライト
-const headings = document.querySelectorAll('.section-title');
+const headings = document.querySelectorAll('.section-top');
 
 headings.forEach(function(heading, i) {
   heading.id = 'sec-0' + (i + 1);
