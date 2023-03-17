@@ -11,7 +11,7 @@ type Props = {
 const {title, number, list, level} = Astro.props;
 ---
 
-<div id={number && `q${number}`}>
+<div id={number && `q${number}`} class="quiz">
   <dt class="border-t-2 border-b border-red-600 bg-orange-50 py-5 md:p-6">
     <div class="flex gap-2.5 pl-1.5 pr-2 text-lg font-bold leading-normal md:gap-10 md:p-0 md:text-2xl md:leading-normal">
       <span class="text-[40px] font-medium leading-none text-orange-600 md:text-[56px] md:leading-none">

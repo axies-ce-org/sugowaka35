@@ -27,6 +27,18 @@
 .section-content {
 	@apply leading-relaxed text-stone-700;
 
+	>h3,
+	>h4,
+	>p,
+	>img,
+	>.speech-bubbles,
+	>.list-area,
+	>.img-caption,
+	>.quiz,
+	>.popup-paragraph {
+		@apply my-5 md:my-6;
+	}
+
 	h3 {
 		@apply bg-orange-600 text-white text-xl md:text-2xl font-medium leading-normal md:leading-normal py-2 px-3 md:px-4 rounded;
 	}
