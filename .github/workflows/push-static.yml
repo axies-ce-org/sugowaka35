@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+      - akiya/imple-github-actions
+
+jobs:
+  test:
+    name: push test from GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: create dummy text
+        run: |
+          touch dummy.txt
+          echo "push test" > dummy.txt
+          ls -la
+      - name: Push
+        run: |
+          git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          `echo git remote -v`
+          `echo git diff --shortstat`
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          if (git diff --shortstat | grep '[0-9]'); then \
+            git add .; \
+            `echo git status`; \
+            git commit -m "テスト GitHub Actions からプッシュ"; \
+            git push origin HEAD:${GITHUB_REF}; \
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
