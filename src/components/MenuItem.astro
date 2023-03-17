@@ -1,14 +1,16 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import { log } from 'console';
 
 interface Props extends HTMLAttributes<'a'> {
   href: string;
+  title: string;
+  submenu: {
+    title: string;
+    href: string;
+  }[]
 }
 
-const isBasis = Astro.url.pathname === '/basis'
-
-const { href, ...attrs } = Astro.props;
+const { href, title, submenu, ...attrs } = Astro.props;
 
 const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange-600 before:bg-orange-500 md:py-2 before:z-30' : 'before:bg-stone-500 md:py-1 md:before:hidden';
 ---
@@ -18,19 +20,21 @@ const activeClassA = href === new URL(Astro.request.url).pathname ? 'text-orange
     href={href}
     class={`${activeClassA} flex gap-2.5 py-3 pr-2 before:mx-[2.5px] before:mt-[6.5px] before:block before:h-[11px] before:min-h-[11px] before:w-[11px] before:min-w-[11px] before:rounded-full before:border before:border-white before:content-[''] md:px-0`} {...attrs}>
     <div class="flex w-full items-center">
-      <p class="flex-1">
-        <slot />
-      </p>
+      <p class="flex-1">{title}</p>
       <img src="/assets/images/chevron-right.svg" alt="" class={`md:hidden ${href === new URL(Astro.request.url).pathname && "hidden"}`}  decoding="async"/>
     </div>
   </a>
   {href === new URL(Astro.request.url).pathname && (
-    <div class="sub-menu">
-    </div>
+    <ul id="fixed-toc">
+      {submenu.map(({title, href}) => {
+        return (
+          <li class="relative last-of-type:after:absolute last-of-type:after:left-[7.5px] last-of-type:after:top-5 last-of-type:after:h-4 last-of-type:after:w-px last-of-type:after:bg-white last-of-type:after:content-[''] md:last-of-type:after:top-[13.75px] md:last-of-type:after:h-8">
+            <a href={href} class="flex gap-2.5 py-3 pr-2 text-sm font-normal before:z-30 before:mx-[3.5px] before:mt-[6.75px] before:block before:h-[9px] before:min-h-[9px] before:w-[9px] before:min-w-[9px] before:rounded-full before:border before:border-white before:bg-stone-500 md:py-1.5 md:leading-relaxed">
+              {title}
+            </a>
+          </li>
+        )
+      })}
+    </ul>
   )}
-  <!-- {!isBasis && (
-    <div class="sub-menu">
-      basis
-    </div>
-  )} -->
 </li>

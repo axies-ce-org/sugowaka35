@@ -5,24 +5,100 @@ import MenuItem from "../components/MenuItem.astro"
 <div id="js-nav" class="fixed top-0 left-full translate-x-0 transition-transform duration-300 md:sticky md:top-10 md:left-auto md:right-0 md:block md:max-h-[100vh-40px]">
   <nav class="z-20 min-h-screen w-screen bg-white px-4 pt-14 pb-6 md:min-h-0 md:w-60 md:rounded-2xl md:p-5 md:shadow-[8px_8px_0px_rgba(237,108,0,0.1)] lg:w-[280px] lg:p-6">
     <ul class="text-[17px] font-bold leading-normal text-stone-800 md:flex md:flex-col md:gap-2 md:text-base md:leading-normal">
-      <MenuItem href="/introduction/">
-        はじめに
-      </MenuItem>
-      <MenuItem href="/extra/">
-        資料集・索引
-      </MenuItem>
-      <MenuItem href="/basis/">
-        著作権の基礎
-      </MenuItem>
-      <MenuItem href="/copyright/">
-        授業における著作権
-      </MenuItem>
-      <MenuItem href="/use/">
-        授業における著作物利用Q&A
-      </MenuItem>
-      <MenuItem href="/permission/">
-        許諾の取り方
-      </MenuItem>
+      <MenuItem
+        href="/introduction/"
+        title="はじめに"
+        submenu={[
+          {
+            title: "はじめに",
+            href: "#sec-01",
+          },
+          {
+            title: "本ウェブサイトに出てくるひとたち",
+            href: "#sec-02",
+          },
+          {
+            title: "法律の条文の参照について",
+            href: "#sec-03",
+          },
+        ]} />
+      <MenuItem
+        href="/extra/"
+        title="資料集・索引"
+        submenu={[
+          {
+            title: "著作権を知るための資料集",
+            href: "#sec-01",
+          },
+          {
+            title: "索引",
+            href: "#sec-02",
+          },
+          {
+            title: "おわりに",
+            href: "#sec-03",
+          },
+      ]} />
+      <MenuItem
+        href="/basis/"
+        title="著作権の基礎"
+        submenu={[
+          {
+            title: "著作権法とは",
+            href: "#sec-01",
+          },
+          {
+            title: "著作物とは",
+            href: "#sec-02",
+          },
+          {
+            title: "著作者とは",
+            href: "#sec-03",
+          },
+          {
+            title: "著作権とは",
+            href: "#sec-04",
+          },
+      ]} />
+      <MenuItem
+        href="/copyright/"
+        title="授業における著作権"
+        submenu={[
+          {
+            title: "授業と著作物",
+            href: "#sec-01",
+          },
+          {
+            title: "引用（32条1項）",
+            href: "#sec-02",
+          },
+          {
+            title: "授業目的の複製等（35条）",
+            href: "#sec-03",
+          },
+          {
+            title: "改正著作権法第35条運用指針",
+            href: "#sec-04",
+          },
+      ]} />
+      <MenuItem
+        href="/use/"
+        title="授業における著作物利用Q&A"
+        submenu={[
+          {
+            title: "授業における著作物利用Q&A",
+            href: "#sec-01",
+          },
+      ]} />
+      <MenuItem
+        href="/permission/"
+        title="許諾の取り方"
+        submenu={[
+          {
+            title: "利用許諾の取り方",
+            href: "#sec-01",
+          },
+      ]} />
     </ul>
   </nav>
 </div>
