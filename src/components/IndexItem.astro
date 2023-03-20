@@ -1,0 +1,29 @@
+---
+type Props = {
+  title?: string;
+  item: {
+    text: string;
+    href: string;
+    memo?: string;
+  }[];
+}
+
+const {title, item} = Astro.props;
+---
+<div>
+  <h6 class="font-bold">{title}</h6>
+  <ul>
+    {item.map(({text, href, memo}) => {
+      return (
+        <li>
+          <a href={href} class="text-orange-600">{text}</a>
+          {memo && (
+            <span class="text-stone-700">
+              （{memo}）
+            </span>
+          )}
+        </li>
+      )
+    })}
+  </ul>
+</div>
