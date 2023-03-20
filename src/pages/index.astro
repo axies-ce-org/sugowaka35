@@ -52,44 +52,24 @@ const Chapter = [
         このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。
         このページの内容について2ー3行のテキストを入れたいです。このページの内容について2ー3行のテキストを入れたいです。
       </p>
-      <div class="mt-6 grid gap-6 md:mt-10 md:grid-cols-2 md:gap-10">
-        <a
-          href="/introduction/"
-          class="group flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:p-10">
-          <div class="grow">
-            <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
-              はじめに
-            </h2>
-            <p class="mt-1 text-sm leading-relaxed md:mt-2">
-              本書の読み方、キャラクターや著者の紹介です。
-            </p>
-          </div>
-          <img
-            src="/assets/images/arrow-circle.svg"
-            alt=""
-            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
-            decoding="async"
-          />
-        </a>
-        <a
-          href="/extra/"
-          class="group flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:p-10">
-          <div class="grow">
-            <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
-              資料集・索引
-            </h2>
-            <p class="mt-1 text-sm leading-relaxed md:mt-2">
-              著作権を知るための資料集、用語の索引です。
-            </p>
-          </div>
-          <img
-            src="/assets/images/arrow-circle.svg"
-            alt=""
-            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
-            decoding="async"
-          />
-        </a>
-      </div>
+      <a
+        href="/introduction/"
+        class="group mt-6 flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:mt-10 md:p-10">
+        <div class="grow">
+          <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
+            はじめに
+          </h2>
+          <p class="mt-1 text-sm leading-relaxed md:mt-2">
+            本書の読み方、キャラクターや著者の紹介です。
+          </p>
+        </div>
+        <img
+          src="/assets/images/arrow-circle.svg"
+          alt=""
+          class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
+          decoding="async"
+        />
+      </a>
       <ul class="mt-6 flex flex-col gap-6 md:mt-10 md:gap-10">
         {Chapter.map(({title, text, href, src}, i) => {
           return (
@@ -122,6 +102,44 @@ const Chapter = [
           )
         })}
       </ul>
+      <div class="mt-6 grid gap-6 md:mt-10 md:grid-cols-2 md:gap-10">
+        <a
+          href="/extra/"
+          class="group flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:p-10">
+          <div class="grow">
+            <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
+              資料集・索引
+            </h2>
+            <p class="mt-1 text-sm leading-relaxed md:mt-2">
+              著作権を知るための資料集、用語の索引です。
+            </p>
+          </div>
+          <img
+            src="/assets/images/arrow-circle.svg"
+            alt=""
+            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
+            decoding="async"
+          />
+        </a>
+        <a
+          href="/afterwords/"
+          class="group flex items-center gap-2 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:p-10">
+          <div class="grow">
+            <h2 class="text-lg font-medium leading-normal text-stone-800 md:text-2xl md:leading-normal">
+              おわりに
+            </h2>
+            <p class="mt-1 text-sm leading-relaxed md:mt-2">
+              本書や著者の紹介です。
+            </p>
+          </div>
+          <img
+            src="/assets/images/arrow-circle.svg"
+            alt=""
+            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
+            decoding="async"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </Layout>
