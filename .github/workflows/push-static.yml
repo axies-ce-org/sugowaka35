@@ -36,9 +36,8 @@ jobs:
         with:
           name: static
           path: static
-      - name: check files
-        run: |
-          ls -la
+      - name: Fix .gitignore
+        run: sed -i '/static/d' .gitignore
       - name: Push
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
