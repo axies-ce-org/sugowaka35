@@ -38,6 +38,7 @@ jobs:
           path: static
       - name: Fix .gitignore
         run: sed -i '/static/d' .gitignore
+          ls -la
       - name: Push
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
@@ -45,7 +46,7 @@ jobs:
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .; \
-          git commit -m "テスト GitHub Actions からプッシュ"; \
+          git commit -m "Build at GitHub Actions"; \
           git push --force origin ${TARGET_BRANCH}; \
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
