@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - akiya/imple-github-actions
+      - main
 jobs:
   build:
     name: Build astro
