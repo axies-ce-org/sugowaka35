@@ -71,12 +71,14 @@ import Page from '../../templates/Page.astro';
     title="法律の条文の参照について"
   >
     <PopupParagraph>
-      本ウェブサイトで参照している法律の条文は、「<a href="https://elaws.e-gov.go.jp/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">e-Gov法令検索 https://elaws.e-gov.go.jp/
-      </a>」で確認することができます。法律では2項以下がある場合でも<Popup id="c1s1_1" popup={[
-        {
-          text: "法制執務・法令用語研究会『条文の読み方〔第2版〕』（有斐閣、2021）71頁参照",
-        }
-      ]}>条名の下から始まる段落が1項であることは明らかなため、付番されません</Popup>。もっとも、本ウェブサイトでは読みやすくするため、条文番号を示すときにも、条文を引用するときにも、1項を付番します。
+      <div>
+        <!-- ここだけ余分な改行が発生するため、divを挟んで応急処置しています -->
+        本ウェブサイトで参照している法律の条文は、「<a href="https://elaws.e-gov.go.jp/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">e-Gov法令検索 https://elaws.e-gov.go.jp/</a>」で確認することができます。法律では2項以下がある場合でも<Popup id="c1s1_1" popup={[
+          {
+            text: "法制執務・法令用語研究会『条文の読み方〔第2版〕』（有斐閣、2021）71頁参照",
+          }
+        ]}>条名の下から始まる段落が1項であることは明らかなため、付番されません</Popup>。もっとも、本ウェブサイトでは読みやすくするため、条文番号を示すときにも、条文を引用するときにも、1項を付番します。
+      </div>
     </PopupParagraph>
 
     <div class="my-5 flex flex-col gap-2 md:my-6">
