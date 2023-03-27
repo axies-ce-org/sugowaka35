@@ -51,5 +51,5 @@ const {id, popup, word} = Astro.props;
     </div>
   </div>
 
-  <div role="button" data-micromodal-trigger={`modal-${id}`} class="group inline cursor-pointer text-orange-600"><img src="/assets/images/question.svg" alt="" class="mx-0.5 mb-0.5 inline" decoding="async" /><span class="underline group-hover:no-underline"><slot /></span></div>
+  <div role="button" data-micromodal-trigger={`modal-${id}`} class={`group inline cursor-pointer ${word || 'hover:opacity-50'}`}>{word ? <img src="/assets/images/question.svg" alt="" class="mx-0.5 mb-0.5 inline" decoding="async" /><span class="border-b border-stone-700 hover:border-0"><slot /></span> : <img src="/assets/images/memo.svg" alt="" class="mx-0.5 mb-0.5 inline" decoding="async" />}</div>
 </>
