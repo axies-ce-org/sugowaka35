@@ -1,5 +1,8 @@
 ---
 import Layout from '../templates/Default.astro';
+import Header from '../layouts/Header.astro';
+import Menu from '../layouts/Menu.astro';
+
 const Chapter = [
   {
     title: '著作権法の基礎',
@@ -29,6 +32,7 @@ const Chapter = [
 ---
 
 <Layout title="すごわか">
+  <Header img="none"/>
   <div class="bg-orange-200 pb-16 md:pb-20">
     <div class="mx-auto text-center">
       <h1 class="font-bold">
@@ -142,4 +146,5 @@ const Chapter = [
       </div>
     </div>
   </div>
+  <Menu />
 </Layout>
