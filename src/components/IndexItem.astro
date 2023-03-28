@@ -16,11 +16,8 @@ const {title, item} = Astro.props;
     {item.map(({text, href, memo}) => {
       return (
         <li>
-          <a href={href} class="text-orange-600">{text}</a>
-          {memo && (
-            <span class="text-stone-700">
-              （{memo}）
-            </span>
+          <a href={href} class="text-orange-600">{text}</a>{memo && (
+            <span class="text-stone-700">（{memo}）</span>
           )}
         </li>
       )
