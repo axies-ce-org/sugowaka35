@@ -8,41 +8,37 @@ env:
   TARGET_BRANCH: akiya/static
 
 jobs:
-  #build:
-  #  name: Build astro
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - uses: actions/checkout@main
-  #    - name: Use Node.jobs
-  #      uses: actions/setup-node@main
-  #      with:
-  #        node-version: '16.x'
-  #    - name: Install dependencies
-  #      run: npm ci
-  #    - name: Build
-  #      run: npm run build
-  #    - name: Archive static folder
-  #      uses: actions/upload-artifact@main
-  #      with:
-  #        name: static
-  #        path: static
+  build:
+    name: Build astro
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Use Node.jobs
+        uses: actions/setup-node@main
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Archive static folder
+        uses: actions/upload-artifact@main
+        with:
+          name: static
+          path: static
 
   push:
     name: Push from GitHub Actions
     permissions: write-all
     runs-on: ubuntu-latest
-      # needs: build
+    needs: build
     steps:
-      #- name: Download artifact
-      #  uses: actions/download-artifact@main
-      #  with:
-      #    name: static
-      #    path: static
-      - name: dummy
-        run: |
-          mkdir static
-          touch static/dummy.txt
-      - name: Setup Git global
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: static
+          path: static
+      - name: Setup Git global settings
         run: |
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
