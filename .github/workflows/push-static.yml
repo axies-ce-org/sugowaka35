@@ -48,6 +48,6 @@ jobs:
           cd static
           git init
           git add -A
-          git commit -m "Build at GitHub Actions"
+          git commit -m "Build static files"
           git remote add origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git push --force origin ${TARGET_BRANCH}

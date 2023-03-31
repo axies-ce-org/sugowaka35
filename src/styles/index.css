@@ -58,7 +58,7 @@
 
 	/* --- list styles --- */
 	ul, ol {
-		@apply pl-[15px] md:pl-4;
+		@apply pl-6 md:pl-4;
 
 		li {
 			a {
