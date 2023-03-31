@@ -1,0 +1,52 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build astro
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Use Node.jobs
+        uses: actions/setup-node@main
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Archive static folder
+        uses: actions/upload-artifact@main
+        with:
+          name: static
+          path: static
+
+  push:
+    name: Push from GitHub Actions
+    permissions: write-all
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@main
+        with:
+          fetch-depth: 1
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: static
+          path: static
+      - name: Fix .gitignore
+        run: sed -i '/static/d' .gitignore
+      - name: Push
+        run: |
+          git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git checkout -b ${TARGET_BRANCH}
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add .
+          git commit -m "Build at GitHub Actions"
+          git push --force origin ${TARGET_BRANCH}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_BRANCH: static
