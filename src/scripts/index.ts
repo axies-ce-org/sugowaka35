@@ -45,7 +45,7 @@ window.addEventListener('scroll', function() {
 // ハンバーガー
 const ham = document.querySelector('#js-hamburger');
 const nav = document.querySelector('#js-nav');
-const item = document.querySelectorAll('#js-nav a[href^="#"]');
+const menuItems = document.querySelectorAll('#js-nav a[href^="#"]');
 
 ham.addEventListener('click', function() {
 
@@ -53,9 +53,9 @@ ham.addEventListener('click', function() {
   nav.classList.toggle('active');
 });
 
-item.forEach(function(button) {
+menuItems.forEach(function(item) {
 
-  button.addEventListener('click', function() {
+  item.addEventListener('click', function() {
     ham.classList.remove('active');
     nav.classList.remove('active');
   })
