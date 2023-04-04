@@ -24,9 +24,7 @@ const isCurrent = href === Astro.url.pathname;
   <a
     href={href}
     class={`flex gap-2.5 py-3 pr-2 before:mx-[2.5px] before:mt-[6.5px] before:block before:h-[11px] before:min-h-[11px] before:w-[11px] before:min-w-[11px] before:rounded-full before:border before:border-white before:content-[''] md:px-0 ${
-      isCurrent
-        ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2'
-        : 'before:bg-stone-500 md:py-1 md:before:hidden'
+      isCurrent ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2' : 'before:bg-stone-500 md:py-1'
     }`}
   >
     <div class="flex w-full items-center">
