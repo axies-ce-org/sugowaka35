@@ -38,10 +38,10 @@ const { id, popup, word } = Astro.props;
                     {text && (
                       <p>
                         {text.split('\n').map((t) => (
-                          <p>
+                          <>
                             {t}
                             <br />
-                          </p>
+                          </>
                         ))}
                       </p>
                     )}
@@ -67,21 +67,32 @@ const { id, popup, word } = Astro.props;
     </div>
   </div>
 
-  <span
-    role="button"
-    data-micromodal-trigger={`modal-${id}`}
-    class={`group inline cursor-pointer ${word || 'hover:opacity-50'}`}
+  <button data-micromodal-trigger={`modal-${id}`} class={`group inline cursor-pointer ${word || 'hover:opacity-50'}`}
     >{
       word ? (
         <>
-          <img src="/assets/images/question.svg" alt="" class="mx-0.5 mb-0.5 inline" decoding="async" />
+          <img
+            src="/assets/images/question.svg"
+            alt=""
+            class="mx-0.5 mb-0.5 inline"
+            decoding="async"
+            width="16"
+            height="16"
+          />
           <span class="border-b border-stone-700 hover:border-0">
             <slot />
           </span>
         </>
       ) : (
-        <img src="/assets/images/memo.svg" alt="" class="mx-0.5 mb-0.5 inline" decoding="async" />
+        <img
+          src="/assets/images/memo.svg"
+          alt=""
+          class="mx-0.5 mb-0.5 inline"
+          decoding="async"
+          width="26"
+          height="26"
+        />
       )
-    }</span
-  >
+    }
+  </button>
 </>

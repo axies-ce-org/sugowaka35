@@ -21,8 +21,7 @@ const Chapter = [
     height: '668',
   },
   {
-    title: '授業における\n著作物利用Q&A',
-    // title: <>授業における<br />著作物利用Q&A</>,
+    title: '授業における<br />著作物利用Q&amp;A',
     text: '授業で第三者の著作物を扱う際の具体的な事例について、Q&A形式で説明を行います。',
     href: '/use/',
     src: '/assets/images/2-4.jpg',
@@ -105,14 +104,10 @@ const Chapter = [
                         {('00' + (i + 1)).slice(-2)}
                       </span>
                       <div class="flex gap-2">
-                        <h3 class="grow text-2xl leading-normal text-stone-800 md:text-[32px] md:leading-normal">
-                          {title.split('\n').map((t) => (
-                            <>
-                              {t}
-                              <br />
-                            </>
-                          ))}
-                        </h3>
+                        <h3
+                          class="grow text-2xl leading-normal text-stone-800 md:text-[32px] md:leading-normal"
+                          set:html={title}
+                        />
                         <img
                           src="/assets/images/arrow-circle.svg"
                           alt=""

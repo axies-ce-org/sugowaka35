@@ -4,21 +4,21 @@
 
 @font-face {
 	font-family: 'Noto Sans JP';
-	src: url('/assets/fonts/NotoSansJP-Bold.woff2') format('woff2');
+	src: url('/assets/fonts/NotoSansCJKjp-Bold.woff2') format('woff2');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Noto Sans JP';
-	src: url('/assets/fonts/NotoSansJP-Medium.woff2') format('woff2');
+	src: url('/assets/fonts/NotoSansCJKjp-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Noto Sans JP';
-	src: url('/assets/fonts/NotoSansJP-Regular.woff2') format('woff2');
+	src: url('/assets/fonts/NotoSansCJKjp-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
