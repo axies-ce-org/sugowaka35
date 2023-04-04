@@ -4,33 +4,43 @@ import Point from '../../components/Point.astro';
 import Page from '../../templates/Page.astro';
 ---
 
-<Page title="はじめに">
-  <Section
-    number="01"
-    title="はじめに"
-  >
-  <p>
-    わたしたちの周りには、たくさんの著作物があり、これらは著作権法で保護されています。しかし、著作権法は身近なことに関する法律であるわりに、知られていないことや、勘違いされていることなどが多々あります。
-  </p>
-  <p>
-    平成30（2018）年に著作権法の35条が改正され、教育機関での授業利用による権利制限の内容に大きな変更がありました。補償金を払うことによって、利用できることが増えたという変更です。しかし、法律はいろいろな場面に適用できる表現で書かれていて、なかなか読み解くのも難しい側面があります。
-  </p>
-  <p>
-    そこで、この改正の後、著作権の権利者側と教育機関側が協力して、35条のガイドラインを作ることになりました。それが「<a href="https://sartras.or.jp/unyoshishin/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">改正著作権法第35条運用指針</a>」というもので、SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）という管理団体のサイトに掲載されています。
-  </p>
-  <p>
-    このウェブサイトは、その運用指針をさらにわかりやすく説明しようとするものです。主に教育機関で授業をされている先生方に向けて書きました。著作権の基本的な知識や、授業で著作物を取り扱う際にできること、できないこと、気をつけなければならないことなどについて、より理解を深め、授業に役立てていただれければ幸いです。
-  </p>
+<Page
+  title="はじめに"
+  description="主に教育機関で授業をされている先生を対象に著作権について説明している当ウェブサイトの、登場人物紹介やご挨拶、法律の条文の参照について説明しているページです。"
+>
+  <Section number="01" title="はじめに">
+    <p>
+      わたしたちの周りには、たくさんの著作物があり、これらは著作権法で保護されています。しかし、著作権法は身近なことに関する法律であるわりに、知られていないことや、勘違いされていることなどが多々あります。
+    </p>
+    <p>
+      平成30（2018）年に著作権法の35条が改正され、教育機関での授業利用による権利制限の内容に大きな変更がありました。補償金を払うことによって、利用できることが増えたという変更です。しかし、法律はいろいろな場面に適用できる表現で書かれていて、なかなか読み解くのも難しい側面があります。
+    </p>
+    <p>
+      そこで、この改正の後、著作権の権利者側と教育機関側が協力して、35条のガイドラインを作ることになりました。それが「<a
+        href="https://sartras.or.jp/unyoshishin/"
+        class="text-orange-600 underline hover:no-underline"
+        target="_blank"
+        rel="noopener noreferrer">改正著作権法第35条運用指針</a
+      >」というもので、SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）という管理団体のサイトに掲載されています。
+    </p>
+    <p>
+      このウェブサイトは、その運用指針をさらにわかりやすく説明しようとするものです。主に教育機関で授業をされている先生方に向けて書きました。著作権の基本的な知識や、授業で著作物を取り扱う際にできること、できないこと、気をつけなければならないことなどについて、より理解を深め、授業に役立てていただれければ幸いです。
+    </p>
   </Section>
 
-  <Section
-    number="02"
-    title="本ウェブサイトに出てくるひとたち"
-  >
+  <Section number="02" title="本ウェブサイトに出てくるひとたち">
     <div class="my-5 grid gap-5 sm:grid-cols-2 md:my-6 md:grid-cols-3 md:gap-6">
       <dl class="text-center">
-        <img src="/assets/images/konaka.jpg" alt="" width="1000" height="1000" loading="lazy" decoding="async" class="mx-auto w-full max-w-[160px] sm:max-w-[200px]" />
         <dt class="mt-2 font-bold md:mt-4">
+          <img
+            src="/assets/images/konaka.jpg"
+            alt=""
+            width="1000"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+            class="mx-auto w-full max-w-[160px] sm:max-w-[200px]"
+          />
           小中（こなか）先生
         </dt>
         <dd class="mt-1.5 text-left text-sm leading-relaxed">
@@ -38,8 +48,16 @@ import Page from '../../templates/Page.astro';
         </dd>
       </dl>
       <dl class="text-center">
-        <img src="/assets/images/daiin.jpg" alt="" width="1000" height="1000" loading="lazy" decoding="async" class="mx-auto w-full max-w-[160px] sm:max-w-[200px]" />
         <dt class="mt-2 font-bold md:mt-4">
+          <img
+            src="/assets/images/daiin.jpg"
+            alt=""
+            width="1000"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+            class="mx-auto w-full max-w-[160px] sm:max-w-[200px]"
+          />
           大院（だいいん）先生
         </dt>
         <dd class="mt-1.5 text-left text-sm leading-relaxed">
@@ -47,8 +65,16 @@ import Page from '../../templates/Page.astro';
         </dd>
       </dl>
       <dl class="text-center">
-        <img src="/assets/images/sumiki.jpg" alt="" width="1000" height="1000" loading="lazy" decoding="async" class="mx-auto w-full max-w-[160px] sm:max-w-[200px]" />
         <dt class="mt-2 font-bold md:mt-4">
+          <img
+            src="/assets/images/sumiki.jpg"
+            alt=""
+            width="1000"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+            class="mx-auto w-full max-w-[160px] sm:max-w-[200px]"
+          />
           隅木（すみき）先生
         </dt>
         <dd class="mt-1.5 text-left text-sm leading-relaxed">
@@ -58,39 +84,30 @@ import Page from '../../templates/Page.astro';
     </div>
   </Section>
 
-  <Section
-    number="03"
-    title="法律の条文の参照について"
-  >
+  <Section number="03" title="法律の条文の参照について">
     <p>
-      本ウェブサイトで参照している法律の条文は、「<a href="https://elaws.e-gov.go.jp/" class="text-orange-600 underline hover:no-underline" target="_blank" rel="noopener noreferrer">e-Gov法令検索 https://elaws.e-gov.go.jp/</a>」で確認することができます。法律では2項以下がある場合でも条名の下から始まる段落が1項であることは明らかなため、付番されません。もっとも、本ウェブサイトでは読みやすくするため、条文番号を示すときにも、条文を引用するときにも、1項を付番します。<br/>※法制執務・法令用語研究会『条文の読み方〔第2版〕』（有斐閣、2021）71頁参照
+      本ウェブサイトで参照している法律の条文は、「<a
+        href="https://elaws.e-gov.go.jp/"
+        class="text-orange-600 underline hover:no-underline"
+        target="_blank"
+        rel="noopener noreferrer">e-Gov法令検索</a
+      >」で確認することができます。法律では2項以下がある場合でも条名の下から始まる段落が1項であることは明らかなため、付番されません。もっとも、本ウェブサイトでは読みやすくするため、条文番号を示すときにも、条文を引用するときにも、1項を付番します。<br
+      />※法制執務・法令用語研究会『条文の読み方〔第2版〕』（有斐閣、2021）71頁参照
     </p>
 
     <div class="my-5 flex flex-col gap-2 md:my-6">
-      <p>
-        例えば、著作権法の著作物の定義は、次のように規定されており、「2条1項1号」と表記します。
-      </p>
-      <Point type="simple">
-        <p>
-          （定義）
-        </p>
-        <p>
-          第二条　この法律において、次の各号に掲げる用語の意義は、当該各号に定めるところによる。<br/>一　著作物　思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
-        </p>
+      <p>例えば、著作権法の著作物の定義は、次のように規定されており、「2条1項1号」と表記します。</p>
+      <Point type="simple" title="（定義）" titleStyle="normal">
+        第二条　この法律において、次の各号に掲げる用語の意義は、当該各号に定めるところによる。<br
+        />一　著作物　思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
       </Point>
     </div>
 
     <div class="my-5 flex flex-col gap-2 md:my-6">
-      <p>
-        本ウェブサイトでは、1項も付番して次のように表記します。
-      </p>
-      <Point type="simple">
-        <p>
-          第二条（定義）
-        </p>
-        <p>
-          1　この法律において、次の各号に掲げる用語の意義は、当該各号に定めるところによる。<br/>一　著作物　思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
-        </p>
+      <p>本ウェブサイトでは、1項も付番して次のように表記します。</p>
+      <Point type="simple" title="第二条（定義）" titleStyle="normal">
+        1　この法律において、次の各号に掲げる用語の意義は、当該各号に定めるところによる。<br
+        />一　著作物　思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
       </Point>
     </div>
 
@@ -98,13 +115,8 @@ import Page from '../../templates/Page.astro';
       <p>
         次の26条の2のように「の」が付くのは枝番号と言って、後から新しい条文を追加するときに元の条文番号の変更を避けるための方法です。「26条の2第2項」と表記します。
       </p>
-      <Point type="simple">
-        <p>
-          第二十六条の二（譲渡権）
-        </p>
-        <p>
-          2　前項の規定は、著作物の原作品又は複製物で次の各号のいずれかに該当するものの譲渡による場合には、適用しない。
-        </p>
+      <Point type="simple" title="第二十六条の二（譲渡権）" titleStyle="normal">
+        2　前項の規定は、著作物の原作品又は複製物で次の各号のいずれかに該当するものの譲渡による場合には、適用しない。
       </Point>
     </div>
   </Section>
