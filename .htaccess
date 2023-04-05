@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # httpからの通信を、httpsにリダイレクト（www有り無し）
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*$) https:/copyright-edu.axies.jp/sugowaka35/$1 [R=301,L]
+
+  # httpsからの通信でwww有りの場合、www無しにリダイレクト
+  RewriteCond %{HTTPS} on
+  RewriteCond %{HTTP_HOST} ^www.copyright-edu.axies.jp/sugowaka35$
+  RewriteRule ^(.*)$ https://copyright-edu.axies.jp/sugowaka35/$1 [R=301,L]
+</IfModule>

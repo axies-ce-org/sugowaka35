@@ -1,0 +1,12 @@
+---
+const { id } = Astro.props;
+
+const portal = document.querySelector('#modal-portal');
+const modal = document.querySelector(`#{id}`);
+
+portal.appendChild(modal);
+---
+
+<div id={id}>
+  {slot}
+</div>

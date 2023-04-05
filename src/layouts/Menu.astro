@@ -9,7 +9,7 @@ const { sidebar } = Astro.props;
 
 <div
   id="js-nav"
-  class={`fixed top-0 left-full translate-x-0 transition-transform duration-300 md:sticky md:top-10 md:left-auto md:right-0 md:block md:max-h-[100vh-40px] ${
+  class={`fixed top-0 left-full translate-x-0 transition-transform duration-300 print:hidden md:sticky md:top-10 md:left-auto md:right-0 md:block md:max-h-[100vh-40px] ${
     sidebar === 'none' && 'md:hidden'
   }`}
 >

@@ -67,7 +67,10 @@ const { id, popup, word } = Astro.props;
     </div>
   </div>
 
-  <button data-micromodal-trigger={`modal-${id}`} class={`group inline cursor-pointer ${word || 'hover:opacity-50'}`}
+  <button
+    data-micromodal-trigger={`modal-${id}`}
+    aria-label="ポップアップを表示"
+    class={`group inline cursor-pointer print:hidden ${word || 'hover:opacity-50'}`}
     >{
       word ? (
         <>

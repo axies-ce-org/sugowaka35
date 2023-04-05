@@ -11,30 +11,38 @@ const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="ja" class="scroll-pt-10 scroll-smooth">
+<html lang="ja" class="scroll-pt-10 scroll-smooth" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://copyright-edu.axies.jp/sugowaka35/" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
     <meta
       property="og:description"
-      content="このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。"
+      content="このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。"
     />
+    <meta property="og:url" content="https://copyright-edu.axies.jp/sugowaka35/" />
+    <meta property="og:site_name" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
     <meta property="og:image" content="/assets/images/im-ogp.png" />
     <meta property="og:image:alt" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta property="og:site_name" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/images/cropped-favicon-192x192.png" />
+    <meta name="msapplication-TileImage" content="/assets/images/cropped-favicon-270x270.png" />
   </head>
   <body
     class="font-noto bg-orange-100 text-[15px] leading-relaxed text-stone-700 antialiased md:text-base md:leading-relaxed"
   >
     <slot />
     <Footer />
+    <!-- <div id="modal-portal"></div> -->
   </body>
 </html>
 <script>
