@@ -25,7 +25,9 @@ const { number, title, description } = Astro.props;
     </div>
     {description && <p class="mt-3 md:mt-2 md:ml-[87px] lg:ml-[103px]">{description}</p>}
   </div>
-  <div class="section-content px-3 py-1 md:px-6 md:py-4 lg:px-10">
+  <div
+    class="section-content px-3 py-1 md:px-6 md:py-4 lg:px-10 [&_a:hover]:no-underline [&_a]:text-orange-500 [&_a]:underline"
+  >
     <slot />
   </div>
 </section>

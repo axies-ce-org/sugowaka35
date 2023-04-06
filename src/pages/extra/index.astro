@@ -1,7 +1,6 @@
 ---
 import Section from '../../components/Section.astro';
 import IndexItem from '../../components/IndexItem.astro';
-import Link from '../../components/Link.astro';
 import Page from '../../templates/Page.astro';
 ---
 
@@ -19,22 +18,30 @@ import Page from '../../templates/Page.astro';
       <li>上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）</li>
       <li>宮武久佳、大塚大『著作権ハンドブック：先生、勝手にコピーしちゃダメ』（東京書籍、2021）</li>
       <li>
-        <Link href="https://pf.bunka.go.jp/chosaku/1tyosaku/kyouiku/sidoujireishu/index.html" isExternal>
+        <a
+          href="https://pf.bunka.go.jp/chosaku/1tyosaku/kyouiku/sidoujireishu/index.html"
+          target="_blank"
+          class="block"
+        >
           文化庁 学校における場面対応型指導事例集「著作権教育5分間の使い方」
-        </Link>
+        </a>
       </li>
       <li>
-        <Link href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/92916001_01.pdf" isExternal>
+        <a
+          href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/92916001_01.pdf"
+          target="_blank"
+          class="block"
+        >
           文化庁 学校における教育活動と著作権
-        </Link>
+        </a>
       </li>
       <li>
-        <Link href="https://www.steam-library.go.jp/content/4" isExternal>
+        <a href="https://www.steam-library.go.jp/content/4" target="_blank" class="block">
           STEAMコンテンツ「デジタル時代の著作権を考える - 豊かな文化を支える制度とは」
-        </Link>
+        </a>
         <ul>
           <li>
-            <Link href="https://www.glocom.ac.jp/steam/2020.html" isExternal>補助教材DLページ</Link>
+            <a href="https://www.glocom.ac.jp/steam/2020.html" target="_blank" class="block">補助教材DLページ</a>
           </li>
         </ul>
       </li>
@@ -46,36 +53,38 @@ import Page from '../../templates/Page.astro';
       <li>福井健策『18歳の著作権入門』（ちくまプリマー新書、2015）</li>
       <li>池村聡『はじめての著作権法』（日経文庫、2018）</li>
       <li>
-        <Link href="https://pf.bunka.go.jp/chosaku/chosakuken/hakase/hajimete_1/index.html" isExternal>
+        <a href="https://pf.bunka.go.jp/chosaku/chosakuken/hakase/hajimete_1/index.html" target="_blank" class="block">
           文化庁 はじめて学ぶ著作権
-        </Link>
+        </a>
       </li>
       <li>
-        <Link href="https://pf.bunka.go.jp/chosaku/tanoshiku/" isExternal>文化庁 楽しく学ぼうみんなの著作権</Link>
+        <a href="https://pf.bunka.go.jp/chosaku/tanoshiku/" target="_blank" class="block"
+          >文化庁 楽しく学ぼうみんなの著作権</a
+        >
       </li>
       <li>
-        <Link href="https://pf.bunka.go.jp/chosaku/chosakuken/h22_manga/index.html" isExternal>
+        <a href="https://pf.bunka.go.jp/chosaku/chosakuken/h22_manga/index.html" target="_blank" class="block">
           文化庁 マンガでわかる著作物の利用「作太郎の奮闘記」
-        </Link>
+        </a>
       </li>
       <li>
-        <Link href="https://www.steam-library.go.jp/content/4" isExternal>
+        <a href="https://www.steam-library.go.jp/content/4" target="_blank" class="block">
           STEAMライブラリー「デジタル時代の著作権を考える - 豊かな文化を支える制度とは」
-        </Link>
+        </a>
       </li>
     </ul>
 
     <h3>文化庁　講習会資料</h3>
     <ul>
       <li>
-        <Link href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/93726501.html" isExternal>
+        <a href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/93726501.html" target="_blank" class="block">
           著作権テキスト
-        </Link>
+        </a>
       </li>
       <li>
-        <Link href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/" isExternal>講習会資料集</Link><span
-          >（画面下部にある「講習会・シンポジウム等」の各年度の講習会リンク先に、資料が掲載されています。）</span
-        >
+        <a href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/" target="_blank" class="block"
+          >講習会資料集</a
+        ><span>（画面下部にある「講習会・シンポジウム等」の各年度の講習会リンク先に、資料が掲載されています。）</span>
       </li>
     </ul>
 
@@ -98,15 +107,19 @@ import Page from '../../templates/Page.astro';
     </ul>
 
     <h3>著作権FAQ</h3>
-    <ul>
+    <ul class="my-5 md:my-6">
       <li>
-        <Link href="https://sartras.or.jp/faqs/" isExternal>授業目的公衆送信補償金制度に関するFAQ（SARTRAS）</Link>
+        <a href="https://sartras.or.jp/faqs/" target="_blank" class="block"
+          >授業目的公衆送信補償金制度に関するFAQ（SARTRAS）</a
+        >
       </li>
       <li>
-        <Link href="http://saiteiseido.bunka.go.jp/chosakuken_qa/" isExternal>著作権Q&A（文化庁）</Link>
+        <a href="http://saiteiseido.bunka.go.jp/chosakuken_qa/" target="_blank" class="block">著作権Q&A（文化庁）</a>
       </li>
       <li>
-        <Link href="https://www.cric.or.jp/qa/index.html" isExternal>著作権Q&A（著作権情報センター（CRIC））</Link>
+        <a href="https://www.cric.or.jp/qa/index.html" target="_blank" class="block"
+          >著作権Q&A（著作権情報センター（CRIC））</a
+        >
       </li>
     </ul>
   </Section>
@@ -992,7 +1005,7 @@ import Page from '../../templates/Page.astro';
     </div>
 
     <h4>ら行</h4>
-    <div class="flex flex-col gap-2">
+    <div class="my-5 flex flex-col gap-2 md:my-6">
       <IndexItem
         title="ライセンス"
         items={[

@@ -1,6 +1,5 @@
 ---
 import Section from '../../components/Section.astro';
-import Link from '../../components/Link.astro';
 import Page from '../../templates/Page.astro';
 ---
 
@@ -143,18 +142,18 @@ import Page from '../../templates/Page.astro';
 
     <ul class="my-5 border-b border-stone-200 pb-5 md:my-6 md:pb-6">
       <li>
-        大学ICT推進協議会では、学生さん向けの著作権教育教材として、<Link
+        大学ICT推進協議会では、学生さん向けの著作権教育教材として、<a
           href="https://axies.jp/report/copyright_education/"
-          isExternal
+          target="_blank"
         >
           動画教材を無償で公開
-        </Link>します（2023年度より順次公開）。
+        </a>します（2023年度より順次公開）。
       </li>
       <li>このウェブサイトのPDFファイルも無償で公開します。</li>
       <li>
-        <Link href="https://axies.jp/report/copyright_education/" isExternal>
+        <a href="https://axies.jp/report/copyright_education/" target="_blank">
           こちらのページ
-        </Link>から、CCライセンスの下、ご活用ください。
+        </a>から、CCライセンスの下、ご活用ください。
       </li>
     </ul>
     <p>
@@ -166,14 +165,15 @@ import Page from '../../templates/Page.astro';
     </p>
     <p>
       このサイトの内容向上に関するアンケートを行っています。下記のURLからご意見をお寄せください。ご協力をよろしくお願いいたします。
-      <Link href="https://forms.gle/a1XxvJU1xebuKaS26" isExternal>https://forms.gle/a1XxvJU1xebuKaS26</Link>
+      <a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block">https://forms.gle/a1XxvJU1xebuKaS26</a
+      >
     </p>
   </Section>
   <Section number="03" title="ライセンス">
     <p>
-      このサイトは、<Link href="https://creativecommons.org/licenses/by/4.0/deed.ja" isExternal>
+      このサイトは、<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">
         クリエイティブ・コモンズ 表示 4.0 国際ライセンス（CC BY 4.0）
-      </Link>の下に提供されています。
+      </a>の下に提供されています。
     </p>
     <p>利用の際には「すごくわかる著作権と授業Web/AXIES/CC BY 4.0」のようにクレジットを表記してください。</p>
   </Section>

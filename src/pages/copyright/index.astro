@@ -5,7 +5,6 @@ import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
 import ListArea from '../../components/ListArea.astro';
 import ImgCaption from '../../components/ImgCaption.astro';
-import Link from '../../components/Link.astro';
 import Modal from '../../components/Modal.astro';
 import ModalTrigger from '../../components/ModalTrigger.astro';
 import Page from '../../templates/Page.astro';
@@ -341,7 +340,7 @@ import Page from '../../templates/Page.astro';
     <p>
       やや難しいのは、公衆送信のすべてについて補償金が必要とされているわけではない点です。公衆送信のなかでもいわゆる遠隔合同授業等で行われる場合は補償金の支払いなく無償、無許諾で利用できます（35条3項）。
     </p>
-    <p class="inline">
+    <p>
       これは、2018年の著作権法改正前に無償でできた利用については引き続き無償にするため、改正後の公衆送信にも無償でできる利用が残されたためです<ModalTrigger
         id="c2s3_2"
       />。
@@ -434,7 +433,7 @@ import Page from '../../templates/Page.astro';
         ※2 プリントやUSBメモリでの配布、AirDropなど教室内で閉じた通信による配布
       </p>
     </ImgCaption>
-    <p class="inline">
+    <p>
       文化庁の整理<ModalTrigger
         id="c2s3_3"
       />に従って、本ウェブサイトでは、「遠隔合同授業」には2つの形態が含まれるため「遠隔合同授業等」とします。「遠隔合同授業等」には「同時中継合同授業」と「同時中継遠隔授業」があります。
@@ -460,14 +459,14 @@ import Page from '../../templates/Page.astro';
     <p id="ref2">
       補償金は、公衆送信を行った著作物の著作権者に支払われるべきなのですが、現場の教員や学生が著作権者を探して直接支払うことは実質不可能です。なので、補償金を取りまとめる管理団体を作り、そこにまとめて支払い、そこから著作権者へ分配することになっています。この仕組みを「授業目的公衆送信補償金制度」と呼んでいます。補償金をまとめて支払うのも、教育機関の設置者が行いますので、先生方1人ひとりが支払う必要はありません（104条の11）。設置者というのは、市立小学校だったらその市、県立高校であればその県、大学であれば、国立大学法人や学校法人、ということになります。
     </p>
-    <p class="inline">
+    <p>
       この補償金を収集、管理、分配するのは、「SARTRAS（一般社団法人授業目的公衆送信補償金等管理協会）<ModalTrigger
         id="c2s3_4"
       />」という団体で、「サートラス」と読みます。
     </p>
     <Modal id="c2s3_4">
       <p>
-        SARTRAS<Link href="https://sartras.or.jp/" isExternal>https://sartras.or.jp/</Link>
+        SARTRAS<a href="https://sartras.or.jp/" target="_blank" class="block">https://sartras.or.jp/</a>
       </p>
     </Modal>
     <SpeechBubbles>
@@ -485,24 +484,25 @@ import Page from '../../templates/Page.astro';
     </SpeechBubbles>
     <Modal id="c2s3_5">
       <p>
-        SARTRASの分配金のページ<Link href="https://sartras.or.jp/bunpai/" isExternal>
+        SARTRASの分配金のページ<a href="https://sartras.or.jp/bunpai/" target="_blank" class="block">
           https://sartras.or.jp/bunpai/
-        </Link>
+        </a>
       </p>
     </Modal>
-    <p class="inline" id="ref29">
+    <p id="ref29">
       35条が改正された時に、権利者側と教育機関側の人が集まって、35条の運用について考える会議が設置されました。これを「著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）」と言います（以下、「フォーラム」と略します）<ModalTrigger
         id="c2s3_6"
       />。
     </p>
     <Modal id="c2s3_6">
       <p>
-        著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）<Link
+        著作物の教育利用に関する関係者フォーラム（教育著作権フォーラム）<a
           href="https://forum.sartras.or.jp/"
-          isExternal
+          target="_blank"
+          class="block"
         >
           https://forum.sartras.or.jp/
-        </Link>
+        </a>
       </p>
     </Modal>
     <p>
@@ -519,7 +519,7 @@ import Page from '../../templates/Page.astro';
     description="このsectionでは、著作権教育フォーラムで作成された「運用指針」について説明します。35条を適用しようとする際に、どのように運用したり判断したりすればよいかの説明になります。"
   >
     <h3>改正著作権法第35条運用指針について</h3>
-    <p class="inline">
+    <p>
       さきほど説明したフォーラムで、授業における著作物の運用についてまとめたものが「運用指針」です。本ウェブサイトでは「改正著作権法第35条運用指針令和3（2021）年度版」（2020年12月）<ModalTrigger
         id="c2s4_1"
       />に基づいて、わかりやすく説明をします。これは、SARTRASのページで全文が読めます<ModalTrigger
@@ -528,9 +528,13 @@ import Page from '../../templates/Page.astro';
     </p>
     <Modal id="c2s4_1">
       <p>
-        SARTRAS「改正著作権法35条運用指針について」<Link href="https://sartras.or.jp/unyoshishin/" isExternal>
+        SARTRAS「改正著作権法35条運用指針について」<a
+          href="https://sartras.or.jp/unyoshishin/"
+          target="_blank"
+          class="block"
+        >
           https://sartras.or.jp/unyoshishin/
-        </Link>
+        </a>
       </p>
     </Modal>
     <Modal id="c2s4_2">
@@ -836,7 +840,7 @@ import Page from '../../templates/Page.astro';
     <p>
       一方、長編映画や小説などをまるごと全部複製・公衆送信することは、利益を不当に害する可能性が高いです。相当程度に入手困難かつ、合理的な手段で利用許諾を得ることができない著作物であれば、全部も可能となる場合もあり、個別に判断することが必要と考えられます。
     </p>
-    <p class="inline">
+    <p>
       大学の授業やゼミなどで、論文を読む場合は一般的には一報すべてを読むことが多いでしょう。一方、論文は専門的であるが故にその対象読者は限られているので、授業で複製・公衆送信を行う場合には著作権者の利益を不当に害することがないかよく検討する必要があります（3章
       Q14、Q15）<ModalTrigger id="c2s4_9" />。
     </p>
@@ -860,7 +864,7 @@ import Page from '../../templates/Page.astro';
     <p>
       また、父兄参観や研究授業での教員参観などで学生と同一の資料を送信する場合、参観人数分を加えても、「必要と認められる限度」とされています。この場合には、利益を不当に害するものではないでしょう。
     </p>
-    <p class="inline">
+    <p>
       映画やテレビ番組の録画を教室で上映することは、非営利無償の上映にあたり許諾不要でおこなえます（38条1項）。しかし、動画の複製をつくって学生の人数分配布したり、オンデマンドでいつでも視聴できるようにしたりすることは、著作権者の利益を不当に害する可能性が高いと考えられます<ModalTrigger
         id="c2s4_10"
       />。
@@ -875,7 +879,7 @@ import Page from '../../templates/Page.astro';
     <p>
       著作物を製本して長期間保存できるような形で複製したり、画像や音声を単独で鑑賞可能なほど高品質なファイルとして複製したりするなど、複製物を単体で他の用途にも転用できるような形で作成することは、著作権者の利益を不当に害する可能性が高いと考えられます。
     </p>
-    <p class="inline">
+    <p>
       公衆送信をする場合に、受信できる人は授業をする人と受ける人に限定されるべきです。例えば学生が世界に情報発信をすることが、授業に必要な活動であったとしても、そこに35条適用の著作物を含めることは、著作権者の利益を不当に害することとなる可能性が高いと考えられます<ModalTrigger
         id="c2s4_11"
       />。
