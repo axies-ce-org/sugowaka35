@@ -1,17 +1,17 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import { getRelativePath } from '../libs/getRelativePath';
-
-interface Props extends HTMLAttributes<'link'> {
+type Props = {
   href: string;
-}
+  isExternal?: boolean;
+};
 
-const { href: _href, ...attrs } = Astro.props;
-
-const href = getRelativePath({
-  from: new URL(Astro.request.url).pathname,
-  to: _href,
-});
+const { href, isExternal } = Astro.props;
 ---
 
-<link href={href} {...attrs} />
+<a
+  href={href}
+  target={isExternal && '_blank'}
+  rel={isExternal && 'noopener noreferrer'}
+  class="text-orange-500 underline"
+>
+  <slot />
+</a>

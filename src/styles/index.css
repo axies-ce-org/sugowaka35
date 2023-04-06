@@ -60,12 +60,6 @@
 	ul,
 	ol {
 		@apply pl-6 md:pl-4;
-
-		li {
-			a {
-				@apply text-orange-600 underline leading-relaxed hover:no-underline;
-			}
-		}
 	}
 
 	ul {

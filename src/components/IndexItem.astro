@@ -1,4 +1,6 @@
 ---
+import Link from '../components/Link.astro';
+
 type Props = {
   title?: string;
   items: {
@@ -18,9 +20,7 @@ const { title, items } = Astro.props;
       items.map(({ text, href, memo }) => {
         return (
           <li>
-            <a href={href} class="text-orange-600">
-              {text}
-            </a>
+            <Link href={href}>{text}</Link>
             {memo && <span class="text-stone-700">（{memo}）</span>}
           </li>
         );
