@@ -3,10 +3,6 @@ import MicroModal from 'micromodal';
 // サイドバー ハイライト
 const headings = document.querySelectorAll('.section-top');
 
-// headings.forEach(function(heading, i) {
-//   heading.id = 'sec-0' + (i + 1);
-// });
-
 window.addEventListener('scroll', function () {
   const scroll = window.scrollY; //スクロール量を取得
   const hight = window.innerHeight; //画面の高さを取得

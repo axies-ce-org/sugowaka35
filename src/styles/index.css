@@ -177,7 +177,7 @@
 		transform: translateY(0);
 	}
 	to {
-		transform: translateY(-5%);
+		transform: translateY(15%);
 	}
 }
 
@@ -186,11 +186,11 @@
 }
 
 .micromodal-slide[aria-hidden='false'] .modal__overlay {
-	animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+	animation: mmfadeIn 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden='false'] .modal__container {
-	animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+	animation: mmslideIn 0.4s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden='true'] .modal__overlay {
