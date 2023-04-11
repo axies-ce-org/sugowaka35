@@ -6,12 +6,13 @@ import Menu from '../layouts/Menu.astro';
 export interface Props {
   title: string;
   description: string;
+  ogType?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, ogType } = Astro.props;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} ogType={ogType}>
   <Header />
   <div class="mx-auto max-w-[1160px] px-4 pt-2.5 pb-20 md:px-10 md:pt-2">
     <h1 class="text-base font-bold text-stone-800">{title}</h1>

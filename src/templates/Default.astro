@@ -5,9 +5,10 @@ import Footer from '../layouts/Footer.astro';
 export interface Props {
   title: string;
   description: string;
+  ogType?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, ogType } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <link rel="canonical" href={`${Astro.site}/`} />
     <meta property="og:locale" content="ja_JP" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType ?? 'article'} />
     <meta property="og:title" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
     <meta
       property="og:description"
