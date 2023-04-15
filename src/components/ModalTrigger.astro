@@ -1,0 +1,33 @@
+---
+type Props = {
+  id?: string;
+  word?: string;
+};
+
+const { id, word } = Astro.props;
+---
+
+<button
+  data-micromodal-trigger={`modal-${id}`}
+  aria-label="ポップアップを表示"
+  class={`group inline cursor-pointer print:hidden ${word || 'hover:opacity-50'}`}
+  >{
+    word ? (
+      <>
+        <img
+          src="/assets/images/question.svg"
+          alt=""
+          class="mx-0.5 mb-0.5 inline"
+          decoding="async"
+          width="16"
+          height="16"
+        />
+        <span class="border-b border-stone-700 hover:border-0">
+          <slot />
+        </span>
+      </>
+    ) : (
+      <img src="/assets/images/memo.svg" alt="" class="mx-0.5 mb-0.5 inline" decoding="async" width="26" height="26" />
+    )
+  }
+</button>

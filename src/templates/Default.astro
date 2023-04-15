@@ -4,24 +4,45 @@ import Footer from '../layouts/Footer.astro';
 
 export interface Props {
   title: string;
+  description: string;
+  ogType?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, ogType } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="ja" class="scroll-pt-10 scroll-smooth">
+<html lang="ja" class="scroll-pt-10 scroll-smooth" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`} />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content={ogType ?? 'article'} />
+    <meta property="og:title" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
+    <meta
+      property="og:description"
+      content="このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。"
+    />
+    <meta property="og:url" content={`${Astro.site}/`} />
+    <meta property="og:site_name" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
+    <meta property="og:image" content={`${Astro.site}/im-ogp.png`} />
+    <meta property="og:image:alt" content="「先生にぜひ読んでほしい」すごくわかる著作権と授業" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" sizes="192x192" href={`${Astro.site}/cropped-favicon-192x192.png`} />
+    <meta name="msapplication-TileImage" content={`${Astro.site}/cropped-favicon-270x270.png`} />
+    <script src="../scripts/index.ts"></script>
   </head>
-  <body class="font-noto bg-orange-100 text-[15px] leading-relaxed text-stone-700 antialiased md:text-base md:leading-relaxed">
+  <body
+    class="font-noto bg-orange-100 text-[15px] leading-relaxed text-stone-700 antialiased md:text-base md:leading-relaxed"
+  >
     <slot />
     <Footer />
   </body>
 </html>
-<script>
-  import '../scripts/index.ts';
-</script>
