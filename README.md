@@ -25,13 +25,13 @@ https://github.com/axies-ce-org/sugowaka35/archive/refs/heads/static.zip
     git clone https://github.com/axies-ce-org/sugowaka35.git
     ```
 
-3.  「すごわか」フォルダへ移動
+3.  **「すごわか」フォルダへ移動**
 
     ```
     cd sugowaka35
     ```
 
-4.  依存パッケージのインストール
+4.  **依存パッケージのインストール**
 
     以下のコマンドで必要なパッケージをインストールします。Astro もここでインストールされます。
 
