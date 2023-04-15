@@ -3,10 +3,6 @@ import MicroModal from 'micromodal';
 // サイドバー ハイライト
 const headings = document.querySelectorAll('.section-top');
 
-headings.forEach(function (heading, i) {
-  heading.id = 'sec-0' + (i + 1);
-});
-
 window.addEventListener('scroll', function () {
   const scroll = window.scrollY; //スクロール量を取得
   const hight = window.innerHeight; //画面の高さを取得
@@ -53,15 +49,15 @@ window.addEventListener('scroll', function () {
 // ハンバーガー
 const ham = document.querySelector('#js-hamburger');
 const nav = document.querySelector('#js-nav');
-const menuItems = document.querySelectorAll('#js-nav a[href^="#"]');
+const item = document.querySelectorAll('#js-nav a[href]');
 
 ham.addEventListener('click', function () {
   ham.classList.toggle('active');
   nav.classList.toggle('active');
 });
 
-menuItems.forEach(function (item) {
-  item.addEventListener('click', function () {
+item.forEach(function (button) {
+  button.addEventListener('click', function () {
     ham.classList.remove('active');
     nav.classList.remove('active');
   });
