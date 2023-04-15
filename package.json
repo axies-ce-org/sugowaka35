@@ -22,7 +22,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
     "astro": "^2.0.18",
-    "astro-relative-links": "^0.3.1",
+    "astro-relative-links": "^0.3.2",
     "micromodal": "^0.4.10"
   },
   "devDependencies": {
