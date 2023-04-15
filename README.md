@@ -1,50 +1,54 @@
 # すごわか
 
-## 🚀 Project Structure
+「すごくわかる 著作権と授業 Web」の HTML ファイルは、このリポジトリの `static` ブランチで取得できます。
 
-Inside of your Astro project, you'll see the following folders and files:
+https://github.com/axies-ce-org/sugowaka35/tree/static
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Header.astro
-│   │   └── Footer.astro
-│   │   └── ...
-│   ├── layouts/
-│   │   └── Default.astro
-│   │   └── Page.astro
-│   ├── pages/
-│   │   └── index.astro
-│   │   └── ...
-│   ├── scripts/
-│   │   └── index.ts
-│   └── styles/
-│       └── index.css
-└── package.json
-```
+または、以下のリンクから ZIP ファイルを直接ダウンロードできます。
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+https://github.com/axies-ce-org/sugowaka35/archive/refs/heads/static.zip
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+この HTML ファイル群は、Astro という静的サイトジェネレータを使って作成しています。Astro の構文でソースファイルを作成しビルドすると、`static` にあるファイルが生成されます。同様の作業をお手元で行うには、以下のようにしてください。
 
-Any static assets, like images, can be placed in the `public/` directory.
+## ローカル開発環境構築
 
-## 🧞 Commands
+1.  **Node.js のインストール**
 
-All commands are run from the root of the project, from a terminal:
+    Astro を動かすには Node.js が必要ですので、作業環境で Node.js が未インストールの場合はまず以下のサイトからインストールしてください。  
+    https://nodejs.org/ja
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+2.  **すごわかリポジトリのダウンロード**
 
-## 👀 Want to learn more?
+    以下の Git コマンドでローカル環境にクローンします。
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+    ```
+    git clone https://github.com/axies-ce-org/sugowaka35.git
+    ```
+
+3.  「すごわか」フォルダへ移動
+
+    ```
+    cd sugowaka35
+    ```
+
+4.  依存パッケージのインストール
+
+    以下のコマンドで必要なパッケージをインストールします。Astro もここでインストールされます。
+
+    ```
+    npm install
+    ```
+
+## 利用できるコマンド
+
+上記環境構築完了後、主に以下のコマンドが利用できます。すべてのコマンドは、プロジェクトのルートで、ターミナルから実行します。
+
+| コマンド          | アクション                                                                                            |
+| :---------------- | :---------------------------------------------------------------------------------------------------- |
+| `npm run dev`     | ローカル開発サーバを `localhost:3000` で起動します。`ctrl` + `C` で停止します。                       |
+| `npm run build`   | 本番サイトを `./static/` フォルダにビルドします。                                                     |
+| `npm run preview` | `./static/` にビルドされたファイルを `localhost:3000` でプレビューします。`ctrl` + `C` で停止します。 |
+
+## Astro についてもっと詳しく知りたい方はこちら
+
+https://docs.astro.build
