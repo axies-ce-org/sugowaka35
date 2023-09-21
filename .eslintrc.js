@@ -1,5 +1,12 @@
 module.exports = {
   root: true,
+  settings: {
+    tailwindcss: {
+      callees: ['twMerge', 'twJoin'],
+      classRegex: '^(active)?[cC]lass(Name)?$',
+      whitelist: ['js-.*'],
+    },
+  },
   parser: '@typescript-eslint/parser',
   extends: ['plugin:@typescript-eslint/recommended', 'plugin:tailwindcss/recommended', 'plugin:astro/recommended'],
   plugins: ['@typescript-eslint', 'tailwindcss'],
