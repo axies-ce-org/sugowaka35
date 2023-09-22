@@ -34,6 +34,10 @@ export interface ResultData {
 let resultData: ResultData = {};
 let isComplete = false;
 
+// Specify the endpoint for post request here.
+// If you do not want to send a request, pass an empty string.
+const POST_ENDPOINT = '';
+
 const answerBlocks = document.querySelectorAll<HTMLDivElement>('.js-answer');
 const container = document.querySelector<HTMLDivElement>('.js-container');
 const choices = document.querySelectorAll<HTMLButtonElement>('.js-choice');
@@ -109,12 +113,11 @@ const onClickSubmit = async () => {
 
   updateMessageBlock(messageContent, messageBlock);
   await updateIllustration(isAllCorrect, imageFileName, illustrationImage);
-
   showResult(isAllCorrect, resultBlock, resultContentBlock);
-  setBrowserId();
-  sendData(resultData);
-
   resultBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  setBrowserId();
+  POST_ENDPOINT && sendData(resultData, POST_ENDPOINT);
 };
 
 const onClickReset = () => {

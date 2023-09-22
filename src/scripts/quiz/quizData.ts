@@ -5,7 +5,9 @@ import type { ResultData } from './index';
 const getData = (resultData: ResultData) => {
   // Sort based on question number
   const sortedResultArray = Object.entries(resultData).sort((a, b) => {
-    if (a[0] > b[0]) {
+    const firstId = Number(a[0].replace('question', ''));
+    const secondId = Number(b[0].replace('question', ''));
+    if (firstId > secondId) {
       return 1;
     } else {
       return -1;
@@ -20,9 +22,9 @@ const getData = (resultData: ResultData) => {
   };
 };
 
-export const sendData = async (resultData: ResultData) => {
+export const sendData = async (resultData: ResultData, endpoint: string) => {
   try {
-    const response = await fetch('/quiz', {
+    const response = await fetch(endpoint, {
       method: 'POST',
       body: JSON.stringify(getData(resultData)),
       headers: {
