@@ -1,4 +1,4 @@
-import type { Question } from './index';
+import type { Question } from '../../contents/questions';
 
 const highlightClassNames = [
   '!bg-orange-600',
@@ -6,6 +6,14 @@ const highlightClassNames = [
   '!text-white',
   '[&>span]:!bg-white',
   '[&>span]:!text-orange-600',
+];
+
+const highlightWrongClassNames = [
+  '!bg-zinc-500',
+  '!border-zinc-500',
+  '!text-white',
+  '[&>span]:!bg-white',
+  '[&>span]:!text-zinc-500',
 ];
 
 export const disableChoices = (currentChoice: NodeListOf<HTMLButtonElement>) => {
@@ -30,8 +38,14 @@ export const highlightCorrectChoice = (answeredQuestion: Question, currentChoice
   correctChoice.classList.add(...highlightClassNames);
 };
 
+export const highlightSelectedWrongChoice = (clickedChoice: HTMLButtonElement, isCorrect: boolean) => {
+  if (!isCorrect) {
+    clickedChoice.classList.add(...highlightWrongClassNames);
+  }
+};
+
 export const resetChoices = (choices: NodeListOf<HTMLButtonElement>) => {
   choices.forEach((element) => {
-    element.classList.remove(...highlightClassNames);
+    element.classList.remove(...highlightClassNames, ...highlightWrongClassNames);
   });
 };

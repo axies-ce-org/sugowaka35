@@ -5,6 +5,7 @@ import {
   enableChoices,
   getSelectedChoiceNumber,
   highlightCorrectChoice,
+  highlightSelectedWrongChoice,
   resetChoices,
 } from './quizChoice';
 
@@ -71,6 +72,7 @@ const onClickChoice = (clickedChoice: HTMLButtonElement) => {
   showAnswer(currentAnswerBlock);
   updateJudgement(currentAnswerBlock, isCorrect);
   highlightCorrectChoice(answeredQuestion, currentChoices);
+  highlightSelectedWrongChoice(clickedChoice, isCorrect);
   disableChoices(currentChoices);
   setResultData(resultData, answeredQuestion.questionId, isCorrect);
 
