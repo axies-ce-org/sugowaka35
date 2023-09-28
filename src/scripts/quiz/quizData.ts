@@ -45,6 +45,14 @@ export const setBrowserId = () => {
   localStorage.setItem('browserId', browserId);
 };
 
-export const setResultData = (resultData: ResultData, answeredQuestionId: number, isCorrect: boolean) => {
-  resultData[`question${answeredQuestionId}`] = isCorrect;
+export const setResultData = (
+  currentCoicedNumber: number,
+  resultData: ResultData,
+  answeredQuestionId: number,
+  isCorrect: boolean
+) => {
+  resultData[`question${answeredQuestionId}`] = {
+    answer: currentCoicedNumber,
+    isCorrect,
+  };
 };

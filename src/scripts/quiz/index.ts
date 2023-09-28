@@ -29,7 +29,10 @@ import {
 import { setBrowserId, setResultData, sendData } from './quizData';
 
 export interface ResultData {
-  [x: string]: boolean;
+  [x: string]: {
+    answer: number;
+    isCorrect: boolean;
+  };
 }
 
 let resultData: ResultData = {};
@@ -55,6 +58,8 @@ const resetButton = document.querySelector<HTMLButtonElement>('.js-reset');
 const onClickChoice = (clickedChoice: HTMLButtonElement) => {
   const currentQuestion = clickedChoice.closest<HTMLDivElement>('.js-question');
   const currentChoices = currentQuestion!.querySelectorAll<HTMLButtonElement>('.js-choice');
+  const currentCoicedNumber = Number(clickedChoice.dataset.choiceNumber);
+
   if (!currentQuestion) return;
 
   const currentAnswerBlock = currentQuestion.querySelector<HTMLDivElement>('.js-answer');
@@ -74,7 +79,7 @@ const onClickChoice = (clickedChoice: HTMLButtonElement) => {
   highlightCorrectChoice(answeredQuestion, currentChoices);
   highlightSelectedWrongChoice(clickedChoice, isCorrect);
   disableChoices(currentChoices);
-  setResultData(resultData, answeredQuestion.questionId, isCorrect);
+  setResultData(currentCoicedNumber, resultData, answeredQuestion.questionId, isCorrect);
 
   currentAnswerBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
 

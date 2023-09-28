@@ -7,7 +7,7 @@ export const getAnsweredQuestion = (currentQuestion: HTMLDivElement, questions: 
 };
 
 export const getCorrectAnswersCount = (resultData: ResultData) => {
-  return Object.values(resultData).filter((result) => result === true).length;
+  return Object.values(resultData).filter((result) => result.isCorrect === true).length;
 };
 
 export const resetAnswers = (answerBlocks: NodeListOf<HTMLDivElement>) => {
