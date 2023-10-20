@@ -9,12 +9,12 @@ const { sidebar } = Astro.props;
 
 <div
   id="js-nav"
-  class={`fixed top-0 left-full translate-x-0 transition-transform duration-300 print:hidden md:sticky md:top-10 md:left-auto md:right-0 md:block md:max-h-[100vh-40px] ${
+  class={`fixed left-full top-0 translate-x-0 transition-transform duration-300 print:hidden md:sticky md:left-auto md:right-0 md:top-10 md:block md:max-h-[100vh-40px] ${
     sidebar === 'none' && 'md:hidden'
   }`}
 >
   <nav
-    class="z-20 min-h-screen w-screen bg-white px-4 pt-14 pb-6 md:min-h-0 md:w-60 md:rounded-2xl md:p-5 lg:w-[280px] lg:p-6"
+    class="z-20 min-h-screen w-screen bg-white px-4 pb-6 pt-14 md:min-h-0 md:w-60 md:rounded-2xl md:p-5 lg:w-[280px] lg:p-6"
   >
     <ul
       class="text-[17px] font-bold leading-normal text-stone-800 md:flex md:flex-col md:gap-2 md:text-base md:leading-normal"
@@ -101,6 +101,7 @@ const { sidebar } = Astro.props;
           },
         ]}
       />
+      <MenuItem href="/quiz/" title="著作権クイズ" />
       <MenuItem
         href="/extra/"
         title="資料集・索引"

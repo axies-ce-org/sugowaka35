@@ -4,7 +4,7 @@ import type { HTMLAttributes } from 'astro/types';
 interface Props extends HTMLAttributes<'a'> {
   href: string;
   title: string;
-  submenu: {
+  submenu?: {
     title: string;
     href: string;
   }[];
@@ -18,7 +18,7 @@ const isCurrent = href === Astro.url.pathname;
 <li
   class={`${
     isCurrent &&
-    "relative before:absolute before:top-5 before:left-[7.5px] before:h-[calc(100%-32px)] before:w-px before:bg-stone-200 before:content-[''] md:before:top-[14.5px]"
+    "relative before:absolute before:left-[7.5px] before:top-5 before:h-[calc(100%-32px)] before:w-px before:bg-stone-200 before:content-[''] md:before:top-[14.5px]"
   } border-b border-stone-200 last-of-type:border-0 md:border-0`}
 >
   <a
@@ -40,7 +40,7 @@ const isCurrent = href === Astro.url.pathname;
     </div>
   </a>
   {
-    isCurrent && (
+    isCurrent && submenu && (
       <ul id="fixed-toc">
         {submenu.map(({ title, href }) => {
           return (

@@ -8,10 +8,11 @@ module.exports = {
       },
       fontFamily: {
         noto: ['"Noto Sans JP"', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       fontSize: {
-        '3.25': "0.8125rem" /* 13px */,
-        '3.75': "0.9375rem" /* 15px */,
+        3.25: '0.8125rem' /* 13px */,
+        3.75: '0.9375rem' /* 15px */,
       },
     },
   },
