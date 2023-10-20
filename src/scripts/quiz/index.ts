@@ -38,9 +38,7 @@ export interface ResultData {
 let resultData: ResultData = {};
 let isComplete = false;
 
-// Specify the endpoint for post request here.
-// If you do not want to send a request, pass an empty string.
-const POST_ENDPOINT = '';
+const POST_ENDPOINT = import.meta.env.PUBLIC_POST_ENDPOINT ?? '';
 
 const answerBlocks = document.querySelectorAll<HTMLDivElement>('.js-answer');
 const container = document.querySelector<HTMLDivElement>('.js-container');
