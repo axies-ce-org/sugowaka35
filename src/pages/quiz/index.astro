@@ -11,7 +11,7 @@ import questions from '../../contents/questions';
 >
   <div class="js-container mx-auto grid max-w-[47.5rem] gap-10">
     {
-      questions.map(({ questionId, question, choices, explanation, correctAnswerNumber, notes, reference }) => (
+      questions.map(({ questionId, question, choices, explanations, correctAnswerNumber, reference }) => (
         <section
           id={`question-${questionId}`}
           data-question-id={questionId}
@@ -62,19 +62,26 @@ import questions from '../../contents/questions';
                   </span>
                 </div>
               </div>
-              <div class="mt-4">
-                {explanation.map((paragraph) => (
-                  <p class="[&+p]:mt-2">{paragraph}</p>
-                ))}
-              </div>
-              {notes && (
-                <div class="mt-4 rounded-2xl bg-stone-100 p-4 text-stone-700">
-                  <h4 class="mb-2.5 font-bold text-orange-600">{notes.heading}</h4>
-                  {notes.paragraphs.map((paragraph) => (
-                    <p class="text-[0.9375rem] lg:text-base [&+p]:mt-2">{paragraph}</p>
-                  ))}
-                </div>
-              )}
+              {explanations.map(({ type, heading, paragraphs }) => {
+                if (type === 'plane') {
+                  return (
+                    <div class="mt-4">
+                      {paragraphs.map((paragraph) => (
+                        <p class="[&+p]:mt-2">{paragraph}</p>
+                      ))}
+                    </div>
+                  );
+                } else if (type === 'note') {
+                  return (
+                    <div class="mt-4 rounded-2xl bg-stone-100 p-4 text-stone-700">
+                      <h4 class="mb-2.5 font-bold text-orange-600">{heading}</h4>
+                      {paragraphs.map((paragraph) => (
+                        <p class="text-[0.9375rem] lg:text-base [&+p]:mt-2">{paragraph}</p>
+                      ))}
+                    </div>
+                  );
+                }
+              })}
               {reference && (
                 <div class="mt-4">
                   <span class="font-bold">参考：</span>
