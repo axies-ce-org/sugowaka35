@@ -6,7 +6,7 @@ import relativeLinks from 'astro-relative-links';
 export default defineConfig({
   outDir: './static',
   server: {
-    port: 3000
+    port: 3000,
   },
   site: 'https://copyright-edu.axies.jp/sugowaka35',
   integrations: [
