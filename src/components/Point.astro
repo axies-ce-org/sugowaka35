@@ -13,7 +13,7 @@ const { type, title, id, tag, titleStyle } = Astro.props;
 <div id={id} class="point">
   {
     type !== 'simple' && (
-      <div class="ml-3 inline-block rounded-t-lg bg-orange-600 px-4 py-0.5 text-sm font-medium uppercase leading-normal text-white md:ml-4 md:px-4 md:py-1 md:text-base md:leading-normal">
+      <div class="ml-3 inline-block rounded-t-lg bg-orange-600 px-4 py-0.5 text-sm/normal font-medium uppercase text-white md:ml-4 md:px-4 md:py-1 md:text-base">
         {tag === 'column' ? 'Column' : 'Point'}
       </div>
     )
@@ -21,9 +21,7 @@ const { type, title, id, tag, titleStyle } = Astro.props;
   <div class="rounded-2xl bg-stone-100 p-3 md:p-4">
     {
       title && (
-        <h6 class={`${titleStyle !== 'normal' && 'mb-0.5 text-base font-bold leading-relaxed text-orange-600'}`}>
-          {title}
-        </h6>
+        <h6 class={`${titleStyle !== 'normal' && 'mb-0.5 text-base/relaxed font-bold text-orange-600'}`}>{title}</h6>
       )
     }
     <slot />

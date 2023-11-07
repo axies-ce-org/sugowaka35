@@ -7,8 +7,8 @@ type Props = {
 const { speaker, feLevel } = Astro.props;
 ---
 
-<dl class="flex gap-[19px] md:gap-7">
-  <dt class="w-[36px] min-w-[36px] text-center md:w-[48px] md:min-w-[48px]">
+<dl class="flex gap-[1.1875rem] md:gap-7">
+  <dt class="w-9 min-w-[2.25rem] text-center md:w-12 md:min-w-[3rem]">
     <img
       src={speaker === '小中' || speaker === 'Konaka'
         ? `/assets/images/konaka-fe${feLevel}.png`
@@ -20,10 +20,10 @@ const { speaker, feLevel } = Astro.props;
       width="48"
       height="48"
     />
-    <p class="text-[11px] font-bold leading-relaxed">{speaker}</p>
+    <p class="text-[0.6875rem]/relaxed font-bold">{speaker}</p>
   </dt>
   <dd
-    class="relative grow rounded-lg bg-white p-2 before:absolute before:left-[-15px] before:top-4 before:block before:border-y-[6px] before:border-r-[15px] before:border-y-transparent before:border-r-white before:content-[''] md:p-4 md:before:-left-5 md:before:border-y-[8px] md:before:border-r-[20px]"
+    class="relative grow rounded-lg bg-white p-2 before:absolute before:left-[-0.9375rem] before:top-4 before:block before:border-y-[6px] before:border-r-[15px] before:border-y-transparent before:border-r-white before:content-[''] md:p-4 md:before:-left-5 md:before:border-y-8 md:before:border-r-[20px]"
   >
     <slot />
   </dd>
