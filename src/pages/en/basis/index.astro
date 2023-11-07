@@ -119,7 +119,7 @@ import Page from '../../../templates/Page.astro';
       </Bubble>
       <Bubble speaker="Daiin" feLevel="1">I see, so it's not the same as physical ownership.</Bubble>
     </SpeechBubbles>
-    <Modal id="c1s2_1">
+    <Modal id="c1s2_1" lang="en">
       <p>Supreme Court, January 20, 1984, HANREI JIHO No. 1107, p. 127 [Ganshinkei Case].</p>
     </Modal>
     <img src="/assets/images/1-1-2_en.jpg" alt="" width="1558" height="752" loading="lazy" decoding="async" />
@@ -143,172 +143,204 @@ import Page from '../../../templates/Page.astro';
         turned into a book or a web article, the pictures and text may be copyrighted, so you should be careful.
       </Bubble>
     </SpeechBubbles>
-    <Point>思想や感情を創作的に表現したものでないと「著作物」ではない</Point>
+    <Point>A work is not a "copyrighted work" unless it is a creative expression of thoughts or sentiments.</Point>
     <ListArea id="ref27">
-      <h5>著作権法上の著作物でないものの例</h5>
+      <h5>Examples of works that are not copyrighted works under the Copyright Act:</h5>
       <ul>
         <li>
-          頭の中で考えただけのもの（アイデア）：小説のストーリーも考えただけでは保護されません。小説として表現されたものが保護されます。
+          Something that is just a thought in your head (an idea): the story of a novel is also not protected if it is
+          just a thought. What is expressed as a novel is protected.
         </li>
         <li>
-          データ、事実だけを記したもの：訃報、人事異動情報、各県の人口一覧などは、表現者の考えや気持ちを表現したものではないので、「思想又は感情」を表現したといえず、著作物になりません。
+          Data and facts only: obituaries, information on personnel transfers, population lists for each prefecture,
+          etc., do not express the thoughts or sentiments of the person expressing them, and therefore cannot be an
+          expression of "thoughts or sentiments" and are not copyrighted works.
         </li>
         <li>
-          ありふれた表現やごく短い文章：「青い空」など誰でも使うようなフレーズは創作性がないと判断されることが多いです。
+          Commonplace expressions and very short sentences: phrases that anyone would use, such as "blue skies," are
+          often considered to be non-creative.
         </li>
       </ul>
     </ListArea>
-    <p>著作物の例としては以下のようなものがあります（10条1項）</p>
+    <p>Examples of copyrighted works include the following (Article 10(1)):</p>
     <ImgCaption id="ref30">
-      <figcaption>【著作物の種類（10条1項）】</figcaption>
+      <figcaption>[Types of copyrighted works (Article 10(1))]</figcaption>
       <table>
         <thead>
           <tr class="col-2">
-            <th>種類</th>
-            <th>例</th>
+            <th>Type</th>
+            <th>Example</th>
           </tr>
         </thead>
         <tbody>
           <tr class="col-2">
-            <td>言語の著作物</td>
-            <td>講演、論文、レポート、作文、小説、脚本、詩歌、俳句、落語、漫才など</td>
-          </tr>
-          <tr class="col-2">
-            <td>音楽の著作物</td>
-            <td>曲、楽曲を伴う歌詞など</td>
-          </tr>
-          <tr class="col-2">
-            <td>舞踊、無言劇の著作物</td>
-            <td>日本舞踊、バレエ、ダンス、舞踏、パントマイムなどの振り付け</td>
-          </tr>
-          <tr class="col-2">
-            <td>美術の著作物</td>
-            <td>絵画、版画、彫刻、マンガ、書、舞台装置、生け花など（茶碗、壺、刀剣等の美術工芸品も含む）</td>
-          </tr>
-          <tr class="col-2">
-            <td>建築の著作物</td>
-            <td>宮殿、凱旋門、庭園、塔などの建築物（鑑賞性が必要）</td>
-          </tr>
-          <tr class="col-2">
-            <td>地図、図形の著作物</td>
-            <td>地図、学術的な図面、図表、設計図、立体模型、地球儀など</td>
-          </tr>
-          <tr class="col-2">
-            <td>映画の著作物</td>
+            <td>Literary works</td>
             <td
-              >劇場用映画、アニメ、ビデオ、YouTube動画、TikTok動画、ゲームソフトの映像部分などの「録画されている動く影像」</td
+              >Lectures, papers, reports, essays, novels, screenplays, poetry, haiku, rakugo, comic storytelling, etc.</td
             >
           </tr>
           <tr class="col-2">
-            <td>写真の著作物</td>
-            <td>肖像写真、風景写真、記録写真、広告写真など</td>
+            <td>Musical works</td>
+            <td>Songs, lyrics accompanying songs, etc.</td>
           </tr>
           <tr class="col-2">
-            <td>プログラムの著作物</td>
-            <td>オペレーティング・システム（OS）、アプリケーション・ソフト、家電製品用のプログラムなど</td>
+            <td>Works of choreography and pantomime</td>
+            <td>Choreography for Japanese dance, ballet, dance, pantomime, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Works of fine art</td>
+            <td
+              >Paintings, prints, sculptures, cartoons, calligraphy, stage sets, flower arrangements, etc. (including
+              arts and crafts such as tea bowls, pots, swords, etc.).</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Architectural works</td>
+            <td
+              >Palaces, triumphal arches, gardens, towers, and other architectural structures (must be appreciable).</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Maps and diagrammatic works</td>
+            <td>Maps, academic drawings, charts, blueprints, three-dimensional models, globes, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Cinematographic works</td>
+            <td
+              >Recorded moving images such as theatrical movies, animations, videos, YouTube videos, TikTok videos, and
+              video portions of game software.</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Photographic works</td>
+            <td>Portraits, landscapes, documentary photography, advertising photography, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Works of computer programming</td>
+            <td>Operating systems (OS), application software, programs for consumer electronics, etc.</td>
           </tr>
         </tbody>
       </table>
     </ImgCaption>
-    <p id="ref35">このほかに次のような著作物もあります（11条、12条、12条の2）</p>
+    <p id="ref35">In addition to these works, the following works are also available (Articles 11, 12, and 12-2)</p>
     <ImgCaption>
-      <figcaption>【著作物の種類（11条、12条、12条の2）】</figcaption>
+      <figcaption>[Types of works (Articles 11, 12, 12-2)]</figcaption>
       <table>
         <thead>
           <tr class="col-2">
-            <th>種類</th>
-            <th>例</th>
+            <th>Type</th>
+            <th>Example</th>
           </tr>
         </thead>
         <tbody>
           <tr class="col-2">
-            <td>二次的著作物</td>
-            <td>上表の著作物を翻訳、編曲、変形、翻案し、作成した著作物</td>
+            <td>Derivative works</td>
+            <td>Works created by translating, arranging, transforming, or adapting the works in the table above.</td>
           </tr>
           <tr class="col-2">
-            <td>編集著作物</td>
-            <td>百科事典、辞書、新聞、雑誌、詩集など</td>
+            <td>Compilation works</td>
+            <td>Encyclopedias, dictionaries, newspapers, magazines, poetry books, etc.</td>
           </tr>
           <tr class="col-2">
-            <td>データベースの著作物</td>
-            <td>コンピュータで検索可能な形態をとった百科事典、辞書など</td>
+            <td>Database works</td>
+            <td>Encyclopedias, dictionaries, etc. in computer-searchable form.</td>
           </tr>
         </tbody>
       </table>
     </ImgCaption>
     <p>
-      編集物は、素材の選択や配列に創作性があると、著作物となります。全体としても編集著作物として保護されますが、辞典や雑誌など中身の1つ1つの記事を利用する際には、個々の記事も著作物であるため、それぞれの著作権者の許諾が必要となります。
+      A compilation is a copyrighted work if the selection and arrangement of materials are creative. Although a
+      compilation as a whole is protected as a copyrighted work, when using individual articles in a dictionary,
+      magazine, etc., the permission of the respective copyright owners is required, as each article is also a
+      copyrighted work.
     </p>
     <p>
-      データベースの著作物は、集められた個々のデータに著作物性がなくても、データの選び方やデータを検索するための体系的な構成方法などに創作性があれば、著作物と認められます。
+      A database is a copyrighted work if there is creativity in the way the data is selected and the systematic way the
+      data is organized for retrieval, even if the individual data collected is not copyrightable.
     </p>
     <SpeechBubbles>
-      <Bubble speaker="大院" feLevel="5">データは著作物じゃないのに、データベースは著作物なのか。</Bubble>
-      <Bubble speaker="隅木" feLevel="4">
-        例えば、他のデータベースでは調べられないような情報を検索できたり、同じ情報を検索するのでもキーワードの選定などに工夫があったりする場合に著作物性が認められることがあります。
+      <Bubble speaker="Daiin" feLevel="5">The data is not a copyrighted work, but the database is.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        For example, copyrightability may be recognized when information that cannot be searched in other databases can
+        be retrieved, or when you are creative in the selection of keywords for retrieving the same information.
       </Bubble>
     </SpeechBubbles>
     <p>
-      以下のものは著作物にあたるものの、国民に周知し広く利用してもらう目的で作成されるので、許諾なく利用できます（13条）。
+      Although the following items are copyrighted works, they are created for the purpose of making them known to the
+      public and making them widely available, so they can be used without the copyright owner's permission (Article
+      13).
     </p>
     <ListArea id="ref10">
-      <h5>許諾なく利用できる著作物の例</h5>
+      <h5>Examples of copyrighted works that can be used without permission:</h5>
       <ul>
-        <li>憲法その他の法令</li>
-        <li>国や地方公共団体等の告示、訓令、通達など</li>
-        <li>裁判所の判決、決定、命令など</li>
-        <li>国、地方公共団体等が作成する上記の翻訳物や編集物</li>
+        <li>Constitution and other laws and regulations.</li>
+        <li>Notices, directives, and notices of the national government, local governments, etc.</li>
+        <li>Court judgments, decisions, orders, etc.</li>
+        <li>Translations and compilations of the above prepared by the national government, local governments, etc.</li>
       </ul>
     </ListArea>
     <Quiz
-      title="では、ここでクイズです。下記のものは著作権法で保護される著作物でしょうか？"
+      title="Now here is a quiz. Are the following items copyrighted works protected by the Copyright Act?"
       list={[
-        { item: '（１）ファンタジー小説の設定' },
-        { item: '（２）親戚の子にせがまれて、メモ用紙にさらっと描いた猫の絵' },
-        { item: '（３）アニメのキャラクターの名前' },
-        { item: '（４）学生のレポートに書かれたグラフ' },
+        { item: '(1) Fantasy novel setting.' },
+        { item: "(2) A cat drawing on a piece of notepaper, done at the behest of a relative's child." },
+        { item: '(3) Names of cartoon characters.' },
+        { item: '(4) Graphs in student reports.' },
       ]}
     >
-      <QuizContent title="（１）ファンタジー小説の設定">
-        <Bubble speaker="小中" feLevel="2">小説は著作物だから、設定も著作物かな？</Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          いいえ、抽象的な設定だけでは著作物にはあたりません。例えば、最近、主人公が異世界に飛ばされて、そこで活躍するような小説、漫画、アニメがありますが、異世界に飛ばされるという程度の設定自体はアイデアの範囲であって著作権はないので、このような設定で新たに小説を書いても著作権侵害にはならないのです。
+      <QuizContent title="(1) Fantasy novel setting">
+        <Bubble speaker="Konaka" feLevel="2">
+          Since the novel is copyrighted, is the setting copyrighted as well?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          No, an abstract setting alone does not constitute a copyrighted work. For example, recently, there are novels,
+          manga, and anime in which the main character is transported to and explores another world. This level of
+          setting itself is within the scope of an idea and is not copyrighted, so writing a new novel with this kind of
+          setting is not an infringement of copyright.
         </Bubble>
       </QuizContent>
-      <QuizContent title="（２）親戚の子にせがまれて、メモ用紙にさらっと描いた猫の絵">
-        <Bubble speaker="大院" feLevel="4">
-          メモ用紙に描いたようなものは、すぐ捨てるだろうし著作物じゃないんじゃないか？
+      <QuizContent title="(2) A cat drawing on a piece of notepaper that a relative's child asked me to draw.">
+        <Bubble speaker="Daiin" feLevel="4">
+          Something like a drawing on a piece of notepaper would probably be thrown away immediately so is not a
+          copyrighted work, is it?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="3">
-          いえ、いつ捨てるかは、著作権法上は問題ではなく、描いた時点で「表現されたもの」なので著作物となります<ModalTrigger
-            id="s2_1"
-          />。
+        <Bubble speaker="Sumiki" feLevel="3">
+          No, it does not matter under the Copyright Act when you throw it away, it is a copyrighted work because it was
+          a "creative expression" at the time it was drawn<ModalTrigger id="s2_1" />.
         </Bubble>
       </QuizContent>
-      <Modal id="s2_1">
+      <Modal id="s2_1" lang="en">
         <p>
-          「表現」というと、何らかの物に固定されていなければいけないと思われるかもしれませんが、固定されることは著作物となるための要件ではありません。なお、映画の著作物に関しては固定されていることが要件になります。
+          The word "expression" may sound like it has to be fixed on some object, but being fixed is not a requirement
+          for a copyrighted work. For cinematographic works, it is a requirement that the copyrighted work be fixed.
         </p>
       </Modal>
-      <QuizContent title="（３）アニメのキャラクターの名前">
-        <Bubble speaker="小中" feLevel="1">これはきっと著作物ですよ！</Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          はずれです。これは著作物にはあたりません。小中さんのお名前も著作物にはなりません。色々な考え方がありえますが、「文芸、学術、美術又は音楽の範囲に属するもの」に当たらない、創作性がないといった整理になると思います。ただし、キャラクターの絵は著作物になります<ModalTrigger
+      <QuizContent title="(3) Names of cartoon characters">
+        <Bubble speaker="Konaka" feLevel="1">This is surely a copyrighted work!</Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          Nice try. This is not a copyrighted work. Konaka's name is not a copyrighted work either. There are various
+          opinions on it, but I think it can be categorized as not being "within the literary, academic, artistic, or
+          musical domain" or not having creativity. However, a picture of a character is a copyrighted work<ModalTrigger
             id="s2_2"
-          />。
+          />.
         </Bubble>
       </QuizContent>
-      <Modal id="s2_2">
+      <Modal id="s2_2" lang="en">
         <p>
-          キャラクターの絵との関係ではキャラクターの名前は、「著作物...の題号」（20条1項）として同一性保持権の対象にはなりえます。
+          Concerning a picture of a character, the name can be subject to the integrity right as "the title of the work"
+          (Article 20(1)).
         </p>
       </Modal>
-      <QuizContent title="（４）学生のレポートに書かれたグラフ">
-        <Bubble speaker="大院" feLevel="3">
-          グラフは著作物じゃないな。単なるデータは著作物じゃないし、データをグラフにしただけだったら、創作性はないんじゃないかな？
+      <QuizContent title="(4) Graphs in student reports">
+        <Bubble speaker="Daiin" feLevel="3">
+          I don't think a graph is a copyrighted work. Mere data isn't a copyrighted work, and if it were just a graph
+          of data, it wouldn't be creative.
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          Excelなどで誰が描いても同じようなグラフになる場合は、創作性がなく、著作物にならない可能性が高いです。ですが、例えばビール消費量とかのグラフで、棒グラフをビールジョッキの絵にしているなど、表現上の工夫をしている場合は、創作性が認められて著作物になる可能性があります。
+        <Bubble speaker="Sumiki" feLevel="2">
+          If the graph looks the same no matter who draws it in Excel or other software, it is not creative and is not
+          likely to be a copyrighted work. However, if the graph shows, for example, beer consumption, and uses a
+          creative way to express it, such as by using a picture of a beer mug instead of a bar graph, the creativity of
+          the graph may be recognized and the work may be copyrighted work.
         </Bubble>
       </QuizContent>
     </Quiz>
@@ -316,310 +348,411 @@ import Page from '../../../templates/Page.astro';
 
   <Section
     number="03"
-    title="著作者とは"
-    description="このsectionでは、著作権法で定義する「著作者」について説明します。個人1人だけでなく、法人著作や共同著作者などもあることを理解しましょう。"
+    title="Who is the author?"
+    description={'This section explains "author" under the Copyright Act. It is important to understand that there are not only individual authors but also corporate authors and joint authors.'}
   >
-    <h3>著作者の定義</h3>
-    <p>著作権法の2条1項2号に、著作者について定義されています。</p>
-    <Point type="simple" title="2条1項2号">著作者　著作物を創作する者をいう。</Point>
-    <p>著作物がなにかについては、前のsectionで学びました。それらを創作する者が「著作者」となります。</p>
+    <h3>Definition of author</h3>
+    <p>Article 2(1)(ii) of the Copyright Act defines an author.</p>
+    <Point type="simple" title="Article 2(1)(ii)">Author means a person who creates a work.</Point>
+    <p>We learned in the previous section what copyrighted works are. The person who creates them is the "author".</p>
     <p>
-      著作者となるのはプロのクリエイターだけではありません。幼稚園児や小学生が、絵を描けば、その絵の著作者となります。手紙を書けば、書いた人が手紙の著作者です。もし、イラストやプログラムなどの著作物の作成を外注した場合、実際にその著作物を作成した外注先が著作者になります。
+      It is not only professional creators who are authors. If a kindergarten or elementary school student draws a
+      picture, then they are the author of the picture. If they write a letter, the person who wrote it is the author of
+      the letter. If you subcontract the creation of a copyrighted work, such as an illustration or a computer program,
+      the subcontractor who created the copyrighted work is the author.
     </p>
-    <Point>著作者は著作物を創作した者であって、プロかアマチュアか、子どもか大人かは関係しない！</Point>
+    <Point>
+      The author is the creator of the copyrighted work. It does not matter if such a person is a professional or
+      amateur, child or adult!
+    </Point>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">
-        この前、親戚の幼稚園の子が描いた絵を写真に撮ってSNSにアップしちゃいましたけど……
+      <Bubble speaker="Konaka" feLevel="2">
+        The other day I took a picture of a drawing by a relative's kindergarten child and posted it on SNS. ......
       </Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        幼稚園のお子さんでも著作者ですね。ただ、幼稚園のお子さんには判断できないと思いますから、<span
-          class="font-bold text-orange-600">保護者さんの許諾</span
-        >をとりましょう。
+      <Bubble speaker="Sumiki" feLevel="2">
+        A child can be an author too, even if the child is in kindergarten. However, I do not think that a kindergarten
+        child would be able to judge this, so you should obtain <span class="font-bold text-orange-600"
+          >permission from the parents</span
+        >.
       </Bubble>
-      <Bubble speaker="小中" feLevel="4">うぅ……あれは、やらかしだったんですね……すみません……</Bubble>
+      <Bubble speaker="Konaka" feLevel="4">Ugh ...... that was a mistake ...... I'm sorry ......</Bubble>
     </SpeechBubbles>
-    <h4 id="ref25">著作者と著作権者</h4>
+    <h4 id="ref25">Authors and copyright owners</h4>
     <p>
-      「著作者」は著作物を創作した者で、「著作権者」は著作権を持っている者を指します。基本的に「著作者＝著作権者」になります。しかし、次のsection（section04
-      著作権とは）で説明しますが、財産権としての著作権は譲渡したり相続したりできるので、「著作者≠著作権者」になることもあります。著作物を利用する際に許諾を求める先は、以下のようになります。
+      The "author" is the person who created the copyrighted work, and the "copyright owner" is the person who holds the
+      copyright. Basically, "author = copyright owner". However, as explained in the next section (Section 04 What is
+      Copyright?), copyright as an economic right can be transferred or inherited, so the situation of "author ≠
+      copyright owner" happens sometimes. When using copyrighted works, permission should be requested for the
+      following:
     </p>
     <ListArea>
       <ul>
-        <li>著作者人格権に関すること：著作者に許諾をとる</li>
-        <li>著作権（財産権）に関すること：著作権者に許諾をとる</li>
+        <li>Matters related to moral rights: obtain permission from the author.</li>
+        <li>Matters related to copyright (economic rights): obtain permission from the copyright owner.</li>
       </ul>
     </ListArea>
-    <p>著作者人格権と著作権（財産権）については次のsectionで説明します。</p>
-    <img src="/assets/images/1-1-3.jpg" alt="" width="1655" height="761" loading="lazy" decoding="async" />
-    <h4 id="ref20">職務著作（法人著作）</h4>
+    <p>Moral rights and copyrights (economic rights) are explained in the next section.</p>
+    <img src="/assets/images/1-1-3_en.jpg" alt="" width="1655" height="761" loading="lazy" decoding="async" />
+    <h4 id="ref20">Corporate works</h4>
     <p>
-      仕事でなにか著作物を作成した場合は、作成した個人が著作者になるのではなく会社や学校や大学などの組織が著作者になることがあります（15条）。職務著作（法人著作）となるためには、以下の条件が必要です。
+      If you create a work in the course of duty, the individual who created it may not be the author, but an
+      organization such as a company, school, or university may be the author (Article 15). The following requirements
+      must be met for a work to be a corporate work:
     </p>
     <ListArea>
       <ol>
-        <li>法人等の発意に基づき作成されるものであること</li>
-        <li>法人等の「業務に従事する者」が創作すること</li>
-        <li>「職務上」の行為として創作されること</li>
-        <li>「公表」する場合に法人等の著作名義で公表するものであること</li>
-        <li>著作物の作成の時の「契約、就業規則」その他に職員を著作者とするという定めがないこと</li>
+        <li>The copyrighted work must be prepared based on the initiative of the corporation, etc.</li>
+        <li>Creation by an "employee" of a corporation, etc.</li>
+        <li>To be created "in the course of duty".</li>
+        <li>
+          When "publicizing" the copyrighted work, the copyrighted work must be published under the name of the
+          corporation, etc.
+        </li>
+        <li>
+          There is no provision in the "contract, work regulations," or any other document at the time of the creation
+          of the copyrighted work that designates the employee as the author.
+        </li>
       </ol>
     </ListArea>
     <p>
-      （1）に関しては、必ずしも職場の具体的な指示がなくても最終的に職場の承認を得て作成する場合には「発意に基づき作成された」となります。また、職員がアイデアを出して作成し、職場の承諾がなくても、職務の内容から想定される限り職務上作成すれば、「発意に基づき作成された」ことになります<ModalTrigger
-        id="05"
-      />。
+      For requirement (1), if a copyrighted work is created without specific instructions from the employer but with the
+      final approval of the employer, it is considered to be "created at the employer's initiative”. In addition, even
+      if an employee comes up with an idea and creates the copyrighted work without the approval of the employer, if the
+      copyrighted work is created in the course of duty as far as it is assumed to be based on the job description, it
+      is considered to have been "created at the employee's initiative"<ModalTrigger id="05" />.
     </p>
-    <Modal id="05">
+    <Modal id="05" lang="en">
       <p>
-        「法人等が著作物の作成を企画、構想し、業務に従事する者に具体的に作成を命じる場合」、「業務に従事する者が法人等の承諾を得て著作物を作成する場合」だけではなく、「法人等と業務に従事する者との間に雇用関係があり、法人等の業務計画や法人等が第三者との間で締結した契約等に従って、業務に従事する者が所定の職務を遂行している場合」には、法人等の具体的な指示や承諾がなくても、業務に従事する者の職務の遂行上、その著作物の作成が予定又は予期される限り、「法人等の発意」の要件をみたすと解されています（知財高判平成22年8月4日判タ1344号226頁〔北見工大事件〕）。
+        The requirement of "the initiative of the corporation, etc." is satisfied if there is an employment relationship
+        between the corporation, etc., and the employee, and the employee is performing the prescribed duty under the
+        business plan of the corporation, etc. or a contract concluded by the corporation, etc. with a third party, etc.
+        even without specific instructions or consent from the corporation, etc. as long as the creation of the work is
+        scheduled or expected in the performance of the duty of the employee (Intellectual Property High Court, August
+        4, 2010, HANREI TIMES No. 1344, p. 226 [Kitami Institute of Technology Case]).
       </p>
     </Modal>
     <p>
-      （2）に関しては、基本的には雇用関係のある人になります。会社の社員とか、大学の職員とかですね。派遣職員は会社と直接の雇用関係はないですが派遣先の会社等で具体的な指示を受けて働いている人なので、（2）に該当する可能性があります。
+      For requirement (2), it is generally someone who has an employment relationship. This could be an employee of a
+      company or a staff member of a university. Temporary staff may fall under requirement (2) since they are not
+      directly employed by the company but work under specific instructions at the client company, etc.
     </p>
     <p>
-      （3）に関しては、職務として作成していなければ該当しません。例えば、美術の先生が、休みの日に趣味で絵を描いたとしても、それは職場ではなくその先生が著作者となります。
+      For requirement (3), it does not apply if the work was not created in the course of duty. For example, if an art
+      teacher paints pictures as a hobby on their days off, they are the author of the copyrighted work, not the
+      employer.
     </p>
-    <p>（4）に関しては、大学教授の講義のように、著作名義を教授本人として公表されるものはこれにあたりません。</p>
     <p>
-      （5）に関しては、自分が作成した著作物の著作者を社員や職員本人とするとか著作権が社員や職員に帰属すると定めるような契約や規則があれば職務著作とはならず、作成者が著作者となります。
+      The requirement (4) does not apply to lectures by university professors, which are published under the name of the
+      individual professor.
     </p>
-    <p>職務著作の場合は、法人等が「著作者」となり、「著作権者」となります（15条・17条1項）。</p>
+    <p>
+      For requirement (5), if there is a contract or work regulation that stipulates that the employee or staff member
+      is the author of the copyrighted work they created or that the copyright belongs to the employee or staff member,
+      the copyrighted work is not a corporate work and the creator is the author.
+    </p>
+    <p>
+      In the case of corporate work, a corporation, etc. becomes the "author" and "copyright owner" (Articles 15 and
+      17(1)).
+    </p>
     <SpeechBubbles>
-      <Bubble speaker="大院" feLevel="5">おれが大学で使う授業のために、作ったスライドも職務著作になるのか？</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        個別の授業で作成する場合は、公表するときも大学の名前でなくて、先生のお名前で出されますよね。「（4）『公表』する場合に法人等の著作名義で公表するものであること」が該当しないので、著作者は大院先生になると思います。
+      <Bubble speaker="Daiin" feLevel="5">
+        Are the slides I made for a class at the university considered corporate work?
       </Bubble>
-      <Bubble speaker="大院" feLevel="1">安心した。</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        If the copyrighted work is prepared for an individual class, it will be published in the name of the professor,
+        not in the name of the university when it is published. Since under requirement (4), the copyrighted work must
+        be published under the name of a corporation, etc. when it is "published" does not apply, the author must be Dr.
+        Daiin.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="1">That's a relief.</Bubble>
     </SpeechBubbles>
-    <h4 id="ref9">複数名が著作者となる場合（共同著作者）</h4>
+    <h4 id="ref9">When more than one person is the author (co-authors)</h4>
     <p>
-      複数の人で1つの著作物を作成する場合があります<ModalTrigger
-        id="07"
-      />。例えば、1つのキャンバスに複数人が1つの絵を描くようなときです。こういうものを「共同著作物」（2条1項12号）と言います。共同著作物の著作権は、共同著作者みんなの共有になります。
+      There are times when more than one person may create a copyrighted work<ModalTrigger id="07" />. For example,
+      several people may create a single painting on a canvas. Such a work is called a "joint work" (Article 2(1)(xii)).
+      The copyright in a joint work is shared by all co-authors.
     </p>
-    <Modal id="07">
+    <Modal id="07" lang="en">
       <p>
-        2条1項12号で、「二人以上の者が共同して創作した著作物であって、その各人の寄与を分離して個別的に利用することができないもの」と定義されています。
+        Article 2(1)(xii) defines a joint work as "a work created by two or more persons whose contributions to the work
+        cannot be separated so as to allow each part of the work to be used independently".
       </p>
     </Modal>
     <p>
-      そのほかに、著作権の持分を譲渡したとき、もともとの著作権者が亡くなって、その子ども二人に著作権が相続されるときなどがあります。
+      Other examples include when a copyright is assigned, or when the original copyright owner dies and the copyright
+      is inherited by two of the owner's children.
     </p>
-    <p>共有著作権では、共有者は他の共有者の合意がないと権利を行使できません（65条2項）。</p>
-    <p>65条2項の「合意」は、他の共同者は「正当な理由」がある場合でないと、反対できないこととなっています。</p>
     <p>
-      他の共有者が合意を妨げる「正当な理由」があると認めた裁判例として、東京地判平成12年9月28日（平成11（ワ）7209）〔経済学書籍事件〕があります。この事件では、研究者が共同で執筆した経済学の書籍について、共同執筆者Aが重版と韓国語翻訳の出版について合意を求めましたが、もうひとりの共同執筆者Bがこれを拒みました。書籍が執筆から数年経過して内容が陳腐化していることや書籍への貢献がBのほうが相当上回っていること、Aに重版や翻訳を認めなければ経済的に脅かされたり、学者としての業績に不可欠であったりするとは言えないことなどから、裁判所は「正当な理由」があると判断しています。
+      Under joint copyright, a co-owner cannot exercise their rights without the agreement of all the co-owners (Article
+      65(2)).
+    </p>
+    <p>
+      The "agreement" in Article 65(2) is that the other joint owners cannot object unless they have "justifiable
+      grounds" to do so.
+    </p>
+    <p>
+      Tokyo District Court, September 28, 2000 (1999 (wa) 7209) [Economics Book Case] is one example of a case in which
+      the other co-author was found to have "justifiable grounds" to prevent an agreement. In this case, a co-author of
+      an economics book jointly written by researchers requested an agreement for a reprint of the book and publication
+      of a Korean translation, but the other co-author B, refused. The court found that there were "justifiable grounds"
+      because the book had become obsolete several years after it was written, B's contribution to the book was
+      considerably greater than A's, and it could not be said that A would be threatened financially or that his
+      scholarly achievements would be diminished if he was not allowed to reprint or translate the book.
     </p>
   </Section>
 
   <Section
     number="04"
-    title="著作権とは"
-    description="このsectionでは著作権法で定義する「著作権」には著作者人格権と著作財産権があること、また著作隣接権についても説明します。また、保護期間、ライセンス、権利制限などについても説明します。"
+    title="What is Copyright?"
+    description={'This section explains "copyright" under the Copyright Act including moral rights and copyright (economic rights), as well as neighboring rights. It also explains the terms protection, licensing, and limitation of rights.'}
   >
-    <h3>著作権は「勝手に〇〇されない権利」</h3>
+    <h3>Copyright is "the right not to do specific acts without permission”</h3>
     <SpeechBubbles>
-      <Bubble speaker="隅木" feLevel="2">著作権とは、簡単に言うと自分の著作物を「勝手に〇〇されない権利」です。</Bubble>
-      <Bubble speaker="小中" feLevel="3">勝手にコピーされない、勝手にリメイクされない、とかですね。</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        日本は「無方式主義」というやり方をとっていて、著作物がつくられた瞬間に自動的に著作権が付与されるようになっています。簡単に言うと、著作権を得るために登録とかの手続をしなくてもよいということです。
+      <Bubble speaker="Sumiki" feLevel="2">
+        In simple terms, copyright is the right not to have one's copyrighted work "do specific acts without
+        permission".
       </Bubble>
-      <Bubble speaker="小中" feLevel="3">小学生の描いた絵もですか？</Bubble>
-      <Bubble speaker="大院" feLevel="2">学生の書いたレポートも？</Bubble>
-      <Bubble speaker="隅木" feLevel="1">そうです。</Bubble>
+      <Bubble speaker="Konaka" feLevel="3">
+        Such as, it can't be copied without permission, or remade without permission.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Japan has a 'non-formality' system, which means that a copyright is automatically granted the moment a work is
+        created. Simply put, there is no need to register or go through any other procedures to obtain a copyright.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">Even pictures drawn by elementary school children?</Bubble>
+      <Bubble speaker="Daiin" feLevel="2">And reports written by students?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="1">Yes.</Bubble>
     </SpeechBubbles>
-    <Point>著作物をつくったら、自動的に著作権は付与される（17条2項）</Point>
+    <Point>When a copyrighted work is created, a copyright is automatically granted (Article 17(2)).</Point>
     <p>
-      広義で言う著作権には、著作者のこだわりを保護する「著作者人格権」と財産的価値を保護する「著作財産権」の2種類があります。それぞれにどんな権利があるかを説明します。
+      In a broad sense, there are two types of copyrights: "moral rights," which protect the author's commitment to the
+      copyrighted work, and "copyright (economic rights)", which protect the economic value. The following is an
+      explanation of what rights are associated with each.
     </p>
 
-    <h3 id="ref28">著作者人格権</h3>
+    <h3 id="ref28">Moral rights</h3>
     <p>
-      著作者人格権は、他人に譲渡することができず、相続もできません（59条、民法896条ただし書き）。そのため、著作権を譲渡しても著作者人格権は著作者に残ります。
+      Moral rights cannot be assigned to others and cannot be inherited (Article 59, proviso of Civil Code Article 896).
+      Therefore, even if a copyright is assigned, the moral rights remain with the author.
     </p>
     <p>
-      著作者が死亡すると著作者人格権は消滅します。もっとも、著作権法には著作者死亡後も、著作物を公衆に提供したり、提示したりする者は、著作者人格権を侵害する行為をしてはいけない、と書かれています（60条）。
+      Moral rights cease to exist when the author dies. However, the Copyright Act states that even after the author's
+      death, a person who provides or presents a copyrighted work to the public must not commit any act that infringes
+      the moral rights of the author (Article 60).
     </p>
-    <p>では、具体的に著作者人格権にはどのようなものがあるかを説明します。</p>
+    <p>Let us explain what moral rights are.</p>
 
-    <h4 id="ref16">公表権（18条）</h4>
+    <h4 id="ref16">Publication Right (Article 18)</h4>
     <p>
-      公表権とはその名のとおり、未公表の著作物について著作者がどのように公表するか決められる権利です。なお、二次的著作物の著作者は、原著作物の著作者に断りなく二次的著作物を公表することはできません。
+      The publication right is, as the name implies, the right to decide how the author of an unpublished copyrighted
+      work will make it public. The author of a derivative work may not publish the derivative work without the consent
+      of the author of the original work.
     </p>
     <ListArea>
       <ul>
-        <li>公表するかしないか</li>
-        <li>いつ公表するか</li>
-        <li>どのような形態で公表するか（出版、放送、上映、展示、公衆送信など）</li>
+        <li>Whether to make it public or not.</li>
+        <li>When will it be made public?</li>
+        <li>
+          In what form of publication (publication as a book, broadcast, screening, exhibition, public transmission,
+          etc.)?
+        </li>
       </ul>
     </ListArea>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">
-        もしかして生徒の絵を市のコンクールに出したりするのも、本人の同意が必要ですか？
+      <Bubble speaker="Konaka" feLevel="2">
+        Do I need the student's consent to submit their painting to a city competition?
       </Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        もちろん必要です。先生に宿題として絵を提出しただけだったら「公表」したとは言えません。<br
-        />それを複数の第三者に公表するのですから、著作者である生徒さんの同意が必要です。<br
-        />また、絵のコンクールなどは、普通絵をどこかに展示するので展示権の問題もあります。
+      <Bubble speaker="Sumiki" feLevel="2">
+        Of course, you must obtain the student's consent. If the student only submitted the painting to the teacher as
+        homework, it does not meet the definition of "published".<br />Since you are publishing it to third parties, you
+        need the author's consent.<br />There is also the issue of exhibition rights, as such art competitions usually
+        involve exhibiting the paintings somewhere.
       </Bubble>
-      <Bubble speaker="小中" feLevel="4">そうなのですね、気をつけます。</Bubble>
+      <Bubble speaker="Konaka" feLevel="4">I see, I will be careful.</Bubble>
     </SpeechBubbles>
 
-    <h4 id="ref19">氏名表示権（19条）</h4>
+    <h4 id="ref19">Attribution Right (Article 19)</h4>
     <p>
-      氏名表示権とはその名のとおり、著作物を公衆への提供もしくは提示をする際に著作者として表示する名前をどうするか決める権利のことです。
+      The attribution right, as the name implies, is the right to determine the name to be displayed as the author when
+      the copyrighted work is offered or presented to the public.
     </p>
     <ListArea>
       <ul>
-        <li>名前を表示するかしないか</li>
-        <li>表示する場合は、本名か変名（ペンネームや画号など）か</li>
+        <li>Whether to display a name or not.</li>
+        <li>If displayed, whether it is your real name or an alias (pen name, artist's name, etc.).</li>
       </ul>
     </ListArea>
     <p>
-      二次的著作物の場合は、原著作物の著作者と（19条1項後段）、二次的著作物の著作者の両方が氏名表示権を持っていることになります。氏名表示権にも一定の制限があり、次の場合には、氏名表示権の侵害にはなりません。
+      In the case of derivative works, both the author of the original work (the second sentence of Article 19(1)) and
+      the author of the derivative work have the attribution right. There are certain limitations on the attribution
+      right and the following cases do not constitute infringement:
     </p>
     <ListArea>
       <ul>
         <li>
-          著作物を利用する際に、利用者はすでにその著作物で表示されている名前を表示することができます。著作者の特段の意思で別の名前を表示する必要がある場合は、意思に沿う必要があります（19条2項）。
+          When using a copyrighted work, the user may indicate the name already indicated in the copyrighted work. If
+          the author's special intention requires a different name to be indicated, the user must follow the intention
+          (Article 19(2)).
         </li>
         <li>
-          表示するのが困難な場合で、著作者が創作者であることを主張する利益を害するおそれのない場合は、公正な慣行に反しない限り、氏名を表示しなくてもかまいません（19条3項）。
+          If it is difficult to indicate the name and there is no risk of harm to the interest of the author in claiming
+          to be the author, the name need not be indicated as long as it does not violate fair practice (Article 19(3)).
         </li>
       </ul>
     </ListArea>
     <p>
-      2つめは、例えばホテルのロビーなどでBGMを流している時に、いちいち「作曲者はだれそれです」などと放送しなくてよいという例などがあります。
+      For example, when background music is played in a hotel lobby, there is no need to announce who the composer is,
+      every single time.
     </p>
 
-    <h4 id="ref33">同一性保持権（20条）</h4>
+    <h4 id="ref33">Integrity Right (Article 20)</h4>
     <SpeechBubbles>
-      <Bubble speaker="隅木" feLevel="2">
-        同一性保持権とは、自分の著作物の内容やタイトルを、自分の意に反して無断で「改変（変更・切除等）」されない権利です。
+      <Bubble speaker="Sumiki" feLevel="2">
+        The integrity right is the right not to have the content or the title of the author's copyrighted work "altered
+        (modified, mutilated, etc.)" against the author's intention without permission.
       </Bubble>
-      <Bubble speaker="小中" feLevel="2">
-        写真をトリミングして使用したり、文章を変えたり……とか？<ModalTrigger id="s4_1" />
+      <Bubble speaker="Konaka" feLevel="2">
+        Can you crop a photo and use it, or change the text etc. ......?<ModalTrigger id="s4_1" />
       </Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        そうですね。文章は「・（中黒）」を「、（読点）」に変更、読点の削除や改行の省略、「現われ」を「現れ」に、「表われ」を「表れ」に、「決って」を「決まって」にするなどの送り仮名の変更も同一性保持権を侵害する可能性があるので注意が必要です<ModalTrigger
-          id="s4_2"
-        />。
+      <Bubble speaker="Sumiki" feLevel="2">
+        Yes. Please note that changing "," to ";" deleting a line break, and changing paragraph breaks or changing the
+        wording for consistency may also infringe the integrity right<ModalTrigger id="s4_2" />.
       </Bubble>
-      <Bubble speaker="大院" feLevel="5">
-        えー、そんなんおかしかったら直すだろ。学生の論文とかも表記ゆれはよくあるぞ。
+      <Bubble speaker="Daiin" feLevel="5">
+        Well, if something like that is wrong, it should be fixed. It's common for student theses to have
+        inconsistencies in terminology.
       </Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        表記ゆれを直してあげるのも本人の同意があればよいのです。というより、むしろ本人に直していただいたほうが、今後表記ゆれに気をつけるようになるかもしれません。それなら侵害にもなりません。
+      <Bubble speaker="Sumiki" feLevel="2">
+        It is only with the author's consent that you can correct such inconsistencies. In other words, if the author
+        corrects the inconsistencies, they may be more careful about it in the future. Then there is no infringement.
       </Bubble>
-      <Bubble speaker="大院" feLevel="4">そりゃそうだな。</Bubble>
+      <Bubble speaker="Daiin" feLevel="4">That's right.</Bubble>
     </SpeechBubbles>
-    <Modal id="s4_1">
-      <p>東京地判平成11年3月26日判時1694号142頁〔Dolphin Blue事件〕</p>
+    <Modal id="s4_1" lang="en">
+      <p>Tokyo District Court, March 26, 1999, HANREI JIHO No. 1694, p. 142 [Dolphin Blue Case].</p>
     </Modal>
-    <Modal id="s4_2">
-      <p>東京高判平成3年12月19日判時1422号123頁〔法政大学懸賞論文事件〕</p>
+    <Modal id="s4_2" lang="en">
+      <p>Tokyo High Court, December 19, 1991, HANREI JIHO No. 1422, p. 123 [Hosei University Prize Essay Case].</p>
     </Modal>
-    <p>ただし、以下のような場合の改変は許されています（20条2項各号）。</p>
+    <p>However, alterations are permitted in the following cases (Article 20(2)):</p>
     <ListArea>
       <ol>
         <li>
-          教科用図書等への掲載（33条1項・4項）、教科用図書代替教材への掲載等（33条の2第1項）、教科用拡大図書等の作成のための複製（33条の3第1項）及び学校教育番組の放送等（34条1項）の適用により著作物の利用が認められる場合に、学校教育の目的上、やむを得ない改変
+          If the use of a work is permitted by application of the following provisions: publication in textbooks
+          (Article 33(1) and (4)), publication in substitute materials for textbooks (Article 33-2(1)), reproduction for
+          the preparation of expanded textbooks (Article 33-3(1)), and broadcasting of school educational programs
+          (Article 34(1)), the use of a work is unavoidable for school education (Article 33-2(1)).
         </li>
-        <li>建築物の増築、改築、修繕又は模様替えによる改変</li>
-        <li>プログラムのバージョンアップ等の改変</li>
+        <li>Alteration due to extension, reconstruction, repair, or redecoration of buildings.</li>
+        <li>Program version upgrades and other modifications.</li>
         <li>
-          その他、著作物の性質並びにその利用の目的及び<ModalTrigger id="s4_3" word="態様（たいよう）">
-            態様
-          </ModalTrigger>に照らしやむを得ないと認められる改変
+          Other modifications that are deemed unavoidable in light of the nature of the work and the purpose and manner
+          of its use.
         </li>
       </ol>
     </ListArea>
-    <Modal id="s4_3" word="態様（たいよう）">
-      <p>物事のありさま。様子。状態。</p>
-    </Modal>
-    <p>（1）は、例えば難しい漢字をひらがなにして、低学年の生徒にも読みやすくするなどがあります。</p>
     <p>
-      （4）は、印刷機の性能の関係で、元のとおりに色合いが表現できないとか、音痴なので元のメロディのとおりに歌えないなどがあります。
+      An example of (1) is converting difficult Kanji into Hiragana so that they are easier to read for younger
+      students.
     </p>
     <p>
-      具体的にどこまでが「やむを得ない」のかは難しい判断になります。自信が持てないときは著作者に確認をしたほうがよいでしょう。
+      Regarding (4), due to the performance of the printing press, it may not be possible to reproduce the exact colors
+      in the same way as the original, or when a singer may not be able to sing the original melody as it was sung
+      because of the abilities of the singer.
+    </p>
+    <p>
+      It is difficult to determine the specific extent to which a work is "unavoidable. " If you are not sure, you
+      should check with the author.
     </p>
     <Point id="ref33-1">
-      著作者人格権は、（1）公表権、（2）氏名表示権、（3）同一性保持権の3つ！<ModalTrigger id="s4_4" />
+      There are three moral rights: (a) the publication right, (b) the attribution right, and (c) the integrity right!<ModalTrigger
+        id="s4_4"
+      />
     </Point>
-    <Modal id="s4_4">
+    <Modal id="s4_4" lang="en">
       <p>
-        「著作者の名誉又は声望を害する方法によりその著作物を利用する行為」は、著作者人格権侵害とみなされます（113条11項）。厳密には権利として規定されていませんが、この規定は第4の権利として「名誉声望権」と呼ばれることもあります。
+        "The exploitation of a work in a way that is prejudicial to the honor or reputation of the author" is deemed an
+        infringement of the author's moral rights (Article 113(11)). Although not strictly defined as a right, this
+        provision is sometimes called the "honor and reputation right" as a fourth right.
       </p>
     </Modal>
 
-    <h3 id="ref4">著作権（著作財産権）</h3>
+    <h3 id="ref4">Copyrights (Economic rights)</h3>
     <p>
-      財産権としての著作権には以下のようなものがあります<ModalTrigger id="s4_5" />。
+      Copyrights as economic rights include the following<ModalTrigger id="s4_5" />:
     </p>
-    <Modal id="s4_5">
+    <Modal id="s4_5" lang="en">
       <p>
-        著作物を見る、聴く、読むなどの知覚、享受行為自体については著作権者が把握することは困難であることから、著作権の対象となっておらず、その一歩手前の行為を著作権の対象としています（岡本薫『著作権の考え方』（岩波新書、2003）160頁以下参照）。
+        Since it is difficult for a copyright owner to trace a user’s act of perceiving or enjoyment of a work, such as
+        by viewing, listening to, or reading a work, these are not subject to copyright (see Kaoru Okamoto, The Concept
+        of Copyright, Iwanami Shinsho, 2003, p. 160).
       </p>
     </Modal>
     <ListArea>
       <ul>
-        <li>複製権（21条）</li>
-        <li>上演権及び演奏権（22条）</li>
-        <li>上映権（22条の2）</li>
-        <li>公衆送信権、送信可能化権、公の伝達権（23条）</li>
-        <li>口述権（24条）</li>
-        <li>展示権（25条）</li>
-        <li>頒布権（26条）</li>
-        <li>譲渡権（26条の2）</li>
-        <li>貸与権（26条の3）</li>
-        <li>翻訳権、翻案権（27条）</li>
-        <li>二次的著作物の利用に関する原著作者の権利（28条）</li>
+        <li>Reproduction Right (Article 21).</li>
+        <li>Stage Performance Right and Musical Performance Right (Article 22).</li>
+        <li>On-Screen Presentation Right (Article 22-2).</li>
+        <li>Public Transmission Right, Right of Making Transmittable, and Public Communication Right (Article 23).</li>
+        <li>Recitation Right (Article 24).</li>
+        <li>Exhibition Right (Article 25).</li>
+        <li>Distribution Right (Article 26).</li>
+        <li>Transfer Right (Article 26-2).</li>
+        <li>Rent Out Right (Article 26-3).</li>
+        <li>Translation and Adaptation Rights etc. (Article 27).</li>
+        <li>Rights of the Original Author in Connection with the Exploitation of Derivative Works (Article 28).</li>
       </ul>
     </ListArea>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">なんだかたくさんのいろいろな権利があるんですね。</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        そうですね。ちょっと難しそうだと感じる人もいるかもしれません。著作権は「権利の束」と言われることもあります<ModalTrigger
+      <Bubble speaker="Konaka" feLevel="2">There are a lot of different rights.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Yes. Some people may find it a little difficult. Copyright is sometimes called a "bundle of rights"<ModalTrigger
           id="s4_6"
-        />。まずは、大きく2つの権利があると理解しておくとよいです。
+        />. First of all, it is good to understand that there are two major rights.
       </Bubble>
-      <Bubble speaker="小中" feLevel="1">たった2つでいいんですか！？</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        2つの権利が基本ですね。<span class="font-bold text-orange-600"
-          >ひとつは、（1）著作物をコピーする権利。もうひとつは、（2）著作物を公に伝える権利です。</span
+      <Bubble speaker="Konaka" feLevel="1">Only two!</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        There are two fundamental rights. <span class="font-bold text-orange-600"
+          >The first is (1) the right to copy copyrighted works. The other is (2) the right to communicate the
+          copyrighted work to the public.</span
         >
       </Bubble>
-      <Bubble speaker="大院" feLevel="3">ふーん。それだったら覚えられるかも。</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        （1）の「コピーする権利」は、コピーがたくさん生まれると、それだけ公に伝えられる機会が増えるので、（2）の「公に伝える権利」の大前提みたいなものです。<br
-        />（2）の「公に伝える権利」については、技術の進歩によって公に伝える手段が多様になるのにともない、権利が増えていきました。<br
-        />目の前の人々に伝えるのが、「上演」、「演奏」、「口述」、「展示」です。技術が進歩して著作物をなんらかのかたちに固定できるようになると、遠くに離れた人々にもそれらを伝えることができます。それが「譲渡」、「貸与」、「頒布」です。さらに、かたちあるものでなくても遠くに離れた人々にも伝えるのが「公衆送信」、「送信可能化」ということになります。
+      <Bubble speaker="Daiin" feLevel="3">Hmmm. Maybe I can remember that.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        (1) The "right to copy" is like a prerequisite for (2) the "right to communicate the copyrighted work to the
+        public", because the more copies that are created, the more opportunities for communicating to the public.<br
+        />For (2), "the right to communicate to the public," the number of rights has increased as the means of
+        communicating publicly have become more diverse due to technological advances.<br />We can communicate to the
+        people in front of us via "stage performances," "musical performances," "recitations," and "exhibitions." As
+        technology advances and copyrighted works can be fixed in some form, they can be conveyed to people far away.
+        These include "transfer," "rent out," and "distribution." Furthermore, "public transmission" and "making
+        transmittable" are used to convey copyrighted works to people far away, even if they are not in a tangible form.
       </Bubble>
-      <Bubble speaker="小中" feLevel="2">翻案はどう理解すればよいのですか？</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        翻案は、すでにある著作物に新たに創作的な要素を加えることです。なので、（1）の「コピーする権利」の仲間と理解しておいてください。
+      <Bubble speaker="Konaka" feLevel="2">How should we understand an adaptation?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Adaptation is the addition of new creative elements to a preexisting work. So, please understand that it is a
+        sort of (1) the "right to copy".
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s4_6">
+    <Modal id="s4_6" lang="en">
       <p>
-        井上拓『SNS別最新著作権入門』（誠文堂新光社、2022）53頁は、著作権としてたくさんの権利があることをブドウの粒に例えて解説しています。
+        Taku Inoue, Latest Copyright Introduction by SNS, Seibundo-Shinkosha, 2022, p. 53, explains that there are many
+        copyright rights by comparing them to grapes.
       </p>
     </Modal>
-    <img src="/assets/images/1-4-1.jpg" alt="" width="1519" height="809" loading="lazy" decoding="async" />
+    <img src="/assets/images/1-4-1_en.jpg" alt="" width="1519" height="809" loading="lazy" decoding="async" />
     <p id="ref13">
-      「section04
-      著作権とは」で説明したとおり、複製権なら「勝手に複製されない権利」となります。財産権としての著作権は、譲渡したり、相続したりすることが可能です（61条1項）。
+      As explained in Section 04 "What is Copyright?", a reproduction right is "the right not to be reproduced without
+      permission". Copyright as an economic right can be transferred or inherited (Article 61(1)).
     </p>
     <p>
-      例えば、「ズッコケ三人組」シリーズの作者である那須正幹さんは、遺言で全作品の著作権を文学団体に譲渡（遺贈）したと報道されています<ModalTrigger
-        id="s4_7"
-      />。
+      For example, Masamoto Nasu, author of the Zukkoke Sannin-Gumi (The funny trio) series, reportedly transferred
+      (bequeathed) the copyrights of all his works to a literary organization in his will<ModalTrigger id="s4_7" />.
     </p>
-    <Modal id="s4_7">
+    <Modal id="s4_7" lang="en">
       <p>
-        全著作権を寄付『ズッコケ三人組』那須正幹さんの児童文学への願い」毎日新聞（2022年10月5日）<a
+        Donation of all copyrights, "Zukkoke Sannin Gumi", Masamoto Nasu's Wish for Children's Literature, Mainichi
+        Shimbun, October 5, 2022,<a
           href="https://mainichi.jp/articles/20221004/k00/00m/040/188000c"
           target="_blank"
           class="block"
@@ -629,259 +762,314 @@ import Page from '../../../templates/Page.astro';
       </p>
     </Modal>
     <p>
-      「翻案」は、著作権法独特の言い回しかと思いますが、脚色や映画化などにより二次的著作物を作成する行為のことです<ModalTrigger
-        id="s4_8"
-      />。
+      "Adaptation" is a term unique to the Copyright Act, but it means the act of creating a derivative work by adapting
+      it or making it into a film<ModalTrigger id="s4_8" />.
     </p>
-    <Modal id="s4_8">
-      <p>便宜的に翻訳、編曲、変形も含めて二次的著作物を作成する行為のことを「翻案」と呼ぶこともあります。</p>
+    <Modal id="s4_8" lang="en">
+      <p>
+        The act of creating a derivative work, including translation, arrangement, or transformation for the sake of
+        convenience, is sometimes called an "adaptation".
+      </p>
     </Modal>
     <p>
-      「公衆送信権」「送信可能化権」も耳慣れない言葉かもしれません。公衆送信権は、公衆（不特定の者、特定多数の者）に著作物を送信する権利です。例えば、公衆送信のうち、自動公衆送信は、Webサイトに載せて多数の人に閲覧させたり、SNSに投稿して多数の人に見せたりすることなどを指します。送信可能化は、送信したか否かにかかわらず、著作物をサーバ等にアップロードして、自動公衆送信が可能な状態にすることを指します<ModalTrigger
-        id="s4_9"
-      />。
+      The terms "public transmission right" and "right to make transmittable" may also be unfamiliar to you. The public
+      transmission right is the right to transmit a copyrighted work to the public (to an unspecified or specified
+      number of persons). For example, among public transmissions, automatic public transmission means putting the
+      copyrighted work on a website for a large number of people to view, or posting the copyrighted work on a social
+      networking service for a large number of people to see. Making transmittable means uploading a copyrighted work to
+      a server, etc. to make it available for automatic public transmission, regardless of whether it has been
+      transmitted or not<ModalTrigger id="s4_9" />.
     </p>
-    <Modal id="s4_9">
-      <p>23条1項括弧書き</p>
+    <Modal id="s4_9" lang="en">
+      <p>Article 23(1) brackets.</p>
     </Modal>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">「公の伝達」は、公衆送信と何が違うんですか？</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        わかりやすい例で言うと、放送局がテレビ番組を放送するのが「公衆送信」、そのテレビ番組を食堂などに設置してあるテレビに映してお客さんが観ることができる状態にしているのが「公の伝達」になります。
+      <Bubble speaker="Konaka" feLevel="2">
+        What makes "public communication" different from "public transmission"?
       </Bubble>
-      <Bubble speaker="小中" feLevel="1">
-        なるほど、すでに公衆送信されてるものをなにかの機械で受信して観せるってことなんですね。
+      <Bubble speaker="Sumiki" feLevel="2">
+        To use a simple example, a broadcaster broadcasting a TV program is a "public transmission," and a TV program
+        shown on a TV set up in a cafeteria or other location for customers to watch is a "public communication".
       </Bubble>
-      <Bubble speaker="隅木" feLevel="3">
-        ちなみに、放送される著作物について、通常の家庭用受信装置を使用した場合には、営利、有料であっても公の伝達権を侵害していることにはなりません<ModalTrigger
-          id="s4_10"
-        />。
+      <Bubble speaker="Konaka" feLevel="1">
+        I see, so you are saying that it is a device that can receive and watch something that has already been publicly
+        transmitted.
       </Bubble>
-      <Bubble speaker="大院" feLevel="1">おれは公の伝達はしてないな。</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        いえ、大院先生もしてる可能性はありますよ。例えば、授業でWebサイトを映して「ここをクリックしたらこれが表示されます」のような動作を見せている場合には、公の伝達になります。
+      <Bubble speaker="Sumiki" feLevel="3">
+        By the way, the use of an ordinary household receiver to broadcast a copyrighted work does not constitute an
+        infringement of the public communication right, even if it is for profit or a fee<ModalTrigger id="s4_10" />.
       </Bubble>
-      <Bubble speaker="大院" feLevel="4">知らんかった！そんなものにも著作権があるんだ。</Bubble>
+      <Bubble speaker="Daiin" feLevel="1">I haven't made any public communications.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        No, there is a possibility that Dr. Daiin may do this. For example, if you show a website in class and show
+        actions such as "click here to view this", this is a public communication.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">
+        I didn't know that! I didn't know that such an act was subject to copyright too.
+      </Bubble>
     </SpeechBubbles>
-    <Modal id="s4_10">
-      <p>38条3項後段</p>
+    <Modal id="s4_10" lang="en">
+      <p>The second sentence of Article 38(3).</p>
     </Modal>
-    <Point>著作権は、勝手に〇〇されない権利</Point>
+    <Point>Copyright is the right not to do specific acts without permission.</Point>
 
-    <h3 id="ref32">著作隣接権</h3>
+    <h3 id="ref32">Neighboring rights</h3>
     <p>
-      著作物等を「伝達する者」に付与される権利として著作隣接権があります（89条）。著作権と同様に実演、音の固定、放送、有線放送を行った時点で自動的に付与され、登録は不要です（89条5項、101条1項）。
+      Neighboring rights are granted to those who "convey" copyrighted works (Article 89). Like copyrights, these rights
+      are automatically granted upon performance, sound fixation, broadcasting, or wire broadcasting, and do not require
+      any registration (Articles 89(5) and 101(1)).
     </p>
-    <Point>著作隣接権は、著作物の伝達に重要な役割を果たす者を保護する権利</Point>
-    <p>著作隣接権者としては、以下のような人たちがいます。</p>
+    <Point>Neighboring rights protect those who play an important role in the conveyance of copyrighted works.</Point>
+    <p>The following are the owners of neighboring rights.</p>
     <p>
-      それぞれどのような権利があるか、文化庁のテキストなどをご参照ください<ModalTrigger id="c4_11" />。
+      Please see the texts of CRIC and other sources to find out what rights you have for each of them<ModalTrigger
+        id="c4_11"
+      />.
     </p>
-    <Modal id="c4_11">
+    <Modal id="c4_11" lang="en">
       <p>
-        文化庁テキスト「8. 著作隣接権」<a
-          href="https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/93736501_07.pdf"
+        IV. Author’s rights and neighboring rights under the Japanese copyright law, Copyright System in Japan, CRIC:<a
+          href="https://www.cric.or.jp/english/csj/csj4.html"
           target="_blank"
           class="block"
         >
-          https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/93736501_07.pdf
+          https://www.cric.or.jp/english/csj/csj4.html
         </a>
       </p>
     </Modal>
     <ListArea>
       <ul>
-        <li>実演家：著作物等を演じる歌手、俳優、ダンサーなど</li>
-        <li>レコード製作者：音を最初に固定（録音）した者（レコード会社など）</li>
-        <li>放送事業者：放送を業として行う者（テレビ放送局、ラジオ放送局など）</li>
-        <li>有線放送事業者：有線放送を業として行う者（ケーブルテレビ、有線音楽放送局など）</li>
+        <li>Performers: singers, actors, dancers, etc. who perform copyrighted works, etc.</li>
+        <li>Record producer: a person who first fixed (recorded) the sound (e.g., a record company).</li>
+        <li>
+          Broadcaster: a person who engages in broadcasting as a business (TV broadcaster, radio broadcaster, etc.).
+        </li>
+        <li>
+          Cable broadcasting operator: a person who engages in cable broadcasting as a business (cable TV, cable music
+          broadcasting station, etc.).
+        </li>
       </ul>
     </ListArea>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">もしかして、小学生がアイドルの真似してダンスしても実演家？</Bubble>
-      <Bubble speaker="隅木" feLevel="3">
-        そうですね。そのダンスの様子を録画したり、Webサイトで公開したりするような場合には許諾が必要です。
+      <Bubble speaker="Konaka" feLevel="2">
+        Perhaps elementary school students imitating their idols and dancing are performers?
       </Bubble>
-      <Bubble speaker="大院" feLevel="4">
-        レコード製作者の「音を固定」って、おれが犬の鳴き声をスマホで録音しても該当するの？
+      <Bubble speaker="Sumiki" feLevel="3">
+        Yes. Permission is required if the dance is to be recorded or published on a website.
       </Bubble>
-      <Bubble speaker="隅木" feLevel="1">該当します。この固定する「音」は著作物でなくてもよいのです。</Bubble>
-      <Bubble speaker="大院" feLevel="1">おれもレコード製作者！</Bubble>
+      <Bubble speaker="Daiin" feLevel="4">
+        Does the record producer's "fixing the sound" apply to me recording my dog's barking on my phone?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="1">
+        Applicable. This fixed "sound" does not have to be a copyrighted work.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="1">I'm a record producer too!</Bubble>
     </SpeechBubbles>
     <img src="/assets/images/1-4-2.jpg" alt="" width="1592" height="819" loading="lazy" decoding="async" />
 
-    <h3 id="ref23">保護期間</h3>
-    <p>著作権は永遠に存続するのではなく、保護される期間が決まっています。</p>
+    <h3 id="ref23">Protection Term</h3>
+    <p>A copyright does not last forever but has a fixed protection term.</p>
     <ListArea>
-      <h5>著作権</h5>
+      <h5>Copyright</h5>
       <ul>
-        <li>著作物の創作時から著作者の死後70年（51条）</li>
-        <li>無名、変名、団体名義の著作物、映画の著作物は、著作物の公表時から70年（52条1項、53条1項、54条1項）</li>
+        <li>70 years after the author's death from the time of the creation of the copyrighted work (Article 51).</li>
+        <li>
+          For copyrighted works under an unknown name, an unusual name, or a collective name, and cinematographic works,
+          70 years from the time of publication of the copyrighted work (Articles 52(1), 53(1), 54(1)).
+        </li>
       </ul>
 
-      <h5>著作隣接権</h5>
+      <h5>Neighboring rights</h5>
       <ul>
-        <li>実演は、実演時から70年（101条1項1号、同条2項1号）</li>
-        <li>レコードは、音の固定（録音）時から発行後70年（101条2項2号）</li>
-        <li>放送・有線放送は、放送時から50年（101条2項3号、4号）</li>
+        <li>Performances are 70 years from the time of performance (Articles 101(1)(i) and 101(2)(i)).</li>
+        <li>
+          A record is from the time the sound is fixed (recorded) to 70 years after publication (Article 101(2)(ii)).
+        </li>
+        <li>
+          Broadcasting and cable broadcasting is 50 years from the time of broadcast (Article 101(2)(iii) and (iv)).
+        </li>
       </ul>
     </ListArea>
-    <Point tag="column" title="戦時加算制度">
-      著作権の保護期間については、第二次世界大戦中は著作権が保護されていなかったとして、1941年12月7日（開戦前日）に連合国及び連合国民が日本で著作権を有していたもの、1941年12月8日（日本が参戦した日）から、当該連合国について平和条約が発効した日の前日（例えばアメリカ合衆国であれば1952年4月27日）までに著作権を取得したものに関して保護期間を加算するルールがあります。
+    <Point tag="column" title="Wartime extensions">
+      As for the copyright protection term, the rules add the protection term for copyrights that were not protected
+      during World War II, and for which the Allied nations and Allied nationals had copyrighted in Japan on December 7,
+      1941 (the day before the war began), and for which copyrights were acquired from December 8, 1941 (the day Japan
+      entered the war) to the day before the date the peace treaty came into effect for the Allied nations concerned
+      (e.g., April 27, 1952, for the United States). For example, in the case of the United States, the copyright was
+      acquired on April 27, 1952).
     </Point>
     <SpeechBubbles>
-      <Bubble speaker="大院" feLevel="1">
-        あー、これ知ってるぞ。50年だったのに、<ModalTrigger
+      <Bubble speaker="Daiin" feLevel="1">
+        Oh, I know this one...the protection term used to be 50 years and now with the <ModalTrigger
           id="s4_13"
           word="TPP（Trans-Pacific Partnership Agreement）"
         >
           TPP
-        </ModalTrigger>で70年になったんだよな！
+        </ModalTrigger> it's 70!
       </Bubble>
-      <Bubble speaker="隅木" feLevel="4">そうなんですよね……</Bubble>
-      <Bubble speaker="小中" feLevel="2">
-        わたしのおじいちゃんでも亡くなったのは10年前くらいなので、おじいちゃんの著作物があったら、あと60年は保護されるんですね<ModalTrigger
-          id="s4_14"
-        />。わ、わたし生きているかしら……
+      <Bubble speaker="Sumiki" feLevel="4">That's right...</Bubble>
+      <Bubble speaker="Konaka" feLevel="2">
+        My grandfather passed away about 10 years ago, so if there are any copyrighted works by him, they will be
+        protected for another 60 years<ModalTrigger id="s4_14" />. I wonder if I'll still be alive. ......
       </Bubble>
-      <Bubble speaker="隅木" feLevel="4">
-        そう、70年も経つとお孫さんも生きていない可能性があるので、誰が著作権者かわからなくなってしまう場合が増えるかもしれません。
+      <Bubble speaker="Sumiki" feLevel="4">
+        Well, after 70 years, the grandchildren may not be alive, and more often than not, you may not know who the
+        copyright owner is.
       </Bubble>
-      <Bubble speaker="小中" feLevel="3">
-        許諾をとりたくても、著作権者が見つからなかったらどうしたらいいんですか？
+      <Bubble speaker="Konaka" feLevel="3">What if I want to get permission but can't find the copyright owner?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        There is a system that can be used legally instead of having to pay compensation, based on a ruling from the
+        Commissioner of Cultural Affairs.
       </Bubble>
-      <Bubble speaker="隅木" feLevel="3">
-        文化庁長官に裁定してもらって、補償金を払うかわりに、適法に利用できる制度があります。
-      </Bubble>
-      <Bubble speaker="小中" feLevel="4">ちょ、長官に……</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        もちろん決まった手続があるので、長官に直談判しに行くわけではありませんよ。詳しくは4章で説明します。
+      <Bubble speaker="Konaka" feLevel="4">Wait, the Commissioner of Cultural Affairs...</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Of course, there is a procedure, so we're not going to go directly to the Commissioner. I will explain this in
+        detail in Chapter 4.
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s4_13" word="TPP（Trans-Pacific Partnership Agreement）">
-      <p>2016年2月4日に署名された経済連携協定である「環太平洋パートナーシップ協定」の略称。</p>
-    </Modal>
-    <Modal id="s4_14">
+    <Modal id="s4_13" word="TPP (Trans-Pacific Partnership Agreement)" lang="en">
       <p>
-        小中先生のおじいちゃんの話には、注意点があります。<br
-        />保護期間の終期は、著作者が亡くなった日から数えるのではなく亡くなった年の翌年1月1日から数えます（57条）。そのため、おじいちゃんが亡くなったのが、2012年5月1日だと、2013年1月1日から起算しますので、保護期間は70年後の2082年12月31日までとなります。
+        Abbreviation for the Trans-Pacific Partnership Agreement, an economic partnership agreement signed on February
+        4, 2016.
       </p>
     </Modal>
-    <Point>保護期間は、基本的に著作物の創作時から著作者の死後70年まで</Point>
+    <Modal id="s4_14" lang="en">
+      <p>
+        There is a caveat to Dr. Konaka's grandfather's story. <br />The end of the protection term is counted from
+        January 1 of the year following the year of the author's death, not from the date of the author's death (Article
+        57). Therefore, if the grandfather died on May 1, 2012, the protection term is counted from January 1, 2013,
+        which means that the protection term will expire 70 years later, on December 31, 2082.
+      </p>
+    </Modal>
+    <Point>
+      The protection term is basically from the time of the creation of the copyrighted work to 70 years after the
+      author's death.
+    </Point>
 
-    <h3 id="ref26">パブリックドメイン</h3>
+    <h3 id="ref26">Public Domain</h3>
     <p>
-      パブリックドメイン（public domain）は、公有という意味です。著作権者の許諾なく、誰でも自由に利用できます<ModalTrigger
-        id="s4_15"
-      />。以下のようなものが該当します。
+      Public domain means public ownership. It can be freely used by anyone without the permission of the copyright
+      owner<ModalTrigger id="s4_15" />. The following fall under this category.
     </p>
-    <Modal id="s4_15">
+    <Modal id="s4_15" lang="en">
       <p>
-        正確に言うと、パブリックドメインになれば、著作者の人格的利益を侵害しない限り、著作権の対象となっていた行為を自由にすることができます（最判昭和59年1月20日判時1107号127頁〔顔真卿事件〕）。
+        To be precise, once in the public domain, anyone is free to perform acts that were the subject of copyright as
+        long as they do not infringe on the moral interests of the author (Supreme Court, January 20, 1984, HANREI JIHO
+        No. 1107, p. 127 [Ganshinkei Case]).
       </p>
       <p>
-        死後の著作者人格権の保護期間には限定がなく、理論上は永久に存続します。そのため、著作者の死後70年間が経過したパブリックドメインとなった作品も理論的には保護されます。
+        The protection term for moral rights after death is not limited and theoretically lasts forever. Therefore,
+        copyrighted works that have entered the public domain 70 years after the author's death are also theoretically
+        protected.
       </p>
       <p>
-        しかし、この死後の著作者人格権に関する請求ができるのは、死亡した著作者の「配偶者、子、父母、孫、祖父母又は兄弟姉妹」、つまり、二親等までとなっています（著作権法116条1項）。したがって、これらの者が死亡すれば請求権者がいなくなることで事実上、著作者の死後の著作者人格権の保護も終了します。
-        <br />中山信弘『著作権法〔第3版〕』（有斐閣、2020）652頁参照。
+        However, claims regarding moral rights after the author's death can only be made by the deceased author's
+        "spouse, children, parents, grandchildren, grandparents, or siblings", in other words, up to the second degree
+        of kinship (Article 116(1)). Therefore, if these persons die, there will be no claimant, meaning the end of the
+        protection term for moral rights after the author's death.
+        <br />See Nobuhiro Nakayama, Copyright Law, 3rd ed., Yuhikaku, 2020, p. 652.
       </p>
     </Modal>
     <ListArea>
       <ul>
-        <li>著作物の保護期間が満了しているもの</li>
-        <li>著作権者が権利放棄したもの</li>
-        <li>著作権者が死亡して、相続人が不存在のもの（62条1項1号）</li>
+        <li>Copyrighted works whose protection term has expired.</li>
+        <li>Copyrighted works for which the copyright owner has waived their rights.</li>
+        <li>The copyright owner is dead and there are no heirs (Article 62(1)(i)).</li>
       </ul>
     </ListArea>
     <p>
-      パブリックドメイン作品を元に創られた二次的著作物は、その二次的著作物が創られた時点から著作権が発生します。その二次的著作物までパブリックドメインでないことに注意してください。
+      A derivative work based on a public domain work is copyrighted from the time the derivative work is created. Note
+      that even the derivative work is not in the public domain.
     </p>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="1">著作権フリーってやつですね。</Bubble>
-      <Bubble speaker="隅木" feLevel="4">
-        「著作権フリー」はちょっと危険な言葉なんですよ。「著作権フリー＝著作権がない」と思い込んでる人が多いんですけど、違うんです。
+      <Bubble speaker="Konaka" feLevel="1">It's copyright "free".</Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        The term "copyright free" is a bit of a dangerous term. Many people understand that "copyright free = no
+        copyright", but this is not the case.
       </Bubble>
-      <Bubble speaker="小中" feLevel="2">違うんですか？</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        著作権フリーと書いてあっても、権利を放棄していない場合があります。その場合はパブリックドメインにあたりません。
+      <Bubble speaker="Konaka" feLevel="2">No?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Even if it says "copyright free", the rights may not be waived. In that case, it is not in the public domain.
       </Bubble>
-      <Bubble speaker="大院" feLevel="3">ネットで公開してるようなものは、別に勝手に使っていいんだろ？</Bubble>
-      <Bubble speaker="隅木" feLevel="4">
-        違います、違います（汗）。<br />まずライセンスの条件を確認しましょう。
+      <Bubble speaker="Daiin" feLevel="3">
+        Is it okay to use anything publicly available on the Internet without permission?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        No, no.<br />First, let's check the license requirements.
       </Bubble>
     </SpeechBubbles>
 
-    <h3 id="ref38">ライセンス</h3>
+    <h3 id="ref38">License</h3>
     <p>
-      ライセンスとは、著作者や著作権者が「こういうふうに使ってもいいよ」と利用者に許可を与えることです。利用者から求めて個別に与えられる場合と、権利者があらかじめ提示している場合があります。
+      A license is permission given by the author or copyright owner to the user, saying, "You may use it in this way".
+      It may be granted individually upon request from the user, or it may be presented in advance by the rights owner.
     </p>
     <p>
-      他の人の著作物を利用する際には、利用規約、利用契約、利用許諾書などを確認し、ライセンスがあるか、あるならどんな内容かを必ず確認するようにしましょう。
+      When using the copyrighted works of others, be sure to check the terms of use, license, or license agreement to
+      see if there is a license, and if so, what it entails.
     </p>
 
-    <h4 id="ref39">利用条件を確認する</h4>
-    <p>最近、いろいろなところでお目にかかるイラストに「いらすとや」さんがあります。</p>
-    <p>
-      「いらすとや」さんのホームページにいくと「ご利用について」と書かれているページがあるので、確認してみましょう<ModalTrigger
-        id="c4_16"
-      />。
-    </p>
-    <Modal id="c4_16">
+    <h4 id="ref39">Check the Terms of Use</h4>
+    <p>One of the illustrations we have seen recently in various places is by "Irasutoya".</p>
+    <p>If you go to the website of "Irasutoya", you will find the "Terms of Use" page<ModalTrigger id="c4_16" />.</p>
+    <Modal id="c4_16" lang="en">
       <p>
-        いらすとや<br />「ご利用について」<a
-          href="https://www.irasutoya.com/p/terms.html"
-          target="_blank"
-          class="block"
-        >
+        Irasutoya, Terms of Use:<a href="https://www.irasutoya.com/p/terms.html" target="_blank" class="block">
           https://www.irasutoya.com/p/terms.html
         </a>
       </p>
       <p class="mt-3">
-        「よくあるご質問」<a href="https://www.irasutoya.com/p/faq.html" target="_blank" class="block">
+        Frequently Asked Questions:<a href="https://www.irasutoya.com/p/faq.html" target="_blank" class="block">
           https://www.irasutoya.com/p/faq.html
         </a>
       </p>
     </Modal>
     <Point type="simple">
-      当サイトで配布している素材は規約の範囲内であれば、個人、法人、商用、非商用問わず無料でご利用頂けます。
+      The materials distributed on this site may be used free of charge by individuals or corporations, commercial or
+      non-commercial, as long as they are within the scope of the terms of use.
     </Point>
     <p>
-      「そうか、無料で使っていいのか！」と安心してはいけません。この「規約の範囲内」をちゃんと確認する必要があります。「よくあるご質問」にも利用方法について丁寧に説明されているのでちゃんと読みましょう。
+      Do not think, 'Oh well, I get to use it for free!'. You should not be reassured that you can use the service for
+      free. You need to make sure that you are within the terms of use. Please read the FAQs carefully for detailed
+      instructions on how to use the site.
     </p>
     <p>
-      特に注意が必要なのは、商用利用で1つの制作物に21点以上のイラストを使う場合は有償となる旨が書かれていることです。
+      Particular attention should be paid to the fact that it states that a fee will be charged for the use of 21 or
+      more illustrations in a single production for commercial use.
     </p>
     <p>
-      このようなイラスト素材や、写真素材を提供するサイトなどは、「利用について」「利用条件」「ライセンス」などの名前のところに、利用条件が書かれていることが多いので、よく確認してから使うようにしましょう。
+      Sites that provide such illustration materials and photo materials often have terms and conditions of use written
+      in them such as "About Use," "Terms of Use," and "License," so be sure to check them carefully before using them.
     </p>
     <p>
-      みなさんがよく利用されているであろう「Googleマップ」もクレジット表記を必須としています<ModalTrigger
-        id="c4_17"
-      />。すでに表示されているクレジット表記を消して利用することは、契約違反や権利侵害となる可能性がありますので、注意しましょう。
+      Google Maps, which you may be familiar with, also requires credit<ModalTrigger id="c4_17" />. Please be aware that
+      removing the credit already displayed may constitute a breach of contract or an infringement of rights.
     </p>
-    <Modal id="c4_17">
+    <Modal id="c4_17" lang="en">
       <p>
-        Googleマップ<br />「一般的なガイドライン」<a
-          href="https://www.google.com/intl/ja/permissions/geoguidelines/"
+        Google Maps, General guidelines:<a
+          href="https://about.google/brand-resource-center/products-and-services/geo-guidelines/"
           target="_blank"
           class="block"
         >
-          https://www.google.com/intl/ja/permissions/geoguidelines/
+          https://about.google/brand-resource-center/products-and-services/geo-guidelines/
         </a>
       </p>
     </Modal>
 
-    <h4 id="ref11">クリエイティブ・コモンズ・ライセンス（Creative Commons License）</h4>
+    <h4 id="ref11">Creative Commons License</h4>
     <p>
-      ライセンスとして有名なものに「クリエイティブ・コモンズ・ライセンス」があります。名前が長いので、略して「CC」と呼ぶこともあります。CCは、作品を公開する作者が「この条件を守れば私の作品を自由に使って構いません」という意思表示をするためのツールとして、世界中で使用されています。
+      One of the most famous licenses is the Creative Commons License, but because the name is long, it is sometimes
+      abbreviated to "CC". CC is used around the world as a tool for authors who publish their works to express their
+      willingness to say, "You are free to use my work as long as you abide by these terms of use".
     </p>
-    <p>本ウェブサイトも「CC BY 4.0」で公開しています（フッターにこのマークがついています）。</p>
+    <p>This material is also published under "CC BY 4.0" (this symbol is marked in the footer).</p>
     <ImgCaption>
-      <figcaption>【クリエイティブ・コモンズ（CC BY 4.0）の表記】</figcaption>
+      <figcaption>Creative Commons (CC BY 4.0)</figcaption>
       <div class="max-w-xs border border-stone-500 p-4 md:p-8">
         <img
           src="/assets/images/cc.svg"
-          alt="原作者のクレジット（氏名、作品タイトルなど）を表示することを主な条件とし、改変はもちろん、営利目的での二次利用も許可される最も自由度の高いCCライセンスのマーク"
+          alt="Mark of the most liberal CC licence, which permits modification as well as secondary use for commercial purposes, with the main condition that the original author's credit (name, title of work, etc.) is indicated."
           width="224"
           height="78"
           loading="lazy"
@@ -891,289 +1079,364 @@ import Page from '../../../templates/Page.astro';
       </div>
     </ImgCaption>
     <p>
-      これは「表示」というもので、「原作者のクレジット（氏名、作品タイトルなど）を表示すれば」、改変も営利目的利用もOKとなります。
+      This is called "attribution," and as long as "the credit of the original author (name, title of the work, etc.) is
+      indicated", modification and commercial use are allowed.
     </p>
     <p>
-      たまに「CCついてるから自由に利用してもいいんだよね」と勘違いされてる方がいらっしゃいますが、BYでもクレジット表記は必須なので、注意してください。
+      Please note that sometimes there are people who mistakenly think that because it has CC indicated, they are free
+      to use it, but credit is required even for BY.
     </p>
     <p>
-      CCではBYを必ずつけることになっています。その他に下の【クリエイティブ・コモンズの表記例】のように、表示を組み合わせて、作者が希望する条件を提示することができます。
+      In CC, BY must be added. Other conditions can be combined with the indications as shown in the [Creative Commons
+      example] below to provide the conditions desired by the author.
     </p>
     <ImgCaption>
-      <figcaption>【クリエイティブ・コモンズの表記例】</figcaption>
+      <figcaption>Creative Commons example</figcaption>
       <table>
         <thead>
           <tr class="col-3">
-            <th>表示</th>
-            <th>意味</th>
-            <th>概要</th>
+            <th>Display</th>
+            <th>Meaning</th>
+            <th>Summary</th>
           </tr>
         </thead>
         <tbody>
           <tr class="col-3">
             <td>SA</td>
-            <td>継承</td>
-            <td>改変した場合、元の作品と同じCCライセンスをつけることが条件</td>
+            <td>Share Alike</td>
+            <td>If you modify the work, you must distribute it under the same CC license as the original.</td>
           </tr>
           <tr class="col-3">
             <td>ND</td>
-            <td>改変禁止</td>
-            <td>改変をしないことが条件</td>
+            <td>No Derivatives</td>
+            <td>No derivative work is permitted.</td>
           </tr>
           <tr class="col-3">
             <td>NC</td>
-            <td>非営利</td>
-            <td>非営利であることが条件</td>
+            <td>Non-Commercial</td>
+            <td>Must be non-commercial.</td>
           </tr>
         </tbody>
       </table>
     </ImgCaption>
     <p>
-      例えば、CC-BY-ND-NCの場合は、「クレジット表示、改変禁止、非営利」であれば、利用できることになります。全部で6通りの方法があります。
+      For example, CC-BY-ND-NC means that you can use it as long as it is "credited, no derivative work is allowed,
+      non-commercial". There are a total of six types.
     </p>
     <p>
-      CC0もあり、これは権利の放棄を表明しているものです。CC0がついている著作物は自由に利用することができます<ModalTrigger
+      There is also CC0, which indicates a waiver of rights. Works marked with CC0 are free to use<ModalTrigger
         id="c4_18"
-      />。
+      />.
     </p>
-    <Modal id="c4_18">
+    <Modal id="c4_18" lang="en">
       <p>
-        「CC0について ― “いかなる権利も保有しない”」<a
-          href="https://creativecommons.jp/sciencecommons/aboutcc0/"
+        About CC0 - "No Copyright":<a
+          href="https://creativecommons.org/publicdomain/zero/1.0/"
           target="_blank"
           class="block"
         >
-          https://creativecommons.jp/sciencecommons/aboutcc0/
+          https://creativecommons.org/publicdomain/zero/1.0/
         </a>
       </p>
     </Modal>
     <p>
-      詳しくはクリエイティブ・コモンズのサイト<ModalTrigger id="c4_19" />をご参照ください<ModalTrigger id="c4_20" />。
+      For more information, please visit the Creative Commons website<ModalTrigger id="c4_19" /><ModalTrigger
+        id="c4_20"
+      />.
     </p>
-    <Modal id="c4_19">
+    <Modal id="c4_19" lang="en">
       <p>
-        クリエイティブ・コモンズ・ジャパン<a href="https://creativecommons.jp/licenses/" target="_blank" class="block">
-          https://creativecommons.jp/licenses/
+        Creative Commons:<a href="https://creativecommons.org/" target="_blank" class="block">
+          https://creativecommons.org/
         </a>
       </p>
     </Modal>
-    <Modal id="c4_20">
+    <Modal id="c4_20" lang="en">
       <p>
-        東京地判令和3年10月12日（令和3（ワ）5285）〔flickr投稿写真事件〕では、クリエイティブ・コモンズ・ライセンス（BY-SA）の下でflickrに投稿された原告（写真家）の写真を著作者のクレジットを表示せずに被告が自身のウェブサイトに利用した行為について、裁判所は公衆送信権、氏名表示権侵害にあたると判断しています。
+        In the Tokyo District Court, October 12, 2021 (2021 (wa) 5285) [Photo on Flickr Case], the court ruled that the
+        defendant's use of a photo by the plaintiff (photographer) posted on Flickr under a Creative Commons License
+        (BY-SA) on his website without giving credit to the author constituted an infringement of the public
+        transmission right and the attribution right.
       </p>
     </Modal>
-    <Point>ライセンスの確認は必ずしましょう！</Point>
+    <Point>Be sure to check the license!</Point>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">
-        CCでなくても、利用条件のところに「クレジット表記」と書いてあるサイトもわりとありますね。
+      <Bubble speaker="Konaka" feLevel="2">
+        Even if you don't use CC, there are quite a few sites that require "credit" in their terms of use.
       </Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        その場合は、ちゃんと作品名や著作者名を表記して、著作物を利用する必要があります。
+      <Bubble speaker="Sumiki" feLevel="2">
+        In that case, you must use the copyrighted work by properly indicating the name of the work and the name of the
+        author.
       </Bubble>
-      <Bubble speaker="大院" feLevel="5">
-        利用条件とかなんにも書いてなくても、ネットで公開してたら使ってもいいんだろ？
+      <Bubble speaker="Daiin" feLevel="5">
+        Even if there are no terms of use or anything, if it's on the Internet, you're allowed to use it, right?
       </Bubble>
-      <Bubble speaker="隅木" feLevel="4">
-        いいえ、なんにも書いてない場合は、基本的に利用の際には許諾が必要ということになります。ネットで公開してるからって、イコール自由に使っていいってことではないですよ。
+      <Bubble speaker="Sumiki" feLevel="4">
+        No. If nothing is written, it basically means that permission is required for use. Just because it is published
+        on the Internet does not mean that you are free to use it.
       </Bubble>
     </SpeechBubbles>
     <img src="/assets/images/1-4-3.jpg" alt="" width="1715" height="847" loading="lazy" decoding="async" />
 
-    <h3 id="ref12">権利制限</h3>
+    <h3 id="ref12">Limitation of rights</h3>
     <p>
-      「section01
-      著作権法とは」で説明したように、著作権法は、著作者の権利の保護だけではなく、著作物の「公正な利用」も考えて、文化を発展させることを目的としています。
+      As explained in Section 01 "What is the Copyright Act?", the Copyright Act aims to develop culture by considering
+      not only the protection of authors' rights but also the "fair exploitation" of copyrighted works.
     </p>
     <p>
-      著作権法は、この「公正な利用」を促進するために著作権者の許可なく著作物を利用できる場面を規定していて、これらを「権利制限規定」と呼んでいます<ModalTrigger
+      To promote "fair exploitation", the Copyright Act stipulates situations in which copyrighted works may be used
+      without the permission of the copyright owner, and these are called "limitations of rights"<ModalTrigger
         id="c4_21"
-      />。著作権者の権利を制限して、公正な利用の範囲を定める条文になります。
+      />. These provisions limit the rights of copyright owners and define the scope of fair exploitation.
     </p>
-    <Modal id="c4_21">
+    <Modal id="c4_21" lang="en">
       <p>
-        著作権の権利制限は著作者人格権に影響を及ぼすものと解釈してはならないため（50条）、著作者人格権への配慮は必要となりますので、注意しましょう。
+        Note that the limitation of rights shall not be construed as affecting moral rights (Article 50), so
+        consideration must be given to moral rights.
       </p>
     </Modal>
     <p>
-      権利制限規定はたくさんありますが、本ウェブサイトを読んでくださってるみなさんに関係ありそうな規定をいくつか以下にあげます。これらにあてはまる場合には、著作権者の許諾がなくても利用できます。
+      There are many limitations of rights, but the following are a few that may be relevant to you, the reader of this
+      material. If any of these apply to you, you may use the material without the permission of the copyright owner.
     </p>
     <ListArea id="ref18">
-      <h5>私的使用のための複製（30条）</h5>
+      <h5>Reproduction for private use (Article 30)</h5>
       <ul>
-        <li>自分や家庭内その他これに準ずる限られた範囲内で使うためだけに自分で複製するのはOK</li>
-        <li>映画館などでの映画の盗撮は、自分しか観ないとしてもNG（映画盗撮防止法4条1項）</li>
-        <li>違法にアップロードされている著作物を著作権侵害物であると知りながらダウンロードするのもNG（30条1項3号）</li>
+        <li>
+          It is OK to make your copies only for your use or for use within your home or another similarly limited area.
+        </li>
+        <li>
+          The voyeurism of movies in theaters and other places is not allowed, even if you are the only one watching the
+          movie (Article 4(1) of the Law for the Prevention of Voyeurism of Films).
+        </li>
+        <li>
+          Downloading illegally uploaded copyrighted material knowing that the material is an infringement of copyright
+          is also not allowed (Article 30(1)(iii)).
+        </li>
       </ul>
     </ListArea>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="1">
-        推し画像をホームページからダウンロードして、自分のスマホの待ち受けにするのは私的使用のための複製ですよね？
+      <Bubble speaker="Konaka" feLevel="1">
+        Downloading a favorite image from a website and using it as wallpaper for your phone is a reproduction for
+        private use, right?
       </Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        そのとおりです。でも、その画像をSNSにアップするのは公衆送信権侵害となってしまいます。30条で認められているのは複製だけですから。
+      <Bubble speaker="Sumiki" feLevel="2">
+        That is correct. But uploading the image to a social networking site is an infringement of the public
+        transmission right since Article 30 only allows reproduction.
       </Bubble>
-      <Bubble speaker="大院" feLevel="4">職員会議で新聞記事のコピーを配ったりするのは？</Bubble>
-      <Bubble speaker="隅木" feLevel="3">
-        その会議は、業務目的なので私的とは言えないですよね。私的使用のための複製にはあたりません<ModalTrigger
+      <Bubble speaker="Daiin" feLevel="4">
+        What about handing out copies of newspaper articles at staff meetings?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        Such a meeting is for business purposes, so it is not private. It is not a reproduction for private use<ModalTrigger
           id="s4_21"
-        />。
+        />.
       </Bubble>
-      <Bubble speaker="小中" feLevel="2">町内会だったらどうですか？</Bubble>
-      <Bubble speaker="隅木" feLevel="2">
-        それも「家庭内」や「これに準ずる限られた範囲内」とは言いづらい集まりなので、あてはまらないですね<ModalTrigger
-          id="s4_22"
-        />。
+      <Bubble speaker="Konaka" feLevel="2">What if it was a neighborhood association?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        It is also hard to describe such gatherings as "within the family" or "within a similar limited range", so it
+        does not apply to this group<ModalTrigger id="s4_22" />.
       </Bubble>
-      <Bubble speaker="大院" feLevel="4">そういや自炊代行業者問題とかあったな……</Bubble>
-      <Bubble speaker="隅木" feLevel="3">
-        あの事例では、購入した紙の本を電子化したい人が業者に依頼してスキャンさせていたのですが、その複製物を使用したい人が自分で複製しなければ30条にはあてはまらない、ということでした<ModalTrigger
+      <Bubble speaker="Daiin" feLevel="4">Well, there was a book scan service case or something like that......</Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        In that case, a person who wanted to digitize a purchased paper book hired a service provider to scan it, but
+        the person who wanted to use the copy had to make the copy themselves to be covered by Article 30<ModalTrigger
           id="s4_23"
-        />。
+        />.
       </Bubble>
-      <Bubble speaker="小中" feLevel="2">私的複製と言ってもあまり広く複製していいわけじゃないのですね……</Bubble>
-      <Modal id="s4_21">
-        <p>東京地判昭和52年7月22日無体例集9・2・534</p>
+      <Bubble speaker="Konaka" feLevel="2">
+        Private reproduction does not mean you can reproduce too widely. ......
+      </Bubble>
+      <Modal id="s4_21" lang="en">
+        <p>Tokyo District Court, July 22, 1977, Mutaireishu 9, 2, 534.</p>
       </Modal>
-      <Modal id="s4_22">
+      <Modal id="s4_22" lang="en">
         <p>
-          東京地判令和4年11月8日（令和4（ワ）2229）は、「著作物の使用範囲が『その他これに準ずる限られた範囲内』といえるためには、少なくとも家庭に準じる程度に親密かつ閉鎖的な関係があることが必要である」と判示しています。
+          Tokyo District Court, November 8, 2022 (2022 (wa) 2229) held that "for the scope of use of a work to be
+          considered 'within the limited scope of other similar uses', it is necessary to have at least a close and
+          closed relationship to the extent that it is equivalent to a family".
         </p>
       </Modal>
-      <Modal id="s4_23">
-        <p>知財高判平成26年10月22日判時2246号92頁〔自炊代行事件〕</p>
+      <Modal id="s4_23" lang="en">
+        <p>
+          Intellectual Property High Court, October 22, 2014, HANREI JIHO No. 2246, p. 92 [Book Scan Service Provider
+          Case].
+        </p>
       </Modal>
     </SpeechBubbles>
     <ListArea id="ref37">
-      <h5>付随対象著作物の利用（30条の2）</h5>
+      <h5>Use of Incidental Works (Article 30-2)</h5>
       <ul>
-        <li>写真や動画を撮った時に付随して著作物が軽微な構成部分として写ってしまうのはOK</li>
-        <li>付随して写ってしまった写真や動画を正当な範囲内で公衆送信OK</li>
-        <li>でも著作権者の権利を不当に害する場合はNG</li>
+        <li>
+          It is OK for a copyrighted work to appear as a minor part of an accompanying photograph or video when it is
+          taken.
+        </li>
+        <li>Public transmission of incidentally captured photos and videos is OK within a legitimate scope.</li>
+        <li>But not if it unreasonably prejudices the interests of the copyright owner.</li>
       </ul>
     </ListArea>
     <ListArea id="ref34">
-      <h5>図書館等における複製（31条）</h5>
+      <h5>Reproduction in libraries, etc. (Article 31)</h5>
       <ul>
         <li>
-          図書館は、営利を目的としない事業として、次の場合に図書館資料の著作物を複製できる
-
+          Libraries may reproduce works of library materials as a not-for-profit enterprise in the following cases:
           <ul>
             <li>
-              利用者の求めに応じて、公表された著作物の一部分<ModalTrigger
-                id="c4_23"
-              />の複製物を1人につき1部提供する場合
+              When one copy of a part of a published work<ModalTrigger id="c4_23" /> is provided per person upon request
+              of the user.
             </li>
-            <li>図書館資料保存のために必要な場合</li>
-            <li>他の図書館等の求めに応じ、絶版等資料の複製物を提供する場合</li>
+            <li>When necessary for the preservation of library materials</li>
+            <li>When providing copies of out-of-print materials at the request of other libraries, etc.</li>
           </ul>
         </li>
       </ul>
     </ListArea>
-    <Modal id="c4_23">
+    <Modal id="c4_23" lang="en">
       <p>
-        「一部分」については原則として著作物の「半分まで」と解されています。国立国会図書館の運用については、国立国会図書館「著作権にかかわる注意事項」を参照してください。
+        As a general rule, "a portion" is understood to mean "up to half" of a work. For the operation of the National
+        Diet Library, please visit Information about Copyright of the National Diet Library.
       </p>
       <p class="mt-3">
-        「著作権にかかわる注意事項」<a
-          href="https://www.ndl.go.jp/jp/copy/copyright/index.html"
+        Information about Copyright:<a
+          href="https://www.ndl.go.jp/en/copy/copyright/index.html"
           target="_blank"
           class="block"
         >
-          https://www.ndl.go.jp/jp/copy/copyright/index.html
+          https://www.ndl.go.jp/en/copy/copyright/index.html
         </a>
       </p>
       <p class="mt-3">
-        なお、令和3年著作権法改正により、国等の周知目的資料その他の著作物の全部の複製物の提供が著作権者の利益を不当に害しないと認められる特別な事情があるものとして政令で定めるものはその全部が対象になります（31条1項1号括弧書き）。
+        In addition, under the 2021 amendment to the Copyright Act, the provision of copies of materials for publicity
+        by the state, etc., and other works specified by Cabinet Order as having special circumstances in which the
+        provision of copies of the entire work is deemed not to unreasonably prejudice the interests of the copyright
+        owner is covered in its entirety (Article 31(1)(i), bracketed).
       </p>
     </Modal>
     <ListArea id="ref8">
-      <h5>教科用図書等への掲載（33条）</h5>
+      <h5>Publication in textbooks, etc. (Article 33)</h5>
       <ul>
-        <li>学校教育の目的上、必要と認められる限度で教科書に掲載できる</li>
+        <li>May be published in textbooks to the extent necessary for school education.</li>
         <li>
-          教科書に掲載する際に、翻訳、編曲、変形、翻案OK<ModalTrigger id="c4_24" />
+          Translation, arrangement, transformation, and adaptation OK for inclusion in textbooks<ModalTrigger
+            id="c4_24"
+          />.
         </li>
-        <li>著作権者への通知と補償金が必要</li>
+        <li>Requires notification and compensation to copyright owners.</li>
       </ul>
     </ListArea>
-    <Modal id="c4_24">
+    <Modal id="c4_24" lang="en">
       <p>
-        用字又は用語の変更その他の改変で、学校教育の目的上やむを得ないと認められるもの（20条2項1号）は、同一性保持権の侵害にはなりません。
+        Changes in type or terminology or other alterations that are unavoidable for school education (Article 20
+        (2)(i)) do not constitute an infringement of the integrity right.
       </p>
     </Modal>
     <ListArea id="ref17">
-      <h5>試験問題としての複製等（36条）</h5>
+      <h5>Reproduction, etc. as examination questions (Article 36)</h5>
       <ul>
         <li>
-          すでに公表されている著作物を、試験、検定の目的上必要な限度で試験、検定の問題として複製、公衆送信（放送、有線放送は除く）できる<ModalTrigger
+          Reproduction and public transmission (excluding broadcasting and cable broadcasting) of works that have
+          already been published as examination or examination questions to the extent necessary for the examination<ModalTrigger
             id="c4_26"
-          /><ModalTrigger id="c4_25" />
+          /><ModalTrigger id="c4_25" />.
         </li>
-        <li>オンライン形式でする試験の場合もOK</li>
-        <li>ただし、著作権者の利益を不当に害することとなる場合はNG</li>
-        <li>有料の検定、採用試験など営利を目的として利用する場合は、補償金の支払いが必要</li>
+        <li>OK for examinations done in an online format.</li>
+        <li>However, if it would unreasonably prejudice the interests of the copyright owner, it is not acceptable.</li>
         <li>
-          過去の試験問題をWebで公開したり、オープンキャンパスで配布したりする場合は、36条の適用はできないため著作権者の許諾が必要
+          Compensation must be paid when used for commercial purposes such as paid examinations, employment
+          examinations, etc.
+        </li>
+        <li>
+          When publishing past exam questions on the web or distributing them at open campuses, permission from the
+          copyright owner is required since Article 36 is not applicable.
         </li>
       </ul>
     </ListArea>
-    <Modal id="c4_26">
-      <p>試験という性質上、事前に著作権者から許諾をとるのが適当ではないために設けられた規定です。</p>
-    </Modal>
-    <Modal id="c4_25">
+    <Modal id="c4_26" lang="en">
       <p>
-        穴埋め問題など問題の性質上必要である場合に改変することは同一性保持権との関係で問題が生じるものの、やむを得ない改変（20条2項4号）として必要な範囲では許容されると解されます（上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）148頁以下参照、中山信弘『著作権法〔第3版〕』（有斐閣、2020）421頁以下参照）。
+        This provision was established because it is not appropriate to obtain permission from the copyright owner in
+        advance due to the nature of examinations.
+      </p>
+    </Modal>
+    <Modal id="c4_25" lang="en">
+      <p>
+        Although modification of questions that are necessary due to the nature of the question (e.g.,
+        fill-in-the-blanks questions) raises issues concerning the integrity right, modification is permissible to the
+        extent necessary as an unavoidable modification (Article 20(2)(iv)) (see Tatsuhiro Ueno, Copyright Guide for
+        Educators and Researchers, Yuhikaku, 2021, p. 148, and see also Nobuhiro Nakayama, Copyright Law, 3rd ed.,
+        Yuhikaku, 2020, p. 421).
       </p>
     </Modal>
     <ListArea id="ref3">
-      <h5>営利を目的としない上演等（38条）</h5>
+      <h5>Performances, etc. not for profit (Article 38)</h5>
       <ul>
         <li>
-          営利を目的としない、観客から料金をとらない、出演者に報酬を支払わない場合に、公表された著作物を、公に上演・演奏・上映・口述OK
+          Public stage performances, musical performances, on-screen presentations, or recitations of a published work
+          are OK if they are not for profit, if no fee is charged by the audience, and if no compensation is paid to the
+          performers.
         </li>
-        <li>営利を目的としない、貸与を受ける者から料金をとらない場合は、CDなど公表された著作物の複製物を貸与OK</li>
+        <li>
+          It is OK to lend copies of published works, such as CDs, when not for profit and when no fee is charged by the
+          lender.
+        </li>
       </ul>
     </ListArea>
-    <Point>権利制限は、著作者の権利を制限することで、公正な利用を促進しようとするもの。</Point>
-    <img src="/assets/images/1-4-5.jpg" alt="" width="1543" height="732" loading="lazy" decoding="async" />
-    <p>以下の2つは、特に授業でよく使う権利制限規定なので、2章で詳しく説明します。</p>
+    <Point>Limitations of rights seek to promote fair exploitation by limiting the rights of authors.</Point>
+    <img src="/assets/images/1-4-5_en.jpg" alt="" width="1543" height="732" loading="lazy" decoding="async" />
+    <p>
+      The following two are particularly useful limitations of rights in the classroom and are discussed in detail in
+      Chapter 2.
+    </p>
     <ListArea>
       <ul>
-        <li>引用（32条1項）</li>
-        <li>教育機関における複製等（35条）</li>
+        <li>Citation (Article 32(1)).</li>
+        <li>Reproduction, etc. in educational institutions (Article 35).</li>
       </ul>
     </ListArea>
 
-    <h3 id="ref21">罰則規定</h3>
+    <h3 id="ref21">Penal Provisions</h3>
     <p>
-      いろいろと守っていただきたいことを説明してきましたが、それらを破って故意に著作権侵害をしたとして、刑事裁判で「それは罪です！」となった場合には、10年以下の懲役もしくは1千万円以下の罰金、またはその両方（119条1項）が刑事罰として定められています。
+      We have explained various rules that you should comply with, but if you break those rules and the criminal court
+      determines that you have willfully infringed copyright, the criminal penalty is imprisonment for not more than 10
+      years or a fine of not more than 10 million yen, or both (Article 119(1)).
     </p>
     <SpeechBubbles>
-      <Bubble speaker="小中" feLevel="2">やっぱり法律破ったら犯罪なんですね……</Bubble>
-      <Bubble speaker="大院" feLevel="5">
-        でも著作権って親告罪なんだろ。<br />訴えられないと罪にならないんだろ？
+      <Bubble speaker="Konaka" feLevel="2">It's still a crime to break the law. ......</Bubble>
+      <Bubble speaker="Daiin" feLevel="5">
+        But copyright is a crime requiring a complaint from the victim for prosecution, right?<br />You can't be guilty
+        of a crime if no one submits a complaint, right?
       </Bubble>
-      <Bubble speaker="隅木" feLevel="4">
-        著作権法が「親告罪」という制度をとっているのは、著作者や著作権者が別にいいと思ってる場合は起訴する必要がないからなんですよね。<br
-        />しかし、起訴されないからやってもいいということではなく、法律違反であることには変わりありません。法律違反をしている限り、いつ告訴されるかわからないですよ。
+      <Bubble speaker="Sumiki" feLevel="4">
+        The reason why the Copyright Act has this system is that there is no need to prosecute if the author or
+        copyright owner thinks it's okay.<br />However, just because you are not prosecuted does not mean you can do it.
+        It is still a violation of the law. As long as you are breaking the law, you never know when you might be
+        prosecuted.
       </Bubble>
     </SpeechBubbles>
     <p>
-      平成30年の著作権法改正では、次の要件すべてを満たすものを「非親告罪」とし、告訴がなくとも起訴できることになりました（123条2項）。
+      The Copyright Act was amended in 2018 to make it an offense prosecutable without a complaint from a victim if it
+      meets all of the following requirements (Article 123(2)):
     </p>
     <ListArea>
       <ul>
-        <li>対価を得る目的又は権利者の利益を害する目的があること</li>
+        <li>The purpose of obtaining compensation or the purpose of harming the interests of the right owner.</li>
         <li>
-          有償で公衆に提供され、又は提示されている著作物（有償著作物等）を原作のまま譲渡、公衆送信、その目的のために複製すること
+          Transferring, publicly transmitting, or reproducing for such purposes, in its original form, a copyrighted
+          work that is offered or presented to the public for a fee (paid copyrighted work, etc.).
         </li>
-        <li>有償著作物等の提供・提示により得ることが見込まれる権利者の利益が不当に害されること</li>
+        <li>
+          Unjust harm is caused to the interests of right owners who are expected to gain from the provision or
+          presentation of paid copyrighted works, etc.
+        </li>
       </ul>
     </ListArea>
     <p>
-      具体的には、漫画・映画・アニメなどの海賊版を販売したりWebで公開したりすると、権利者本人の告訴がなくても刑事事件になりえます。
+      Specifically, selling pirated copies of manga, movies, anime, etc., or publishing them on the internet can be a
+      criminal offense even without a complaint from the rights owner.
     </p>
-    <p>一方で、コミケなどで販売されている同人誌などの二次的著作物については、親告罪のままになっています。</p>
-    <img src="/assets/images/1-4-6.jpg" alt="" width="1666" height="827" loading="lazy" decoding="async" />
+    <p>
+      On the other hand, derivative works such as fanzine (dōjinshi) sold at Comiket and other events remains a crime
+      prosecutable upon a complaint from the victim.
+    </p>
+    <img src="/assets/images/1-4-6_en.jpg" alt="" width="1666" height="827" loading="lazy" decoding="async" />
   </Section>
 </Page>
