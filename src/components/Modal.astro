@@ -2,15 +2,16 @@
 type Props = {
   id: string;
   word?: string;
+  lang?: string;
 };
 
-const { id, word } = Astro.props;
+const { id, word, lang } = Astro.props;
 ---
 
 <>
   <div class="micromodal-slide absolute hidden" id={`modal-${id}`} aria-hidden="true">
     <div
-      class="modal__overlay transition-opacity duration-500 fixed inset-0 z-30 flex items-center justify-center bg-black/50"
+      class="modal__overlay fixed inset-0 z-30 flex items-center justify-center bg-black/50 transition-opacity duration-500"
       tabindex="-1"
       data-micromodal-close
     >
@@ -37,9 +38,9 @@ const { id, word } = Astro.props;
           </div>
           <div class="mt-4 inline-block md:mt-6">
             <button
-              class="rounded-lg bg-neutral-500 py-1 px-4 text-base leading-normal text-white"
+              class="rounded-lg bg-neutral-500 px-4 py-1 text-base leading-normal text-white"
               data-micromodal-close
-              aria-label="Close this dialog window">閉じる</button
+              aria-label="Close this dialog window">{lang === 'en' ? 'Close' : '閉じる'}</button
             >
           </div>
         </div>
