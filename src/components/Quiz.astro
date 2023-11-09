@@ -6,9 +6,10 @@ type Props = {
     item: string;
   }[];
   level?: string;
+  isEN?: boolean;
 };
 
-const { title, number, list, level } = Astro.props;
+const { title, number, list, level, isEN } = Astro.props;
 ---
 
 <dl id={number && `q${number}`} class="quiz">
@@ -29,7 +30,7 @@ const { title, number, list, level } = Astro.props;
                     : 'border border-slate-300 bg-white text-slate-300'
                 }`}
               >
-                初等・中等
+                {isEN ? 'Elementary, middle' : '初等・中等'}
               </li>
               <li
                 class={`list-none rounded px-1.5 md:px-2 ${
@@ -38,7 +39,7 @@ const { title, number, list, level } = Astro.props;
                     : 'border border-slate-300 bg-white text-slate-300'
                 }`}
               >
-                高等
+                {isEN ? 'High' : '高等'}
               </li>
             </ul>
           )

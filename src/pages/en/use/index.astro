@@ -1,315 +1,415 @@
 ---
-import Section from '../../components/Section.astro';
-import SpeechBubbles from '../../components/SpeechBubbles.astro';
-import Bubble from '../../components/Bubble.astro';
-import Modal from '../../components/Modal.astro';
-import ModalTrigger from '../../components/ModalTrigger.astro';
-import Page from '../../templates/Page.astro';
-import Quiz from '../../components/Quiz.astro';
+import Section from '../../../components/Section.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import Modal from '../../../components/Modal.astro';
+import ModalTrigger from '../../../components/ModalTrigger.astro';
+import Page from '../../../templates/Page.astro';
+import Quiz from '../../../components/Quiz.astro';
 ---
 
 <Page
-  title="授業における著作物利用Q&A"
+  title="Q&A on the Use of Copyrighted Works in the Classroom"
   description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは授業で第三者の著作物を扱う際の具体的な事例について、Q&A形式で説明を行っています。"
 >
   <Section
     number="01"
-    title="授業における著作物利用Q&A"
-    description="この章では、授業で第三者の著作物を扱う際の具体的な事例について、Q&A形式で説明を行います。"
+    title="Q&A on the Use of Copyrighted Works in the Classroom"
+    description="This chapter provides Q&A for specific cases on dealing with third-party copyrighted works in the classroom."
   >
     <ul
       class="my-5 flex flex-col gap-2 !p-0 text-3.25/normal font-bold md:my-6 md:flex-row md:gap-5 md:text-sm/relaxed"
     >
       <li class="flex list-none gap-2">
-        <span class="h-fit whitespace-nowrap rounded bg-orange-600 px-1.5 text-white md:px-2"> 初等・中等</span>
-        小学校・中学校・高校などでありそうな事例
+        <span class="h-fit whitespace-nowrap rounded bg-orange-600 px-1.5 text-white md:px-2"> Elementary, middle</span>
+        For elementary school, junior high schools, and high schools
       </li>
       <li class="flex list-none gap-2">
-        <span class="h-fit whitespace-nowrap rounded bg-orange-600 px-1.5 text-white md:px-2"> 高等</span>
-        大学や高専などでありそうな事例
+        <span class="h-fit whitespace-nowrap rounded bg-orange-600 px-1.5 text-white md:px-2">High</span>
+        For universities, higher professional schools, etc.
       </li>
     </ul>
 
-    <Quiz title="学校を紹介した新聞記事をWebサイトで紹介しても大丈夫？" number="1" level="both">
+    <Quiz title="Can I introduce a newspaper article about my school on our website?" number="1" level="both" isEN>
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="2">
-          わたしの学校の取り組みが地元新聞に掲載されたので、紹介したいです。その記事をまるごとPDFにして自分の学校のホームページに掲載してもいいですか？
+        <Bubble speaker="Konaka" feLevel="2">
+          My school's activity was featured in the local newspaper and I would like to introduce it. Can I make a PDF of
+          the full article and post it on my school's website?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          その場合は、「複製」、「公衆送信」にあたるので、著作権者である新聞社の許諾が必要です。もし、その記事が新聞社のWebサイトで見られる場合、学校のホームページに記事のリンクを貼れば問題ありません。
+        <Bubble speaker="Sumiki" feLevel="2">
+          In such a case, your activities include "reproduction" and "public transmission" and require the permission of
+          the newspaper as the copyright owner. If the article is available on the newspaper's website, it is no problem
+          for you to put a link to the article on your school's website.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="共同で作成した教材は作成に関わった教員なら使える？" number="2" level="both">
+    <Quiz
+      title="Can teachers involved in the creation of jointly produced teaching materials use them?"
+      number="2"
+      level="both"
+      isEN
+    >
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          複数の授業担当教員で1つの教材を作ったんだけど、一部第三者の著作物が混じってるんだよなぁ。<br
-          />それは作成に参加した教員がそれぞれの授業で使っていいのか？その第三者からの許諾はいるのか？
+        <Bubble speaker="Daiin" feLevel="4">
+          I've created one material with several class teachers, but some of it is mixed with third-party copyrighted
+          material.<br />Can a teacher use the material in each of the classes by the teachers who participated in the
+          creation? Do they need permission from a third party?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          第三者の著作物が一部含まれていても、引用の条件をみたしていれば利用できるので、第三者からの許諾は必要ありません。また、みんなで1つの教材を作成しており、共同著作物になりそうですが、当然それぞれの教員の授業で利用することが合意されているでしょうから、それぞれの授業で複製したり、オンライン授業で公衆送信したりしても問題ありません<ModalTrigger
-            id="c3_1"
-          />。
+        <Bubble speaker="Sumiki" feLevel="2">
+          Even if a third party's copyrighted work is partially included, the teacher can use it as long as the
+          requirements for citation are met, so permission from the third party is not required. Also, since everyone is
+          working together to create one teaching material, it is likely to be a joint work, but of course, it will be
+          agreed that each teacher will use it in their class, so there is no problem in reproducing it in each class or
+          making a public transmission in an online class<ModalTrigger id="c3_1" />.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_1"><p>65条2項</p></Modal>
+    <Modal id="c3_1" isEN><p>Article 65(2)</p></Modal>
 
-    <Quiz title="著作物を複製して他の教員に提供しても大丈夫？" number="3" level="both">
+    <Quiz title="Can I reproduce copyrighted material and provide it to other teachers?" number="3" level="both" isEN>
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="2">
-          わたしが持っている本をコピーして、他の授業を担当している先生にお渡ししてもいいですか？
+        <Bubble speaker="Konaka" feLevel="2">
+          Can I make a copy of my book and give it to another teacher who teaches a different class?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          授業を担当する教員・教師等が主体で複製しなければ、35条1項を適用できません。小中先生はその別の授業を担当するわけではないので、著作権者の許諾が必要でしょうね。
+        <Bubble speaker="Sumiki" feLevel="4">
+          Article 35(1) cannot apply unless the teacher, etc. in charge of the class takes the initiative to reproduce
+          the material. Since Dr. Konaka is not in charge of that other class, they need the permission of the copyright
+          owner.
         </Bubble>
-        <Bubble speaker="大院" feLevel="2">
-          じゃ、その先生に小中先生が本を無償で貸してあげて、借りた先生が自分でコピーしたらいいわけだ。
+        <Bubble speaker="Daiin" feLevel="2">
+          Then, Dr. Konaka could lend the book to the teacher free of charge, and the teacher who borrowed the book
+          could make a copy.
         </Bubble>
-        <Bubble speaker="隅木" feLevel="1">
-          それなら大丈夫です<ModalTrigger id="c3_2" />。
+        <Bubble speaker="Sumiki" feLevel="1">
+          That would be fine<ModalTrigger id="c3_2" />.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_2"><p>38条4項</p></Modal>
+    <Modal id="c3_2" isEN><p>Article 38(4)</p></Modal>
 
-    <Quiz title="卒業した学生の作文やレポートを授業で紹介したい。" number="4" level="both">
+    <Quiz
+      title="I would like to present essays and reports of graduating students to the class."
+      number="4"
+      level="both"
+      isEN
+    >
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="3">
-          卒業した生徒さんの優秀な作文を、今年の国語の授業で使いたいのですけど。
+        <Bubble speaker="Konaka" feLevel="3">
+          I would like to use an excellent essay of a graduating student in my Japanese class this year.
         </Bubble>
-        <Bubble speaker="大院" feLevel="2">
-          おれも去年の授業の学生の優秀なレポートを、今年の授業でクラスのみんなに配って見せたい。
+        <Bubble speaker="Daiin" feLevel="2">
+          I, too, would like to show the excellent reports of the students in last year's class and hand them out to
+          this year's class.
         </Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          学生や生徒さんが、宿題や課題として、先生に提出しただけの著作物は「公表」しているとは言えません。35条が適用できるのは公表された著作物のみなので、おふたりの場合はどちらも著作権者（著作者）の許諾が必要です<ModalTrigger
-            id="c3_3"
-          />。公表権（18条1項）や氏名表示権（19条1項）への配慮も必要になります。
+        <Bubble speaker="Sumiki" feLevel="4">
+          Since Article 35 applies only to published copyrighted works, the permission of the copyright owner (author)
+          is required in both cases<ModalTrigger id="c3_3" />. You will also need to consider the publication right
+          (Article 18(1)) and the attribution right (Article 19(1)).
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_3"><p>18歳未満の未成年者の場合には親権者の許諾が必要になります（民法4条、5条1項本文）。</p></Modal>
-
-    <Quiz title="違法な著作物を授業で紹介しても大丈夫？" number="5" level="high">
-      <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          授業でどんな違法の例があるか見せたいんだよな。有名人の画像を加工してSNSでアップしてるとか。違法なものの著作権ってどう扱ったらいいんだ？
-        </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          著作権は元の写真を撮った人にありますし、有名人の肖像権やパブリシティ権の問題もありますが、先生がその画像がどう違法なのかということをちゃんと説明することで主従関係など引用の条件をみたせば、適法な引用として利用することができます<ModalTrigger
-            id="c3_4"
-          />。
-        </Bubble>
-      </SpeechBubbles>
-    </Quiz>
-    <Modal id="c3_4">
+    <Modal id="c3_3" isEN>
       <p>
-        引用の要件としては、適法に入手した情報源からの採録でなければいけないことは求められていません。上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）180頁参照。
+        In the case of minors under 18 years of age, the permission of a parent or guardian is required (Civil Code
+        Articles 4 and 5(1), main text).
       </p>
     </Modal>
 
-    <Quiz title="授業で映画を上映できる？" number="6" level="both">
+    <Quiz title="Can I introduce illegal copyrighted materials in class?" number="5" level="high" isEN>
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="3">
-          わたしはNetflixを契約してるんですけど、その中に動物のドキュメンタリー映画があって、授業で見せたいのですけど大丈夫ですか？
+        <Bubble speaker="Daiin" feLevel="4">
+          I want to show illegal examples in the class. Like, they're manipulating images of celebrities and uploading
+          them on social media. How can I handle copyrights for illegal stuff?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          小中先生がプロジェクタを使ってスクリーンに投影するような場合は「公の伝達」にあたり、35条を適用できると思います。と、言いたいところなのですが、Netflixの利用規約（4.2）を読むと、「お客様のご世帯以外の方と共有することはできません。（中略）お客様は公の場での上映のために当サービスを利用しないことに同意します」と書いてあるんですね<ModalTrigger
-            id="c3_5"
-          />。<br /><br
-          />このように、法律では権利制限規定があるけれど、契約で制限をしようとすることをオーバーライド問題といって、契約での制限を有効とすべきかは専門家でも意見の分かれるところです。<br
-          /><br />現在、フォーラムでも検討中であり、現時点では利用規約違反のリスクがあり難しいと言わざるを得ません。<br
-          />ただ、Netflixの定めるルールでも、一部の教育的なオリジナルドキュメンタリー作品は教育を目的とした上映を1回のみしてもよいとされています。適宜、最新の利用規約を確認するようにしましょう。
+        <Bubble speaker="Sumiki" feLevel="2">
+          The copyright belongs to the person who took the original photo, and there are issues of privacy rights and
+          publicity rights for celebrities, but as long as the teacher explains how the image is illegal and the
+          requirements of the citation, including the master-subject relationship, are met, the image can be used as the
+          citation<ModalTrigger id="c3_4" />.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_5">
+    <Modal id="c3_4" isEN>
       <p>
-        Netflix利用規約<a href="https://help.netflix.com/legal/termsofuse" target="_blank" class="block">
-          https://help.netflix.com/legal/termsofuse
+        There is no requirement that the citation must be taken from a legitimate source. See Tatsuhiro Ueno, Copyright
+        Guide for Educators and Researchers, Yuhikaku, 2021, p.180.
+      </p>
+    </Modal>
+
+    <Quiz title="Can I show you a film in class?" number="6" level="both" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="3">
+          I have a Netflix subscription, and I would like to show a documentary film on animals to students in my class.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          If Dr. Konaka uses a projector to project onto a screen, it would be a "public communication" and Article 35
+          could apply. I would say, however, if you read Netflix's Terms of Use (4.2), you will find that "The Netflix
+          service and any content accessed through the service are for your personal and non-commercial use only and may
+          not be shared with individuals beyond your household unless otherwise allowed by your subscription plan…You
+          agree not to use the service for public performances"<ModalTrigger id="c3_5" />.<br /><br />Thus, although
+          there are provisions in the law limiting copyrights, attempts to limit them by contract are called
+          “overriding”, and even experts have different opinions on whether contractual limitations should be valid.<br
+          /><br />The Forum is currently discussing this issue, and I must say that it is a difficult issue right now
+          due to the risk of violating the Terms of Use.<br />However, the rules of Netflix also state that some
+          educational original documentaries may be shown only once for educational purposes. Be sure to check the
+          latest Terms of Use.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_5" isEN>
+      <p>
+        Netflix, Terms of Use:
+        <a href="https://help.netflix.com/en/legal/termsofuse" target="_blank" class="block">
+          https://help.netflix.com/en/legal/termsofuse
         </a>
       </p>
       <p class="mt-3">
-        教育を目的としたドキュメンタリーの上映<a
-          href="https://help.netflix.com/ja/node/57695"
+        Educational screenings of documentaries: <a
+          href="https://help.netflix.com/en/node/57695"
           target="_blank"
           class="block"
         >
-          https://help.netflix.com/ja/node/57695
+          https://help.netflix.com/en/node/57695
         </a>
       </p>
     </Modal>
 
-    <Quiz title="読み聞かせの動画をインターネット上に公開しても大丈夫？" number="7" level="low">
+    <Quiz title="Can I post videos of my reading of a story to others on the Internet?" number="7" level="low" isEN>
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="2">
-          児童向けのお話なんですけど、わたしが読み聞かせした動画をWebサーバにアップロードし、生徒が自宅からいつでも見られるようにするのは大丈夫ですか？
+        <Bubble speaker="Konaka" feLevel="2">
+          I'm talking about a story for children. Can I upload a video of my reading of a story to a web server so that
+          students can watch it from home at any time?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          それはそのお話をまるまる全部を「複製」し、「公衆送信」することになります。そのため、著作権者の権利を不当に害することになるかと思われるので、35条を適用できません。
+        <Bubble speaker="Sumiki" feLevel="4">
+          That would be the "reproduction" and "public transmission" of the entire story. Therefore, Article 35 cannot
+          apply because it would unreasonably prejudice the interests of the copyright owner.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="楽曲を練習しやすく編曲すると問題ある？" number="8" level="low">
+    <Quiz
+      title="Is there a problem if I arrange a piece of music in a way that makes it easier to practice?"
+      number="8"
+      level="low"
+      isEN
+    >
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="2">
-          人気のアニメソングをそのままだと難しいので、小学生がリコーダーで合奏できるようにかんたんな感じに音楽の先生が編曲して、授業で練習してもいいですか？
+        <Bubble speaker="Konaka" feLevel="2">
+          Since it is difficult to play an original popular anime song, can the music teacher simply arrange it so that
+          elementary school students can play it as an ensemble with recorders and practice it in class?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          これは47条の6第1項1号で、35条1項が適用できる場合には、翻訳、編曲、変形、翻案をしてもよいとされているので、許諾なく行っても大丈夫です。
+        <Bubble speaker="Sumiki" feLevel="2">
+          This can be done without permission, as Article 47-6(1)(i) states that translation, musical arrangement,
+          reformation, or adaptation is allowed when Article 35(1) is applicable.
         </Bubble>
-        <Bubble speaker="小中" feLevel="3">その曲を、学校の音楽会で演奏していいですか？</Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          学校の音楽会は、非営利・無償の演奏会なので、38条1項の権利制限を適用できると思うかもしれません。しかし、38条1項は著作物をそのまま利用する場合に適用され、編曲（27条）するときには適用されません（47条の6第1項参照）。そのため、著作権者の許諾が必要になります<ModalTrigger
-            id="c3_ensokai"
-          />。
+        <Bubble speaker="Konaka" feLevel="3">Can I play the arranged song at the school concert?</Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          You may think that the limitation of rights in Article 38(1) can apply to school concerts because they are
+          non-profit, free-of-charge performances. However, Article 38(1) applies to the use of copyrighted works as
+          they are, and does not apply to musical arrangements (Article 27) (see Article 47-6(1)). Therefore, the
+          permission of the copyright owner is required<ModalTrigger id="c3_ensokai" />.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_ensokai">
+    <Modal id="c3_ensokai" isEN>
       <p>
-        例えば、ごく単純な楽器編成の変更は、新たな創作性を加えておらず、著作権法上の「編曲」に該当しないこともありうると考えられます。その場合は38条1項の条件をみたせば、公に演奏することが可能で、同一性保持権の侵害にも当たらないと解釈する余地もあるでしょう。
+        For example, it is possible that a very simple change in instrumentation does not add new creativity and does
+        not constitute a "musical arrangement" under the Copyright Act. In such a case, there may be room for
+        interpretation that if the requirements of Article 38(1) are met, the copyrighted work can be performed publicly
+        and does not constitute an infringement of the integrity right.
       </p>
     </Modal>
 
-    <Quiz title="給食の時間に録画したテレビ番組を流したい。" number="9" level="low">
+    <Quiz title="I would like to play recorded TV programs during lunchtime." number="9" level="low" isEN>
       <SpeechBubbles>
-        <Bubble speaker="小中" feLevel="2">
-          給食の時間中に、わたしが録画した教育番組を教室のテレビで流したいんですけど、大丈夫でしょうか？
+        <Bubble speaker="Konaka" feLevel="2">
+          I would like to play my recorded educational program on the classroom TV during lunchtime.
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          給食は、学習指導要領で規定している「特別活動」になるので、「授業」にあたります。授業の目的で行った録画は「複製」で35条1項を適用できます。テレビで流すことは非営利・無償の上映で38条1項を適用できます<ModalTrigger
-            id="c3_7"
-          />。
+        <Bubble speaker="Sumiki" feLevel="2">
+          School lunch is a "special activity" as stipulated in the Courses of Study, and therefore constitutes a
+          "class". Recording for teaching is "reproduction" and Article 35(1) can apply. Broadcasting on television is a
+          non-profit, free-of-charge showing, and Article 38(1) can apply<span class="mr-1"
+            ><ModalTrigger id="c3_7" /></span
+          >.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_7"><p>上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）118頁参照。</p></Modal>
+    <Modal id="c3_7" isEN>
+      <p>See Tatsuhiro Ueno, Copyright Guide for Educators and Researchers, Yuhikaku, 2021, p.118.</p>
+    </Modal>
 
-    <Quiz title="海外の著作物を授業で扱う場合に注意する点は？" number="10" level="both">
+    <Quiz
+      title="What should I care about when dealing with foreign copyrighted work in the classroom?"
+      number="10"
+      level="both"
+      isEN
+    >
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          英語の授業で、学生に海外の小説を翻訳させたいらしいんだよ。海外の著作物はどうしたらいいんだ？
+        <Bubble speaker="Daiin" feLevel="4">
+          An English teacher wants students to translate foreign novels. How can I help them with foreign copyrighted
+          work?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          海外の著作物については、著作権は「ベルヌ条約」、「万国著作権条約」、「TRIPS協定」などの条約に日本も加入しており、世界の大半の国の著作物を保護する義務があります<ModalTrigger
-            id="c3_8"
-          />。
+        <Bubble speaker="Sumiki" feLevel="2">
+          As for foreign copyrighted works, Japan is a signatory to treaties such as the Berne Convention, the Universal
+          Copyright Convention, and the TRIPS Agreement, and is obligated to protect copyrighted works from most
+          countries in the world<ModalTrigger id="c3_8" />.
         </Bubble>
-        <Bubble speaker="大院" feLevel="5">外国の法律とかしらねーし！</Bubble>
-        <Bubble speaker="隅木" feLevel="1">
-          安心してください。海外の著作物でも日本で扱う場合には、日本の著作権法が適用されます。<br
-          />先生が学生に配布するために小説を翻訳に必要な範囲でコピーする行為は「複製」、翻訳する行為は、著作権法的には「翻訳」に該当します。<br
-          />先生が必要な範囲でコピーする場合は、35条1項が適用されますので複製はOK、授業で学生さんが翻訳するのは、47条の6第1項1号により、翻訳してもOKです。
+        <Bubble speaker="Daiin" feLevel="5">I don't know about foreign laws!</Bubble>
+        <Bubble speaker="Sumiki" feLevel="1">
+          No problem. The Japanese Copyright Act applies when handling foreign copyrighted works in Japan.<br />A
+          teacher's copying of a novel for distribution to students to the extent necessary for translation is a
+          "reproduction" and "translation" under the Copyright Act.<br />If a teacher makes copies to the extent
+          necessary, reproduction is OK because Article 35(1) applies, and translation by students in class is OK under
+          Article 47-6(1)(i).
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_8"><p>著作隣接権についても様々な条約により条約上保護義務を負っています。</p></Modal>
+    <Modal id="c3_8" isEN>
+      <p>Neighboring rights also have treaty protection obligations under various treaties.</p>
+    </Modal>
 
-    <Quiz title="ビブリオバトルを行う場合に注意するポイントとは？" number="11" level="high">
+    <Quiz title="What should students care about when conducting a Bibliobattle?" number="11" level="high" isEN>
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          学祭で学生が<ModalTrigger id="c3_9" word="ビブリオバトル">
-            ビブリオバトル
-          </ModalTrigger>をやりたいらしいんだよ。著作権法上の問題があるかな？
+        <Bubble speaker="Daiin" feLevel="4">
+          Students want to hold a <ModalTrigger id="c3_9" word="Bibliobattle">Bibliobattle</ModalTrigger> at a school festival.
+          Is there any problem with the Copyright Act?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          大学の学祭は、運用指針の「授業」の定義からすると「授業」にあたらないので、35条は適用できないですね。内容を数分で紹介するのは、要約が「翻案（27条）<ModalTrigger
+        <Bubble speaker="Sumiki" feLevel="2">
+          A university festival is not a "class" according to the definition of "class" in the Guidelines, so Article 35
+          is not applicable. Introducing the contents in a few minutes may fall under adaptation (Article 27<ModalTrigger
             id="c3_10"
-          />」、プレゼンが口述（24条）に該当する可能性があります。<br
-          />「翻案」にあたるかは、そのプレゼンでどの程度本の内容を話しているかによるので判断が難しいのですが、著作物の表現上の本質的特徴を直接感得できない場合には、「翻案」にあたらず、著作権者から許諾を得ることは必要ありません<ModalTrigger
+          />) for a summary and recitation (Article 24) for a presentation.<br />Whether or not the summary is an
+          "adaptation" is difficult to determine because it depends on the extent to which the content of the book is
+          discussed in the presentation. If the essential expressive features of the copyrighted work cannot be directly
+          perceived, the work is not an "adaptation" and permission from the copyright owner is not required<ModalTrigger
             id="c3_11"
-          />。これは、ケース・バイ・ケースの検討が必要になります。
+          />. This is a case-by-case consideration.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_9" word="ビブリオバトル">
+    <Modal id="c3_9" word="Bibliobattle" isEN>
       <p>
-        参加者が「面白い」と思う本の内容を5分間で紹介して、どの本を一番読みたくなったかを参加者勢員の投票で決めるもの。<br
-        />ビブリオバトル公式サイト」<a href="https://www.bibliobattle.jp/" target="_blank" class="block">
-          https://www.bibliobattle.jp/
+        Participants are given 5 minutes to introduce what they think is an "interesting" book, and the participants
+        vote on which book they would like to read the most. <br />The Official Website of Bibliobattle: <a
+          href="https://en.bibliobattle.jp/"
+          target="_blank"
+          class="block"
+        >
+          https://en.bibliobattle.jp/
         </a>
       </p>
     </Modal>
-    <Modal id="c3_10">
+    <Modal id="c3_10" isEN>
       <p>
-        「授業」の定義は、「2章 section04
-        改正著作権法第35条運用指針『35条が適用される「授業」』」の箇所をご参照ください。
+        For the definition of "class", please see "Chapter 2, Section 04: Guidelines for Article 35 of the Amended
+        Copyright Act, 'Class to Which Article 35 Applies'".
       </p>
     </Modal>
-    <Modal id="c3_11">
-      <p>最判平成13年6月28日判時1754号144頁〔江差追分事件〕</p>
+    <Modal id="c3_11" isEN>
+      <p>Supreme Court, June 28, 2001, Hanrei-Ji, No. 1754, p.144 (Esashioiwake Case)</p>
     </Modal>
 
-    <Quiz title="TAが去年のテスト問題を学生に配布したい。" number="12" level="high">
+    <Quiz title="TA wants to distribute last year's exam questions to students." number="12" level="high" isEN>
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          <ModalTrigger id="c3_12" word="TA（Teaching Assistant）">
-            TA
-          </ModalTrigger>が自分が去年受けたテスト問題をみんなに配布したいらしいけど、どうなのかな？
+        <Bubble speaker="Daiin" feLevel="4">
+          The <ModalTrigger id="c3_12" word="TA (Teaching Assistant)">TA</ModalTrigger> wants to distribute the exam questions
+          they took last year to everyone.
         </Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          それは複数の授業の過去のテスト問題をまとめて配布するということですか？
+        <Bubble speaker="Sumiki" feLevel="4">
+          Does that mean that past exam questions from multiple classes will be distributed together?
         </Bubble>
-        <Bubble speaker="大院" feLevel="3">そうらしい</Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          それは35条を適用できないですね。<br
-          />Aの授業を受けている学生が、Aの授業の学習に必要と認められる限度で、複製が可能です。しかも授業に必要かどうかは教員が決定します。Aの授業の担当教員が、過去問で勉強する必要ありと判断した場合に、Aの授業に関係する部分のみ複製が可能です。TAさんが35条1項を適用できる複製ができるのは、教員の指示があり、学校内の設備を用いるなど学校の管理下で複製をする場合です。<br
-          />もしくは、その授業のうちの1回をTAさんが指導補助者として分担するような場合は、「授業を担当する者」になりますが、この場合も複製できるのはAの授業のその担当授業回に関する部分だけです。<br
-          />授業A、B、C、Dの過去問をまとめて配布するには、許諾を得る必要がありますね。
+        <Bubble speaker="Daiin" feLevel="3">That's right.</Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          That makes Article 35 inapplicable.<br />Students taking class A may reproduce only to the extent that it is
+          deemed necessary for the study of class A. Furthermore, the teacher decides whether or not reproduction is
+          necessary for the class, and if the teacher decides that the students must study the past questions, only the
+          part related to class A can be reproduced. The TA is allowed to make a reproduction under the supervision of
+          the school, for example, by using the school's equipment.<br />Or, if the TA shares one of the class sessions
+          as an assistant, they will be a "person in charge of the class", but in this case, only the part of the class
+          A session that they are in charge of can be reproduced.<br />I would need to get permission to distribute a
+          compilation of past exam questions from classes A, B, C, and D.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_12" word="TA（Teaching Assistant）">
-      <p>授業の補助をおこなう学生のこと。</p>
+    <Modal id="c3_12" word="TA (Teaching Assistant)" isEN>
+      <p>A student who assists in a class.</p>
     </Modal>
 
-    <Quiz title="本登録していない学生は「授業を受ける者」に該当する？" number="13" level="high">
+    <Quiz
+      title={'Is a student who has not registered for this class considered a "person taking classes"?'}
+      number="13"
+      level="high"
+      isEN
+    >
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          大学って履修登録期間があって、本登録してなくて仮登録の学生も授業を受けられるんだよな。全8回の授業の最初の1回を受けて、その後本登録しないってことがあり得る。その場合は、その仮登録の学生は35条の「授業を受ける者」に該当するかな？
+        <Bubble speaker="Daiin" feLevel="4">
+          Universities have a registration period, and students who are not registered and are provisionally registered
+          can take classes. A student can take the first of a total of eight classes and then not register for the main
+          class. In that case, would that provisionally registered student be considered a "person taking classes" under
+          Article 35?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          35条の「授業」は1回でも授業ですね。1回でもちゃんと授業を受けていれば授業を受ける者に該当すると思います。ただ、授業資料に第三者の著作物が含まれている場合に、1回目の授業で全8回分の資料を配布するようなことは避けた方がいいでしょう。必要と認められる範囲を超えていると判断されやすくなる上、著作権者の利益を不当に害しかねません。
+        <Bubble speaker="Sumiki" feLevel="4">
+          The "class" in Article 35 is a class even if it is only one class, and if you have taken the class properly
+          even once, you would be considered a person taking classes. However, if the class materials include a third
+          party's copyrighted work, it would be better to avoid distributing all eight materials in the first class. It
+          is easy to be judged as exceeding the scope of what is necessary, and it may also unreasonably prejudice the
+          interests of the copyright owner.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="論文をコピーして学生に配布するのは問題ない？" number="14" level="high">
+    <Quiz
+      title="Is there a problem with photocopying my paper and distributing copies to students?"
+      number="14"
+      level="high"
+      isEN
+    >
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="1">
-          おれの論文は大変ためになるから、学生に配布して読ませたい。なんの問題もないよな？
+        <Bubble speaker="Daiin" feLevel="1">
+          My paper is very informative and I want to distribute it to my students for their reading. No problem, right?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="4">
-          著作権が大院先生にあれば何の問題もありません。しかし、学会や出版社に著作権を譲渡している可能性がありますよね。その場合に注意が必要です。まず学会や出版社の著作権規程を確認しましょう。ご本人が使用する場合について書かれていることが多いと思います。
+        <Bubble speaker="Sumiki" feLevel="4">
+          If the copyright owner is Dr. Daiin, there is no problem. However, you may have assigned the copyright to an
+          academic society or publisher. In that case, you should be careful. First, check the copyright regulations of
+          the academic society or publisher. In many cases, it will be written for your use.
         </Bubble>
-        <Bubble speaker="大院" feLevel="5">おれのなのに……</Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          学会誌などは「著作権は本学会に最終原稿が投稿された時点から原則として本学会に帰属する」などの記載があることが多く、その場合は論文の著者には著作財産権がありません。<br
-          />また、譲渡できない著作者人格権についても「著作者人格権を行使しない」などの記載があることがあります。<br
-          />こういう規程は、論文投稿の際にはよく確認したほうがいいですね。<br
-          />学会の規程で難しい場合でも、引用の要件を守っていれば32条の引用を適用できますし、授業の過程で必要な場合は、論文の一部であれば35条を適用できるかもしれません。
+        <Bubble speaker="Daiin" feLevel="5">It's mine.</Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          Many academic journals have regulations such as "Copyright belongs to the Society from the time the final
+          manuscript is submitted to the Society", in which case the authors of the paper do not have copyrights.
+          <br />Moral rights that cannot be transferred may also be stated, such as "The author shall not exercise moral
+          rights”.<br />You should check these regulations carefully when submitting your paper.<br />Even if it is
+          difficult to do so under the regulations of society, Article 32 can apply as long as the requirements for
+          citation are met, and if it is necessary in the course of teaching, Article 35 may apply if it is a part of a
+          paper.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="論文を丸ごと学生に配布しても大丈夫？" number="15" level="high">
+    <Quiz title="Can I distribute a whole paper to students?" number="15" level="high" isEN>
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          学生が英語の論文を最初から最後まで読んで、内容を発表するという授業をやりたい。一つの論文をまるまる学生に配布していいかな。
+        <Bubble speaker="Daiin" feLevel="4">
+          I would like to have a class in which students read an English paper from beginning to end and present its
+          contents. May I distribute one whole paper to the students?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          通読することが必要ということは大前提ですが、論文一つを全部配布する場合は様々な側面から配慮する必要があります。「運用指針」では、授業の目的から論文全文が必要な場合には、次の要素を考慮して、個々の履修者が論文自体や論文集などを購入することが必ずしも合理的でなければ、論文全部の複製や公衆送信をしても、著作権者の利益を不当に害することにならない可能性が高いとされています。
+        <Bubble speaker="Sumiki" feLevel="2">
+          While it is a basic premise that the entire paper is required to be read through, various aspects need to be
+          considered when distributing a whole paper. According to the Guidelines, if the full text of a paper is
+          necessary for a class, it is highly likely that reproduction or public transmission of the whole paper will
+          not unreasonably prejudice the interests of the copyright owner if it is not necessarily reasonable for each
+          student to purchase the paper itself or a collection of papers, considering the following factors:
           <ul class="mt-2">
-            <li>当該論文や論文集などの入手が容易であるか</li>
+            <li>If the paper or collection of papers is readily available.</li>
             <li>
-              当該論文が論文集などの出版物に掲載されている場合
+              If the paper has been published in a book of papers or other publication.
               <ul class="mt-1">
-                <li>出版物全体に占める論文の分量</li>
-                <li>出版物の流通の状況や当初の出版時に想定された読者対象かどうか</li>
-                <li>出版物が出版後相当期間を経過しているか</li>
+                <li>Number of papers in all publications.</li>
+                <li>
+                  The state of distribution of the publication and whether it is intended for the intended audience at
+                  the time of the original publication.
+                </li>
+                <li>Whether the publication has been in existence for a reasonable period after publication.</li>
               </ul>
             </li>
           </ul>
@@ -317,36 +417,43 @@ import Quiz from '../../components/Quiz.astro';
       </SpeechBubbles>
     </Quiz>
 
-    <Quiz title="履修期間を過ぎた後でも教材は使える？" number="16" level="high">
+    <Quiz title="Can I still use the course materials after the enrollment period?" number="16" level="high" isEN>
       <SpeechBubbles>
-        <Bubble speaker="大院" feLevel="4">
-          おれの前期の授業は4月から9月末までが履修期間なんだけど、10月になったら、LMSのコースに載ってる教材はもう置いておけないのか？
+        <Bubble speaker="Daiin" feLevel="4">
+          My first-semester class is from April to the end of September, but once October comes, can't I put the course
+          materials on the LMS course any longer?
         </Bubble>
-        <Bubble speaker="隅木" feLevel="2">
-          基本的には、第三者の著作物が入った教材をLMSで公衆送信できるのは、その授業の期間のみとされています。該当する教材は、期間がすぎたら削除するか、学生がアクセスできないように設定を変更する必要があります。<br
-          />この授業期間がいつからいつまでなのかの判断が難しいのですが、大学の場合は、成績や単位認定などの評価が終わるまでは授業期間と考えてもよさそうです。<br
-          /><br
-          />また、「〇〇演習１」「〇〇演習２」のように段階的に履修することが前提になっている授業で、２の授業期間も１の教材を閲覧可能とするのは、「授業の過程」としてよいように思います<ModalTrigger
+        <Bubble speaker="Sumiki" feLevel="2">
+          Educational materials containing third-party copyrighted material can only be publicly transmitted on the LMS
+          for the period of the class. The materials should be removed after the period or their settings should be
+          changed so that students cannot access them.<br />It is difficult to determine when the class period begins
+          and ends, but in the case of universities, it seems safe to assume that the class period lasts until the
+          evaluation of grades and credits is completed.<br /><br />In addition, in classes that are supposed to be
+          taken in stages, such as "Exercise 1" and "Exercise 2", it would fall within "in the course of class" to allow
+          students to view the material from Exercise 1 during the class period of Exercise 2 as well<ModalTrigger
             id="c3_13"
-          />。<br
-          />予習や復習も「授業の過程」とすることは運用指針に記載されており、「〇〇演習１」と「〇〇演習２」で内容的にも関連性があるのであれば、「〇〇演習１」の教材は、復習に準じるものと考えられるからです。<br
-          />また、「2章 section04
-          改正著作権法第35条運用指針」の終わりで説明したように、履修期間外も継続して教材利用をすることについて、<ModalTrigger
+          />.<br />This is because the Guidelines state that preparation and review are also "in the course of classes",
+          and if there is a content relationship between Exercise 1 and Exercise 2, then the materials for Exercise 1
+          are equivalent to those for review.<br />In addition, as explained at the end of "Chapter 2, Section 04:
+          Guidelines for Article 35 of the Amended Copyright Act", the possibility of continued use of educational
+          materials outside the period of a class is under consideration to be covered by the <ModalTrigger
             id="c3_14"
-            word="SARTRASライセンス"
+            word="SARTRAS License"
           >
-            SARTRASライセンス
-          </ModalTrigger>の対象とできるよう検討されています。
+            SARTRAS license
+          </ModalTrigger>.
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_13">
-      <p>上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）55頁参照。</p>
+    <Modal id="c3_13" isEN>
+      <p>See Tatsuhiro Ueno, Copyright Guide for Educators and Researchers, Yuhikaku, 2021, p.55.</p>
     </Modal>
-    <Modal id="c3_14" word="SARTRASライセンス">
+    <Modal id="c3_14" word="SARTRAS License" isEN>
       <p>
-        2022年11月現在、35条と補償金でもカバーできない著作物の利用について、許諾なくおこなえるようSARTRASライセンス制度が検討されています。<br
-        />これは別途ライセンス料金を払って、補償金の範囲を超えた複製や公衆送信等ができるようにするものです。その利用範囲や形態については検討中です。
+        As of November 2022, the SARTRAS licensing system is being considered to allow the use of copyrighted works that
+        are not covered by Article 35 and compensation without permission.<br />This system would allow reproduction and
+        public transmission beyond the scope of compensation by paying a license fee. The scope and form of use are
+        still under consideration.
       </p>
     </Modal>
   </Section>
