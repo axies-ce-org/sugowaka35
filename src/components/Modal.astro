@@ -2,10 +2,10 @@
 type Props = {
   id: string;
   word?: string;
-  lang?: string;
+  btnText?: string;
 };
 
-const { id, word, lang } = Astro.props;
+const { id, word, btnText } = Astro.props;
 ---
 
 <>
@@ -40,7 +40,7 @@ const { id, word, lang } = Astro.props;
             <button
               class="rounded-lg bg-neutral-500 px-4 py-1 text-base text-white"
               data-micromodal-close
-              aria-label="Close this dialog window">{lang === 'en' ? 'Close' : '閉じる'}</button
+              aria-label="Close this dialog window">{btnText ? btnText : '閉じる'}</button
             >
           </div>
         </div>
