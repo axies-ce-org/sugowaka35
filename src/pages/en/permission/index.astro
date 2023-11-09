@@ -1,0 +1,244 @@
+---
+import Section from '../../../components/Section.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import ListArea from '../../../components/ListArea.astro';
+import ImgCaption from '../../../components/ImgCaption.astro';
+import Modal from '../../../components/Modal.astro';
+import ModalTrigger from '../../../components/ModalTrigger.astro';
+import Page from '../../../templates/Page.astro';
+---
+
+<Page
+  title="How to Obtain Permission"
+  description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは利用許諾の取り方について解説しています。"
+>
+  <Section
+    number="01"
+    title="How to obtain permission for use"
+    description="You need to obtain permission from the copyright owner when you cannot freely use the copyrighted work due to the protection period, or terms of use, or if rights limitations cannot be applied. This chapter explains how to obtain permission."
+  >
+    <h3>Steps for obtaining permission</h3>
+    <p>
+      We showed you the flow chart in "Chapter 2, Section 01, Classes and Copyrighted Works". Let's review the contents
+      again.
+    </p>
+    <p>
+      When it comes to "obtaining permission or giving up", you can either: (a) remove the third-party's copyrighted
+      work or (b) find a replacement.
+    </p>
+    <p>The following is an explanation when you select "Obtaining Permission".</p>
+
+    <h4>Step 1: Find out who the author/copyright owner is</h4>
+    <SpeechBubbles>
+      <Bubble speaker="Sumiki" feLevel="2">
+        We would like to ask you to record the source when using third-party works.<br />If you use several sources in a
+        single material, it is advisable to prepare a list of sources for each material.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="5">I don't do any of those things.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        As long as the class is held in a classroom, Article 35 can apply and it is fine. However, if, for example, you
+        decide to record a class by Dr. Daiin and distribute it on the university's website, Article 35 does not apply
+        because it is available to anyone. There would be no problem if the citation could apply, but it may be
+        difficult in some cases.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="1">
+        If you have a list of sources, you can get permission based on the list.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        That's right. On the contrary, without it, you have to start by finding out where the photo, illustration, or
+        text comes from.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="5">That's really hard.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        You need to clearly state the source when using citations, too. These days, you are likely to disseminate your
+        educational activities outside of the university, so please be sure to record the source in case that happens.<br
+        />Also, if you reproduce a work from a website, please be careful to ensure that it is not a secondhand citation
+        of the work.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">Secondhand citation?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        In other words, the site you saw may have reproduced the image or other information from another site.<br />In
+        that case, you have to look at the original site to see who the author or copyright owner is and if there is any
+        indication of the licensor.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">Oh, that seems likely. I have to be careful.</Bubble>
+    </SpeechBubbles>
+
+    <h4>Step 2: Find out if there is any contact information</h4>
+    <p>Many copyright owners offer contact information for licenses.</p>
+    <p>
+      First, check the CRIC, Copyright System in Japan page to see if there is any contact information<ModalTrigger
+        id="c4s1_1"
+      />.
+    </p>
+    <Modal id="c4s1_1" isEN>
+      <p>
+        Overview of the Copyright System:<a
+          href="https://www.bunka.go.jp/english/policy/copyright/system/"
+          target="_blank"
+          class="block"
+        >
+          https://www.bunka.go.jp/english/policy/copyright/system/
+        </a>
+      </p>
+      <p>
+        CRIC, Copyright System in Japan:<a
+          href="https://www.cric.or.jp/english/csj/csj7.html"
+          target="_blank"
+          class="block"
+        >
+          https://www.cric.or.jp/english/csj/csj7.html
+        </a>
+      </p>
+    </Modal>
+    <p>
+      For example, music copyrights are often managed by a management society, JASRAC or NexTone, but sometimes they are
+      not.
+    </p>
+    <p>
+      So, first, let's search JASRAC's database to see if there are any songs you want to use<ModalTrigger
+        id="c4s1_2"
+      />. If you can't find the music you are looking for through JASRAC, check NexTone's database<ModalTrigger
+        id="c4s1_3"
+      />.
+    </p>
+    <Modal id="c4s1_2" isEN>
+      <p>
+        J-WID, the database for JASRAC works:<a href="https://www2.jasrac.or.jp/eJwid/" target="_blank" class="block">
+          https://www2.jasrac.or.jp/eJwid/
+        </a>
+      </p>
+    </Modal>
+    <Modal id="c4s1_3" isEN>
+      <p>
+        NexTone Work Search Database:<a href="https://search.nex-tone.co.jp/" target="_blank" class="block">
+          https://search.nex-tone.co.jp/
+        </a>
+      </p>
+    </Modal>
+    <p>
+      For example, a search of the Official Hige Dandism music in the database reveals that it is managed by NexTone
+      rather than JASRAC. In this case, you need to apply to NexTone for permission.
+    </p>
+
+    <h4>Step 3: Make a permission request</h4>
+    <p>
+      If there is a point of contact, apply for a license through the point of contact. Many points of contact are web
+      forms. Check the fees, as there may be fees involved; JASRAC and NexTone offer fee calculation simulations<ModalTrigger
+        id="c4s1_4"
+      /><ModalTrigger id="c4s1_5" />.
+    </p>
+    <Modal id="c4s1_4" isEN>
+      <p>
+        JASRAC, Royalty Calculation Simulation:<a
+          href="https://www.jasrac.or.jp/info/create/calculation/simulation.html"
+          target="_blank"
+          class="block"
+        >
+          https://www.jasrac.or.jp/info/create/calculation/simulation.html
+        </a>
+      </p>
+    </Modal>
+    <Modal id="c4s1_5" isEN>
+      <p>
+        NexTone, Usage Fee Simulation:<a href="https://sim.nex-tone.co.jp/" target="_blank" class="block">
+          https://sim.nex-tone.co.jp/
+        </a>
+      </p>
+    </Modal>
+    <p>
+      If a calculation simulation is not available, read the Rental Fee Rules and Regulations or obtain an estimate.
+    </p>
+    <p>
+      If there is no point of contact, contact the author or copyright owner directly to obtain permission [Flow of
+      Permission].
+    </p>
+    <ImgCaption>
+      <figcaption>[Flow of licensing]</figcaption>
+      <img
+        src="/assets/images/permission-01.png"
+        alt="まずは著作者・著作権者を確認。その著作権者に対する窓口を確認し、許諾依頼をする。著作権者がわからない場合は、裁定を受ける。"
+        width="1360"
+        height="546"
+        loading="lazy"
+        decoding="async"
+      />
+    </ImgCaption>
+    <p>
+      To avoid any misunderstanding with the copyright owner, you should communicate in writing and on record. At a
+      minimum, the following information should be included:
+    </p>
+    <ListArea>
+      <ul>
+        <li>Works to be used.</li>
+        <li>Users.</li>
+        <li>Purpose of use (Specify).</li>
+        <li>
+          How to use (be specific)<br />e.g.: At a cultural festival with an audience of about 100 people, we do not
+          charge an admission fee, but we pay a fee to the guest actors. We would like to use a script we created based
+          on your novel.
+        </li>
+        <li>Term.</li>
+        <li>Scope of use: is it all of the work or just a part of it?</li>
+        <li>Compensation: if a fee is charged, the amount and method of payment.</li>
+      </ul>
+    </ListArea>
+    <p>For educational use, the fee may be low or free, so we recommend that you inquire anyway.</p>
+
+    <h4 id="ref5">Step 4: If you do not know the copyright owner</h4>
+    <p>
+      Even if you have tried to find out who the copyright owner is you still might not be able to figure out who the
+      actual copyright owner is.
+    </p>
+    <p>
+      The Copyright Act provides for the use of copyrighted works with a compulsory license by the Commissioner of the
+      Agency for Cultural Affairs and payment of compensation (the compulsory license system if the copyright owner is
+      unknown) (Article 67). The same adjudication system applies to cases if the owner of neighboring rights is unknown<ModalTrigger
+        id="c4s1_6"
+      />.
+    </p>
+    <Modal id="c4s1_6" isEN><p>Articles 67 and 103(1) of the Copyright Act</p></Modal>
+    <p>
+      Copyrighted works whose copyright owners are unknown are called "orphan works<ModalTrigger id="c4s1_7" />." The
+      Orphan Works Demonstration Project Executive Committee, consisting of rights owners' organizations, etc., has
+      published a "Guide for Preparation of Application Forms for Ruling on Works of Unknown Copyright owners, etc."
+      Please refer to this guide.
+    </p>
+    <Modal id="c4s1_7" isEN>
+      <p>
+        Orphan Works Demonstration Project Executive Committee:<a
+          href="https://jrrc.or.jp/orphanworks/about/committee/"
+          target="_blank"
+          class="block"
+        >
+          https://jrrc.or.jp/orphanworks/about/committee/
+        </a>
+      </p>
+      <p class="mt-3">
+        Guide for Preparation of Application Forms for Ruling on Works of Unknown Copyright owners, etc:<a
+          href="https://jrrc.or.jp/orphanworks/about/saitei_guide2021/"
+          target="_blank"
+          class="block"
+        >
+          https://jrrc.or.jp/orphanworks/about/saitei_guide2021/
+        </a>
+      </p>
+    </Modal>
+    <p>
+      To apply, compensation is required in addition to the cost of advertising for the right owner's search (usually
+      8,250 yen) and the adjudication application fee (usually 6,900 yen). For the amount of compensation, please refer
+      to the Agency for Cultural Affairs' simulation system for the amount of compensation for adjudication<ModalTrigger
+        id="c4s1_9"
+      />.
+    </p>
+    <Modal id="c4s1_9" isEN>
+      <p>
+        Agency for Cultural Affairs, Simulation System for the Amount of Compensation in the Case of Unknown Copyright
+        owner:<a href="https://www.bunka.go.jp/saiteisimulation/" target="_blank" class="block">
+          https://www.bunka.go.jp/saiteisimulation/
+        </a>
+      </p>
+    </Modal>
+  </Section>
+</Page>

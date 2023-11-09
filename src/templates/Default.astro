@@ -8,7 +8,7 @@ export interface Props {
   ogType?: string;
 }
 
-const siteName = '「先生にぜひ読んでほしい」すごくわかる著作権と授業 (すごわか)';
+const siteName = 'A must-read for teachers Understanding Copyright in Classes';
 const siteDescription =
   'このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。';
 
@@ -40,9 +40,7 @@ const { title, description, ogType } = Astro.props;
     <meta name="msapplication-TileImage" content={`${Astro.site}/cropped-favicon-270x270.png`} />
     <script src="../scripts/index.ts"></script>
   </head>
-  <body
-    class="bg-orange-100 font-noto text-[15px] leading-relaxed text-stone-700 antialiased md:text-base md:leading-relaxed"
-  >
+  <body class="bg-orange-100 font-noto text-[0.9375rem]/relaxed text-stone-700 antialiased md:text-base/relaxed">
     <slot />
     <Footer />
   </body>
