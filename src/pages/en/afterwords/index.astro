@@ -16,37 +16,37 @@ import Page from '../../../templates/Page.astro';
             src: '/assets/images/amano.png',
             name: 'Yuki Amano',
             title: 'Writing',
-            text: '大学ICT推進協議会学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。帝京大学ラーニングテクノロジー開発室 講師。ねこでもわかるグラフシリーズ連載中。ねこ4匹と暮らしている。',
+            text: 'A member of the Copyright Task Force of the Academic and Educational Content Sharing and Distribution Subcommittee of the AXIES. She is a lecturer at Teikyo University, Learning Technology Development Office. Currently writing a series of articles on graphs that even a cat can understand. Lives with four cats and a dog.',
           },
           {
             src: '/assets/images/kimura.png',
-            name: '木村 剛大（きむら こうだい）',
-            title: '監修',
-            text: '大学IC弁護士（日本・ニューヨーク州・ワシントン DC）、小林・弓削田法律事務所パートナー。ウェブ版美術手帖での連載「アートと法/Art Law」、「アートと法の基礎知識」、『クリエイターのための権利の本』（ボーンデジタル、2018）の共著、法律監修など著作権を一般にも分かりやすく解説することにも力を入れている。ボクシング好き（みるのだけ）。T推進協議会学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。帝京大学ラーニングテクノロジー開発室 講師。ねこでもわかるグラフシリーズ連載中。ねこ4匹と暮らしている。',
+            name: 'Kodai Kimura',
+            title: 'Supervision & Translation',
+            text: 'An Attorney at law admitted in Japan, New York & Washington DC and a partner at Kobayashi & Yugeta Law Office, Tokyo. He also focuses on explaining copyright in a way that is easy to understand for the general public, including serializing Art Law in the web edition of Bijutsutecho, co-authoring A Book on Rights for Creators, (Bone Digital, 2018), and supervising legal work. He loves boxing (only to watch).',
           },
           {
             src: '/assets/images/sumiya.png',
-            name: '隅谷 孝洋（すみや たかひろ）',
-            title: '企画',
-            text: '大学ICT推進協議会 学術・教育コンテンツ 共有流通部会著作権タスクフォースメンバー。著作物の教育利用に関する関係者フォーラム委員（2021、2022年度）。広島大学情報メディア教育研究センター教授。Star Warsとラーメンが好き。',
+            name: 'Takahiro Sumiya',
+            title: 'Planning',
+            text: 'A member of the Copyright Task Force, Academic, and Educational Content Sharing and Distribution Subcommittee of the AXIES, as well as a member of the Forum of Those Related about Educational Use of Works (FY2021 and FY2022). A professor at Hiroshima University, Information Media Education and Research Center. He loves Star Wars and ramen.',
           },
           {
             src: '/assets/images/sumida.png',
-            name: '角田 綾佳（すみだ あやか）',
-            title: 'イラスト',
-            text: '株式会社キテレツ、デザイナー＆イラストレーター。ウェブデザインを中心に、印刷物や広告などさまざまなデザインを手がける。ねことラッコとK-POPが大好き。',
+            name: 'Ayaka Sumida',
+            title: 'Illustration',
+            text: 'Designer & Illustrator, KITERETZ inc. She works on a variety of designs, mainly web design, but also printed matter and advertisements. She loves cats, otters, and K-POP.',
           },
           {
             src: '/assets/images/sato.png',
-            name: '佐藤 理樹（さとう まさき）',
-            title: 'デザイン・DTP',
-            text: 'アルファデザイン、書籍制作中心のグラフィックデザイナー。著書『はじめてのIllustrator CC』（秀和システム）。デザイン・DTP『クリエイターのための権利の本』、『HTML解体新書』（ボーンデジタル）、『ネオ・ダダの逆説』（みすず書房）など。バイクとねこと日本酒好き。',
+            name: 'Masaki Sato',
+            title: 'Design & DTP',
+            text: 'Graphic designer focusing on Alpha Design and book production. Author of Hajimete no Illustrator CC, (Shuwa System). Design and DTP A Book on Rights for Creators, HTML Kaitai Shinsho, (Bone Digital), Neo Dada no Gyakusetsu, (Misuzu Shobo), etc. He loves motorcycles, cats, and sake.',
           },
           {
             src: '/assets/images/koseki.png',
-            name: '小関 匡（こせき きょう）',
-            title: '編集',
-            text: 'IT、Web、デザイン系のライター兼書籍編集者。ライターとしては、企業のオウンドメディアを中心に活動中。主な書籍編集実績『クリエイターのための権利の本』（ボーンデジタル）『鬼フィードバック デザインのチカラは“ダメ出し"で育つ』（MdN）他。日本酒好きなれど、ダイエットのため節酒中。',
+            name: 'Kyo Koseki',
+            title: 'Editing',
+            text: "Writer and book editor for IT, Web, and design. As a writer, he is active mainly in corporate-owned media. Major book editing credits include A Book on Rights for Creators, (Bone Digital, 2018), and Oni Feedback: The Chikara of Design Grows by 'Dame-dashi', (MdN). He loves sake but is trying to cut back to stay in good shape.",
           },
         ].map(({ src, name, title, text }) => {
           return (
@@ -71,75 +71,80 @@ import Page from '../../../templates/Page.astro';
         })
       }
     </ul>
-    <h3>
-      <span class="block text-[1rem]">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業Web」制作チーム
-    </h3>
+    <h3>Team for Understanding Copyright in Classes Web</h3>
     <ul class="!p-0">
       <li class="grid list-none items-center gap-4 pb-4 md:flex md:items-start md:pb-5">
         <img
           src="/assets/images/kiteretz.png"
-          alt="株式会社キテレツのロゴ"
+          alt="KITERETZ inc. Logo"
           width="80"
           height="80"
           decoding="async"
           class="h-auto w-20"
         />
         <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">Webサイト制作</span>株式会社キテレツ</h6>
+          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">Website Design</span>KITERETZ inc.</h6>
           <p>
-            ウェブ制作を中心に、グラフィックデザインやロゴデザイン、システム開発などを手がける制作会社。豊富な実績を誇り、常に最新の技術を取り入れたクオリティの高いサービスを提供しています。オフィスのデロンギ全自動コーヒーマシンが作るカプチーノが美味しい。
+            A web design company that handles web design, graphic design, logo design, and system development. The
+            company boasts a wealth of experience and always provides high-quality services incorporating the latest
+            technology. Cappuccino made by the office's DeLonghi fully automatic coffee machine is so delicious.
           </p>
         </div>
       </li>
     </ul>
   </Section>
-  <Section number="02" title="おわりに">
+  <Section number="02" title="This Project">
     <p>
-      このサイトでは、教育機関の先生方を対象として、主に授業で第三者の著作物を扱う際に必要な知識について説明しました。
+      This material was designed primarily for teachers at educational institutions to explain what they need to know
+      when dealing with third-party copyrighted works in the classroom.
     </p>
     <p>
-      一方で、学生や生徒さんにも「これは授業だから複製していいんだよ」「引用は要件を守ってね」などのことは伝えていく必要があります。「授業だからアニメキャラを複製して作品を作ったりしてもいいけど、SNSにその作品の写真をUPしたりしたら、著作権侵害になるよ」というように、授業とプライベートの違いをご説明いただければと思います。
+      On the other hand, it is necessary to tell students and pupils that "this is a class, so you can reproduce it", or
+      "you must comply with the requirements for citation". Please explain the difference between class and private
+      life, such as, "since this is a class, you may reproduce an animated character and create a work of art, but if
+      you upload a picture of that work onto a social networking service, you will be violating a copyright".
     </p>
     <p>
-      加えて、文章や絵をかいたり、写真を撮ったりすれば、学生や生徒さん自身が著作者になり、著作権が発生することをあわせてお伝えいただければと思います。
+      In addition, please inform students that they are the authors of their writings, drawings, and photographs and
+      that copyrights apply to them.
     </p>
 
     <ul class="my-5 border-b border-stone-200 pb-5 md:my-6 md:pb-6">
       <li>
-        大学ICT推進協議会では、学生さん向けの著作権教育教材として、<a
+        Academic eXchange for Information Environment and Strategy (AXIES) will make <a
           href="https://axies.jp/report/copyright_education/"
           target="_blank"
-        >
-          動画教材を無償で公開
-        </a>します（2023年度より順次公開）。
+          >video materials
+        </a> available free of charge as copyright education materials for students.
       </li>
-      <li>このウェブサイトのPDFファイルも無償で公開します。</li>
+      <li>A PDF file of this material will also be available free of charge.</li>
       <li>
-        <a href="https://axies.jp/report/copyright_education/" target="_blank">
-          こちらのページ
-        </a>から、CCライセンスの下、ご活用ください。
+        Please use <a href="https://axies.jp/report/copyright_education/" target="_blank">this material</a> under the CC
+        license.
       </li>
     </ul>
     <p>
-      <span class="block text-lg font-bold">制作・発行　一般社団法人　大学ICT推進協議会</span>
-      お問い合わせ sugowaka35[at]axies.jp<br />[at]を@にご変更ください。
+      <span class="block text-lg font-bold">Produced and published by AXIES</span>
+      Contact: sugowaka35[at]axies.jp<br />[change [at] to @].
     </p>
     <p>
-      このサイトは、一般社団法人授業目的公衆送信補償金等管理協会（SARTRAS）の共通目的基金の助成を受けて制作されています。
+      This material has been produced with a grant from the Common Purpose Fund of the Society for the Administration of
+      Remuneration for Public Transmission for School Lessons (SARTRAS).
     </p>
     <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="120" loading="lazy" decoding="async" />
     <p>
-      このサイトの内容向上に関するアンケートを行っています。下記のURLからご意見をお寄せください。ご協力をよろしくお願いいたします。
-      <a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block">https://forms.gle/a1XxvJU1xebuKaS26</a
+      We are striving to improve the content of this material. Please send us your comments at the URL below. We
+      appreciate your cooperation.<a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block"
+        >https://forms.gle/a1XxvJU1xebuKaS26</a
       >
     </p>
   </Section>
-  <Section number="03" title="ライセンス">
+  <Section number="03" title="License">
     <p>
-      このサイトは、<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">
-        クリエイティブ・コモンズ 表示 4.0 国際ライセンス（CC BY 4.0）
-      </a>の下に提供されています。
+      This material is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">
+        Creative Commons Attribution 4.0 International License (CC BY 4.0)
+      </a>.
     </p>
-    <p>利用の際には「すごくわかる著作権と授業Web/AXIES/CC BY 4.0」のようにクレジットを表記してください。</p>
+    <p>When using this material, please reference as Understanding Copyright in Classes Web/AXIES/CC BY 4.0.</p>
   </Section>
 </Page>
