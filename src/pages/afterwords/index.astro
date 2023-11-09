@@ -10,125 +10,72 @@ import Page from '../../templates/Page.astro';
   <Section number="01" title="制作チーム紹介">
     <h3><span class="block text-[1rem]">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業」制作チーム</h3>
     <ul class="!p-0">
-      <li class="flex list-none flex-col items-center gap-4 pb-4 md:flex-row md:items-start md:pb-5">
-        <img
-          src="/assets/images/amano.png"
-          alt="天野 由貴（あまの ゆき）の似顔絵イラスト"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
-        <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">執筆</span>天野 由貴（あまの ゆき）</h6>
-          <p>
-            大学ICT推進協議会学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。帝京大学
-            ラーニングテクノロジー開発室 講師。ねこでもわかるグラフシリーズ連載中。ねこ4匹と暮らしている。
-          </p>
-        </div>
-      </li>
-      <li
-        class="flex list-none flex-col items-center gap-4 border-t border-stone-200 py-4 md:flex-row md:items-start md:py-5"
-      >
-        <img
-          src="/assets/images/kimura.png"
-          alt="木村 剛大（きむら こうだい）の似顔絵イラスト"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
-        <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">監修</span>木村 剛大（きむら こうだい）</h6>
-          <p>
-            弁護士（日本・ニューヨーク州・ワシントン
-            DC）、小林・弓削田法律事務所パートナー。ウェブ版美術手帖での連載「アートと法/Art
-            Law」、「アートと法の基礎知識」、『クリエイターのための権利の本』（ボーンデジタル、2018）の共著、法律監修など著作権を一般にも分かりやすく解説することにも力を入れている。ボクシング好き（みるのだけ）。
-          </p>
-        </div>
-      </li>
-      <li
-        class="flex list-none flex-col items-center gap-4 border-t border-stone-200 py-4 md:flex-row md:items-start md:py-5"
-      >
-        <img
-          src="/assets/images/sumiya.png"
-          alt="隅谷 孝洋（すみや たかひろ）の似顔絵イラスト"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
-        <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">企画</span>隅谷 孝洋（すみや たかひろ）</h6>
-          <p>
-            大学ICT推進協議会 学術・教育コンテンツ 共有流通部会
-            著作権タスクフォースメンバー。著作物の教育利用に関する関係者フォーラム委員（2021、2022年度）。広島大学情報メディア教育研究センター教授。Star
-            Warsとラーメンが好き。
-          </p>
-        </div>
-      </li>
-      <li
-        class="flex list-none flex-col items-center gap-4 border-t border-stone-200 py-4 md:flex-row md:items-start md:py-5"
-      >
-        <img
-          src="/assets/images/sumida.png"
-          alt="角田 綾佳（すみだ あやか）の似顔絵イラスト"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
-        <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">イラスト</span>角田 綾佳（すみだ あやか）</h6>
-          <p>
-            株式会社キテレツ、デザイナー＆イラストレーター。ウェブデザインを中心に、印刷物や広告などさまざまなデザインを手がける。ねことラッコとK-POPが大好き。
-          </p>
-        </div>
-      </li>
-      <li
-        class="flex list-none flex-col items-center gap-4 border-t border-stone-200 py-4 md:flex-row md:items-start md:py-5"
-      >
-        <img
-          src="/assets/images/sato.png"
-          alt="佐藤 理樹（さとう まさき）の似顔絵イラスト"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
-        <div>
-          <h6 class="font-bold">
-            <span class="mr-[1rem] text-orange-600">デザイン・DTP</span>佐藤 理樹（さとう まさき）
-          </h6>
-          <p>
-            アルファデザイン、書籍制作中心のグラフィックデザイナー。著書『はじめてのIllustrator
-            CC』（秀和システム）。デザイン・DTP『クリエイターのための権利の本』、『HTML解体新書』（ボーンデジタル）、『ネオ・ダダの逆説』（みすず書房）など。バイクとねこと日本酒好き。
-          </p>
-        </div>
-      </li>
-      <li
-        class="flex list-none flex-col items-center gap-4 border-t border-stone-200 py-4 md:flex-row md:items-start md:py-5"
-      >
-        <img
-          src="/assets/images/koseki.png"
-          alt="小関 匡（こせき きょう）の似顔絵イラスト"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
-        <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">編集</span>小関 匡（こせき きょう）</h6>
-          <p>
-            IT、Web、デザイン系のライター兼書籍編集者。ライターとしては、企業のオウンドメディアを中心に活動中。主な書籍編集実績『クリエイターのための権利の本』（ボーンデジタル）『鬼フィードバック
-            デザインのチカラは“ダメ出し"で育つ』（MdN）他。日本酒好きなれど、ダイエットのため節酒中。
-          </p>
-        </div>
-      </li>
+      {
+        [
+          {
+            src: '/assets/images/amano.png',
+            name: '天野 由貴（あまの ゆき）',
+            title: '執筆',
+            text: '大学ICT推進協議会学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。帝京大学ラーニングテクノロジー開発室 講師。ねこでもわかるグラフシリーズ連載中。ねこ4匹と暮らしている。',
+          },
+          {
+            src: '/assets/images/kimura.png',
+            name: '木村 剛大（きむら こうだい）',
+            title: '監修',
+            text: '大学IC弁護士（日本・ニューヨーク州・ワシントン DC）、小林・弓削田法律事務所パートナー。ウェブ版美術手帖での連載「アートと法/Art Law」、「アートと法の基礎知識」、『クリエイターのための権利の本』（ボーンデジタル、2018）の共著、法律監修など著作権を一般にも分かりやすく解説することにも力を入れている。ボクシング好き（みるのだけ）。T推進協議会学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。帝京大学ラーニングテクノロジー開発室 講師。ねこでもわかるグラフシリーズ連載中。ねこ4匹と暮らしている。',
+          },
+          {
+            src: '/assets/images/sumiya.png',
+            name: '隅谷 孝洋（すみや たかひろ）',
+            title: '企画',
+            text: '大学ICT推進協議会 学術・教育コンテンツ 共有流通部会著作権タスクフォースメンバー。著作物の教育利用に関する関係者フォーラム委員（2021、2022年度）。広島大学情報メディア教育研究センター教授。Star Warsとラーメンが好き。',
+          },
+          {
+            src: '/assets/images/sumida.png',
+            name: '角田 綾佳（すみだ あやか）',
+            title: 'イラスト',
+            text: '株式会社キテレツ、デザイナー＆イラストレーター。ウェブデザインを中心に、印刷物や広告などさまざまなデザインを手がける。ねことラッコとK-POPが大好き。',
+          },
+          {
+            src: '/assets/images/sato.png',
+            name: '佐藤 理樹（さとう まさき）',
+            title: 'デザイン・DTP',
+            text: 'アルファデザイン、書籍制作中心のグラフィックデザイナー。著書『はじめてのIllustrator CC』（秀和システム）。デザイン・DTP『クリエイターのための権利の本』、『HTML解体新書』（ボーンデジタル）、『ネオ・ダダの逆説』（みすず書房）など。バイクとねこと日本酒好き。',
+          },
+          {
+            src: '/assets/images/koseki.png',
+            name: '小関 匡（こせき きょう）',
+            title: '編集',
+            text: 'IT、Web、デザイン系のライター兼書籍編集者。ライターとしては、企業のオウンドメディアを中心に活動中。主な書籍編集実績『クリエイターのための権利の本』（ボーンデジタル）『鬼フィードバック デザインのチカラは“ダメ出し"で育つ』（MdN）他。日本酒好きなれど、ダイエットのため節酒中。',
+          },
+        ].map(({ src, name, title, text }) => {
+          return (
+            <li class="grid list-none items-center gap-4 border-t border-stone-200 py-4 first:border-none md:flex md:items-start md:py-5 md:first:pt-0">
+              <img
+                src={src}
+                alt={`${name}の似顔絵イラスト`}
+                width="80"
+                height="80"
+                decoding="async"
+                class="h-auto w-20"
+              />
+              <div>
+                <>
+                  <h6 class="font-bold">
+                    <span class="mr-[1rem] text-orange-600">{title}</span>
+                    {name}
+                  </h6>
+                  <p>{text}</p>
+                </>
+              </div>
+            </li>
+          );
+        })
+      }
     </ul>
     <h3><span class="block text-[1rem]">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業Web」制作チーム</h3>
     <ul class="!p-0">
-      <li class="flex list-none flex-col items-center gap-4 pb-4 md:flex-row md:items-start md:pb-5">
+      <li class="grid list-none items-center gap-4 pb-4 md:flex md:items-start md:pb-5">
         <img
           src="/assets/images/kiteretz.png"
           alt="株式会社キテレツのロゴ"
@@ -180,7 +127,7 @@ import Page from '../../templates/Page.astro';
     <p>
       このサイトは、一般社団法人授業目的公衆送信補償金等管理協会（SARTRAS）の共通目的基金の助成を受けて制作されています。
     </p>
-    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="120"  loading="lazy" decoding="async" />
+    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="120" loading="lazy" decoding="async" />
     <p>
       このサイトの内容向上に関するアンケートを行っています。下記のURLからご意見をお寄せください。ご協力をよろしくお願いいたします。
       <a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block">https://forms.gle/a1XxvJU1xebuKaS26</a

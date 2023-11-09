@@ -19,7 +19,7 @@ const isCurrent = href === Astro.url.pathname;
   class={`${
     isCurrent &&
     "relative before:absolute before:left-[0.46875rem] before:top-5 before:h-[calc(100%-2rem)] before:w-px before:bg-stone-200 before:content-[''] md:before:top-[0.90625rem]"
-  } border-b border-stone-200 last-of-type:border-0 md:border-0`}
+  } border-b border-stone-200 last:border-0 md:border-0`}
 >
   <a
     href={href}
@@ -44,7 +44,7 @@ const isCurrent = href === Astro.url.pathname;
       <ul id="fixed-toc">
         {submenu.map(({ title, href }) => {
           return (
-            <li class="relative last-of-type:after:absolute last-of-type:after:left-[0.46875rem] last-of-type:after:top-5 last-of-type:after:h-4 last-of-type:after:w-px last-of-type:after:bg-white last-of-type:after:content-[''] md:last-of-type:after:top-[0.859375rem] md:last-of-type:after:h-8">
+            <li class="relative last:after:absolute last:after:left-[0.46875rem] last:after:top-5 last:after:h-4 last:after:w-px last:after:bg-white last:after:content-[''] md:last:after:top-[0.859375rem] md:last:after:h-8">
               <a
                 href={href}
                 class="flex gap-2.5 py-3 pr-2 text-sm font-normal before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500 md:py-1.5 md:leading-relaxed"

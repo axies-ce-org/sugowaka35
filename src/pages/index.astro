@@ -45,6 +45,8 @@ const Chapter = [
     height: '826',
   },
 ];
+
+const arrowCircleClass = 'h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9';
 ---
 
 <Layout ogType="website">
@@ -83,28 +85,30 @@ const Chapter = [
       >
         <div class="grow">
           <h2 class="text-lg/normal font-medium text-stone-800 md:text-2xl/normal">はじめに</h2>
-          <p class="mt-1 text-sm/relaxed md:mt-2">本書の読み方、キャラクターや著者の紹介です。</p>
+          <div class="mt-1 md:mt-2">
+            <p class="text-sm/relaxed">本書の読み方、キャラクターや著者の紹介です。</p>
+          </div>
         </div>
         <img
           src="/assets/images/arrow-circle.svg"
           alt=""
           width="36"
           height="36"
-          class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
+          class=`${arrowCircleClass}`
           decoding="async"
         />
       </a>
-      <ul class="mt-6 flex flex-col gap-6 md:mt-10 md:gap-10">
+      <ul class="mt-6 grid gap-6 md:mt-10 md:gap-10">
         {
           Chapter.map(({ title, text, href, src, width, height }, i) => {
             return (
               <li>
                 <a
                   href={href}
-                  class="group flex flex-col gap-6 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:flex-row md:gap-10 md:p-10"
+                  class="group grid gap-6 rounded-2xl bg-white p-4 transition-opacity hover:opacity-95 md:flex md:gap-10 md:p-10"
                 >
-                  <div class="flex flex-col gap-2 md:gap-4">
-                    <div class="flex flex-col gap-1 font-medium md:gap-0">
+                  <div class="grid gap-2 md:gap-4">
+                    <div class="grid gap-1 font-medium md:gap-0">
                       <span class="font-inter text-5xl/none text-orange-600 md:text-[5rem]/none">
                         {('00' + (i + 1)).slice(-2)}
                       </span>
@@ -115,7 +119,7 @@ const Chapter = [
                           alt=""
                           width="36"
                           height="36"
-                          class="mt-0.5 h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:mt-2 md:h-9 md:w-9"
+                          class={`mt-0.5 md:mt-2 ${arrowCircleClass}`}
                           decoding="async"
                         />
                       </div>
@@ -143,14 +147,16 @@ const Chapter = [
         >
           <div class="grow">
             <h2 class="text-lg/normal font-medium text-stone-800 md:text-2xl/normal">資料集・索引</h2>
-            <p class="mt-1 text-sm/relaxed md:mt-2">著作権を知るための資料集、用語の索引です。</p>
+            <div class="mt-1 md:mt-2">
+              <p class="text-sm/relaxed">著作権を知るための資料集、用語の索引です。</p>
+            </div>
           </div>
           <img
             src="/assets/images/arrow-circle.svg"
             alt=""
             width="36"
             height="36"
-            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
+            class=`${arrowCircleClass}`
             decoding="async"
           />
         </a>
@@ -160,14 +166,16 @@ const Chapter = [
         >
           <div class="grow">
             <h2 class="text-lg/normal font-medium text-stone-800 md:text-2xl/normal">おわりに</h2>
-            <p class="mt-1 text-sm/relaxed md:mt-2">本書や著者の紹介です。</p>
+            <div class="mt-1 md:mt-2">
+              <p class="text-sm/relaxed">本書や著者の紹介です。</p>
+            </div>
           </div>
           <img
             src="/assets/images/arrow-circle.svg"
             alt=""
             width="36"
             height="36"
-            class="h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9"
+            class=`${arrowCircleClass}`
             decoding="async"
           />
         </a>

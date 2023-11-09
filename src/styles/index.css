@@ -104,14 +104,14 @@
 		.col-2 {
 			th,
 			td {
-				@apply first-of-type:w-[31.4%] first-of-type:min-w-[31.4%] first-of-type:grow-0 md:first-of-type:w-[35.3%] md:first-of-type:min-w-[35.3%] grow;
+				@apply first:w-[31.4%] first:min-w-[31.4%] first:grow-0 md:first:w-[35.3%] md:first:min-w-[35.3%] grow;
 			}
 		}
 
 		.col-3 {
 			th,
 			td {
-				@apply w-[20%] min-w-[20%] grow-0 last-of-type:w-full last-of-type:grow;
+				@apply w-[20%] min-w-[20%] grow-0 last:w-full last:grow;
 			}
 		}
 	}
@@ -129,13 +129,13 @@
 	@apply text-transparent;
 
 	.hamburger {
-		span:first-of-type {
+		span:first {
 			@apply translate-y-[0.3125rem] scale-[1.06] rotate-45;
 		}
 		span:nth-of-type(2) {
 			@apply scale-0;
 		}
-		span:last-of-type {
+		span:last {
 			@apply translate-y-[-0.3125rem] scale-[1.06] -rotate-45;
 		}
 	}
