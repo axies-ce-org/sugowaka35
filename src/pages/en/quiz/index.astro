@@ -1,0 +1,166 @@
+---
+import { twJoin } from 'tailwind-merge';
+import Page from '../../../templates/en/Page.astro';
+import CircledArrowIcon from '../../../components/CircledArrowIcon.astro';
+import questions from '../../../contents/questions_en';
+---
+
+<Page
+  title="Understanding Copyright in Classes - Quiz"
+  description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは、著作権についてのクイズを提供します。"
+>
+  <div class="js-container mx-auto grid max-w-[47.5rem] gap-10">
+    {
+      questions.map(({ questionId, question, choices, explanations, correctAnswerNumber, reference }) => (
+        <section
+          id={`question-${questionId}`}
+          data-question-id={questionId}
+          class="js-question overflow-hidden rounded-2xl bg-white shadow-[0_0_16px_rgba(189,68,0,0.10)]"
+        >
+          <div class="flex flex-col gap-3 bg-orange-200 px-4 py-5 font-inter lg:flex-row lg:items-start lg:gap-10 lg:p-10">
+            <div class="flex items-center gap-2 text-orange-600 lg:flex-col lg:gap-0">
+              <span class="bg-orange-600 px-1.5 py-0.5 text-center text-[0.625rem]/none font-medium text-white lg:w-full lg:text-xs">
+                question
+              </span>
+              <span class="text-[2.125rem]/none font-medium lg:text-[3.5rem]">
+                {questionId.toString().padStart(2, '0')}
+              </span>
+              <span class="text-[0.875rem]/none font-normal">/{questions.length}</span>
+            </div>
+            <h2 class="font-noto text-xl/normal font-medium lg:pt-2 lg:text-[2rem]">{question}</h2>
+          </div>
+          <div class="flex flex-col gap-4 p-3 pt-6 lg:p-10">
+            {choices.map((choice, i) => (
+              <button
+                id={`question-${questionId}-${i + 1}`}
+                data-choice-number={i + 1}
+                type="button"
+                class={twJoin(
+                  'js-choice flex items-start gap-2.5 rounded-lg border border-orange-600 bg-orange-100 p-4 text-left font-noto font-medium leading-normal outline-none ring-orange-400 ring-offset-2 transition-all ease-out',
+                  'hover:bg-orange-200',
+                  'focus-visible:bg-orange-200 focus-visible:ring-2',
+                  'disabled:border-zinc-500 disabled:bg-zinc-100',
+                  '[&>span]:disabled:bg-zinc-500'
+                )}
+              >
+                <span class="mt-px flex min-h-[1.5rem] w-fit min-w-[1.5rem] place-content-center rounded-md bg-orange-600 px-1.5 py-1 leading-none text-white">
+                  {i + 1}
+                </span>
+                {choice}
+              </button>
+            ))}
+          </div>
+          <div class="js-answer invisible h-0 overflow-hidden px-3 lg:px-10">
+            <div class="js-judgement pb-4 text-2xl/relaxed font-bold text-zinc-600" />
+            <div class="border-t border-orange-600 pb-3 pt-4 lg:pb-10">
+              <div class="flex items-center gap-4 font-bold">
+                <h3 class="text-xl/relaxed text-orange-600">Explanation</h3>
+                <div class="flex items-center gap-2">
+                  <span>Correct answer </span>
+                  <span class="flex min-h-[1.5rem] w-fit min-w-[1.5rem] place-content-center rounded-md bg-orange-600 px-1.5 py-1 leading-none text-white">
+                    {correctAnswerNumber}
+                  </span>
+                </div>
+              </div>
+              {explanations.map(({ type, heading, paragraphs }) => {
+                if (type === 'plane') {
+                  return (
+                    <div class="mt-4">
+                      {paragraphs.map((paragraph) => (
+                        <p class="[&+p]:mt-2">{paragraph}</p>
+                      ))}
+                    </div>
+                  );
+                } else if (type === 'note') {
+                  return (
+                    <div class="mt-4 rounded-2xl bg-stone-100 p-4 text-stone-700">
+                      <h4 class="mb-2.5 font-bold text-orange-600">{heading}</h4>
+                      {paragraphs.map((paragraph) => (
+                        <p class="text-[0.9375rem] lg:text-base [&+p]:mt-2">{paragraph}</p>
+                      ))}
+                    </div>
+                  );
+                }
+              })}
+              {reference && (
+                <div class="mt-4">
+                  <span class="font-bold">Reference: </span>
+                  <a
+                    href={reference.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class={twJoin(
+                      'rounded-sm px-1 text-orange-600 underline outline-none ring-orange-400 ring-offset-2 transition-opacity ease-out',
+                      'hover:opacity-80',
+                      'focus-visible:ring-2'
+                    )}
+                  >
+                    {reference.label}
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      ))
+    }
+    <button
+      disabled
+      type="submit"
+      class={twJoin(
+        'flex items-center justify-center gap-4 rounded-2xl border-2 border-orange-600 bg-white px-8 py-4 text-sm leading-tight text-orange-600 outline-none ring-orange-400 ring-offset-2 transition-all ease-out',
+        'hover:bg-orange-600 hover:text-white',
+        'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',
+        'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300'
+      )}
+      ><span class="text-xl font-bold">採点結果を見る</span>
+      <CircledArrowIcon />
+    </button>
+    <section class="js-result hidden items-center overflow-hidden rounded-2xl bg-white p-6">
+      <div
+        class="js-result-content relative mb-20 flex h-[25rem] w-full flex-col items-center rounded-2xl bg-orange-600 p-2 pb-[7.5rem] pt-10 font-bold text-white lg:mb-6 lg:w-[25rem] lg:rounded-full lg:p-16"
+      >
+        <h2 class="border-b-2 border-white text-2xl/normal">
+          <span class="px-1 font-medium">結果発表</span>
+        </h2>
+        <div class="flex flex-col items-center gap-1">
+          <div class="js-all-correct text-[3.5rem] font-medium">全問正解</div>
+          <div class="js-correct-answers flex items-end gap-1.5">
+            <span class="pb-1.5">正解</span>
+            <span class="js-correct-answers-number text-[3.5rem]/tight font-medium lg:text-[4rem]">0</span>
+            <span class="pb-1.5">問</span>
+          </div>
+          <div class="font-medium lg:text-2xl">全{questions.length}問</div>
+        </div>
+        <div class="mt-6 flex flex-col items-center lg:mt-8">
+          <div
+            class="js-message grid min-h-[3rem] place-items-center rounded-2xl bg-white px-4 py-2 text-center leading-normal text-orange-600 lg:text-xl"
+          >
+          </div>
+          <div class="-mt-px">
+            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.5 16.5769V0.576904H0.5L18.5 16.5769Z" fill="white"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="absolute inset-x-0 -bottom-11 flex justify-center px-4 lg:bottom-0 lg:justify-end">
+          <img src="" alt="" class="js-illustration max-w-[5.625rem]" />
+        </div>
+      </div>
+      <button
+        type="submit"
+        class={twJoin(
+          'js-reset flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-orange-600 bg-white px-3 py-2.5 text-sm/tight text-orange-600 outline-none ring-orange-400 ring-offset-2 transition-all ease-out',
+          'lg:w-fit lg:px-6',
+          'hover:bg-orange-600 hover:text-white',
+          'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',
+          'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300'
+        )}
+        ><span class="text-sm font-bold">もう一度クイズに挑戦する</span>
+        <CircledArrowIcon className="rotate-180 scale-75" /></button
+      >
+    </section>
+  </div>
+</Page>
+
+<script src="../../../scripts/en/quiz/index.ts"></script>
