@@ -15,16 +15,13 @@ const { href, title, submenu } = Astro.props;
 const isCurrent = href === Astro.url.pathname;
 ---
 
-<li
-  class={`${
-    isCurrent &&
-    "relative before:absolute before:left-[0.46875rem] before:top-5 before:h-[calc(100%-2rem)] before:w-px before:bg-stone-200 before:content-[''] md:before:top-[0.90625rem]"
-  } border-b border-stone-200 last:border-0 md:border-0`}
->
+<li class="border-b border-stone-200 last:border-0 md:border-0">
   <a
     href={href}
-    class={`flex gap-2.5 py-3 pr-2 before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white before:content-[''] md:px-0 ${
-      isCurrent ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2' : 'before:bg-stone-500 md:py-1'
+    class={`relative flex gap-2.5 py-3 pr-2 before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white md:px-0 ${
+      isCurrent
+        ? 'text-orange-600 before:z-30 before:bg-orange-500 after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 md:py-2'
+        : 'before:bg-stone-500 md:py-1'
     }`}
   >
     <div class="flex w-full items-center">
@@ -44,7 +41,12 @@ const isCurrent = href === Astro.url.pathname;
       <ul id="fixed-toc">
         {submenu.map(({ title, href }) => {
           return (
-            <li class="relative last:after:absolute last:after:left-[0.46875rem] last:after:top-5 last:after:h-4 last:after:w-px last:after:bg-white last:after:content-[''] md:last:after:top-[0.859375rem] md:last:after:h-8">
+            <li
+              class={
+                isCurrent &&
+                'relative after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 last:after:hidden'
+              }
+            >
               <a
                 href={href}
                 class="flex gap-2.5 py-3 pr-2 text-sm font-normal before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500 md:py-1.5 md:leading-relaxed"
