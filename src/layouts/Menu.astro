@@ -2,9 +2,10 @@
 import MenuItem from '../components/MenuItem.astro';
 export interface Props {
   sidebar?: string;
+  isEN?: boolean;
 }
 
-const { sidebar } = Astro.props;
+const { sidebar, isEN } = Astro.props;
 ---
 
 <div
@@ -18,119 +19,212 @@ const { sidebar } = Astro.props;
   >
     <ul class="text-[1.0625rem]/normal font-bold text-stone-800 md:flex md:flex-col md:gap-2 md:text-base">
       <MenuItem
-        href="/introduction/"
-        title="はじめに"
-        submenu={[
-          {
-            title: 'はじめに',
-            href: '/introduction/#sec-01',
-          },
-          {
-            title: '本ウェブサイトに出てくるひとたち',
-            href: '/introduction/#sec-02',
-          },
-          {
-            title: '法律の条文の参照について',
-            href: '/introduction/#sec-03',
-          },
-        ]}
+        href={isEN ? '/en/introduction/' : '/introduction/'}
+        title={isEN ? 'Introduction' : 'はじめに'}
+        submenu={isEN
+          ? [
+              {
+                title: 'Introduction',
+                href: '/en/introduction/#sec-01',
+              },
+              {
+                title: 'People who appear in this material',
+                href: '/en/introduction/#sec-02',
+              },
+              {
+                title: 'References to Provisions of Laws',
+                href: '/en/introduction/#sec-03',
+              },
+            ]
+          : [
+              {
+                title: 'はじめに',
+                href: '/introduction/#sec-01',
+              },
+              {
+                title: '本ウェブサイトに出てくるひとたち',
+                href: '/introduction/#sec-02',
+              },
+              {
+                title: '法律の条文の参照について',
+                href: '/introduction/#sec-03',
+              },
+            ]}
       />
       <MenuItem
-        href="/basis/"
-        title="著作権の基礎"
-        submenu={[
-          {
-            title: '著作権法とは',
-            href: '/basis/#sec-01',
-          },
-          {
-            title: '著作物とは',
-            href: '/basis/#sec-02',
-          },
-          {
-            title: '著作者とは',
-            href: '/basis/#sec-03',
-          },
-          {
-            title: '著作権とは',
-            href: '/basis/#sec-04',
-          },
-        ]}
+        href={isEN ? '/en/basis/' : '/basis/'}
+        title={isEN ? 'Copyright Basics' : '著作権の基礎'}
+        submenu={isEN
+          ? [
+              {
+                title: 'What is the Copyright Act?',
+                href: '/en/basis/#sec-01',
+              },
+              {
+                title: 'What is a copyrighted work?',
+                href: '/en/basis/#sec-02',
+              },
+              {
+                title: 'Who is the author?',
+                href: '/en/basis/#sec-03',
+              },
+              {
+                title: 'What is Copyright?',
+                href: '/en/basis/#sec-04',
+              },
+            ]
+          : [
+              {
+                title: '著作権法とは',
+                href: '/basis/#sec-01',
+              },
+              {
+                title: '著作物とは',
+                href: '/basis/#sec-02',
+              },
+              {
+                title: '著作者とは',
+                href: '/basis/#sec-03',
+              },
+              {
+                title: '著作権とは',
+                href: '/basis/#sec-04',
+              },
+            ]}
       />
       <MenuItem
-        href="/copyright/"
-        title="授業における著作権"
-        submenu={[
-          {
-            title: '授業と著作物',
-            href: '/copyright/#sec-01',
-          },
-          {
-            title: '引用（32条1項）',
-            href: '/copyright/#sec-02',
-          },
-          {
-            title: '授業目的の複製等（35条）',
-            href: '/copyright/#sec-03',
-          },
-          {
-            title: '改正著作権法第35条運用指針',
-            href: '/copyright/#sec-04',
-          },
-        ]}
+        href={isEN ? '/en/copyright/' : '/copyright/'}
+        title={isEN ? 'Copyright in Classes' : '授業における著作権'}
+        submenu={isEN
+          ? [
+              {
+                title: 'Classes and copyrighted works',
+                href: '/en/copyright/#sec-01',
+              },
+              {
+                title: 'Citation (Article 32(1))',
+                href: '/en/copyright/#sec-02',
+              },
+              {
+                title: 'Reproduction, etc. for class purposes (Article 35)',
+                href: '/en/copyright/#sec-03',
+              },
+              {
+                title: 'Amended Copyright Act Article 35 Guidelines',
+                href: '/en/copyright/#sec-04',
+              },
+            ]
+          : [
+              {
+                title: '授業と著作物',
+                href: '/copyright/#sec-01',
+              },
+              {
+                title: '引用（32条1項）',
+                href: '/copyright/#sec-02',
+              },
+              {
+                title: '授業目的の複製等（35条）',
+                href: '/copyright/#sec-03',
+              },
+              {
+                title: '改正著作権法第35条運用指針',
+                href: '/copyright/#sec-04',
+              },
+            ]}
       />
       <MenuItem
-        href="/use/"
-        title="授業における著作物利用Q&A"
-        submenu={[
-          {
-            title: '授業における著作物利用Q&A',
-            href: '/use/#sec-01',
-          },
-        ]}
+        href={isEN ? '/en/use/' : '/use/'}
+        title={isEN ? 'Q&A on the Use of Copyrighted Works in the Classroom' : '授業における著作物利用Q&A'}
+        submenu={isEN
+          ? [
+              {
+                title: 'Q&A on the Use of Copyrighted Works in the Classroom',
+                href: '/en/use/#sec-01',
+              },
+            ]
+          : [
+              {
+                title: '授業における著作物利用Q&A',
+                href: '/use/#sec-01',
+              },
+            ]}
       />
       <MenuItem
-        href="/permission/"
-        title="許諾の取り方"
-        submenu={[
-          {
-            title: '利用許諾の取り方',
-            href: '/permission/#sec-01',
-          },
-        ]}
+        href={isEN ? '/en/permission/' : '/permission/'}
+        title={isEN ? 'How to Obtain Permission' : '許諾の取り方'}
+        submenu={isEN
+          ? [
+              {
+                title: 'How to obtain permission for use',
+                href: '/en/permission/#sec-01',
+              },
+            ]
+          : [
+              {
+                title: '利用許諾の取り方',
+                href: '/permission/#sec-01',
+              },
+            ]}
       />
-      <MenuItem href="/quiz/" title="著作権クイズ" />
+      <MenuItem href={isEN ? '/en/quiz/' : '/quiz/'} title={isEN ? 'Quiz' : '著作権クイズ'} />
       <MenuItem
-        href="/extra/"
-        title="資料集・索引"
-        submenu={[
-          {
-            title: '著作権を知るための資料集',
-            href: '/extra/#sec-01',
-          },
-          {
-            title: '索引',
-            href: '/extra/#sec-02',
-          },
-        ]}
+        href={isEN ? '/en/extra/' : '/extra/'}
+        title={isEN ? 'References and Index' : '資料集・索引'}
+        submenu={isEN
+          ? [
+              {
+                title: 'Resources for learning about copyright',
+                href: '/en/extra/#sec-01',
+              },
+              {
+                title: 'Index',
+                href: '/en/extra/#sec-02',
+              },
+            ]
+          : [
+              {
+                title: '著作権を知るための資料集',
+                href: '/extra/#sec-01',
+              },
+              {
+                title: '索引',
+                href: '/extra/#sec-02',
+              },
+            ]}
       />
       <MenuItem
-        href="/afterwords/"
-        title="おわりに"
-        submenu={[
-          {
-            title: '制作チーム紹介',
-            href: '/afterwords/#sec-01',
-          },
-          {
-            title: 'おわりに',
-            href: '/afterwords/#sec-02',
-          },
-          {
-            title: 'ライセンス',
-            href: '/afterwords/#sec-03',
-          },
-        ]}
+        href={isEN ? '/en/afterwords/' : '/afterwords/'}
+        title={isEN ? 'Epilogue' : 'おわりに'}
+        submenu={isEN
+          ? [
+              {
+                title: 'Team',
+                href: '/en/afterwords/#sec-01',
+              },
+              {
+                title: 'This Project',
+                href: '/en/afterwords/#sec-02',
+              },
+              {
+                title: 'License',
+                href: '/en/afterwords/#sec-03',
+              },
+            ]
+          : [
+              {
+                title: '制作チーム紹介',
+                href: '/afterwords/#sec-01',
+              },
+              {
+                title: 'おわりに',
+                href: '/afterwords/#sec-02',
+              },
+              {
+                title: 'ライセンス',
+                href: '/afterwords/#sec-03',
+              },
+            ]}
       />
     </ul>
   </nav>
