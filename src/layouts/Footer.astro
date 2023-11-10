@@ -1,27 +1,51 @@
 ---
+type Props = {
+  isEN?: boolean;
+};
+
+const { isEN } = Astro.props;
 ---
 
 <footer class="flex flex-col items-center gap-4 bg-orange-300 px-4 pb-7 pt-6 md:flex-row md:justify-between md:p-10">
-  <a href="/">
+  <a href={`/${isEN ? 'en/' : ''}`}>
     <img
-      src="/assets/images/logo.svg"
+      src={`/assets/images/logo${isEN ? '_en' : ''}.svg`}
       width="233"
       height="30"
-      alt="「先生にぜひ読んでほしい」すごくわかる著作権と授業"
+      alt={isEN
+        ? 'A must-read for teachers Understanding Copyright in Classes'
+        : '「先生にぜひ読んでほしい」すごくわかる著作権と授業'}
       class="max-w-[14.5625rem]"
       decoding="async"
     />
   </a>
   <div class="flex flex-col justify-center gap-3 md:items-end md:gap-2">
     <p class="text-xs/relaxed md:text-sm/relaxed">
-      このウェブサイトの内容は<a href="https://github.com/axies-ce-org/sugowaka35" class="underline hover:no-underline"
-        >GitHub</a
-      >で公開しています。
+      {
+        isEN ? (
+          <>
+            The content of this website is available on{' '}
+            <a href="https://github.com/axies-ce-org/sugowaka35" class="underline hover:no-underline">
+              GitHub
+            </a>
+          </>
+        ) : (
+          <>
+            このウェブサイトの内容は
+            <a href="https://github.com/axies-ce-org/sugowaka35" class="underline hover:no-underline">
+              GitHub
+            </a>
+            で公開しています。
+          </>
+        )
+      }
     </p>
     <div class="flex justify-center gap-3 md:gap-4">
       <img
         src="/assets/images/cc.svg"
-        alt="このウェブサイトは、原作者のクレジット（氏名、作品タイトルなど）を表示することを主な条件とし、改変はもちろん、営利目的での二次利用も許可されています"
+        alt={isEN
+          ? 'alt'
+          : 'このウェブサイトは、原作者のクレジット（氏名、作品タイトルなど）を表示することを主な条件とし、改変はもちろん、営利目的での二次利用も許可されています'}
         decoding="async"
         width="69"
         height="24"

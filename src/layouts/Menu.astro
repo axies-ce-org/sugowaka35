@@ -19,7 +19,7 @@ const { sidebar, isEN } = Astro.props;
   >
     <ul class="text-[1.0625rem]/normal font-bold text-stone-800 md:flex md:flex-col md:gap-2 md:text-base">
       <MenuItem
-        href={isEN ? '/en/introduction/' : '/introduction/'}
+        href={`/${isEN ? 'en/' : ''}introduction/`}
         title={isEN ? 'Introduction' : 'はじめに'}
         submenu={isEN
           ? [
@@ -52,7 +52,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={isEN ? '/en/basis/' : '/basis/'}
+        href={`/${isEN ? 'en/' : ''}basis/`}
         title={isEN ? 'Copyright Basics' : '著作権の基礎'}
         submenu={isEN
           ? [
@@ -93,7 +93,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={isEN ? '/en/copyright/' : '/copyright/'}
+        href={`/${isEN ? 'en/' : ''}copyright/`}
         title={isEN ? 'Copyright in Classes' : '授業における著作権'}
         submenu={isEN
           ? [
@@ -134,7 +134,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={isEN ? '/en/use/' : '/use/'}
+        href={`/${isEN ? 'en/' : ''}use/`}
         title={isEN ? 'Q&A on the Use of Copyrighted Works in the Classroom' : '授業における著作物利用Q&A'}
         submenu={isEN
           ? [
@@ -151,7 +151,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={isEN ? '/en/permission/' : '/permission/'}
+        href={`/${isEN ? 'en/' : ''}permission/`}
         title={isEN ? 'How to Obtain Permission' : '許諾の取り方'}
         submenu={isEN
           ? [
@@ -167,9 +167,9 @@ const { sidebar, isEN } = Astro.props;
               },
             ]}
       />
-      <MenuItem href={isEN ? '/en/quiz/' : '/quiz/'} title={isEN ? 'Quiz' : '著作権クイズ'} />
+      <MenuItem href={`/${isEN ? 'en/' : ''}quiz/`} title={isEN ? 'Quiz' : '著作権クイズ'} />
       <MenuItem
-        href={isEN ? '/en/extra/' : '/extra/'}
+        href={`/${isEN ? 'en/' : ''}extra/`}
         title={isEN ? 'References and Index' : '資料集・索引'}
         submenu={isEN
           ? [
@@ -194,7 +194,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={isEN ? '/en/afterwords/' : '/afterwords/'}
+        href={`/${isEN ? 'en/' : ''}afterwords/`}
         title={isEN ? 'Epilogue' : 'おわりに'}
         submenu={isEN
           ? [
