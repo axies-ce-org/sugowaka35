@@ -7,20 +7,21 @@ export interface Props {
   title: string;
   description: string;
   ogType?: string;
+  isEN?: boolean;
 }
 
-const { title, description, ogType } = Astro.props;
+const { title, description, ogType, isEN } = Astro.props;
 ---
 
-<Layout title={title} description={description} ogType={ogType}>
-  <Header />
+<Layout title={title} description={description} ogType={ogType} isEN={isEN} hasBorder>
+  <Header isEN={isEN} />
   <div class="mx-auto max-w-[72.5rem] px-4 pb-20 pt-2.5 md:px-10 md:pt-2">
     <h1 class="text-base font-bold text-stone-800">{title}</h1>
     <div class="mt-6 flex items-start gap-7 md:mt-10 md:h-full lg:gap-10">
       <main class="grid w-[47.5rem] gap-6 md:gap-10">
         <slot />
       </main>
-      <Menu />
+      <Menu isEN={isEN} />
     </div>
   </div>
 </Layout>

@@ -1,6 +1,6 @@
 ---
 import { twJoin } from 'tailwind-merge';
-import Page from '../../../templates/en/Page.astro';
+import Page from '../../../templates/Page.astro';
 import CircledArrowIcon from '../../../components/CircledArrowIcon.astro';
 import questions from '../../../contents/questions_en';
 ---
@@ -8,6 +8,7 @@ import questions from '../../../contents/questions_en';
 <Page
   title="Quiz"
   description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは、著作権についてのクイズを提供します。"
+  isEN
 >
   <div class="js-container mx-auto grid max-w-[47.5rem] gap-10">
     {

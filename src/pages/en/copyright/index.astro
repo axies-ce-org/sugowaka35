@@ -7,12 +7,13 @@ import ListArea from '../../../components/ListArea.astro';
 import ImgCaption from '../../../components/ImgCaption.astro';
 import Modal from '../../../components/Modal.astro';
 import ModalTrigger from '../../../components/ModalTrigger.astro';
-import Page from '../../../templates/en/Page.astro';
+import Page from '../../../templates/Page.astro';
 ---
 
 <Page
   title="Copyright in Classes"
   description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは授業で著作物を扱う際の法律上の決まりやフロー、引用、複製等について解説しています。"
+  isEN
 >
   <Section
     number="01"
@@ -55,7 +56,7 @@ import Page from '../../../templates/en/Page.astro';
     <ImgCaption>
       <figcaption>[Flow chart for dealing with copyrighted works in classes.]</figcaption>
       <img
-        src="/assets/images/copyright-01-01.png"
+        src="/assets/images/copyright-01.png"
         alt="それは著作物である場合。パブリックドメイン、ライセンス（CC、利用条件）でOKであれば利用可能。OKでない場合、権利制限が適用可能かどうか確認（30条から47条の5）。適用可能な場合、利用可能。適用不可の場合、許諾を取るか諦めるかを判断する。"
         width="1360"
         height="964"

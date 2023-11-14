@@ -1,4 +1,5 @@
 ---
+import { twJoin } from 'tailwind-merge';
 import '../styles/index.css';
 import Footer from '../layouts/Footer.astro';
 
@@ -6,17 +7,22 @@ export interface Props {
   title?: string;
   description?: string;
   ogType?: string;
+  hasBorder?: boolean;
+  isEN?: boolean;
 }
+const { title, description, ogType, hasBorder, isEN } = Astro.props;
 
-const siteName = '「先生にぜひ読んでほしい」すごくわかる著作権と授業 (すごわか)';
-const siteDescription =
-  'このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。';
+const siteName = isEN
+  ? 'A must-read for teachers Understanding Copyright in Classes'
+  : '「先生にぜひ読んでほしい」すごくわかる著作権と授業 (すごわか)';
 
-const { title, description, ogType } = Astro.props;
+const siteDescription = isEN
+  ? 'description'
+  : 'このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。';
 ---
 
 <!DOCTYPE html>
-<html lang="ja" class="scroll-pt-10 scroll-smooth" dir="ltr">
+<html lang={isEN ? 'en' : 'ja'} class="scroll-pt-10 scroll-smooth" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -40,8 +46,13 @@ const { title, description, ogType } = Astro.props;
     <meta name="msapplication-TileImage" content={`${Astro.site}/cropped-favicon-270x270.png`} />
     <script src="../scripts/index.ts"></script>
   </head>
-  <body class="bg-orange-100 font-noto text-[0.9375rem]/relaxed text-stone-700 antialiased md:text-base/relaxed">
+  <body
+    class={twJoin(
+      'font-noto text-[0.9375rem]/relaxed text-stone-700 antialiased md:text-base/relaxed',
+      hasBorder ? 'border-t-4 border-orange-400 bg-orange-100' : 'bg-orange-200'
+    )}
+  >
     <slot />
-    <Footer />
+    <Footer isEN={isEN} />
   </body>
 </html>

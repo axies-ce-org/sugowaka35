@@ -1,5 +1,5 @@
 ---
-import Layout from '../../templates/en/Default.astro';
+import Layout from '../../templates/Default.astro';
 import Header from '../../layouts/Header.astro';
 import Menu from '../../layouts/Menu.astro';
 
@@ -49,9 +49,9 @@ const Chapter = [
 const arrowCircleClass = 'h-8 w-8 transition-transform duration-200 group-hover:translate-x-2 md:h-9 md:w-9';
 ---
 
-<Layout ogType="website">
-  <Header img="none" />
-  <div class="bg-orange-200 pb-16 pt-[3.75rem] md:pb-20">
+<Layout ogType="website" isEN>
+  <Header img="none" isEN />
+  <div class="pb-16 pt-[3.75rem] md:pb-20">
     <div class="mx-auto text-center">
       <h1 class="font-bold">
         <img
