@@ -9,7 +9,7 @@ import Page from '../../../templates/Page.astro';
   isEN
 >
   <Section number="01" title="Team">
-    <h3>Team for Understanding Copyright in Classes</h3>
+    <h3>Team for <span class="italic">Understanding Copyright in Classes</span></h3>
     <ul class="!p-0">
       {
         [
@@ -23,7 +23,15 @@ import Page from '../../../templates/Page.astro';
             src: '/assets/images/kimura.png',
             name: 'Kodai Kimura',
             title: 'Supervision & Translation',
-            text: 'An Attorney at law admitted in Japan, New York & Washington DC and a partner at Kobayashi & Yugeta Law Office, Tokyo. He also focuses on explaining copyright in a way that is easy to understand for the general public, including serializing Art Law in the web edition of Bijutsutecho, co-authoring A Book on Rights for Creators, (Bone Digital, 2018), and supervising legal work. He loves boxing (only to watch).',
+            text: (
+              <>
+                An Attorney at law admitted in Japan, New York & Washington DC and a partner at Kobayashi & Yugeta Law
+                Office, Tokyo. He also focuses on explaining copyright in a way that is easy to understand for the
+                general public, including serializing Art Law in the web edition of Bijutsutecho, co-authoring{' '}
+                <span class="italic">A Book on Rights for Creators</span>, (Bone Digital, 2018), and supervising legal
+                work. He loves boxing (only to watch).
+              </>
+            ),
           },
           {
             src: '/assets/images/sumiya.png',
@@ -41,13 +49,29 @@ import Page from '../../../templates/Page.astro';
             src: '/assets/images/sato.png',
             name: 'Masaki Sato',
             title: 'Design & DTP',
-            text: 'Graphic designer focusing on Alpha Design and book production. Author of Hajimete no Illustrator CC, (Shuwa System). Design and DTP A Book on Rights for Creators, HTML Kaitai Shinsho, (Bone Digital), Neo Dada no Gyakusetsu, (Misuzu Shobo), etc. He loves motorcycles, cats, and sake.',
+            text: (
+              <>
+                Graphic designer focusing on Alpha Design and book production. Author of{' '}
+                <span class="italic">Hajimete no Illustrator CC</span>, (Shuwa System). Design and DTP{' '}
+                <span class="italic">A Book on Rights for Creators, HTML Kaitai Shinsho</span>, (Bone Digital),{' '}
+                <span class="italic">Neo Dada no Gyakusetsu</span>, (Misuzu Shobo), etc. He loves motorcycles, cats, and
+                sake.
+              </>
+            ),
           },
           {
             src: '/assets/images/koseki.png',
             name: 'Kyo Koseki',
             title: 'Editing',
-            text: "Writer and book editor for IT, Web, and design. As a writer, he is active mainly in corporate-owned media. Major book editing credits include A Book on Rights for Creators, (Bone Digital, 2018), and Oni Feedback: The Chikara of Design Grows by 'Dame-dashi', (MdN). He loves sake but is trying to cut back to stay in good shape.",
+            text: (
+              <>
+                Writer and book editor for IT, Web, and design. As a writer, he is active mainly in corporate-owned
+                media. Major book editing credits include <span class="italic">A Book on Rights for Creators</span>,
+                (Bone Digital, 2018), and{' '}
+                <span class="italic">Oni Feedback: The Chikara of Design Grows by 'Dame-dashi'</span>, (MdN). He loves
+                sake but is trying to cut back to stay in good shape.
+              </>
+            ),
           },
         ].map(({ src, name, title, text }) => {
           return (
@@ -146,6 +170,9 @@ import Page from '../../../templates/Page.astro';
         Creative Commons Attribution 4.0 International License (CC BY 4.0)
       </a>.
     </p>
-    <p>When using this material, please reference as Understanding Copyright in Classes Web/AXIES/CC BY 4.0.</p>
+    <p>
+      When using this material, please reference as <span class="italic"
+        >Understanding Copyright in Classes Web/AXIES/CC BY 4.0.</span>
+    </p>
   </Section>
 </Page>
