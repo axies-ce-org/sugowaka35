@@ -56,7 +56,7 @@ const resetButton = document.querySelector<HTMLButtonElement>('.js-reset');
 const onClickChoice = (clickedChoice: HTMLButtonElement) => {
   const currentQuestion = clickedChoice.closest<HTMLDivElement>('.js-question');
   const currentChoices = currentQuestion!.querySelectorAll<HTMLButtonElement>('.js-choice');
-  const currentCoicedNumber = Number(clickedChoice.dataset.choiceNumber);
+  const currentChoicedNumber = Number(clickedChoice.dataset.choiceNumber);
 
   if (!currentQuestion) return;
 
@@ -77,7 +77,7 @@ const onClickChoice = (clickedChoice: HTMLButtonElement) => {
   highlightCorrectChoice(answeredQuestion, currentChoices);
   highlightSelectedWrongChoice(clickedChoice, isCorrect);
   disableChoices(currentChoices);
-  setResultData(currentCoicedNumber, resultData, answeredQuestion.questionId, isCorrect);
+  setResultData(currentChoicedNumber, resultData, answeredQuestion.questionId, isCorrect);
 
   currentAnswerBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
