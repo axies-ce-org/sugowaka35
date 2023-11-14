@@ -39,7 +39,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 2,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#sec-01',
+      href: '/en/basis/#sec-01',
       label: 'Understanding Copyright in Classes: 1-01',
     },
   },
@@ -67,13 +67,14 @@ const questions: Question[] = [
       {
         type: 'plane',
         paragraphs: [
-          'Numbers 1. and 2. are mere facts so these do not qualify as copyrighted works. Number 4. is not a "creative" expression and does not qualify as a copyrighted work, since it is merely a recording of facts without room for the photographer\'s thoughts or sentiments to be expressed.',
+          'Numbers 1. and 2. are mere facts so these do not qualify as copyrighted works.',
+          ' Number 4. is not a "creative" expression and does not qualify as a copyrighted work, since it is merely a recording of facts without room for the photographer\'s thoughts or sentiments to be expressed.',
         ],
       },
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#sec-02',
+      href: '/en/basis/#sec-02',
       label: 'Understanding Copyright in Classes: 1-02',
     },
   },
@@ -98,7 +99,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 2,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#sec-03',
+      href: '/en/basis/#sec-03',
       label: 'Understanding Copyright in Classes: 1-03',
     },
   },
@@ -122,7 +123,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 1,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#sec-03',
+      href: '/en/basis/#sec-03',
       label: 'Understanding Copyright in Classes: 1-03',
     },
   },
@@ -146,7 +147,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#sec-04',
+      href: '/en/basis/#sec-04',
       label: 'Understanding Copyright in Classes: 1-04',
     },
   },
@@ -200,7 +201,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 2,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#sec-04',
+      href: '/en/basis/#sec-04',
       label: 'Understanding Copyright in Classes: 1-04',
     },
   },
@@ -224,7 +225,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/basis/#ref23',
+      href: '/en/basis/#ref23',
       label: 'Understanding Copyright in Classes: 1-04 Protection Term',
     },
   },
@@ -266,7 +267,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/copyright/#sec-02',
+      href: '/en/copyright/#sec-02',
       label: 'Understanding Copyright in Classes: 2-02',
     },
   },
@@ -290,7 +291,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 4,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/copyright/#sec-03',
+      href: '/en/copyright/#sec-03',
       label: 'Understanding Copyright in Classes: 2-03',
     },
   },
@@ -315,7 +316,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/en/copyright/#sec-04',
+      href: '/en/copyright/#sec-04',
       label: 'Understanding Copyright in Classes: 2-04',
     },
   },
