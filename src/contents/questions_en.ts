@@ -14,7 +14,7 @@ export interface Question {
   };
 }
 
-const questions: Question[] = [
+const questions_en: Question[] = [
   {
     questionId: 1,
     question: 'Which of the following is the purpose of the Copyright Act?',
@@ -470,4 +470,4 @@ const questions: Question[] = [
   },
 ];
 
-export default questions;
+export default questions_en;

@@ -2,7 +2,7 @@
 import { twJoin } from 'tailwind-merge';
 import Page from '../../../templates/Page.astro';
 import CircledArrowIcon from '../../../components/CircledArrowIcon.astro';
-import questions from '../../../contents/questions_en';
+import questions_en from '../../../contents/questions_en';
 ---
 
 <Page
@@ -12,7 +12,7 @@ import questions from '../../../contents/questions_en';
 >
   <div class="js-container mx-auto grid max-w-[47.5rem] gap-10">
     {
-      questions.map(({ questionId, question, choices, explanations, correctAnswerNumber, reference }) => (
+      questions_en.map(({ questionId, question, choices, explanations, correctAnswerNumber, reference }) => (
         <section
           id={`question-${questionId}`}
           data-question-id={questionId}
@@ -26,7 +26,7 @@ import questions from '../../../contents/questions_en';
               <span class="text-[2.125rem]/none font-medium lg:text-[3.5rem]">
                 {questionId.toString().padStart(2, '0')}
               </span>
-              <span class="text-[0.875rem]/none font-normal">/{questions.length}</span>
+              <span class="text-[0.875rem]/none font-normal">/{questions_en.length}</span>
             </div>
             <h2 class="font-noto text-xl/normal font-medium lg:pt-2 lg:text-[2rem]">{question}</h2>
           </div>
@@ -131,7 +131,7 @@ import questions from '../../../contents/questions_en';
             <span class="js-correct-answers-number text-[3.5rem]/tight font-medium lg:text-[4rem]">0</span>
             <span class="pb-1.5">問</span>
           </div>
-          <div class="font-medium lg:text-2xl">全{questions.length}問</div>
+          <div class="font-medium lg:text-2xl">全{questions_en.length}問</div>
         </div>
         <div class="mt-6 flex flex-col items-center lg:mt-8">
           <div

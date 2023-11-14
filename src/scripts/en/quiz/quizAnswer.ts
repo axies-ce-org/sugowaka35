@@ -1,9 +1,9 @@
 import type { ResultData } from './index';
 import type { Question } from '../../../contents/questions_en';
 
-export const getAnsweredQuestion = (currentQuestion: HTMLDivElement, questions: Question[]) => {
+export const getAnsweredQuestion = (currentQuestion: HTMLDivElement, questions_en: Question[]) => {
   const questionId = Number(currentQuestion?.dataset?.questionId ?? '1');
-  return questions[questionId - 1];
+  return questions_en[questionId - 1];
 };
 
 export const getCorrectAnswersCount = (resultData: ResultData) => {
