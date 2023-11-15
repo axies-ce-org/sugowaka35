@@ -46,13 +46,13 @@ export const setBrowserId = () => {
 };
 
 export const setResultData = (
-  currentCoicedNumber: number,
+  currentChoicedNumber: number,
   resultData: ResultData,
   answeredQuestionId: number,
   isCorrect: boolean
 ) => {
   resultData[`question${answeredQuestionId}`] = {
-    answer: currentCoicedNumber,
+    answer: currentChoicedNumber,
     isCorrect,
   };
 };

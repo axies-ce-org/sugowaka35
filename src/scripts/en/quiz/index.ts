@@ -1,4 +1,4 @@
-import questions_en from '../../../contents/questions_en';
+import questions from '../../../contents/questions_en';
 
 import {
   disableChoices,
@@ -62,7 +62,7 @@ const onClickChoice = (clickedChoice: HTMLButtonElement) => {
 
   const currentAnswerBlock = currentQuestion.querySelector<HTMLDivElement>('.js-answer');
 
-  const answeredQuestion = getAnsweredQuestion(currentQuestion, questions_en);
+  const answeredQuestion = getAnsweredQuestion(currentQuestion, questions);
   const isCorrect = answeredQuestion.correctAnswerNumber === getSelectedChoiceNumber(clickedChoice);
 
   const enableSumbit = () => {
@@ -81,13 +81,13 @@ const onClickChoice = (clickedChoice: HTMLButtonElement) => {
 
   currentAnswerBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-  if (Object.keys(resultData).length === questions_en.length) isComplete = true;
+  if (Object.keys(resultData).length === questions.length) isComplete = true;
   isComplete && enableSumbit();
 };
 
 const onClickSubmit = async () => {
   const correctAnswersCount = getCorrectAnswersCount(resultData);
-  const correctRatio = correctAnswersCount / questions_en.length;
+  const correctRatio = correctAnswersCount / questions.length;
   const isAllCorrect = correctRatio === 1;
   const { messageContent, imageFileName } = getResultContent(correctRatio);
 

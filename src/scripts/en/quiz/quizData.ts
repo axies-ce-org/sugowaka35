@@ -1,4 +1,4 @@
-import questions_en from '../../../contents/questions_en';
+import questions from '../../../contents/questions_en';
 import { getCorrectAnswersCount } from './quizAnswer';
 import type { ResultData } from './index';
 
@@ -17,7 +17,7 @@ const getData = (resultData: ResultData) => {
 
   return {
     browserId: localStorage.getItem('browserId'),
-    score: getCorrectAnswersCount(resultData) * (100 / questions_en.length),
+    score: getCorrectAnswersCount(resultData) * (100 / questions.length),
     result: sortedResult,
   };
 };
@@ -46,13 +46,13 @@ export const setBrowserId = () => {
 };
 
 export const setResultData = (
-  currentCoicedNumber: number,
+  currentChoicedNumber: number,
   resultData: ResultData,
   answeredQuestionId: number,
   isCorrect: boolean
 ) => {
   resultData[`question${answeredQuestionId}`] = {
-    answer: currentCoicedNumber,
+    answer: currentChoicedNumber,
     isCorrect,
   };
 };
