@@ -83,7 +83,7 @@ export const updateIllustration = (
       illustrationImage.parentElement?.classList.add(...illustrationParentClassNames);
     }
 
-    illustrationImage.src = `../../assets/images/${imageFileName}-quiz.png`;
+    illustrationImage.src = '../../assets/images/' + imageFileName + '-quiz.png';
     illustrationImage.onload = () => resolve();
   });
 };

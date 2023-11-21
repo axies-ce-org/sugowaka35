@@ -1,4 +1,5 @@
 ---
+import { twJoin } from 'tailwind-merge';
 import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {
@@ -18,13 +19,19 @@ const isCurrent = href === Astro.url.pathname;
 <li class="border-b border-stone-200 last:border-0 md:border-0">
   <a
     href={href}
-    class={`relative flex gap-2.5 py-3 pr-2 before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white md:px-0 ${
+    class={twJoin(
+      'relative flex gap-2.5 py-3 pr-2 md:px-0',
+      'before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white',
       isCurrent && submenu
-        ? 'text-orange-600 before:z-30 before:bg-orange-500 after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 md:py-2'
+        ? twJoin(
+            'text-orange-600 md:py-2',
+            'before:z-30 before:bg-orange-500',
+            'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200'
+          )
         : isCurrent
         ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2'
         : 'before:bg-stone-500 md:py-1'
-    }`}
+    )}
   >
     <div class="flex w-full items-center">
       <p class="flex-1">{title}</p>
@@ -33,7 +40,7 @@ const isCurrent = href === Astro.url.pathname;
         width="16"
         height="16"
         alt=""
-        class={`md:hidden ${isCurrent && 'hidden'}`}
+        class={twJoin('md:hidden', isCurrent && 'hidden')}
         decoding="async"
       />
     </div>
@@ -46,12 +53,18 @@ const isCurrent = href === Astro.url.pathname;
             <li
               class={
                 isCurrent &&
-                'relative after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 last:after:hidden'
+                twJoin(
+                  'relative',
+                  'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 last:after:hidden'
+                )
               }
             >
               <a
                 href={href}
-                class="flex gap-2.5 py-3 pr-2 text-sm font-normal before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500 md:py-1.5 md:leading-relaxed"
+                class={twJoin(
+                  'flex gap-2.5 py-3 pr-2 text-sm font-normal md:py-1.5 md:leading-relaxed',
+                  'before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500'
+                )}
               >
                 {title}
               </a>

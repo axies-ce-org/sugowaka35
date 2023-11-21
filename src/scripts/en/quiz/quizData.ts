@@ -51,7 +51,7 @@ export const setResultData = (
   answeredQuestionId: number,
   isCorrect: boolean
 ) => {
-  resultData[`question${answeredQuestionId}`] = {
+  resultData['question' + answeredQuestionId] = {
     answer: currentChoicedNumber,
     isCorrect,
   };

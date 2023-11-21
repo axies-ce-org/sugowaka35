@@ -1,4 +1,5 @@
 ---
+import { twJoin } from 'tailwind-merge';
 import Layout from '../templates/Default.astro';
 import Header from '../layouts/Header.astro';
 import Menu from '../layouts/Menu.astro';
@@ -94,7 +95,7 @@ const arrowCircleClass = 'h-8 w-8 transition-transform duration-200 group-hover:
           alt=""
           width="36"
           height="36"
-          class=`${arrowCircleClass}`
+          class={arrowCircleClass}
           decoding="async"
         />
       </a>
@@ -119,7 +120,7 @@ const arrowCircleClass = 'h-8 w-8 transition-transform duration-200 group-hover:
                           alt=""
                           width="36"
                           height="36"
-                          class={`mt-0.5 md:mt-2 ${arrowCircleClass}`}
+                          class={twJoin('mt-0.5 md:mt-2', arrowCircleClass)}
                           decoding="async"
                         />
                       </div>
@@ -156,7 +157,7 @@ const arrowCircleClass = 'h-8 w-8 transition-transform duration-200 group-hover:
             alt=""
             width="36"
             height="36"
-            class=`${arrowCircleClass}`
+            class={arrowCircleClass}
             decoding="async"
           />
         </a>
@@ -175,7 +176,7 @@ const arrowCircleClass = 'h-8 w-8 transition-transform duration-200 group-hover:
             alt=""
             width="36"
             height="36"
-            class=`${arrowCircleClass}`
+            class={arrowCircleClass}
             decoding="async"
           />
         </a>
