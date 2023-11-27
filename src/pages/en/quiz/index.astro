@@ -7,7 +7,7 @@ import questions_en from '../../../contents/questions_en';
 
 <Page
   title="Quiz"
-  description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは、著作権についてのクイズを提供します。"
+  description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page offers a quiz about copyright."
   isEN
 >
   <div class="js-container mx-auto grid max-w-[47.5rem] gap-10">
@@ -114,7 +114,7 @@ import questions_en from '../../../contents/questions_en';
         'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',
         'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300'
       )}
-      ><span class="text-xl font-bold">採点結果を見る</span>
+      ><span class="text-xl font-bold">View the scores</span>
       <CircledArrowIcon />
     </button>
     <section class="js-result hidden items-center overflow-hidden rounded-2xl bg-white p-6">
@@ -122,16 +122,16 @@ import questions_en from '../../../contents/questions_en';
         class="js-result-content relative mb-20 flex h-[25rem] w-full flex-col items-center rounded-2xl bg-orange-600 p-2 pb-[7.5rem] pt-10 font-bold text-white lg:mb-6 lg:w-[25rem] lg:rounded-full lg:p-16"
       >
         <h2 class="border-b-2 border-white text-2xl/normal">
-          <span class="px-1 font-medium">結果発表</span>
+          <span class="px-1 font-medium">Result announcement</span>
         </h2>
         <div class="flex flex-col items-center gap-1">
-          <div class="js-all-correct text-[3.5rem] font-medium">全問正解</div>
+          <div class="js-all-correct text-[3.5rem] font-medium">All questions correct</div>
           <div class="js-correct-answers flex items-end gap-1.5">
-            <span class="pb-1.5">正解</span>
+            <span class="pb-1.5">Correct answer</span>
             <span class="js-correct-answers-number text-[3.5rem]/tight font-medium lg:text-[4rem]">0</span>
-            <span class="pb-1.5">問</span>
+            <span class="pb-1.5"> question</span>
           </div>
-          <div class="font-medium lg:text-2xl">全{questions_en.length}問</div>
+          <div class="font-medium lg:text-2xl">All {questions_en.length} questions</div>
         </div>
         <div class="mt-6 flex flex-col items-center lg:mt-8">
           <div
@@ -157,7 +157,7 @@ import questions_en from '../../../contents/questions_en';
           'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',
           'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300'
         )}
-        ><span class="text-sm font-bold">もう一度クイズに挑戦する</span>
+        ><span class="text-sm font-bold">Let's try the quiz again.</span>
         <CircledArrowIcon className="rotate-180 scale-75" /></button
       >
     </section>

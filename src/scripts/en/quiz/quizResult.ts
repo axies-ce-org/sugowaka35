@@ -2,19 +2,19 @@ const illustrationParentClassNames = ['!-bottom-16', 'md:!justify-center', 'md:!
 
 const resultContent = {
   all: {
-    messageContent: 'すごーい！',
+    messageContent: 'Great!',
     imageFileName: 'all',
   },
   above80: {
-    messageContent: 'よくできましたね！',
+    messageContent: 'Well done!',
     imageFileName: 'sumiki',
   },
   above40: {
-    messageContent: `あとちょっとで<br />もっとよくなるぞ！`,
+    messageContent: 'Just a little bit more!',
     imageFileName: 'daiin',
   },
   below40: {
-    messageContent: `もうすこし<br />がんばりましょう!`,
+    messageContent: `Let's try <br />a little harder!`,
     imageFileName: 'konaka',
   },
 };
@@ -92,7 +92,7 @@ export const updateJudgement = (answerBlock: HTMLElement, isCorrect: boolean) =>
   const currentJudgement = answerBlock.querySelector('.js-judgement');
   if (!currentJudgement) return;
 
-  currentJudgement.textContent = isCorrect ? '正解です！' : '残念、不正解です';
+  currentJudgement.textContent = isCorrect ? "That's correct!" : "Unfortunately, that's not correct.";
   currentJudgement.classList.replace(
     isCorrect ? 'text-zinc-600' : 'text-orange-600',
     isCorrect ? 'text-orange-600' : 'text-zinc-600'
