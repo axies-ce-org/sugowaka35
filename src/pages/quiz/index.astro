@@ -13,7 +13,7 @@ import questions from '../../contents/questions';
     {
       questions.map(({ questionId, question, choices, explanations, correctAnswerNumber, reference }) => (
         <section
-          id={'question-' + questionId}
+          id={`question-${questionId}`}
           data-question-id={questionId}
           class="js-question overflow-hidden rounded-2xl bg-white shadow-[0_0_16px_rgba(189,68,0,0.10)]"
         >
@@ -32,7 +32,7 @@ import questions from '../../contents/questions';
           <div class="flex flex-col gap-4 p-3 pt-6 lg:p-10">
             {choices.map((choice, i) => (
               <button
-                id={'question-' + questionId + '-' + (i + 1)}
+                id={`question-${questionId}-${i + 1}`}
                 data-choice-number={i + 1}
                 type="button"
                 class={twJoin(

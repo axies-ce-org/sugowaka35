@@ -14,11 +14,11 @@ type Props = {
 const { title, number, list, level, isEN } = Astro.props;
 ---
 
-<dl id={number && 'q' + number} class="quiz">
+<dl id={number && `q${number}`} class="quiz">
   <dt class="border-b border-t-2 border-red-600 bg-orange-50 py-5 md:p-6">
     <div class="flex gap-2.5 pl-1.5 pr-2 text-lg/normal font-bold md:gap-10 md:p-0 md:text-2xl/normal">
       <span class="text-[2.5rem]/none font-medium text-orange-600 md:text-[3.5rem]/none">
-        Q{number}
+        Q{number && number}
       </span>
       <div class="flex flex-col gap-2">
         {title}
