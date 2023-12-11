@@ -19,15 +19,15 @@ import questions from '../../contents/questions';
         >
           <div class="flex flex-col gap-3 bg-orange-200 px-4 py-5 font-inter lg:flex-row lg:items-start lg:gap-10 lg:p-10">
             <div class="flex items-center gap-2 text-orange-600 lg:flex-col lg:gap-0">
-              <span class="bg-orange-600 px-1.5 py-0.5 text-center text-[0.625rem] font-medium leading-none text-white lg:w-full lg:text-xs">
+              <span class="bg-orange-600 px-1.5 py-0.5 text-center text-[0.625rem]/none font-medium text-white lg:w-full lg:text-xs">
                 question
               </span>
-              <span class="text-[2.125rem] font-medium leading-none lg:text-[3.5rem]">
+              <span class="text-[2.125rem]/none font-medium lg:text-[3.5rem]">
                 {questionId.toString().padStart(2, '0')}
               </span>
-              <span class="text-[0.875rem] font-normal leading-none">/全{questions.length}問</span>
+              <span class="text-[0.875rem]/none font-normal">/全{questions.length}問</span>
             </div>
-            <h2 class="font-noto text-xl font-medium leading-normal lg:pt-2 lg:text-[2rem]">{question}</h2>
+            <h2 class="font-noto text-xl/normal font-medium lg:pt-2 lg:text-[2rem]">{question}</h2>
           </div>
           <div class="flex flex-col gap-4 p-3 pt-6 lg:p-10">
             {choices.map((choice, i) => (
@@ -51,10 +51,10 @@ import questions from '../../contents/questions';
             ))}
           </div>
           <div class="js-answer invisible h-0 overflow-hidden px-3 lg:px-10">
-            <div class="js-judgement pb-4 text-2xl font-bold leading-relaxed text-zinc-600" />
+            <div class="js-judgement pb-4 text-2xl/relaxed font-bold text-zinc-600" />
             <div class="border-t border-orange-600 pb-3 pt-4 lg:pb-10">
               <div class="flex items-center gap-4 font-bold">
-                <h3 class="text-xl leading-relaxed text-orange-600">解説</h3>
+                <h3 class="text-xl/relaxed text-orange-600">解説</h3>
                 <div class="flex items-center gap-2">
                   <span>正解： </span>
                   <span class="flex min-h-[1.5rem] w-fit min-w-[1.5rem] place-content-center rounded-md bg-orange-600 px-1.5 py-1 leading-none text-white">
@@ -120,14 +120,14 @@ import questions from '../../contents/questions';
       <div
         class="js-result-content relative mb-20 flex h-[25rem] w-full flex-col items-center rounded-2xl bg-orange-600 p-2 pb-[7.5rem] pt-10 font-bold text-white lg:mb-6 lg:w-[25rem] lg:rounded-full lg:p-16"
       >
-        <h2 class="border-b-2 border-white text-2xl leading-normal">
+        <h2 class="border-b-2 border-white text-2xl/normal">
           <span class="px-1 font-medium">結果発表</span>
         </h2>
         <div class="flex flex-col items-center gap-1">
           <div class="js-all-correct text-[3.5rem] font-medium">全問正解</div>
           <div class="js-correct-answers flex items-end gap-1.5">
             <span class="pb-1.5">正解</span>
-            <span class="js-correct-answers-number text-[3.5rem] font-medium leading-tight lg:text-[4rem]">0</span>
+            <span class="js-correct-answers-number text-[3.5rem]/tight font-medium lg:text-[4rem]">0</span>
             <span class="pb-1.5">問</span>
           </div>
           <div class="font-medium lg:text-2xl">全{questions.length}問</div>
@@ -150,7 +150,7 @@ import questions from '../../contents/questions';
       <button
         type="submit"
         class={twJoin(
-          'js-reset flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-orange-600 bg-white px-3 py-2.5 text-sm leading-tight text-orange-600 outline-none ring-orange-400 ring-offset-2 transition-all ease-out',
+          'js-reset flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-orange-600 bg-white px-3 py-2.5 text-sm/tight text-orange-600 outline-none ring-orange-400 ring-offset-2 transition-all ease-out',
           'lg:w-fit lg:px-6',
           'hover:bg-orange-600 hover:text-white',
           'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',

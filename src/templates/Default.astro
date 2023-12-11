@@ -1,4 +1,5 @@
 ---
+import { twJoin } from 'tailwind-merge';
 import '../styles/index.css';
 import Footer from '../layouts/Footer.astro';
 
@@ -6,44 +7,52 @@ export interface Props {
   title?: string;
   description?: string;
   ogType?: string;
+  hasBorder?: boolean;
+  isEN?: boolean;
 }
+const { title, description, ogType, hasBorder, isEN } = Astro.props;
 
-const siteName = '「先生にぜひ読んでほしい」すごくわかる著作権と授業 (すごわか)';
-const siteDescription =
-  'このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。';
+const siteName = isEN
+  ? 'A must-read for teachers Understanding Copyright in Classes'
+  : '「先生にぜひ読んでほしい」すごくわかる著作権と授業 (すごわか)';
 
-const { title, description, ogType } = Astro.props;
+const siteDescription = isEN
+  ? 'This material was designed primarily for teachers at educational institutions. This has been produced by AXIES with a grant from the Common Purpose Fund of the Society for the Administration of Remuneration for Public Transmission for School Lessons (SARTRAS).'
+  : 'このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。';
 ---
 
 <!DOCTYPE html>
-<html lang="ja" class="scroll-pt-10 scroll-smooth" dir="ltr">
+<html lang={isEN ? 'en' : 'ja'} class="scroll-pt-10 scroll-smooth" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title ? `${title}｜${siteName}` : siteName}</title>
+    <title>{title ? title + '｜' + siteName : siteName}</title>
     <meta name="description" content={description ?? siteDescription} />
-    <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`} />
+    <link rel="canonical" href={Astro.site + Astro.url.pathname} />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content={ogType ?? 'article'} />
-    <meta property="og:title" content={title ? `${title}｜${siteName}` : siteName} />
+    <meta property="og:title" content={title ? title + '｜' + siteName : siteName} />
     <meta property="og:description" content={description ?? siteDescription} />
-    <meta property="og:url" content={`${Astro.site}/`} />
+    <meta property="og:url" content={Astro.site + '/'} />
     <meta property="og:site_name" content={siteName} />
-    <meta property="og:image" content={`${Astro.site}/im-ogp.png`} />
+    <meta property="og:image" content={Astro.site + '/im-ogp' + (isEN ? '_en' : '') + '.png'} />
     <meta property="og:image:alt" content={siteName} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="apple-touch-icon" sizes="192x192" href={`${Astro.site}/cropped-favicon-192x192.png`} />
-    <meta name="msapplication-TileImage" content={`${Astro.site}/cropped-favicon-270x270.png`} />
+    <link rel="apple-touch-icon" sizes="192x192" href={Astro.site + '/cropped-favicon-192x192.png'} />
+    <meta name="msapplication-TileImage" content={Astro.site + '/cropped-favicon-270x270.png'} />
     <script src="../scripts/index.ts"></script>
   </head>
   <body
-    class="bg-orange-100 font-noto text-[15px] leading-relaxed text-stone-700 antialiased md:text-base md:leading-relaxed"
+    class={twJoin(
+      'font-noto text-[0.9375rem]/relaxed text-stone-700 antialiased md:text-base/relaxed',
+      hasBorder ? 'border-t-4 border-orange-400 bg-orange-100' : 'bg-orange-200'
+    )}
   >
     <slot />
-    <Footer />
+    <Footer isEN={isEN} />
   </body>
 </html>

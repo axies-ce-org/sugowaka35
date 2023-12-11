@@ -1,0 +1,465 @@
+---
+import Section from '../../../components/Section.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import Modal from '../../../components/Modal.astro';
+import ModalTrigger from '../../../components/ModalTrigger.astro';
+import Page from '../../../templates/Page.astro';
+import Quiz from '../../../components/Quiz.astro';
+---
+
+<Page
+  title="Q&A on the Use of Copyrighted Works in the Classroom"
+  description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page explans about the requirements for dealing with third-party copyrighted works in classes in a Q&A format."
+  isEN
+>
+  <Section
+    number="01"
+    title="Q&A on the Use of Copyrighted Works in the Classroom"
+    description="This chapter provides Q&A for specific cases on dealing with third-party copyrighted works in the classroom."
+  >
+    <ul class="my-5 grid gap-2 !p-0 text-3.25/normal font-bold md:my-6 md:flex md:gap-5 md:text-sm/relaxed">
+      <li class="flex list-none gap-2">
+        <span class="h-fit whitespace-nowrap rounded bg-orange-600 px-1.5 text-white md:px-2"> Elementary, middle</span>
+        For elementary school, junior high schools, and high schools
+      </li>
+      <li class="flex list-none gap-2">
+        <span class="h-fit whitespace-nowrap rounded bg-orange-600 px-1.5 text-white md:px-2">High</span>
+        For universities, higher professional schools, etc.
+      </li>
+    </ul>
+
+    <Quiz title="Can I introduce a newspaper article about my school on our website?" number="1" level="both" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="2">
+          My school's activity was featured in the local newspaper and I would like to introduce it. Can I make a PDF of
+          the full article and post it on my school's website?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          In such a case, your activities include "reproduction" and "public transmission" and require the permission of
+          the newspaper as the copyright owner. If the article is available on the newspaper's website, it is no problem
+          for you to put a link to the article on your school's website.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+
+    <Quiz
+      title="Can teachers involved in the creation of jointly produced teaching materials use them?"
+      number="2"
+      level="both"
+      isEN
+    >
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          I've created one material with several class teachers, but some of it is mixed with third-party copyrighted
+          material.<br />Can a teacher use the material in each of the classes by the teachers who participated in the
+          creation? Do they need permission from a third party?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          Even if a third party's copyrighted work is partially included, the teacher can use it as long as the
+          requirements for citation are met, so permission from the third party is not required. Also, since everyone is
+          working together to create one teaching material, it is likely to be a joint work, but of course, it will be
+          agreed that each teacher will use it in their class, so there is no problem in reproducing it in each class or
+          making a public transmission in an online class<ModalTrigger id="c3_1" />.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_1" isEN><p>Article 65(2)</p></Modal>
+
+    <Quiz title="Can I reproduce copyrighted material and provide it to other teachers?" number="3" level="both" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="2">
+          Can I make a copy of my book and give it to another teacher who teaches a different class?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          Article 35(1) cannot apply unless the teacher, etc. in charge of the class takes the initiative to reproduce
+          the material. Since Dr. Konaka is not in charge of that other class, they need the permission of the copyright
+          owner.
+        </Bubble>
+        <Bubble speaker="Daiin" feLevel="2">
+          Then, Dr. Konaka could lend the book to the teacher free of charge, and the teacher who borrowed the book
+          could make a copy.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="1">
+          That would be fine<ModalTrigger id="c3_2" />.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_2" isEN><p>Article 38(4)</p></Modal>
+
+    <Quiz
+      title="I would like to present essays and reports of graduating students to the class."
+      number="4"
+      level="both"
+      isEN
+    >
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="3">
+          I would like to use an excellent essay of a graduating student in my Japanese class this year.
+        </Bubble>
+        <Bubble speaker="Daiin" feLevel="2">
+          I, too, would like to show the excellent reports of the students in last year's class and hand them out to
+          this year's class.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          Since Article 35 applies only to published copyrighted works, the permission of the copyright owner (author)
+          is required in both cases<ModalTrigger id="c3_3" />. You will also need to consider the publication right
+          (Article 18(1)) and the attribution right (Article 19(1)).
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_3" isEN>
+      <p>
+        In the case of minors under 18 years of age, the permission of a parent or guardian is required (Civil Code
+        Articles 4 and 5(1), main text).
+      </p>
+    </Modal>
+
+    <Quiz title="Can I introduce illegal copyrighted materials in class?" number="5" level="high" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          I want to show illegal examples in the class. Like, they're manipulating images of celebrities and uploading
+          them on social media. How can I handle copyrights for illegal stuff?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          The copyright belongs to the person who took the original photo, and there are issues of privacy rights and
+          publicity rights for celebrities, but as long as the teacher explains how the image is illegal and the
+          requirements of the citation, including the master-subject relationship, are met, the image can be used as the
+          citation<ModalTrigger id="c3_4" />.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_4" isEN>
+      <p>
+        There is no requirement that the citation must be taken from a legitimate source. See Tatsuhiro Ueno, <span
+          class="italic">Copyright Guide for Educators and Researchers</span
+        >, Yuhikaku, 2021, p.180.
+      </p>
+    </Modal>
+
+    <Quiz title="Can I show you a film in class?" number="6" level="both" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="3">
+          I have a Netflix subscription, and I would like to show a documentary film on animals to students in my class.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          If Dr. Konaka uses a projector to project onto a screen, it would be a "public communication" and Article 35
+          could apply. I would say, however, if you read Netflix's Terms of Use (4.2), you will find that "The Netflix
+          service and any content accessed through the service are for your personal and non-commercial use only and may
+          not be shared with individuals beyond your household unless otherwise allowed by your subscription plan...You
+          agree not to use the service for public performances"<ModalTrigger id="c3_5" />.<br /><br />Thus, although
+          there are provisions in the law limiting copyrights, attempts to limit them by contract are called
+          “overriding”, and even experts have different opinions on whether contractual limitations should be valid.<br
+          /><br />The Forum is currently discussing this issue, and I must say that it is a difficult issue right now
+          due to the risk of violating the Terms of Use.<br />However, the rules of Netflix also state that some
+          educational original documentaries may be shown only once for educational purposes. Be sure to check the
+          latest Terms of Use.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_5" isEN>
+      <p>
+        Netflix, Terms of Use:
+        <a href="https://help.netflix.com/en/legal/termsofuse" target="_blank" class="block">
+          https://help.netflix.com/en/legal/termsofuse
+        </a>
+      </p>
+      <p class="mt-3">
+        Educational screenings of documentaries: <a
+          href="https://help.netflix.com/en/node/57695"
+          target="_blank"
+          class="block"
+        >
+          https://help.netflix.com/en/node/57695
+        </a>
+      </p>
+    </Modal>
+
+    <Quiz title="Can I post videos of my reading of a story to others on the Internet?" number="7" level="low" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="2">
+          I'm talking about a story for children. Can I upload a video of my reading of a story to a web server so that
+          students can watch it from home at any time?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          That would be the "reproduction" and "public transmission" of the entire story. Therefore, Article 35 cannot
+          apply because it would unreasonably prejudice the interests of the copyright owner.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+
+    <Quiz
+      title="Is there a problem if I arrange a piece of music in a way that makes it easier to practice?"
+      number="8"
+      level="low"
+      isEN
+    >
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="2">
+          Since it is difficult to play an original popular anime song, can the music teacher simply arrange it so that
+          elementary school students can play it as an ensemble with recorders and practice it in class?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          This can be done without permission, as Article 47-6(1)(i) states that translation, musical arrangement,
+          reformation, or adaptation is allowed when Article 35(1) is applicable.
+        </Bubble>
+        <Bubble speaker="Konaka" feLevel="3">Can I play the arranged song at the school concert?</Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          You may think that the limitation of rights in Article 38(1) can apply to school concerts because they are
+          non-profit, free-of-charge performances. However, Article 38(1) applies to the use of copyrighted works as
+          they are, and does not apply to musical arrangements (Article 27) (see Article 47-6(1)). Therefore, the
+          permission of the copyright owner is required<ModalTrigger id="c3_ensokai" />.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_ensokai" isEN>
+      <p>
+        For example, it is possible that a very simple change in instrumentation does not add new creativity and does
+        not constitute a "musical arrangement" under the Copyright Act. In such a case, there may be room for
+        interpretation that if the requirements of Article 38(1) are met, the copyrighted work can be performed publicly
+        and does not constitute an infringement of the integrity right.
+      </p>
+    </Modal>
+
+    <Quiz title="I would like to play recorded TV programs during lunchtime." number="9" level="low" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Konaka" feLevel="2">
+          I would like to play my recorded educational program on the classroom TV during lunchtime.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          School lunch is a "special activity" as stipulated in the Courses of Study, and therefore constitutes a
+          "class". Recording for teaching is "reproduction" and Article 35(1) can apply. <span class="mr-1"
+            >Broadcasting on television is a non-profit, free-of-charge showing, and Article 38(1) can apply</span
+          ><ModalTrigger id="c3_7" />.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_7" isEN>
+      <p>
+        See Tatsuhiro Ueno, <span class="italic">Copyright Guide for Educators and Researchers</span>, Yuhikaku, 2021,
+        p.118.
+      </p>
+    </Modal>
+
+    <Quiz
+      title="What should I care about when dealing with foreign copyrighted work in the classroom?"
+      number="10"
+      level="both"
+      isEN
+    >
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          An English teacher wants students to translate foreign novels. How can I help them with foreign copyrighted
+          work?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          As for foreign copyrighted works, Japan is a signatory to treaties such as the Berne Convention, the Universal
+          Copyright Convention, and the TRIPS Agreement, and is obligated to protect copyrighted works from most
+          countries in the world<ModalTrigger id="c3_8" />.
+        </Bubble>
+        <Bubble speaker="Daiin" feLevel="5">I don't know about foreign laws!</Bubble>
+        <Bubble speaker="Sumiki" feLevel="1">
+          No problem. The Japanese Copyright Act applies when handling foreign copyrighted works in Japan.<br />A
+          teacher's copying of a novel for distribution to students to the extent necessary for translation is a
+          "reproduction" and "translation" under the Copyright Act.<br />If a teacher makes copies to the extent
+          necessary, reproduction is OK because Article 35(1) applies, and translation by students in class is OK under
+          Article 47-6(1)(i).
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_8" isEN>
+      <p>Neighboring rights also have treaty protection obligations under various treaties.</p>
+    </Modal>
+
+    <Quiz title="What should students care about when conducting a Bibliobattle?" number="11" level="high" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          Students want to hold a <ModalTrigger id="c3_9" word="Bibliobattle">Bibliobattle</ModalTrigger> at a school festival.
+          Is there any problem with the Copyright Act?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          A university festival is not a "class" according to the definition of "class" in the Guidelines, so Article 35
+          is not applicable. Introducing the contents in a few minutes may fall under adaptation (Article 27<ModalTrigger
+            id="c3_10"
+          />) for a summary and recitation (Article 24) for a presentation.<br />Whether or not the summary is an
+          "adaptation" is difficult to determine because it depends on the extent to which the content of the book is
+          discussed in the presentation. If the essential expressive features of the copyrighted work cannot be directly
+          perceived, the work is not an "adaptation" and permission from the copyright owner is not required<ModalTrigger
+            id="c3_11"
+          />. This is a case-by-case consideration.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_9" word="Bibliobattle" isEN>
+      <p>
+        Participants are given 5 minutes to introduce what they think is an "interesting" book, and the participants
+        vote on which book they would like to read the most. <br />The Official Website of Bibliobattle: <a
+          href="https://en.bibliobattle.jp/"
+          target="_blank"
+          class="block"
+        >
+          https://en.bibliobattle.jp/
+        </a>
+      </p>
+    </Modal>
+    <Modal id="c3_10" isEN>
+      <p>
+        For the definition of "class", please see "Chapter 2, Section 04: Guidelines for Article 35 of the Amended
+        Copyright Act, 'Class to Which Article 35 Applies'".
+      </p>
+    </Modal>
+    <Modal id="c3_11" isEN>
+      <p>Supreme Court, June 28, 2001, Hanrei-Ji, No. 1754, p.144 (Esashioiwake Case)</p>
+    </Modal>
+
+    <Quiz title="TA wants to distribute last year's exam questions to students." number="12" level="high" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          The <ModalTrigger id="c3_12" word="TA (Teaching Assistant)">TA</ModalTrigger> wants to distribute the exam questions
+          they took last year to everyone.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          Does that mean that past exam questions from multiple classes will be distributed together?
+        </Bubble>
+        <Bubble speaker="Daiin" feLevel="3">That's right.</Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          That makes Article 35 inapplicable.<br />Students taking class A may reproduce only to the extent that it is
+          deemed necessary for the study of class A. Furthermore, the teacher decides whether or not reproduction is
+          necessary for the class, and if the teacher decides that the students must study the past questions, only the
+          part related to class A can be reproduced. The TA is allowed to make a reproduction under the supervision of
+          the school, for example, by using the school's equipment.<br />Or, if the TA shares one of the class sessions
+          as an assistant, they will be a "person in charge of the class", but in this case, only the part of the class
+          A session that they are in charge of can be reproduced.<br />I would need to get permission to distribute a
+          compilation of past exam questions from classes A, B, C, and D.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_12" word="TA (Teaching Assistant)" isEN>
+      <p>A student who assists in a class.</p>
+    </Modal>
+
+    <Quiz
+      title={'Is a student who has not registered for this class considered a "person taking classes"?'}
+      number="13"
+      level="high"
+      isEN
+    >
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          Universities have a registration period, and students who are not registered and are provisionally registered
+          can take classes. A student can take the first of a total of eight classes and then not register for the main
+          class. In that case, would that provisionally registered student be considered a "person taking classes" under
+          Article 35?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          The "class" in Article 35 is a class even if it is only one class, and if you have taken the class properly
+          even once, you would be considered a person taking classes. However, if the class materials include a third
+          party's copyrighted work, it would be better to avoid distributing all eight materials in the first class. It
+          is easy to be judged as exceeding the scope of what is necessary, and it may also unreasonably prejudice the
+          interests of the copyright owner.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+
+    <Quiz
+      title="Is there a problem with photocopying my paper and distributing copies to students?"
+      number="14"
+      level="high"
+      isEN
+    >
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="1">
+          My paper is very informative and I want to distribute it to my students for their reading. No problem, right?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          If the copyright owner is Dr. Daiin, there is no problem. However, you may have assigned the copyright to an
+          academic society or publisher. In that case, you should be careful. First, check the copyright regulations of
+          the academic society or publisher. In many cases, it will be written for your use.
+        </Bubble>
+        <Bubble speaker="Daiin" feLevel="5">It's mine.</Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          Many academic journals have regulations such as "Copyright belongs to the Society from the time the final
+          manuscript is submitted to the Society", in which case the authors of the paper do not have copyrights.
+          <br />Moral rights that cannot be transferred may also be stated, such as "The author shall not exercise moral
+          rights”.<br />You should check these regulations carefully when submitting your paper.<br />Even if it is
+          difficult to do so under the regulations of society, Article 32 can apply as long as the requirements for
+          citation are met, and if it is necessary in the course of teaching, Article 35 may apply if it is a part of a
+          paper.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+
+    <Quiz title="Can I distribute a whole paper to students?" number="15" level="high" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          I would like to have a class in which students read an English paper from beginning to end and present its
+          contents. May I distribute one whole paper to the students?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          While it is a basic premise that the entire paper is required to be read through, various aspects need to be
+          considered when distributing a whole paper. According to the Guidelines, if the full text of a paper is
+          necessary for a class, it is highly likely that reproduction or public transmission of the whole paper will
+          not unreasonably prejudice the interests of the copyright owner if it is not necessarily reasonable for each
+          student to purchase the paper itself or a collection of papers, considering the following factors:
+          <ul class="mt-2">
+            <li>If the paper or collection of papers is readily available.</li>
+            <li>
+              If the paper has been published in a book of papers or other publication.
+              <ul class="mt-1">
+                <li>Number of papers in all publications.</li>
+                <li>
+                  The state of distribution of the publication and whether it is intended for the intended audience at
+                  the time of the original publication.
+                </li>
+                <li>Whether the publication has been in existence for a reasonable period after publication.</li>
+              </ul>
+            </li>
+          </ul>
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+
+    <Quiz title="Can I still use the course materials after the enrollment period?" number="16" level="high" isEN>
+      <SpeechBubbles>
+        <Bubble speaker="Daiin" feLevel="4">
+          My first-semester class is from April to the end of September, but once October comes, can't I put the course
+          materials on the LMS course any longer?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          Educational materials containing third-party copyrighted material can only be publicly transmitted on the LMS
+          for the period of the class. The materials should be removed after the period or their settings should be
+          changed so that students cannot access them.<br />It is difficult to determine when the class period begins
+          and ends, but in the case of universities, it seems safe to assume that the class period lasts until the
+          evaluation of grades and credits is completed.<br /><br />In addition, in classes that are supposed to be
+          taken in stages, such as "Exercise 1" and "Exercise 2", it would fall within "in the course of class" to allow
+          students to view the material from Exercise 1 during the class period of Exercise 2 as well<ModalTrigger
+            id="c3_13"
+          />.<br />This is because the Guidelines state that preparation and review are also "in the course of classes",
+          and if there is a content relationship between Exercise 1 and Exercise 2, then the materials for Exercise 1
+          are equivalent to those for review.<br />In addition, as explained at the end of "Chapter 2, Section 04:
+          Guidelines for Article 35 of the Amended Copyright Act", the possibility of continued use of educational
+          materials outside the period of a class is under consideration to be covered by the <ModalTrigger
+            id="c3_14"
+            word="SARTRAS License"
+          >
+            SARTRAS license
+          </ModalTrigger>.
+        </Bubble>
+      </SpeechBubbles>
+    </Quiz>
+    <Modal id="c3_13" isEN>
+      <p>
+        See Tatsuhiro Ueno, <span class="italic">Copyright Guide for Educators and Researchers</span>, Yuhikaku, 2021,
+        p.55.
+      </p>
+    </Modal>
+    <Modal id="c3_14" word="SARTRAS License" isEN>
+      <p>
+        As of November 2022, the SARTRAS licensing system is being considered to allow the use of copyrighted works that
+        are not covered by Article 35 and compensation without permission.<br />This system would allow reproduction and
+        public transmission beyond the scope of compensation by paying a license fee. The scope and form of use are
+        still under consideration.
+      </p>
+    </Modal>
+  </Section>
+</Page>

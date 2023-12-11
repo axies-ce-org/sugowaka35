@@ -1,4 +1,5 @@
 ---
+import { twJoin } from 'tailwind-merge';
 import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {
@@ -15,17 +16,22 @@ const { href, title, submenu } = Astro.props;
 const isCurrent = href === Astro.url.pathname;
 ---
 
-<li
-  class={`${
-    isCurrent &&
-    "relative before:absolute before:left-[7.5px] before:top-5 before:h-[calc(100%-32px)] before:w-px before:bg-stone-200 before:content-[''] md:before:top-[14.5px]"
-  } border-b border-stone-200 last-of-type:border-0 md:border-0`}
->
+<li class="border-b border-stone-200 last:border-0 md:border-0">
   <a
     href={href}
-    class={`flex gap-2.5 py-3 pr-2 before:mx-[2.5px] before:mt-[6.5px] before:block before:h-[11px] before:min-h-[11px] before:w-[11px] before:min-w-[11px] before:rounded-full before:border before:border-white before:content-[''] md:px-0 ${
-      isCurrent ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2' : 'before:bg-stone-500 md:py-1'
-    }`}
+    class={twJoin(
+      'relative flex gap-2.5 py-3 pr-2 md:px-0',
+      'before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white',
+      isCurrent && submenu
+        ? twJoin(
+            'text-orange-600 md:py-2',
+            'before:z-30 before:bg-orange-500',
+            'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200'
+          )
+        : isCurrent
+        ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2'
+        : 'before:bg-stone-500 md:py-1'
+    )}
   >
     <div class="flex w-full items-center">
       <p class="flex-1">{title}</p>
@@ -34,7 +40,7 @@ const isCurrent = href === Astro.url.pathname;
         width="16"
         height="16"
         alt=""
-        class={`md:hidden ${isCurrent && 'hidden'}`}
+        class={twJoin('md:hidden', isCurrent && 'hidden')}
         decoding="async"
       />
     </div>
@@ -44,10 +50,21 @@ const isCurrent = href === Astro.url.pathname;
       <ul id="fixed-toc">
         {submenu.map(({ title, href }) => {
           return (
-            <li class="relative last-of-type:after:absolute last-of-type:after:left-[7.5px] last-of-type:after:top-5 last-of-type:after:h-4 last-of-type:after:w-px last-of-type:after:bg-white last-of-type:after:content-[''] md:last-of-type:after:top-[13.75px] md:last-of-type:after:h-8">
+            <li
+              class={
+                isCurrent &&
+                twJoin(
+                  'relative',
+                  'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 last:after:hidden'
+                )
+              }
+            >
               <a
                 href={href}
-                class="flex gap-2.5 py-3 pr-2 text-sm font-normal before:z-30 before:mx-[3.5px] before:mt-[6.75px] before:block before:h-[9px] before:min-h-[9px] before:w-[9px] before:min-w-[9px] before:rounded-full before:border before:border-white before:bg-stone-500 md:py-1.5 md:leading-relaxed"
+                class={twJoin(
+                  'flex gap-2.5 py-3 pr-2 text-sm font-normal md:py-1.5 md:leading-relaxed',
+                  'before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500'
+                )}
               >
                 {title}
               </a>
