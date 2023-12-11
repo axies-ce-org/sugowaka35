@@ -12,11 +12,9 @@ const currentSlug = Astro.url.pathname;
 ---
 
 <>
-  <header
-    class="absolute left-0 top-0 z-10 flex h-[3.6875rem] items-center px-4 pb-1.5 md:top-1 md:mx-auto md:mt-[2.6875rem] md:h-11 md:px-10 md:pb-0"
-  >
-    {
-      img !== 'none' && (
+  {
+    img !== 'none' && (
+      <header class="absolute left-0 top-0 z-10 flex h-[3.6875rem] items-center px-4 pb-1.5 md:top-1 md:mx-auto md:mt-[2.6875rem] md:h-11 md:px-10 md:pb-0">
         <a href={'/' + (isEN ? 'en/' : '')} class="inline-block w-[13.625rem] font-bold md:w-[21.25rem]">
           <img
             src={'/assets/images/logo' + (isEN ? '_en' : '') + '.svg'}
@@ -30,13 +28,14 @@ const currentSlug = Astro.url.pathname;
             height="44"
           />
         </a>
-      )
-    }
-  </header>
+      </header>
+    )
+  }
   <div
     class={twJoin(
-      'sticky top-[1.03125rem] z-20 ml-auto flex w-fit items-center justify-end gap-4',
-      'md:top-4 md:mt-[2.9375rem] md:max-w-[72.5rem]'
+      'sticky z-20 ml-auto flex w-fit items-center justify-end gap-4',
+      'md:max-w-[72.5rem]',
+      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0'
     )}
   >
     <div class="flex items-center rounded-2xl bg-white p-1 text-[0.6875rem]/normal font-bold md:text-xs/normal">
