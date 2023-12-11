@@ -1,14 +1,20 @@
 ---
+import { twJoin } from 'tailwind-merge';
+
 type Props = {
   number: string;
   title: string;
   description?: string;
+  marginTop?: boolean;
 };
 
-const { number, title, description } = Astro.props;
+const { number, title, description, marginTop } = Astro.props;
 ---
 
-<section id={'sec-' + number} class="section-top overflow-hidden rounded-2xl bg-white">
+<section
+  id={'sec-' + number}
+  class={twJoin('section-top overflow-hidden rounded-2xl bg-white', marginTop && 'mt-6 md:mt-10')}
+>
   <div class="flex flex-col bg-orange-200 px-3 py-5 md:px-6 md:py-10 lg:p-10">
     <div class="flex gap-2 md:gap-6 lg:gap-10">
       <div class="font-inter">

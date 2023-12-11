@@ -78,6 +78,7 @@ import Page from '../../../templates/Page.astro';
     number="02"
     title="Citation (Article 32(1))"
     description={'This section explains "Citation" under the Copyright Act. There are many requirements regarding "Citation", and there are many explanations, but please try your best to read them.'}
+    marginTop
   >
     <h3>What is a citation?</h3>
     <SpeechBubbles>
@@ -320,6 +321,7 @@ import Page from '../../../templates/Page.astro';
     number="03"
     title="Reproduction, etc. for class purposes (Article 35)"
     description="This section describes Article 35, which governs reproduction and public transmission for classroom purposes. It also explains what happened when Article 35 was amended in 2018."
+    marginTop
   >
     <h3>Limitations on rights when dealing with copyrighted works in the classroom</h3>
     <p>
@@ -456,19 +458,19 @@ import Page from '../../../templates/Page.astro';
     </Modal>
     <ImgCaption id="ref15">
       <figcaption>[Permission for public transmission]</figcaption>
-      <table class="text-3.25/tight md:text-sm/tight">
+      <table class="text-3.25/tight md:text-sm/tight [&_td]:break-all [&_th]:break-all">
         <thead>
           <tr>
             <th rowspan="2">Type of class</th>
-            <th rowspan="2" class="md::max-w-[7rem] max-w-[5.75rem]">Where students participate in class</th>
-            <th>Distribution of learning materials‡</th>
-            <th>Public communication</th>
+            <th rowspan="2" class="max-w-[5.75rem] md:max-w-[5rem]">Where students participate in class</th>
+            <th class="max-w-[5.75rem] md:max-w-[5rem]">Distribution of learning materials‡</th>
+            <th class="max-w-[5.75rem] break-words md:max-w-[5rem]">Public communication</th>
             <th colspan="2">Public transmission of mataerials</th>
             <th colspan="2">Public transmission of classes</th>
           </tr>
           <tr>
             <th>In classroom</th>
-            <th class="md::max-w-[7rem] max-w-[5.75rem]">In classroom</th>
+            <th class="max-w-[5.75rem] break-words md:max-w-[5rem]">In classroom</th>
             <th>in class time</th>
             <th>out of class time</th>
             <th>Live</th>
@@ -641,6 +643,7 @@ import Page from '../../../templates/Page.astro';
     number="04"
     title="Amended Copyright Act Article 35 Guidelines"
     description="This section describes the Guidelines prepared by the Forum, which explain how to operate and make decisions when applying Article 35."
+    marginTop
   >
     <h3>Guidelines for Article 35 under the Amended Copyright Act</h3>
     <p>
