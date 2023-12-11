@@ -122,20 +122,20 @@
 	}
 }
 #js-nav.active {
-	@apply -translate-x-full;
+	@apply translate-x-0 opacity-100;
 }
 
 #js-hamburger.active {
 	@apply text-transparent;
 
 	.hamburger {
-		span:first {
+		span:first-of-type {
 			@apply translate-y-[0.3125rem] scale-[1.06] rotate-45;
 		}
 		span:nth-of-type(2) {
 			@apply scale-0;
 		}
-		span:last {
+		span:last-of-type {
 			@apply translate-y-[-0.3125rem] scale-[1.06] -rotate-45;
 		}
 	}

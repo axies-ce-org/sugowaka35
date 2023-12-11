@@ -12,15 +12,15 @@ const { sidebar, isEN } = Astro.props;
 <div
   id="js-nav"
   class={twJoin(
-    'fixed left-full top-0 translate-x-0 transition-transform duration-300',
+    'fixed inset-0 z-10 translate-x-full opacity-0 transition-[opacity_transform] duration-300',
     'print:hidden',
-    'md:sticky md:left-auto md:right-0 md:top-[5.5rem] md:block md:max-h-[100vh-2.5rem]',
+    'md:sticky md:bottom-0 md:left-auto md:right-0 md:top-[3.875rem] md:mb-10 md:block md:max-h-[100vh-2.5rem] md:translate-x-0 md:opacity-100 md:transition-none',
     sidebar === 'none' && 'md:hidden'
   )}
 >
   <nav
     class={twJoin(
-      'z-20 min-h-screen w-screen bg-white px-4 pb-6 pt-14',
+      'z-20 min-h-screen w-full bg-white px-4 pb-6 pt-14',
       'md:min-h-0 md:w-60 md:rounded-2xl md:p-5',
       'lg:w-[17.5rem] lg:p-6'
     )}
