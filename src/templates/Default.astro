@@ -30,7 +30,7 @@ const siteDescription = isEN
     <title>{title ? title + '｜' + siteName : siteName}</title>
     <meta name="description" content={description ?? siteDescription} />
     <link rel="canonical" href={Astro.site + Astro.url.pathname} />
-    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale" content={isEN ? 'en_US' : 'ja_JP'} />
     <meta property="og:type" content={ogType ?? 'article'} />
     <meta property="og:title" content={title ? title + '｜' + siteName : siteName} />
     <meta property="og:description" content={description ?? siteDescription} />
