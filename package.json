@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">= 16"
+    "node": ">= 18"
   },
   "scripts": {
     "lint": "eslint src",
@@ -11,13 +11,7 @@
     "start": "npm run dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "run-s build deploy:*",
-    "deploy:init": "git init -b static static",
-    "deploy:remote": "git -C static remote add origin https://github.com/ixkaito/sugowaka35.git",
-    "deploy:add": "git -C static add -A",
-    "deploy:commit": "git -C static commit -m 'Deploy'",
-    "deploy:push": "git -C static push -f origin static"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
