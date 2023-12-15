@@ -85,16 +85,15 @@ import Page from '../../../templates/Page.astro';
               <img
                 src={src}
                 alt={'Illustration of the' + name + "'s portrait."}
-                width="80"
-                height="80"
-                decoding="async"
+                width="480"
+                height="480"
                 class="h-auto w-20"
               />
               <div>
-                <h6 class="font-bold">
+                <p class="font-bold">
                   <span class="mr-[1rem] text-orange-600">{title}</span>
                   {name}
-                </h6>
+                </p>
                 <p>{text}</p>
               </div>
             </li>
@@ -105,16 +104,9 @@ import Page from '../../../templates/Page.astro';
     <h3>Team for Understanding Copyright in Classes Web</h3>
     <ul class="!p-0">
       <li class="grid list-none items-center gap-4 pb-4 md:flex md:items-start md:pb-5">
-        <img
-          src="/assets/images/kiteretz.png"
-          alt="KITERETZ inc. Logo"
-          width="80"
-          height="80"
-          decoding="async"
-          class="h-auto w-20"
-        />
+        <img src="/assets/images/kiteretz.png" alt="KITERETZ inc. Logo" width="480" height="480" class="h-auto w-20" />
         <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">Website Design</span>KITERETZ inc.</h6>
+          <p class="font-bold"><span class="mr-[1rem] text-orange-600">Website Design</span>KITERETZ inc.</p>
           <p>
             A web design company that handles web design, graphic design, logo design, and system development. The
             company boasts a wealth of experience and always provides high-quality services incorporating the latest
@@ -124,7 +116,7 @@ import Page from '../../../templates/Page.astro';
       </li>
     </ul>
   </Section>
-  <Section number="02" title="This Project" marginTop>
+  <Section number="02" title="This Project">
     <p>
       This material was designed primarily for teachers at educational institutions to explain what they need to know
       when dealing with third-party copyrighted works in the classroom.
@@ -162,7 +154,7 @@ import Page from '../../../templates/Page.astro';
       This material has been produced with a grant from the Common Purpose Fund of the Society for the Administration of
       Remuneration for Public Transmission for School Lessons (SARTRAS).
     </p>
-    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="120" loading="lazy" decoding="async" />
+    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="468" height="413" />
     <p>
       We are striving to improve the content of this material. Please send us your comments at the URL below. We
       appreciate your cooperation.<a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block"
@@ -170,7 +162,7 @@ import Page from '../../../templates/Page.astro';
       >
     </p>
   </Section>
-  <Section number="03" title="License" marginTop>
+  <Section number="03" title="License">
     <p>
       This material is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">
         Creative Commons Attribution 4.0 International License (CC BY 4.0)

@@ -19,7 +19,7 @@ const { type, title, id, tag, titleStyle } = Astro.props;
     )
   }
   <div class="rounded-2xl bg-stone-100 p-3 md:p-4">
-    {title && <h6 class={titleStyle !== 'normal' && 'mb-0.5 text-base/relaxed font-bold text-orange-600'}>{title}</h6>}
+    {title && <p class={titleStyle !== 'normal' && 'mb-0.5 text-base/relaxed font-bold text-orange-600'}>{title}</p>}
     <slot />
   </div>
 </div>

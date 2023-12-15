@@ -34,14 +34,13 @@ const isCurrent = href === Astro.url.pathname;
     )}
   >
     <div class="flex w-full items-center">
-      <p class="flex-1">{title}</p>
+      <p>{title}</p>
       <img
         src="/assets/images/chevron-right.svg"
         width="16"
         height="16"
         alt=""
-        class={twJoin('md:hidden', isCurrent && 'hidden')}
-        decoding="async"
+        class={twJoin('ml-auto md:hidden', isCurrent && 'hidden')}
       />
     </div>
   </a>

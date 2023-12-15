@@ -57,19 +57,12 @@ import Page from '../../templates/Page.astro';
                 'first:border-none md:first:pt-0'
               )}
             >
-              <img
-                src={src}
-                alt={name + 'の似顔絵イラスト'}
-                width="80"
-                height="80"
-                decoding="async"
-                class="h-auto w-20"
-              />
+              <img src={src} alt={name + 'の似顔絵イラスト'} width="480" height="480" class="h-auto w-20" />
               <div>
-                <h6 class="font-bold">
+                <p class="font-bold">
                   <span class="mr-[1rem] text-orange-600">{title}</span>
                   {name}
-                </h6>
+                </p>
                 <p>{text}</p>
               </div>
             </li>
@@ -83,13 +76,12 @@ import Page from '../../templates/Page.astro';
         <img
           src="/assets/images/kiteretz.png"
           alt="株式会社キテレツのロゴ"
-          width="80"
-          height="80"
-          decoding="async"
+          width="480"
+          height="480"
           class="h-auto w-20"
         />
         <div>
-          <h6 class="font-bold"><span class="mr-[1rem] text-orange-600">Webサイト制作</span>株式会社キテレツ</h6>
+          <p class="font-bold"><span class="mr-[1rem] text-orange-600">Webサイト制作</span>株式会社キテレツ</p>
           <p>
             ウェブ制作を中心に、グラフィックデザインやロゴデザイン、システム開発などを手がける制作会社。豊富な実績を誇り、常に最新の技術を取り入れたクオリティの高いサービスを提供しています。オフィスのデロンギ全自動コーヒーマシンが作るカプチーノが美味しい。
           </p>
@@ -97,7 +89,7 @@ import Page from '../../templates/Page.astro';
       </li>
     </ul>
   </Section>
-  <Section number="02" title="おわりに" marginTop>
+  <Section number="02" title="おわりに">
     <p>
       このサイトでは、教育機関の先生方を対象として、主に授業で第三者の著作物を扱う際に必要な知識について説明しました。
     </p>
@@ -131,14 +123,14 @@ import Page from '../../templates/Page.astro';
     <p>
       このサイトは、一般社団法人授業目的公衆送信補償金等管理協会（SARTRAS）の共通目的基金の助成を受けて制作されています。
     </p>
-    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="120" loading="lazy" decoding="async" />
+    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="468" height="413" />
     <p>
       このサイトの内容向上に関するアンケートを行っています。下記のURLからご意見をお寄せください。ご協力をよろしくお願いいたします。
       <a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block">https://forms.gle/a1XxvJU1xebuKaS26</a
       >
     </p>
   </Section>
-  <Section number="03" title="ライセンス" marginTop>
+  <Section number="03" title="ライセンス">
     <p>
       このサイトは、<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">
         クリエイティブ・コモンズ 表示 4.0 国際ライセンス（CC BY 4.0）

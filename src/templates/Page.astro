@@ -18,7 +18,7 @@ const { title, description, ogType, isEN } = Astro.props;
     <Header isEN={isEN} />
     <h1 class="mt-[1.6875rem] text-base font-bold text-stone-800 md:mt-[0.875rem]">{title}</h1>
     <div class="mt-6 flex items-start gap-7 md:mt-10 md:h-full lg:gap-10">
-      <main class="w-[47.5rem]">
+      <main class="grid w-[47.5rem] gap-6 md:gap-10">
         <slot />
       </main>
       <Menu isEN={isEN} />
