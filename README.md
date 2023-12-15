@@ -1,6 +1,6 @@
 # すごわか
 
-「すごくわかる 著作権と授業 Web」の HTML ファイルは、このリポジトリの `static` ブランチで取得できます。
+「すごくわかる 著作権と授業 Web」の HTML ファイルは、このリポジトリの [`static`](https://github.com/axies-ce-org/sugowaka35/tree/static) ブランチで取得できます。
 
 https://github.com/axies-ce-org/sugowaka35/tree/static
 
