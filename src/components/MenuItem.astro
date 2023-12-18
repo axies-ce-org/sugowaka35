@@ -20,7 +20,7 @@ const isCurrent = href === Astro.url.pathname;
   <a
     href={href}
     class={twJoin(
-      'relative flex gap-2.5 py-3 pr-2 md:px-0',
+      'relative flex gap-2.5 py-3 pr-2 hover:text-orange-600 md:px-0',
       'before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white',
       isCurrent && submenu
         ? twJoin(
@@ -61,7 +61,7 @@ const isCurrent = href === Astro.url.pathname;
               <a
                 href={href}
                 class={twJoin(
-                  'flex gap-2.5 py-3 pr-2 text-sm font-normal md:py-1.5 md:leading-relaxed',
+                  'flex gap-2.5 py-3 pr-2 text-sm font-normal hover:text-orange-600 md:py-1.5 md:leading-relaxed',
                   'before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500'
                 )}
               >

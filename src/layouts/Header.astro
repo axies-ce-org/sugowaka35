@@ -42,7 +42,7 @@ const currentSlug = Astro.url.pathname;
         href={isEN ? '' : '/en' + currentSlug}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'bg-orange-600 text-white' : 'text-gray-600'
+          isEN ? 'bg-orange-600 text-white' : 'text-gray-600 hover:text-orange-600'
         )}
       >
         En<span class="hidden md:inline">glish</span>
@@ -51,7 +51,7 @@ const currentSlug = Astro.url.pathname;
         href={isEN ? currentSlug.replace('/en', '') : ''}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'text-gray-600' : 'bg-orange-600 text-white'
+          isEN ? 'text-gray-600 hover:text-orange-600' : 'bg-orange-600 text-white'
         )}
       >
         Ja<span class="hidden md:inline">panese</span>
