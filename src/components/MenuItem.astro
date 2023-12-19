@@ -20,17 +20,17 @@ const isCurrent = href === Astro.url.pathname;
   <a
     href={href}
     class={twJoin(
-      'relative flex gap-2.5 py-3 pr-2 md:px-0',
+      'relative flex gap-2.5 py-3 pr-2 hover:text-orange-600 md:px-0 md:py-2',
       'before:mx-[0.15625rem] before:mt-[0.40625rem] before:block before:h-[0.6875rem] before:min-h-[0.6875rem] before:w-[0.6875rem] before:min-w-[0.6875rem] before:rounded-full before:border before:border-white',
       isCurrent && submenu
         ? twJoin(
-            'text-orange-600 md:py-2',
+            'text-orange-600',
             'before:z-30 before:bg-orange-500',
-            'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200'
+            'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200',
           )
         : isCurrent
-        ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2'
-        : 'before:bg-stone-500 md:py-1'
+          ? 'text-orange-600 before:z-30 before:bg-orange-500 md:py-2'
+          : 'before:bg-stone-500',
     )}
   >
     <div class="flex w-full items-center">
@@ -46,7 +46,7 @@ const isCurrent = href === Astro.url.pathname;
   </a>
   {
     isCurrent && submenu && (
-      <ul id="fixed-toc">
+      <ul id="fixed-toc" class="md:pb-1">
         {submenu.map(({ title, href }) => {
           return (
             <li
@@ -54,15 +54,15 @@ const isCurrent = href === Astro.url.pathname;
                 isCurrent &&
                 twJoin(
                   'relative',
-                  'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 last:after:hidden'
+                  'after:absolute after:left-[0.46875rem] after:top-5 after:h-full after:w-px after:bg-stone-200 last:after:hidden',
                 )
               }
             >
               <a
                 href={href}
                 class={twJoin(
-                  'flex gap-2.5 py-3 pr-2 text-sm font-normal md:py-1.5 md:leading-relaxed',
-                  'before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500'
+                  'flex gap-2.5 py-3 pr-2 text-sm font-normal hover:text-orange-600 md:py-1.5 md:leading-relaxed',
+                  'before:z-30 before:mx-[0.21875rem] before:mt-[0.421875rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500',
                 )}
               >
                 {title}

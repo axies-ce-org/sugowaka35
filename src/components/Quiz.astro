@@ -20,7 +20,7 @@ const { title, number, list, level, isEN } = Astro.props;
       <span class="text-[2.5rem]/none font-medium text-orange-600 md:text-[3.5rem]/none">
         Q{number && number}
       </span>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-3">
         {title}
         {
           level && (
@@ -30,7 +30,7 @@ const { title, number, list, level, isEN } = Astro.props;
                   'list-none rounded px-1.5 md:px-2',
                   level === 'both' || level === 'low'
                     ? 'bg-orange-600 text-white'
-                    : 'border border-slate-300 bg-white text-slate-300'
+                    : 'border border-slate-300 bg-white text-slate-300',
                 )}
               >
                 {isEN ? 'Elementary, middle' : '初等・中等'}
@@ -40,7 +40,7 @@ const { title, number, list, level, isEN } = Astro.props;
                   'list-none rounded px-1.5 md:px-2',
                   level === 'both' || level === 'high'
                     ? 'bg-orange-600 text-white'
-                    : 'border border-slate-300 bg-white text-slate-300'
+                    : 'border border-slate-300 bg-white text-slate-300',
                 )}
               >
                 {isEN ? 'High' : '高等'}

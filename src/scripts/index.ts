@@ -1,7 +1,7 @@
 import MicroModal from 'micromodal';
 
 // サイドバー ハイライト
-const headings = document.querySelectorAll('.section-top');
+const headings = document.querySelectorAll('.js-section-top');
 
 window.addEventListener('scroll', function () {
   const scroll = window.scrollY; //スクロール量を取得

@@ -34,7 +34,7 @@ const currentSlug = Astro.url.pathname;
     class={twJoin(
       'sticky z-20 ml-auto flex w-fit items-center justify-end gap-4',
       'md:max-w-[72.5rem]',
-      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0'
+      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0',
     )}
   >
     <div class="flex items-center rounded-2xl bg-white p-1 text-[0.6875rem]/normal font-bold md:text-xs/normal">
@@ -42,8 +42,9 @@ const currentSlug = Astro.url.pathname;
         href={isEN ? '' : '/en' + currentSlug}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'bg-orange-600 text-white' : 'text-gray-600'
+          isEN ? 'bg-orange-600 text-white' : 'text-gray-600 hover:text-orange-600',
         )}
+        aria-label="English"
       >
         En<span class="hidden md:inline">glish</span>
       </a>
@@ -51,8 +52,9 @@ const currentSlug = Astro.url.pathname;
         href={isEN ? currentSlug.replace('/en', '') : ''}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'text-gray-600' : 'bg-orange-600 text-white'
+          isEN ? 'text-gray-600 hover:text-orange-600' : 'bg-orange-600 text-white',
         )}
+        aria-label="Japanese"
       >
         Ja<span class="hidden md:inline">panese</span>
       </a>

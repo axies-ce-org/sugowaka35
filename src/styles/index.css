@@ -117,8 +117,10 @@
 	}
 	/* --- /table styles --- */
 
-	figcaption {
-		@apply text-3.25/normal md:text-sm/normal;
+	.img-caption {
+		figcaption {
+			@apply text-3.25/normal md:text-sm/normal;
+		}
 	}
 }
 #js-nav.active {
