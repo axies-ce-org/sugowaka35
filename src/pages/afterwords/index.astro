@@ -9,7 +9,7 @@ import Page from '../../templates/Page.astro';
   description="主に教育機関で授業をされている先生を対象に著作権について説明している当ウェブサイトの、制作チーム紹介とあとがきのページです。"
 >
   <Section number="01" title="制作チーム紹介">
-    <h3><span class="block text-[1rem]">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業」制作チーム</h3>
+    <h3><span class="block text-base">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業」制作チーム</h3>
     <ul class="!p-0">
       {
         [
@@ -57,10 +57,16 @@ import Page from '../../templates/Page.astro';
                 'first:border-none md:first:pt-0'
               )}
             >
-              <img src={src} alt={name + 'の似顔絵イラスト'} width="480" height="480" class="h-auto w-20" />
+              <img
+                src={src}
+                alt={name + 'の似顔絵イラスト'}
+                width="480"
+                height="480"
+                class="h-auto w-20"
+              />
               <div>
                 <p class="font-bold">
-                  <span class="mr-[1rem] text-orange-600">{title}</span>
+                  <span class="mr-4 text-orange-600">{title}</span>
                   {name}
                 </p>
                 <p>{text}</p>
@@ -70,7 +76,7 @@ import Page from '../../templates/Page.astro';
         })
       }
     </ul>
-    <h3><span class="block text-[1rem]">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業Web」制作チーム</h3>
+    <h3><span class="block text-base">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業Web」制作チーム</h3>
     <ul class="!p-0">
       <li class="grid list-none items-center gap-4 pb-4 md:flex md:items-start md:pb-5">
         <img
@@ -81,7 +87,7 @@ import Page from '../../templates/Page.astro';
           class="h-auto w-20"
         />
         <div>
-          <p class="font-bold"><span class="mr-[1rem] text-orange-600">Webサイト制作</span>株式会社キテレツ</p>
+          <p class="font-bold"><span class="mr-4 text-orange-600">Webサイト制作</span>株式会社キテレツ</p>
           <p>
             ウェブ制作を中心に、グラフィックデザインやロゴデザイン、システム開発などを手がける制作会社。豊富な実績を誇り、常に最新の技術を取り入れたクオリティの高いサービスを提供しています。オフィスのデロンギ全自動コーヒーマシンが作るカプチーノが美味しい。
           </p>
@@ -123,7 +129,13 @@ import Page from '../../templates/Page.astro';
     <p>
       このサイトは、一般社団法人授業目的公衆送信補償金等管理協会（SARTRAS）の共通目的基金の助成を受けて制作されています。
     </p>
-    <img src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png" alt="" width="468" height="413" />
+    <img
+      src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png"
+      alt="共通目的事業・助成事業を行うサートラスのロゴ"
+      width="468"
+      height="413"
+      class="w-[12rem]"
+    />
     <p>
       このサイトの内容向上に関するアンケートを行っています。下記のURLからご意見をお寄せください。ご協力をよろしくお願いいたします。
       <a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block">https://forms.gle/a1XxvJU1xebuKaS26</a
