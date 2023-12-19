@@ -15,17 +15,17 @@ const { sidebar, isEN } = Astro.props;
     'fixed inset-0 z-10 translate-x-full opacity-0 transition-[opacity_transform] duration-300',
     'print:hidden',
     'md:sticky md:bottom-0 md:left-auto md:right-0 md:top-[3.875rem] md:block md:max-h-[100vh-2.5rem] md:translate-x-0 md:opacity-100 md:transition-none',
-    sidebar === 'none' && 'md:hidden'
+    sidebar === 'none' && 'md:hidden',
   )}
 >
   <nav
     class={twJoin(
       'z-20 min-h-screen w-full bg-white px-4 pb-6 pt-14',
       'md:min-h-0 md:w-60 md:rounded-2xl md:p-5',
-      'lg:w-[17.5rem] lg:p-6'
+      'lg:w-[17.5rem] lg:p-6',
     )}
   >
-    <ul class="text-[1.0625rem]/normal font-bold text-stone-800 md:flex md:flex-col md:gap-2 md:text-base">
+    <ul class="text-[1.0625rem]/normal font-bold text-stone-800 md:flex md:flex-col md:text-base">
       <MenuItem
         href={'/' + (isEN ? 'en/' : '') + 'introduction/'}
         title={isEN ? 'Introduction' : 'はじめに'}
