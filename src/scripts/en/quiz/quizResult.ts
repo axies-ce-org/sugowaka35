@@ -3,7 +3,7 @@ const illustrationParentClassNames = ['!-bottom-16', 'md:!justify-center', 'md:!
 const resultContent = {
   all: {
     messageContent: 'Great!',
-    imageFileName: 'all',
+    imageFileName: 'all_en',
   },
   above80: {
     messageContent: 'Well done!',
