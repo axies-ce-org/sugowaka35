@@ -17,7 +17,9 @@ const { id, word, isEN } = Astro.props;
   {
     word ? (
       <>
-        <span class="underline underline-offset-2 group-hover:no-underline">{word}</span>
+        <span class="underline underline-offset-2 group-hover:no-underline" aria-hidden="true">
+          {word}
+        </span>
         <img src="/assets/images/question.svg" alt="" class="mx-0.5 mb-0.5 inline" width="16" height="16" />
       </>
     ) : (
