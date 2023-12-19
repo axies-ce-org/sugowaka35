@@ -4,7 +4,7 @@ module.exports = {
     tailwindcss: {
       callees: ['twMerge', 'twJoin'],
       classRegex: '^(active)?[cC]lass(Name)?$',
-      whitelist: ['js-.*'],
+      whitelist: ['js-.+', 'modal__.+'],
     },
   },
   parser: '@typescript-eslint/parser',
