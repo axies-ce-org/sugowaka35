@@ -11,8 +11,7 @@ const { id, word } = Astro.props;
 
 <button
   data-micromodal-trigger={'modal-' + id}
-  aria-label="ポップアップを表示"
-  class={twJoin('group inline cursor-pointer print:hidden', word || 'hover:opacity-50')}
+  class={twJoin('group inline cursor-pointer print:hidden', !word && 'hover:opacity-50')}
   >{
     word ? (
       <>
