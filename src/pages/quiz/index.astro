@@ -40,7 +40,7 @@ import questions from '../../contents/questions';
                   'hover:bg-orange-200',
                   'focus-visible:bg-orange-200 focus-visible:ring-2',
                   'disabled:border-zinc-500 disabled:bg-zinc-100',
-                  '[&>span]:disabled:bg-zinc-500'
+                  '[&>span]:disabled:bg-zinc-500',
                 )}
               >
                 <span class="mt-px flex min-h-[1.5rem] w-fit min-w-[1.5rem] place-content-center rounded-md bg-orange-600 px-1.5 py-1 leading-none text-white">
@@ -92,7 +92,7 @@ import questions from '../../contents/questions';
                     class={twJoin(
                       'rounded-sm px-1 text-orange-600 underline outline-none ring-orange-400 ring-offset-2 transition-opacity ease-out',
                       'hover:opacity-80',
-                      'focus-visible:ring-2'
+                      'focus-visible:ring-2',
                     )}
                   >
                     {reference.label}
@@ -111,7 +111,7 @@ import questions from '../../contents/questions';
         'flex items-center justify-center gap-4 rounded-2xl border-2 border-orange-600 bg-white px-8 py-4 text-sm leading-tight text-orange-600 outline-none ring-orange-400 ring-offset-2 transition-all ease-out',
         'hover:bg-orange-600 hover:text-white',
         'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',
-        'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300'
+        'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300',
       )}
       ><span class="text-xl font-bold">採点結果を見る</span>
       <CircledArrowIcon />
@@ -154,7 +154,7 @@ import questions from '../../contents/questions';
           'lg:w-fit lg:px-6',
           'hover:bg-orange-600 hover:text-white',
           'focus-visible:bg-orange-600 focus-visible:text-white focus-visible:ring-2',
-          'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300'
+          'disabled:cursor-not-allowed disabled:border-stone-300 disabled:bg-stone-50 disabled:text-stone-300',
         )}
         ><span class="text-sm font-bold">もう一度クイズに挑戦する</span>
         <CircledArrowIcon className="rotate-180 scale-75" /></button

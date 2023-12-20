@@ -10,6 +10,7 @@ const { id, word, isEN } = Astro.props;
 
 {word && <span class="sr-only">{word}</span>}
 <button
+  type="button"
   data-micromodal-trigger={'modal-' + id}
   class="group cursor-pointer print:hidden"
   aria-label={word ? (isEN ? 'Show definition' : '定義を表示') : isEN ? 'Show memo' : 'メモを表示'}
