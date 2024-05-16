@@ -74,4 +74,16 @@ const currentSlug = Astro.url.pathname;
       >
     </button>
   </div>
+  <div class="my-10 border border-orange-600 p-6">
+    <div>サイト内検索</div>
+    <form class="js-search-form">
+      <input type="text" class="px-2 py-1" />
+      <button
+        disabled
+        type="submit"
+        class="disabled:pointer-events-none disabled:opacity-50 px-2 py-1 border bg-orange-600 text-white">検索</button
+      >
+    </form>
+    <div class="js-search-result invisible grid gap-2 max-h-[200px] overflow-y-auto px-1" tabindex="-1"></div>
+  </div>
 </>
