@@ -50,7 +50,7 @@ const allCorrectBlock = document.querySelector<HTMLDivElement>('.js-all-correct'
 const correctAnswersNumberSpan = document.querySelector<HTMLSpanElement>('.js-correct-answers-number');
 const messageBlock = document.querySelector<HTMLDivElement>('.js-message');
 const illustrationImage = document.querySelector<HTMLImageElement>('.js-illustration');
-const submitButton = document.querySelector<HTMLButtonElement>('button[type="submit"]');
+const submitButton = document.querySelector<HTMLButtonElement>('.js-submit-answer]');
 const resetButton = document.querySelector<HTMLButtonElement>('.js-reset');
 
 const onClickChoice = (clickedChoice: HTMLButtonElement) => {
