@@ -34,7 +34,7 @@ const currentSlug = Astro.url.pathname;
     class={twJoin(
       'sticky z-20 ml-auto flex w-fit items-center justify-end gap-4',
       'md:max-w-[72.5rem]',
-      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0',
+      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0'
     )}
   >
     <div class="flex items-center rounded-2xl bg-white p-1 text-[0.6875rem]/normal font-bold md:text-xs/normal">
@@ -42,7 +42,7 @@ const currentSlug = Astro.url.pathname;
         href={isEN ? '' : '/en' + currentSlug}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'bg-orange-600 text-white' : 'text-gray-600 hover:text-orange-600',
+          isEN ? 'bg-orange-600 text-white' : 'text-gray-600 hover:text-orange-600'
         )}
         aria-label="English"
       >
@@ -52,7 +52,7 @@ const currentSlug = Astro.url.pathname;
         href={isEN ? currentSlug.replace('/en', '') : ''}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'text-gray-600 hover:text-orange-600' : 'bg-orange-600 text-white',
+          isEN ? 'text-gray-600 hover:text-orange-600' : 'bg-orange-600 text-white'
         )}
         aria-label="Japanese"
       >
@@ -74,16 +74,17 @@ const currentSlug = Astro.url.pathname;
       >
     </button>
   </div>
-  <div class="my-10 border border-orange-600 p-6">
+  <div class="my-10 grid gap-1 border border-orange-600 p-6">
     <div>サイト内検索</div>
-    <form class="js-search-form">
-      <input type="text" class="px-2 py-1" />
+    <form class="js-search-form flex w-full max-w-sm text-base">
+      <input disabled type="text" class="w-full flex-1 appearance-none rounded-none px-2 py-1" />
       <button
         disabled
         type="submit"
-        class="disabled:pointer-events-none disabled:opacity-50 px-2 py-1 border bg-orange-600 text-white">検索</button
+        class="z-10 shrink-0 bg-orange-600 px-2 py-1 text-white disabled:cursor-not-allowed disabled:opacity-50"
+        >検索</button
       >
     </form>
-    <div class="js-search-result invisible grid gap-2 max-h-[200px] overflow-y-auto px-1" tabindex="-1"></div>
+    <div class="js-search-result invisible grid max-h-[200px] gap-2 overflow-y-auto px-1" tabindex="-1"></div>
   </div>
 </>
