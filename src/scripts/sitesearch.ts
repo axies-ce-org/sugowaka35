@@ -1,14 +1,9 @@
+const siteUrl = import.meta.env.PUBLIC_OVERRIDE_SITE_URL ?? import.meta.env.SITE ?? '';
+
 /**
  * 検索フォームの入力値に応じて検索結果を表示
  */
 let pageData = [];
-const basePath = window.location.pathname.split('/').slice(0, 2).join('/');
-
-fetch(`${basePath}/pagedata.json`)
-  .then((response) => response.json())
-  .then((data) => {
-    pageData = data;
-  });
 
 const resultBlock = document.querySelector('.js-search-result');
 const form = document.querySelector('.js-search-form');
@@ -20,6 +15,13 @@ const resetResult = () => {
   resultBlock.classList.add('invisible');
   resultBlock.classList.remove('pt-4');
 };
+
+fetch(`${siteUrl}/pagedata.json`)
+  .then((response) => response.json())
+  .then((data) => {
+    pageData = data;
+    input.disabled = false;
+  });
 
 input.addEventListener('input', (e) => {
   if (!(e.currentTarget instanceof HTMLInputElement)) return;
@@ -99,7 +101,7 @@ form.addEventListener('submit', (e) => {
         resultBlock.querySelector('ul').insertAdjacentHTML(
           'beforeend',
           `<li class="border-t border-orange-300">
-            <a class="p-2 block hover:bg-orange-200" href="${href}?${params.toString()}">${spannedSentence}</a>
+            <a class="p-2 block hover:bg-orange-300" href="${href}?${params.toString()}">${spannedSentence}</a>
           </li>`,
         );
         index++;
