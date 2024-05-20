@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { node as kirinuki } from 'kirinuki-core';
-import astroConfig from '../../astro.config.mjs';
 
 // ページごとにデータを抽出するための kirinuki で使用するスキーマを定義
 const schema = {
@@ -16,17 +15,17 @@ export default function postbuildIntegration() {
     name: 'postbuild-integration',
     hooks: {
       'astro:build:done': async () => {
-        const siteUrl = import.meta.env.VITE_SITE_URL ?? astroConfig.site;
-        const outputDir = 'static';
-        const excludePaths = ['_astro', 'assets', 'quiz', 'extra', 'en'];
-
         const getPageData = async () => {
+          const astroConfig = await import('../../astro.config.mjs');
+          const siteUrl = process.env.PUBLIC_OVERRIDE_SITE_URL ?? astroConfig.default.site ?? '';
+          const outputDir = 'static';
+          const excludePaths = ['_astro', 'assets', 'quiz', 'extra', 'en'];
           // excludePaths を除くディレクトリ名を配列で取得
           const slugs = fs.readdirSync(outputDir).filter((file) => !excludePaths.includes(file) && !file.includes('.'));
 
           const pageData = await Promise.all(
             slugs.map(async (slug) => {
-              const href = `${siteUrl}${slug}`;
+              const href = `${siteUrl}/${slug}/`;
               const htmlFilePath = path.join(outputDir, slug, 'index.html');
               if (fs.existsSync(htmlFilePath)) {
                 const htmlContent = fs.readFileSync(htmlFilePath, 'utf-8');
