@@ -1,0 +1,171 @@
+---
+import Section from '../../../components/Section.astro';
+import Point from '../../../components/Point.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import ListArea from '../../../components/ListArea.astro';
+import Modal from '../../../components/Modal.astro';
+import ModalTrigger from '../../../components/ModalTrigger.astro';
+import Page from '../../../templates/Page.astro';
+---
+
+<Page
+  title="Copyright Basics"
+  description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page explains the basics of copyright, copyrighted works, and authors, etc."
+  isEN
+>
+  <Section
+    number="03"
+    title="Who is the author?"
+    description={'This section explains "author" under the Copyright Act. It is important to understand that there are not only individual authors but also corporate authors and joint authors.'}
+  >
+    <h3>Definition of author</h3>
+    <p>Article 2(1)(ii) of the Copyright Act defines an author.</p>
+    <Point type="simple" title="Article 2(1)(ii)">Author means a person who creates a work.</Point>
+    <p>We learned in the previous section what copyrighted works are. The person who creates them is the "author".</p>
+    <p>
+      It is not only professional creators who are authors. If a kindergarten or elementary school student draws a
+      picture, then they are the author of the picture. If they write a letter, the person who wrote it is the author of
+      the letter. If you subcontract the creation of a copyrighted work, such as an illustration or a computer program,
+      the subcontractor who created the copyrighted work is the author.
+    </p>
+    <Point>
+      The author is the creator of the copyrighted work. It does not matter if such a person is a professional or
+      amateur, child or adult!
+    </Point>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">
+        The other day I took a picture of a drawing by a relative's kindergarten child and posted it on SNS ...
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        A child can be an author too, even if the child is in kindergarten. However, I do not think that a kindergarten
+        child would be able to judge this, so you should obtain <span class="font-bold text-orange-600"
+          >permission from the parents</span
+        >.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="4">Ugh ... that was a mistake ... I'm sorry ...</Bubble>
+    </SpeechBubbles>
+    <h4 id="ref25">Authors and copyright owners</h4>
+    <p>
+      The "author" is the person who created the copyrighted work, and the "copyright owner" is the person who holds the
+      copyright. Basically, "author = copyright owner". However, as explained in the next section (Section 04 What is
+      Copyright?), copyright as an economic right can be transferred or inherited, so the situation of "author ≠
+      copyright owner" happens sometimes. When using copyrighted works, permission should be requested for the
+      following:
+    </p>
+    <ListArea>
+      <ul>
+        <li>Matters related to moral rights: obtain permission from the author.</li>
+        <li>Matters related to copyright (economic rights): obtain permission from the copyright owner.</li>
+      </ul>
+    </ListArea>
+    <p>Moral rights and copyrights (economic rights) are explained in the next section.</p>
+    <img src="/assets/images/1-1-3_en.png" alt="" width="1277" height="597" />
+    <h4 id="ref20">Corporate works</h4>
+    <p>
+      If you create a work in the course of duty, the individual who created it may not be the author, but an
+      organization such as a company, school, or university may be the author (Article 15). The following requirements
+      must be met for a work to be a corporate work:
+    </p>
+    <ListArea>
+      <ol>
+        <li>The copyrighted work must be prepared based on the initiative of the corporation, etc.</li>
+        <li>Creation by an "employee" of a corporation, etc.</li>
+        <li>To be created "in the course of duty".</li>
+        <li>
+          When "publicizing" the copyrighted work, the copyrighted work must be published under the name of the
+          corporation, etc.
+        </li>
+        <li>
+          There is no provision in the "contract, work regulations," or any other document at the time of the creation
+          of the copyrighted work that designates the employee as the author.
+        </li>
+      </ol>
+    </ListArea>
+    <p>
+      For requirement (1), if a copyrighted work is created without specific instructions from the employer but with the
+      final approval of the employer, it is considered to be "created at the employer's initiative”. In addition, even
+      if an employee comes up with an idea and creates the copyrighted work without the approval of the employer, if the
+      copyrighted work is created in the course of duty as far as it is assumed to be based on the job description, it
+      is considered to have been "created at the employee's initiative"<ModalTrigger id="05" isEN />.
+    </p>
+    <Modal id="05" isEN>
+      <p>
+        The requirement of "the initiative of the corporation, etc." is satisfied if there is an employment relationship
+        between the corporation, etc., and the employee, and the employee is performing the prescribed duty under the
+        business plan of the corporation, etc. or a contract concluded by the corporation, etc. with a third party, etc.
+        even without specific instructions or consent from the corporation, etc. as long as the creation of the work is
+        scheduled or expected in the performance of the duty of the employee (Intellectual Property High Court, August
+        4, 2010, HANREI TIMES No. 1344, p. 226 [Kitami Institute of Technology Case]).
+      </p>
+    </Modal>
+    <p>
+      For requirement (2), it is generally someone who has an employment relationship. This could be an employee of a
+      company or a staff member of a university. Temporary staff may fall under requirement (2) since they are not
+      directly employed by the company but work under specific instructions at the client company, etc.
+    </p>
+    <p>
+      For requirement (3), it does not apply if the work was not created in the course of duty. For example, if an art
+      teacher paints pictures as a hobby on their days off, they are the author of the copyrighted work, not the
+      employer.
+    </p>
+    <p>
+      The requirement (4) does not apply to lectures by university professors, which are published under the name of the
+      individual professor.
+    </p>
+    <p>
+      For requirement (5), if there is a contract or work regulation that stipulates that the employee or staff member
+      is the author of the copyrighted work they created or that the copyright belongs to the employee or staff member,
+      the copyrighted work is not a corporate work and the creator is the author.
+    </p>
+    <p>
+      In the case of corporate work, a corporation, etc. becomes the "author" and "copyright owner" (Articles 15 and
+      17(1)).
+    </p>
+    <SpeechBubbles>
+      <Bubble speaker="Daiin" feLevel="5">
+        Are the slides I made for a class at the university considered corporate work?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        If the copyrighted work is prepared for an individual class, it will be published in the name of the professor,
+        not in the name of the university when it is published. Since under requirement (4), the copyrighted work must
+        be published under the name of a corporation, etc. when it is "published" does not apply, the author must be Dr.
+        Daiin.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="1">That's a relief.</Bubble>
+    </SpeechBubbles>
+    <h4 id="ref9">When more than one person is the author (co-authors)</h4>
+    <p>
+      There are times when more than one person may create a copyrighted work<ModalTrigger id="07" isEN />. For example,
+      several people may create a single painting on a canvas. Such a work is called a "joint work" (Article 2(1)(xii)).
+      The copyright in a joint work is shared by all co-authors.
+    </p>
+    <Modal id="07" isEN>
+      <p>
+        Article 2(1)(xii) defines a joint work as "a work created by two or more persons whose contributions to the work
+        cannot be separated so as to allow each part of the work to be used independently".
+      </p>
+    </Modal>
+    <p>
+      Other examples include when a copyright is assigned, or when the original copyright owner dies and the copyright
+      is inherited by two of the owner's children.
+    </p>
+    <p>
+      Under joint copyright, a co-owner cannot exercise their rights without the agreement of all the co-owners (Article
+      65(2)).
+    </p>
+    <p>
+      The "agreement" in Article 65(2) is that the other joint owners cannot object unless they have "justifiable
+      grounds" to do so.
+    </p>
+    <p>
+      Tokyo District Court, September 28, 2000 (1999 (wa) 7209) [Economics Book Case] is one example of a case in which
+      the other co-author was found to have "justifiable grounds" to prevent an agreement. In this case, a co-author of
+      an economics book jointly written by researchers requested an agreement for a reprint of the book and publication
+      of a Korean translation, but the other co-author B, refused. The court found that there were "justifiable grounds"
+      because the book had become obsolete several years after it was written, B's contribution to the book was
+      considerably greater than A's, and it could not be said that A would be threatened financially or that his
+      scholarly achievements would be diminished if he was not allowed to reprint or translate the book.
+    </p>
+  </Section>
+</Page>

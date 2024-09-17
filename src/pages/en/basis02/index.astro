@@ -1,0 +1,273 @@
+---
+import Section from '../../../components/Section.astro';
+import Point from '../../../components/Point.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import ListArea from '../../../components/ListArea.astro';
+import Quiz from '../../../components/Quiz.astro';
+import QuizContent from '../../../components/QuizContent.astro';
+import Modal from '../../../components/Modal.astro';
+import ModalTrigger from '../../../components/ModalTrigger.astro';
+import ImgCaption from '../../../components/ImgCaption.astro';
+import Page from '../../../templates/Page.astro';
+---
+
+<Page
+  title="Copyright Basics"
+  description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page explains the basics of copyright, copyrighted works, and authors, etc."
+  isEN
+>
+  <Section
+    number="02"
+    title="What is a copyrighted work?"
+    description={'This section explains what a "copyrighted work" is, as defined under the Copyright Act.'}
+  >
+    <h3>Definition of copyrighted works</h3>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="3">Copyrighted works are not diminished by their use, are they?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        That's right. For example, if a car is stolen, it will be gone, so you will know right away. However, most of
+        the time even if text is stolen, it will not be lost, so in most cases it is not immediately obvious if it is
+        being misused. Among such intangible information, information that contributes to cultural development is
+        copyrighted work.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">But you can tell when a painting on a canvas is stolen, can't you?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        A painting is indeed a copyrighted work, but it has two aspects: one as a "tangible object" and the other as
+        "information". You may think of a copyrighted work as a "tangible object", but a copyrighted work is
+        "information". In other words, the copyrighted work (information) is superimposed on the tangible object
+        (painting)<ModalTrigger id="c1s2_1" isEN />. It would be a problem if someone made and sold postcards or other
+        goods using the painting without permission, wouldn't it?<br />Even if you buy a painting, you are simply
+        receiving the rights to the tangible object, the physical ownership (title). The rights to the information
+        (copyright) of the person who originally painted the painting remain with the person who painted it.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="1">I see, so it's not the same as physical ownership.</Bubble>
+    </SpeechBubbles>
+    <Modal id="c1s2_1" isEN>
+      <p>Supreme Court, January 20, 1984, HANREI JIHO No. 1107, p. 127 [Ganshinkei Case].</p>
+    </Modal>
+    <img src="/assets/images/1-1-2_en.png" alt="" width="1277" height="596" />
+    <p>The Copyright Act protects "copyrighted works". A copyrighted work is defined as follows:</p>
+    <Point type="simple" title="Article 2(1)(i)">
+      "a creatively produced expression of thoughts or sentiments that falls within the literary, academic, artistic, or
+      musical domain"
+    </Point>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">
+        Is a table listing the height and weight of the students in my class copyrighted work because it is an
+        expression?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        No, mere data is not thought or sentiment so it is not considered a copyrighted work.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="2">I often hear that cooking recipes are not copyrighted.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        The idea itself is not a copyrighted work because it has to be expressed. Just having an idea in your head is
+        not subject to copyright protection.<br />The idea of the recipe itself is not a copyrighted work, but if it is
+        turned into a book or a web article, the pictures and text may be copyrighted, so you should be careful.
+      </Bubble>
+    </SpeechBubbles>
+    <Point>A work is not a "copyrighted work" unless it is a creative expression of thoughts or sentiments.</Point>
+    <ListArea id="ref27">
+      <p>Examples of works that are not copyrighted works under the Copyright Act:</p>
+      <ul>
+        <li>
+          Something that is just a thought in your head (an idea): the story of a novel is also not protected if it is
+          just a thought. What is expressed as a novel is protected.
+        </li>
+        <li>
+          Data and facts only: obituaries, information on personnel transfers, population lists for each prefecture,
+          etc., do not express the thoughts or sentiments of the person expressing them, and therefore cannot be an
+          expression of "thoughts or sentiments" and are not copyrighted works.
+        </li>
+        <li>
+          Commonplace expressions and very short sentences: phrases that anyone would use, such as "blue skies," are
+          often considered to be non-creative.
+        </li>
+      </ul>
+    </ListArea>
+    <p>Examples of copyrighted works include the following (Article 10(1)):</p>
+    <ImgCaption id="ref30">
+      <figcaption>[Types of copyrighted works (Article 10(1))]</figcaption>
+      <table>
+        <thead>
+          <tr class="col-2">
+            <th>Type</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="col-2">
+            <td>Literary works</td>
+            <td
+              >Lectures, papers, reports, essays, novels, screenplays, poetry, haiku, rakugo, comic storytelling, etc.</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Musical works</td>
+            <td>Songs, lyrics accompanying songs, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Works of choreography and pantomime</td>
+            <td>Choreography for Japanese dance, ballet, dance, pantomime, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Works of fine art</td>
+            <td
+              >Paintings, prints, sculptures, cartoons, calligraphy, stage sets, flower arrangements, etc. (including
+              arts and crafts such as tea bowls, pots, swords, etc.).</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Architectural works</td>
+            <td
+              >Palaces, triumphal arches, gardens, towers, and other architectural structures (must be appreciable).</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Maps and diagrammatic works</td>
+            <td>Maps, academic drawings, charts, blueprints, three-dimensional models, globes, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Cinematographic works</td>
+            <td
+              >Recorded moving images such as theatrical movies, animations, videos, YouTube videos, TikTok videos, and
+              video portions of game software.</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>Photographic works</td>
+            <td>Portraits, landscapes, documentary photography, advertising photography, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Works of computer programming</td>
+            <td>Operating systems (OS), application software, programs for consumer electronics, etc.</td>
+          </tr>
+        </tbody>
+      </table>
+    </ImgCaption>
+    <p id="ref35">In addition to these works, the following works are also available (Articles 11, 12, and 12-2)</p>
+    <ImgCaption>
+      <figcaption>[Types of works (Articles 11, 12, 12-2)]</figcaption>
+      <table>
+        <thead>
+          <tr class="col-2">
+            <th>Type</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="col-2">
+            <td>Derivative works</td>
+            <td>Works created by translating, arranging, transforming, or adapting the works in the table above.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Compilation works</td>
+            <td>Encyclopedias, dictionaries, newspapers, magazines, poetry books, etc.</td>
+          </tr>
+          <tr class="col-2">
+            <td>Database works</td>
+            <td>Encyclopedias, dictionaries, etc. in computer-searchable form.</td>
+          </tr>
+        </tbody>
+      </table>
+    </ImgCaption>
+    <p>
+      A compilation is a copyrighted work if the selection and arrangement of materials are creative. Although a
+      compilation as a whole is protected as a copyrighted work, when using individual articles in a dictionary,
+      magazine, etc., the permission of the respective copyright owners is required, as each article is also a
+      copyrighted work.
+    </p>
+    <p>
+      A database is a copyrighted work if there is creativity in the way the data is selected and the systematic way the
+      data is organized for retrieval, even if the individual data collected is not copyrightable.
+    </p>
+    <SpeechBubbles>
+      <Bubble speaker="Daiin" feLevel="5">The data is not a copyrighted work, but the database is.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        For example, copyrightability may be recognized when information that cannot be searched in other databases can
+        be retrieved, or when you are creative in the selection of keywords for retrieving the same information.
+      </Bubble>
+    </SpeechBubbles>
+    <p>
+      Although the following items are copyrighted works, they are created for the purpose of making them known to the
+      public and making them widely available, so they can be used without the copyright owner's permission (Article
+      13).
+    </p>
+    <ListArea id="ref10">
+      <p>Examples of copyrighted works that can be used without permission:</p>
+      <ul>
+        <li>Constitution and other laws and regulations.</li>
+        <li>Notices, directives, and notices of the national government, local governments, etc.</li>
+        <li>Court judgments, decisions, orders, etc.</li>
+        <li>Translations and compilations of the above prepared by the national government, local governments, etc.</li>
+      </ul>
+    </ListArea>
+    <Quiz
+      title="Now here is a quiz. Are the following items copyrighted works protected by the Copyright Act?"
+      list={[
+        { item: '(1) Fantasy novel setting.' },
+        { item: "(2) A cat drawing on a piece of notepaper, done at the behest of a relative's child." },
+        { item: '(3) Names of cartoon characters.' },
+        { item: '(4) Graphs in student reports.' },
+      ]}
+    >
+      <QuizContent title="(1) Fantasy novel setting">
+        <Bubble speaker="Konaka" feLevel="2">
+          Since the novel is copyrighted, is the setting copyrighted as well?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          No, an abstract setting alone does not constitute a copyrighted work. For example, recently, there are novels,
+          manga, and anime in which the main character is transported to and explores another world. This level of
+          setting itself is within the scope of an idea and is not copyrighted, so writing a new novel with this kind of
+          setting is not an infringement of copyright.
+        </Bubble>
+      </QuizContent>
+      <QuizContent title="(2) A cat drawing on a piece of notepaper that a relative's child asked me to draw.">
+        <Bubble speaker="Daiin" feLevel="4">
+          Something like a drawing on a piece of notepaper would probably be thrown away immediately so is not a
+          copyrighted work, is it?
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="3">
+          No, it does not matter under the Copyright Act when you throw it away, it is a copyrighted work because it was
+          a "creative expression" at the time it was drawn<ModalTrigger id="s2_1" isEN />.
+        </Bubble>
+      </QuizContent>
+      <Modal id="s2_1" isEN>
+        <p>
+          The word "expression" may sound like it has to be fixed on some object, but being fixed is not a requirement
+          for a copyrighted work. For cinematographic works, it is a requirement that the copyrighted work be fixed.
+        </p>
+      </Modal>
+      <QuizContent title="(3) Names of cartoon characters">
+        <Bubble speaker="Konaka" feLevel="1">This is surely a copyrighted work!</Bubble>
+        <Bubble speaker="Sumiki" feLevel="4">
+          Nice try. This is not a copyrighted work. Konaka's name is not a copyrighted work either. There are various
+          opinions on it, but I think it can be categorized as not being "within the literary, academic, artistic, or
+          musical domain" or not having creativity. However, a picture of a character is a copyrighted work<ModalTrigger
+            id="s2_2"
+            isEN
+          />.
+        </Bubble>
+      </QuizContent>
+      <Modal id="s2_2" isEN>
+        <p>
+          Concerning a picture of a character, the name can be subject to the integrity right as "the title of the work"
+          (Article 20(1)).
+        </p>
+      </Modal>
+      <QuizContent title="(4) Graphs in student reports">
+        <Bubble speaker="Daiin" feLevel="3">
+          I don't think a graph is a copyrighted work. Mere data isn't a copyrighted work, and if it were just a graph
+          of data, it wouldn't be creative.
+        </Bubble>
+        <Bubble speaker="Sumiki" feLevel="2">
+          If the graph looks the same no matter who draws it in Excel or other software, it is not creative and is not
+          likely to be a copyrighted work. However, if the graph shows, for example, beer consumption, and uses a
+          creative way to express it, such as by using a picture of a beer mug instead of a bar graph, the creativity of
+          the graph may be recognized and the work may be copyrighted work.
+        </Bubble>
+      </QuizContent>
+    </Quiz>
+  </Section>
+</Page>

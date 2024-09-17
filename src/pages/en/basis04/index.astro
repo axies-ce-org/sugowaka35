@@ -1,0 +1,971 @@
+---
+import Section from '../../../components/Section.astro';
+import Point from '../../../components/Point.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import ListArea from '../../../components/ListArea.astro';
+import Modal from '../../../components/Modal.astro';
+import ModalTrigger from '../../../components/ModalTrigger.astro';
+import ImgCaption from '../../../components/ImgCaption.astro';
+import Page from '../../../templates/Page.astro';
+---
+
+<Page
+  title="Copyright Basics"
+  description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page explains the basics of copyright, copyrighted works, and authors, etc."
+  isEN
+>
+  <Section
+    number="04"
+    title="What is Copyright?"
+    description={'This section explains "copyright" under the Copyright Act including moral rights and copyright (economic rights), as well as neighboring rights. It also explains the terms protection, licensing, and limitation of rights.'}
+  >
+    <h3>Copyright is "the right not to do specific acts without permission”</h3>
+    <SpeechBubbles>
+      <Bubble speaker="Sumiki" feLevel="2">
+        In simple terms, copyright is the right not to have one's copyrighted work "do specific acts without
+        permission".
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">
+        Such as, it can't be copied without permission, or remade without permission.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Japan has a 'non-formality' system, which means that a copyright is automatically granted the moment a work is
+        created. Simply put, there is no need to register or go through any other procedures to obtain a copyright.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">Even pictures drawn by elementary school children?</Bubble>
+      <Bubble speaker="Daiin" feLevel="2">And reports written by students?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="1">Yes.</Bubble>
+    </SpeechBubbles>
+    <Point>When a copyrighted work is created, a copyright is automatically granted (Article 17(2)).</Point>
+    <p>
+      In a broad sense, there are two types of copyrights: "moral rights," which protect the author's commitment to the
+      copyrighted work, and "copyright (economic rights)", which protect the economic value. The following is an
+      explanation of what rights are associated with each.
+    </p>
+
+    <h3 id="ref28">Moral rights</h3>
+    <p>
+      Moral rights cannot be assigned to others and cannot be inherited (Article 59, proviso of Civil Code Article 896).
+      Therefore, even if a copyright is assigned, the moral rights remain with the author.
+    </p>
+    <p>
+      Moral rights cease to exist when the author dies. However, the Copyright Act states that even after the author's
+      death, a person who provides or presents a copyrighted work to the public must not commit any act that infringes
+      the moral rights of the author (Article 60).
+    </p>
+    <p>Let us explain what moral rights are.</p>
+
+    <h4 id="ref16">Publication Right (Article 18)</h4>
+    <p>
+      The publication right is, as the name implies, the right to decide how the author of an unpublished copyrighted
+      work will make it public. The author of a derivative work may not publish the derivative work without the consent
+      of the author of the original work.
+    </p>
+    <ListArea>
+      <ul>
+        <li>Whether to make it public or not.</li>
+        <li>When will it be made public?</li>
+        <li>
+          In what form of publication (publication as a book, broadcast, screening, exhibition, public transmission,
+          etc.)?
+        </li>
+      </ul>
+    </ListArea>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">
+        Do I need the student's consent to submit their painting to a city competition?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Of course, you must obtain the student's consent. If the student only submitted the painting to the teacher as
+        homework, it does not meet the definition of "published".<br />Since you are publishing it to third parties, you
+        need the author's consent.<br />There is also the issue of exhibition rights, as such art competitions usually
+        involve exhibiting the paintings somewhere.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="4">I see, I will be careful.</Bubble>
+    </SpeechBubbles>
+
+    <h4 id="ref19">Attribution Right (Article 19)</h4>
+    <p>
+      The attribution right, as the name implies, is the right to determine the name to be displayed as the author when
+      the copyrighted work is offered or presented to the public.
+    </p>
+    <ListArea>
+      <ul>
+        <li>Whether to display a name or not.</li>
+        <li>If displayed, whether it is your real name or an alias (pen name, artist's name, etc.).</li>
+      </ul>
+    </ListArea>
+    <p>
+      In the case of derivative works, both the author of the original work (the second sentence of Article 19(1)) and
+      the author of the derivative work have the attribution right. There are certain limitations on the attribution
+      right and the following cases do not constitute infringement:
+    </p>
+    <ListArea>
+      <ul>
+        <li>
+          When using a copyrighted work, the user may indicate the name already indicated in the copyrighted work. If
+          the author's special intention requires a different name to be indicated, the user must follow the intention
+          (Article 19(2)).
+        </li>
+        <li>
+          If it is difficult to indicate the name and there is no risk of harm to the interest of the author in claiming
+          to be the author, the name need not be indicated as long as it does not violate fair practice (Article 19(3)).
+        </li>
+      </ul>
+    </ListArea>
+    <p>
+      For example, when background music is played in a hotel lobby, there is no need to announce who the composer is,
+      every single time.
+    </p>
+
+    <h4 id="ref33">Integrity Right (Article 20)</h4>
+    <SpeechBubbles>
+      <Bubble speaker="Sumiki" feLevel="2">
+        The integrity right is the right not to have the content or the title of the author's copyrighted work "altered
+        (modified, mutilated, etc.)" against the author's intention without permission.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">
+        Can you crop a photo and use it, or change the text etc ... ?<ModalTrigger id="s4_1" isEN />
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Yes. Please note that changing "," to ";" deleting a line break, and changing paragraph breaks or changing the
+        wording for consistency may also infringe the integrity right<ModalTrigger id="s4_2" isEN />.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="5">
+        Well, if something like that is wrong, it should be fixed. It's common for student theses to have
+        inconsistencies in terminology.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        It is only with the author's consent that you can correct such inconsistencies. In other words, if the author
+        corrects the inconsistencies, they may be more careful about it in the future. Then there is no infringement.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">That's right.</Bubble>
+    </SpeechBubbles>
+    <Modal id="s4_1" isEN>
+      <p>Tokyo District Court, March 26, 1999, HANREI JIHO No. 1694, p. 142 [Dolphin Blue Case].</p>
+    </Modal>
+    <Modal id="s4_2" isEN>
+      <p>Tokyo High Court, December 19, 1991, HANREI JIHO No. 1422, p. 123 [Hosei University Prize Essay Case].</p>
+    </Modal>
+    <p>However, alterations are permitted in the following cases (Article 20(2)):</p>
+    <ListArea>
+      <ol>
+        <li>
+          If the use of a work is permitted by application of the following provisions: publication in textbooks
+          (Article 33(1) and (4)), publication in substitute materials for textbooks (Article 33-2(1)), reproduction for
+          the preparation of expanded textbooks (Article 33-3(1)), and broadcasting of school educational programs
+          (Article 34(1)), the use of a work is unavoidable for school education (Article 33-2(1)).
+        </li>
+        <li>Alteration due to extension, reconstruction, repair, or redecoration of buildings.</li>
+        <li>Program version upgrades and other modifications.</li>
+        <li>
+          Other modifications that are deemed unavoidable in light of the nature of the work and the purpose and manner
+          of its use.
+        </li>
+      </ol>
+    </ListArea>
+    <p>
+      An example of (1) is converting difficult Kanji into Hiragana so that they are easier to read for younger
+      students.
+    </p>
+    <p>
+      Regarding (4), due to the performance of the printing press, it may not be possible to reproduce the exact colors
+      in the same way as the original, or when a singer may not be able to sing the original melody as it was sung
+      because of the abilities of the singer.
+    </p>
+    <p>
+      It is difficult to determine the specific extent to which a work is "unavoidable. " If you are not sure, you
+      should check with the author.
+    </p>
+    <Point id="ref33-1">
+      There are three moral rights: (a) the publication right, (b) the attribution right, and (c) the integrity right!<ModalTrigger
+        id="s4_4"
+        isEN
+      />
+    </Point>
+    <Modal id="s4_4" isEN>
+      <p>
+        "The exploitation of a work in a way that is prejudicial to the honor or reputation of the author" is deemed an
+        infringement of the author's moral rights (Article 113(11)). Although not strictly defined as a right, this
+        provision is sometimes called the "honor and reputation right" as a fourth right.
+      </p>
+    </Modal>
+
+    <h3 id="ref4">Copyrights (Economic rights)</h3>
+    <p>
+      Copyrights as economic rights include the following<ModalTrigger id="s4_5" isEN />:
+    </p>
+    <Modal id="s4_5" isEN>
+      <p>
+        Since it is difficult for a copyright owner to trace a user's act of perceiving or enjoyment of a work, such as
+        by viewing, listening to, or reading a work, these are not subject to copyright (see Kaoru Okamoto, <span
+          class="italic">The Concept of Copyright</span
+        >, Iwanami Shinsho, 2003, p. 160).
+      </p>
+    </Modal>
+    <ListArea>
+      <ul>
+        <li>Reproduction Right (Article 21).</li>
+        <li>Stage Performance Right and Musical Performance Right (Article 22).</li>
+        <li>On-Screen Presentation Right (Article 22-2).</li>
+        <li>Public Transmission Right, Right of Making Transmittable, and Public Communication Right (Article 23).</li>
+        <li>Recitation Right (Article 24).</li>
+        <li>Exhibition Right (Article 25).</li>
+        <li>Distribution Right (Article 26).</li>
+        <li>Transfer Right (Article 26-2).</li>
+        <li>Rent Out Right (Article 26-3).</li>
+        <li>Translation and Adaptation Rights etc. (Article 27).</li>
+        <li>Rights of the Original Author in Connection with the Exploitation of Derivative Works (Article 28).</li>
+      </ul>
+    </ListArea>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">There are a lot of different rights.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Yes. Some people may find it a little difficult. Copyright is sometimes called a "bundle of rights"<ModalTrigger
+          id="s4_6"
+          isEN
+        />. First of all, it is good to understand that there are two major rights.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="1">Only two!</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        There are two fundamental rights. <span class="font-bold text-orange-600"
+          >The first is (1) the right to copy copyrighted works. The other is (2) the right to communicate the
+          copyrighted work to the public.</span
+        >
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="3">Hmmm. Maybe I can remember that.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        (1) The "right to copy" is like a prerequisite for (2) the "right to communicate the copyrighted work to the
+        public", because the more copies that are created, the more opportunities for communicating to the public.<br
+        />For (2), "the right to communicate to the public," the number of rights has increased as the means of
+        communicating publicly have become more diverse due to technological advances.<br />We can communicate to the
+        people in front of us via "stage performances," "musical performances," "recitations," and "exhibitions." As
+        technology advances and copyrighted works can be fixed in some form, they can be conveyed to people far away.
+        These include "transfer," "rent out," and "distribution." Furthermore, "public transmission" and "making
+        transmittable" are used to convey copyrighted works to people far away, even if they are not in a tangible form.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">How should we understand an adaptation?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Adaptation is the addition of new creative elements to a preexisting work. So, please understand that it is a
+        sort of (1) the "right to copy".
+      </Bubble>
+    </SpeechBubbles>
+    <Modal id="s4_6" isEN>
+      <p>
+        Taku Inoue, <span class="italic">Latest Copyright Introduction by SNS</span>, Seibundo-Shinkosha, 2022, p. 53,
+        explains that there are many copyright rights by comparing them to grapes.
+      </p>
+    </Modal>
+    <img src="/assets/images/1-4-1_en.png" alt="" width="1277" height="597" />
+    <p id="ref13">
+      As explained in Section 04 "What is Copyright?", a reproduction right is "the right not to be reproduced without
+      permission". Copyright as an economic right can be transferred or inherited (Article 61(1)).
+    </p>
+    <p>
+      For example, Masamoto Nasu, author of the <span class="italic">Zukkoke Sannin-Gumi (The funny trio)</span> series,
+      reportedly transferred (bequeathed) the copyrights of all his works to a literary organization in his will<ModalTrigger
+        id="s4_7"
+        isEN
+      />.
+    </p>
+    <Modal id="s4_7" isEN>
+      <p>
+        Donation of all copyrights, "Zukkoke Sannin Gumi", Masamoto Nasu's Wish for Children's Literature, Mainichi
+        Shimbun, October 5, 2022,<a
+          href="https://mainichi.jp/articles/20221004/k00/00m/040/188000c"
+          target="_blank"
+          class="block"
+        >
+          https://mainichi.jp/articles/20221004/k00/00m/040/188000c
+        </a>
+      </p>
+    </Modal>
+    <p>
+      "Adaptation" is a term unique to the Copyright Act, but it means the act of creating a derivative work by adapting
+      it or making it into a film<ModalTrigger id="s4_8" isEN />.
+    </p>
+    <Modal id="s4_8" isEN>
+      <p>
+        The act of creating a derivative work, including translation, arrangement, or transformation for the sake of
+        convenience, is sometimes called an "adaptation".
+      </p>
+    </Modal>
+    <p>
+      The terms "public transmission right" and "right to make transmittable" may also be unfamiliar to you. The public
+      transmission right is the right to transmit a copyrighted work to the public (to an unspecified or specified
+      number of persons). For example, among public transmissions, automatic public transmission means putting the
+      copyrighted work on a website for a large number of people to view, or posting the copyrighted work on a social
+      networking service for a large number of people to see. Making transmittable means uploading a copyrighted work to
+      a server, etc. to make it available for automatic public transmission, regardless of whether it has been
+      transmitted or not<ModalTrigger id="s4_9" isEN />.
+    </p>
+    <Modal id="s4_9" isEN>
+      <p>Article 23(1) brackets.</p>
+    </Modal>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">
+        What makes "public communication" different from "public transmission"?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        To use a simple example, a broadcaster broadcasting a TV program is a "public transmission," and a TV program
+        shown on a TV set up in a cafeteria or other location for customers to watch is a "public communication".
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="1">
+        I see, so you are saying that it is a device that can receive and watch something that has already been publicly
+        transmitted.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        By the way, the use of an ordinary household receiver to broadcast a copyrighted work does not constitute an
+        infringement of the public communication right, even if it is for profit or a fee<ModalTrigger
+          id="s4_10"
+          isEN
+        />.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="1">I haven't made any public communications.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        No, there is a possibility that Dr. Daiin may do this. For example, if you show a website in class and show
+        actions such as "click here to view this", this is a public communication.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">
+        I didn't know that! I didn't know that such an act was subject to copyright too.
+      </Bubble>
+    </SpeechBubbles>
+    <Modal id="s4_10" isEN>
+      <p>The second sentence of Article 38(3).</p>
+    </Modal>
+    <Point>Copyright is the right not to do specific acts without permission.</Point>
+
+    <h3 id="ref32">Neighboring rights</h3>
+    <p>
+      Neighboring rights are granted to those who "convey" copyrighted works (Article 89). Like copyrights, these rights
+      are automatically granted upon performance, sound fixation, broadcasting, or wire broadcasting, and do not require
+      any registration (Articles 89(5) and 101(1)).
+    </p>
+    <Point>Neighboring rights protect those who play an important role in the conveyance of copyrighted works.</Point>
+    <p>The following are the owners of neighboring rights.</p>
+    <p>
+      Please see the texts of CRIC and other sources to find out what rights you have for each of them<ModalTrigger
+        id="c4_11"
+        isEN
+      />.
+    </p>
+    <Modal id="c4_11" isEN>
+      <p>
+        IV. Author's rights and neighboring rights under the Japanese copyright law, Copyright System in Japan, CRIC:<a
+          href="https://www.cric.or.jp/english/csj/csj4.html"
+          target="_blank"
+          class="block"
+        >
+          https://www.cric.or.jp/english/csj/csj4.html
+        </a>
+      </p>
+    </Modal>
+    <ListArea>
+      <ul>
+        <li>Performers: singers, actors, dancers, etc. who perform copyrighted works, etc.</li>
+        <li>Record producer: a person who first fixed (recorded) the sound (e.g., a record company).</li>
+        <li>
+          Broadcaster: a person who engages in broadcasting as a business (TV broadcaster, radio broadcaster, etc.).
+        </li>
+        <li>
+          Cable broadcasting operator: a person who engages in cable broadcasting as a business (cable TV, cable music
+          broadcasting station, etc.).
+        </li>
+      </ul>
+    </ListArea>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">
+        Perhaps elementary school students imitating their idols and dancing are performers?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        Yes. Permission is required if the dance is to be recorded or published on a website.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">
+        Does the record producer's "fixing the sound" apply to me recording my dog's barking on my phone?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="1">
+        Applicable. This fixed "sound" does not have to be a copyrighted work.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="1">I'm a record producer too!</Bubble>
+    </SpeechBubbles>
+    <img src="/assets/images/1-4-2.png" alt="" width="1592" height="819" />
+
+    <h3 id="ref23">Protection Term</h3>
+    <p>A copyright does not last forever but has a fixed protection term.</p>
+    <ListArea>
+      <p>Copyright</p>
+      <ul>
+        <li>70 years after the author's death from the time of the creation of the copyrighted work (Article 51).</li>
+        <li>
+          For copyrighted works under an unknown name, an unusual name, or a collective name, and cinematographic works,
+          70 years from the time of publication of the copyrighted work (Articles 52(1), 53(1), 54(1)).
+        </li>
+      </ul>
+
+      <p>Neighboring rights</p>
+      <ul>
+        <li>Performances are 70 years from the time of performance (Articles 101(1)(i) and 101(2)(i)).</li>
+        <li>
+          A record is from the time the sound is fixed (recorded) to 70 years after publication (Article 101(2)(ii)).
+        </li>
+        <li>
+          Broadcasting and cable broadcasting is 50 years from the time of broadcast (Article 101(2)(iii) and (iv)).
+        </li>
+      </ul>
+    </ListArea>
+    <Point tag="column" title="Wartime extensions">
+      As for the copyright protection term, the rules add the protection term for copyrights that were not protected
+      during World War II, and for which the Allied nations and Allied nationals had copyrighted in Japan on December 7,
+      1941 (the day before the war began), and for which copyrights were acquired from December 8, 1941 (the day Japan
+      entered the war) to the day before the date the peace treaty came into effect for the Allied nations concerned
+      (e.g., April 27, 1952, for the United States). For example, in the case of the United States, the copyright was
+      acquired on April 27, 1952).
+    </Point>
+    <SpeechBubbles>
+      <Bubble speaker="Daiin" feLevel="1">
+        Oh, I know this one ... the protection term used to be 50 years and now with the <ModalTrigger
+          id="s4_13"
+          word="TPP"
+          isEN
+        /> it's 70!
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">That's right ...</Bubble>
+      <Bubble speaker="Konaka" feLevel="2">
+        My grandfather passed away about 10 years ago, so if there are any copyrighted works by him, they will be
+        protected for another 60 years<ModalTrigger id="s4_14" isEN />. I wonder if I'll still be alive ...
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        Well, after 70 years, the grandchildren may not be alive, and more often than not, you may not know who the
+        copyright owner is.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">What if I want to get permission but can't find the copyright owner?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        There is a system that can be used legally instead of having to pay compensation, based on a ruling from the
+        Commissioner of Cultural Affairs.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="4">Wait, the Commissioner of Cultural Affairs ...</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Of course, there is a procedure, so we're not going to go directly to the Commissioner. I will explain this in
+        detail in Chapter 4.
+      </Bubble>
+    </SpeechBubbles>
+    <Modal id="s4_13" word="TPP (Trans-Pacific Partnership Agreement)" isEN>
+      <p>
+        Abbreviation for the Trans-Pacific Partnership Agreement, an economic partnership agreement signed on February
+        4, 2016.
+      </p>
+    </Modal>
+    <Modal id="s4_14" isEN>
+      <p>
+        There is a caveat to Dr. Konaka's grandfather's story. <br />The end of the protection term is counted from
+        January 1 of the year following the year of the author's death, not from the date of the author's death (Article
+        57). Therefore, if the grandfather died on May 1, 2012, the protection term is counted from January 1, 2013,
+        which means that the protection term will expire 70 years later, on December 31, 2082.
+      </p>
+    </Modal>
+    <Point>
+      The protection term is basically from the time of the creation of the copyrighted work to 70 years after the
+      author's death.
+    </Point>
+
+    <h3 id="ref26">Public Domain</h3>
+    <p>
+      Public domain means public ownership. It can be freely used by anyone without the permission of the copyright
+      owner<ModalTrigger id="s4_15" isEN />. The following fall under this category.
+    </p>
+    <Modal id="s4_15" isEN>
+      <p>
+        To be precise, once in the public domain, anyone is free to perform acts that were the subject of copyright as
+        long as they do not infringe on the moral interests of the author (Supreme Court, January 20, 1984, HANREI JIHO
+        No. 1107, p. 127 [Ganshinkei Case]).
+      </p>
+      <p>
+        The protection term for moral rights after death is not limited and theoretically lasts forever. Therefore,
+        copyrighted works that have entered the public domain 70 years after the author's death are also theoretically
+        protected.
+      </p>
+      <p>
+        However, claims regarding moral rights after the author's death can only be made by the deceased author's
+        "spouse, children, parents, grandchildren, grandparents, or siblings", in other words, up to the second degree
+        of kinship (Article 116(1)). Therefore, if these persons die, there will be no claimant, meaning the end of the
+        protection term for moral rights after the author's death.
+        <br />See Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed., Yuhikaku, 2023, p. 672.
+      </p>
+    </Modal>
+    <ListArea>
+      <ul>
+        <li>Copyrighted works whose protection term has expired.</li>
+        <li>Copyrighted works for which the copyright owner has waived their rights.</li>
+        <li>The copyright owner is dead and there are no heirs (Article 62(1)(i)).</li>
+      </ul>
+    </ListArea>
+    <p>
+      A derivative work based on a public domain work is copyrighted from the time the derivative work is created. Note
+      that even the derivative work is not in the public domain.
+    </p>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="1">It's copyright "free".</Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        The term "copyright free" is a bit of a dangerous term. Many people understand that "copyright free = no
+        copyright", but this is not the case.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">No?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Even if it says "copyright free", the rights may not be waived. In that case, it is not in the public domain.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="3">
+        Is it okay to use anything publicly available on the Internet without permission?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        No, no.<br />First, let's check the license requirements.
+      </Bubble>
+    </SpeechBubbles>
+
+    <h3 id="ref38">License</h3>
+    <p>
+      A license is permission given by the author or copyright owner to the user, saying, "You may use it in this way".
+      It may be granted individually upon request from the user, or it may be presented in advance by the rights owner.
+    </p>
+    <p>
+      When using the copyrighted works of others, be sure to check the terms of use, license, or license agreement to
+      see if there is a license, and if so, what it entails.
+    </p>
+
+    <h4 id="ref39">Check the Terms of Use</h4>
+    <p>One of the illustrations we have seen recently in various places is by "Irasutoya".</p>
+    <p>
+      If you go to the website of "Irasutoya", you will find the "Terms of Use" page<ModalTrigger id="c4_16" isEN />.
+    </p>
+    <Modal id="c4_16" isEN>
+      <p>
+        Irasutoya,<br />Terms of Use:<a href="https://www.irasutoya.com/p/terms.html" target="_blank" class="block">
+          https://www.irasutoya.com/p/terms.html
+        </a>
+      </p>
+      <p class="mt-3">
+        Frequently Asked Questions:<a href="https://www.irasutoya.com/p/faq.html" target="_blank" class="block">
+          https://www.irasutoya.com/p/faq.html
+        </a>
+      </p>
+    </Modal>
+    <Point type="simple">
+      The materials distributed on this site may be used free of charge by individuals or corporations, commercial or
+      non-commercial, as long as they are within the scope of the terms of use.
+    </Point>
+    <p>
+      Do not think, 'Oh well, I get to use it for free!'. You should not be reassured that you can use the service for
+      free. You need to make sure that you are within the terms of use. Please read the FAQs carefully for detailed
+      instructions on how to use the site.
+    </p>
+    <p>
+      Particular attention should be paid to the fact that it states that a fee will be charged for the use of 21 or
+      more illustrations in a single production for commercial use.
+    </p>
+    <p>
+      Sites that provide such illustration materials and photo materials often have terms and conditions of use written
+      in them such as "About Use," "Terms of Use," and "License," so be sure to check them carefully before using them.
+    </p>
+    <p>
+      Google Maps, which you may be familiar with, also requires credit<ModalTrigger id="c4_17" isEN />. Please be aware
+      that removing the credit already displayed may constitute a breach of contract or an infringement of rights.
+    </p>
+    <Modal id="c4_17" isEN>
+      <p>
+        Google Maps, General guidelines:<a
+          href="https://about.google/brand-resource-center/products-and-services/geo-guidelines/"
+          target="_blank"
+          class="block"
+        >
+          https://about.google/brand-resource-center/products-and-services/geo-guidelines/
+        </a>
+      </p>
+    </Modal>
+
+    <h4 id="ref11">Creative Commons License</h4>
+    <p>
+      One of the most famous licenses is the Creative Commons License, but because the name is long, it is sometimes
+      abbreviated to "CC". CC is used around the world as a tool for authors who publish their works to express their
+      willingness to say, "You are free to use my work as long as you abide by these terms of use".
+    </p>
+    <p>This material is also published under "CC BY 4.0" (this symbol is marked in the footer).</p>
+    <ImgCaption>
+      <figcaption>[Creative Commons (CC BY 4.0)]</figcaption>
+      <div class="max-w-xs border border-stone-500 p-4 md:p-8">
+        <img
+          src="/assets/images/cc.svg"
+          alt="This Creative Commons license mark has the highest degree of freedom, with the main condition being that the original author's credit (name, title, etc.) is displayed, and not only modification but also secondary use for commercial purposes is permitted."
+          width="69"
+          height="24"
+          class="mx-auto w-56"
+        />
+      </div>
+    </ImgCaption>
+    <p>
+      This is called "attribution," and as long as "the credit of the original author (name, title of the work, etc.) is
+      indicated", modification and commercial use are allowed.
+    </p>
+    <p>
+      Please note that sometimes there are people who mistakenly think that because it has CC indicated, they are free
+      to use it, but credit is required even for BY.
+    </p>
+    <p>
+      In CC, BY must be added. Other conditions can be combined with the indications as shown in the [Creative Commons
+      example] below to provide the conditions desired by the author.
+    </p>
+    <ImgCaption>
+      <figcaption>[Creative Commons example]</figcaption>
+      <table>
+        <thead>
+          <tr class="col-3">
+            <th>Display</th>
+            <th>Meaning</th>
+            <th>Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="col-3">
+            <td>SA</td>
+            <td>Share Alike</td>
+            <td>If you modify the work, you must distribute it under the same CC license as the original.</td>
+          </tr>
+          <tr class="col-3">
+            <td>ND</td>
+            <td>No Derivatives</td>
+            <td>No derivative work is permitted.</td>
+          </tr>
+          <tr class="col-3">
+            <td>NC</td>
+            <td>Non-Commercial</td>
+            <td>Must be non-commercial.</td>
+          </tr>
+        </tbody>
+      </table>
+    </ImgCaption>
+    <p>
+      For example, CC-BY-ND-NC means that you can use it as long as it is "credited, no derivative work is allowed,
+      non-commercial". There are a total of six types.
+    </p>
+    <p>
+      There is also CC0, which indicates a waiver of rights. Works marked with CC0 are free to use<ModalTrigger
+        id="c4_18"
+        isEN
+      />.
+    </p>
+    <Modal id="c4_18" isEN>
+      <p>
+        About CC0 - "No Copyright":<a
+          href="https://creativecommons.org/publicdomain/zero/1.0/"
+          target="_blank"
+          class="block"
+        >
+          https://creativecommons.org/publicdomain/zero/1.0/
+        </a>
+      </p>
+    </Modal>
+    <p>
+      For more information, please visit the Creative Commons website<ModalTrigger id="c4_19" isEN /><ModalTrigger
+        id="c4_20"
+        isEN
+      />.
+    </p>
+    <Modal id="c4_19" isEN>
+      <p>
+        Creative Commons:<a href="https://creativecommons.org/" target="_blank" class="block">
+          https://creativecommons.org/
+        </a>
+      </p>
+    </Modal>
+    <Modal id="c4_20" isEN>
+      <p>
+        In the Tokyo District Court, October 12, 2021 (2021 (wa) 5285) [Photo on Flickr Case], the court ruled that the
+        defendant's use of a photo by the plaintiff (photographer) posted on Flickr under a Creative Commons License
+        (BY-SA) on his website without giving credit to the author constituted an infringement of the public
+        transmission right and the attribution right.
+      </p>
+    </Modal>
+    <Point>Be sure to check the license!</Point>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">
+        Even if you don't use CC, there are quite a few sites that require "credit" in their terms of use.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        In that case, you must use the copyrighted work by properly indicating the name of the work and the name of the
+        author.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="5">
+        Even if there are no terms of use or anything, if it's on the Internet, you're allowed to use it, right?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        No. If nothing is written, it basically means that permission is required for use. Just because it is published
+        on the Internet does not mean that you are free to use it.
+      </Bubble>
+    </SpeechBubbles>
+    <img src="/assets/images/1-4-3.png" alt="" width="1715" height="847" />
+
+    <h3 id="ref12">Limitation of rights</h3>
+    <p>
+      As explained in Section 01 "What is the Copyright Act?", the Copyright Act aims to develop culture by considering
+      not only the protection of authors' rights but also the "fair exploitation" of copyrighted works.
+    </p>
+    <p>
+      To promote "fair exploitation", the Copyright Act stipulates situations in which copyrighted works may be used
+      without the permission of the copyright owner, and these are called "limitations of rights"<ModalTrigger
+        id="c4_21"
+        isEN
+      />. These provisions limit the rights of copyright owners and define the scope of fair exploitation.
+    </p>
+    <Modal id="c4_21" isEN>
+      <p>
+        Note that the limitation of rights shall not be construed as affecting moral rights (Article 50), so
+        consideration must be given to moral rights.
+      </p>
+    </Modal>
+    <p>
+      There are many limitations of rights, but the following are a few that may be relevant to you, the reader of this
+      material. If any of these apply to you, you may use the material without the permission of the copyright owner.
+    </p>
+    <ListArea id="ref18">
+      <p>Reproduction for private use (Article 30)</p>
+      <ul>
+        <li>
+          It is OK to make your copies only for your use or for use within your home or another similarly limited area.
+        </li>
+        <li>
+          The voyeurism of movies in theaters and other places is not allowed, even if you are the only one watching the
+          movie (Article 4(1) of the Law for the Prevention of Voyeurism of Films).
+        </li>
+        <li>
+          Downloading illegally uploaded copyrighted material knowing that the material is an infringement of copyright
+          is also not allowed (Article 30(1)(iii)).
+        </li>
+      </ul>
+    </ListArea>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="1">
+        Downloading a favorite image from a website and using it as wallpaper for your phone is a reproduction for
+        private use, right?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        That is correct. But uploading the image to a social networking site is an infringement of the public
+        transmission right since Article 30 only allows reproduction.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">
+        What about handing out copies of newspaper articles at staff meetings?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        Such a meeting is for business purposes, so it is not private. It is not a reproduction for private use<ModalTrigger
+          id="s4_21"
+          isEN
+        />.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">What if it was a neighborhood association?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        It is also hard to describe such gatherings as "within the family" or "within a similar limited range", so it
+        does not apply to this group<ModalTrigger id="s4_22" isEN />.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">Well, there was a book scan service case or something like that ...</Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        In that case, a person who wanted to digitize a purchased paper book hired a service provider to scan it, but
+        the person who wanted to use the copy had to make the copy themselves to be covered by Article 30<ModalTrigger
+          id="s4_23"
+          isEN
+        />.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">Private reproduction does not mean you can reproduce too widely ...</Bubble>
+      <Modal id="s4_21" isEN>
+        <p>Tokyo District Court, July 22, 1977, Mutaireishu 9, 2, 534.</p>
+      </Modal>
+      <Modal id="s4_22" isEN>
+        <p>
+          Tokyo District Court, November 8, 2022 (2022 (wa) 2229) held that "for the scope of use of a work to be
+          considered 'within the limited scope of other similar uses', it is necessary to have at least a close and
+          closed relationship to the extent that it is equivalent to a family".
+        </p>
+      </Modal>
+      <Modal id="s4_23" isEN>
+        <p>
+          Intellectual Property High Court, October 22, 2014, HANREI JIHO No. 2246, p. 92 [Book Scan Service Provider
+          Case].
+        </p>
+      </Modal>
+    </SpeechBubbles>
+    <ListArea id="ref37">
+      <p>Use of Incidental Works (Article 30-2)</p>
+      <ul>
+        <li>
+          It is OK for a copyrighted work to appear as a minor part of an accompanying photograph or video when it is
+          taken.
+        </li>
+        <li>Public transmission of incidentally captured photos and videos is OK within a legitimate scope.</li>
+        <li>But not if it unreasonably prejudices the interests of the copyright owner.</li>
+      </ul>
+    </ListArea>
+    <ListArea id="ref34">
+      <p>Reproduction in libraries, etc. (Article 31)</p>
+      <ul>
+        <li>
+          Libraries may reproduce works of library materials as a not-for-profit enterprise in the following cases:
+          <ul>
+            <li>
+              When one copy of a part of a published work<ModalTrigger id="c4_23" isEN /> is provided per person upon
+              request of the user.
+            </li>
+            <li>When necessary for the preservation of library materials.</li>
+            <li>When providing copies of out-of-print materials at the request of other libraries, etc.</li>
+          </ul>
+        </li>
+      </ul>
+    </ListArea>
+    <Modal id="c4_23" isEN>
+      <p>
+        As a general rule, "a portion" is understood to mean "up to half" of a work. For the operation of the National
+        Diet Library, please visit <span class="italic">Information about Copyright</span> of the National Diet Library.
+      </p>
+      <p class="mt-3">
+        Information about Copyright:<a
+          href="https://www.ndl.go.jp/en/copy/copyright/index.html"
+          target="_blank"
+          class="block"
+        >
+          https://www.ndl.go.jp/en/copy/copyright/index.html
+        </a>
+      </p>
+      <p class="mt-3">
+        In addition, under the 2021 amendment to the Copyright Act, the provision of copies of materials for publicity
+        by the state, etc., and other works specified by Cabinet Order as having special circumstances in which the
+        provision of copies of the entire work is deemed not to unreasonably prejudice the interests of the copyright
+        owner is covered in its entirety (Article 31(1)(i), bracketed).
+      </p>
+    </Modal>
+    <ListArea id="ref8">
+      <p>Publication in textbooks, etc. (Article 33)</p>
+      <ul>
+        <li>May be published in textbooks to the extent necessary for school education.</li>
+        <li>
+          Translation, arrangement, transformation, and adaptation OK for inclusion in textbooks<ModalTrigger
+            id="c4_24"
+            isEN
+          />.
+        </li>
+        <li>Requires notification and compensation to copyright owners.</li>
+      </ul>
+    </ListArea>
+    <Modal id="c4_24" isEN>
+      <p>
+        Changes in type or terminology or other alterations that are unavoidable for school education (Article 20
+        (2)(i)) do not constitute an infringement of the integrity right.
+      </p>
+    </Modal>
+    <ListArea id="ref17">
+      <p>Reproduction, etc. as examination questions (Article 36)</p>
+      <ul>
+        <li>
+          Reproduction and public transmission (excluding broadcasting and cable broadcasting) of works that have
+          already been published as examination or examination questions to the extent necessary for the examination<ModalTrigger
+            id="c4_26"
+            isEN
+          /><ModalTrigger id="c4_25" isEN />.
+        </li>
+        <li>OK for examinations done in an online format.</li>
+        <li>However, if it would unreasonably prejudice the interests of the copyright owner, it is not acceptable.</li>
+        <li>
+          Compensation must be paid when used for commercial purposes such as paid examinations, employment
+          examinations, etc.
+        </li>
+        <li>
+          When publishing past exam questions on the web or distributing them at open campuses, permission from the
+          copyright owner is required since Article 36 is not applicable.
+        </li>
+      </ul>
+    </ListArea>
+    <Modal id="c4_26" isEN>
+      <p>
+        This provision was established because it is not appropriate to obtain permission from the copyright owner in
+        advance due to the nature of examinations.
+      </p>
+    </Modal>
+    <Modal id="c4_25" isEN>
+      <p>
+        Although modification of questions that are necessary due to the nature of the question (e.g.,
+        fill-in-the-blanks questions) raises issues concerning the integrity right, modification is permissible to the
+        extent necessary as an unavoidable modification (Article 20(2)(iv)) (see Tatsuhiro Ueno, <span class="italic"
+          >Copyright Guide for Educators and Researchers</span
+        >, Yuhikaku, 2021, p. 148, and see also Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed.,
+        Yuhikaku, 2023, p. 441).
+      </p>
+    </Modal>
+    <ListArea id="ref3">
+      <p>Performances, etc. not for profit (Article 38)</p>
+      <ul>
+        <li>
+          Public stage performances, musical performances, on-screen presentations, or recitations of a published work
+          are OK if they are not for profit, if no fee is charged by the audience, and if no compensation is paid to the
+          performers.
+        </li>
+        <li>
+          It is OK to lend copies of published works, such as CDs, when not for profit and when no fee is charged by the
+          lender.
+        </li>
+      </ul>
+    </ListArea>
+    <Point>Limitations of rights seek to promote fair exploitation by limiting the rights of authors.</Point>
+    <img src="/assets/images/1-4-5_en.png" alt="" width="1277" height="597" />
+    <p>
+      The following two are particularly useful limitations of rights in the classroom and are discussed in detail in
+      Chapter 2.
+    </p>
+    <ListArea>
+      <ul>
+        <li>Citation (Article 32(1)).</li>
+        <li>Reproduction, etc. in educational institutions (Article 35).</li>
+      </ul>
+    </ListArea>
+
+    <h3 id="ref21">Penal Provisions</h3>
+    <p>
+      We have explained various rules that you should comply with, but if you break those rules and the criminal court
+      determines that you have willfully infringed copyright, the criminal penalty is imprisonment for not more than 10
+      years or a fine of not more than 10 million yen, or both (Article 119(1)).
+    </p>
+    <SpeechBubbles>
+      <Bubble speaker="Konaka" feLevel="2">It's still a crime to break the law ...</Bubble>
+      <Bubble speaker="Daiin" feLevel="5">
+        But copyright is a crime requiring a complaint from the victim for prosecution, right?<br />You can't be guilty
+        of a crime if no one submits a complaint, right?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        The reason why the Copyright Act has this system is that there is no need to prosecute if the author or
+        copyright owner thinks it's okay.<br />However, just because you are not prosecuted does not mean you can do it.
+        It is still a violation of the law. As long as you are breaking the law, you never know when you might be
+        prosecuted.
+      </Bubble>
+    </SpeechBubbles>
+    <p>
+      The Copyright Act was amended in 2018 to make it an offense prosecutable without a complaint from a victim if it
+      meets all of the following requirements (Article 123(2)):
+    </p>
+    <ListArea>
+      <ul>
+        <li>The purpose of obtaining compensation or the purpose of harming the interests of the right owner.</li>
+        <li>
+          Transferring, publicly transmitting, or reproducing for such purposes, in its original form, a copyrighted
+          work that is offered or presented to the public for a fee (paid copyrighted work, etc.).
+        </li>
+        <li>
+          Unjust harm is caused to the interests of right owners who are expected to gain from the provision or
+          presentation of paid copyrighted works, etc.
+        </li>
+      </ul>
+    </ListArea>
+    <p>
+      Specifically, selling pirated copies of manga, movies, anime, etc., or publishing them on the internet can be a
+      criminal offense even without a complaint from the rights owner.
+    </p>
+    <p>
+      On the other hand, derivative works such as fanzine (dōjinshi) sold at Comiket and other events remains a crime
+      prosecutable upon a complaint from the victim.
+    </p>
+    <img src="/assets/images/1-4-6_en.png" alt="" width="1277" height="596" />
+  </Section>
+</Page>

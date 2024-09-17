@@ -1,0 +1,228 @@
+---
+import Section from '../../components/Section.astro';
+import Point from '../../components/Point.astro';
+import SpeechBubbles from '../../components/SpeechBubbles.astro';
+import Bubble from '../../components/Bubble.astro';
+import ListArea from '../../components/ListArea.astro';
+import Quiz from '../../components/Quiz.astro';
+import QuizContent from '../../components/QuizContent.astro';
+import Modal from '../../components/Modal.astro';
+import ModalTrigger from '../../components/ModalTrigger.astro';
+import ImgCaption from '../../components/ImgCaption.astro';
+import Page from '../../templates/Page.astro';
+---
+
+<Page
+  title="著作権の基礎"
+  description="当ウェブサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。このページでは著作権の基礎や著作物、著作者等について解説しています。"
+>
+  <Section
+    number="02"
+    title="著作物とは"
+    description="このsectionでは、著作権法で定義する「著作物」がどういうものであるかを説明します。"
+  >
+    <h3>著作物の定義</h3>
+    <SpeechBubbles>
+      <Bubble speaker="小中" feLevel="3">著作物って使っても減るわけじゃないですよね？</Bubble>
+      <Bubble speaker="隅木" feLevel="2">
+        そうです。例えば、車は盗まれたらなくなってしまうので、すぐわかります。でも、文章は盗まれてもなくならないので、悪用されてもすぐにはわからないことがほとんどです。こういう無形の情報のうち、文化の発展に寄与する情報が著作物です。
+      </Bubble>
+      <Bubble speaker="大院" feLevel="4">でも、キャンバスに描かれた絵は盗まれたらわかるんじゃないか？</Bubble>
+      <Bubble speaker="隅木" feLevel="2">
+        絵は確かに著作物ですが、「物」としての側面と「情報」としての側面があります。著作物というと「物」だと思うかもしれませんが、著作物は「情報」なんです。つまり、著作物（情報）が有体物（絵）に乗っかっているわけです<ModalTrigger
+          id="c1s2_1"
+        />。その絵で、勝手にポストカードなどのグッズを作られて売られてしまったら困りますよね。<br
+        />たとえ、正当に絵を買ったとしても、それは物としての権利、所有権をもらっただけです。もとの絵を描いた人の情報に対する権利は、そのまま描いた人に残っています。
+      </Bubble>
+      <Bubble speaker="大院" feLevel="1">なるほど、所有してるのとは別ってことだな。</Bubble>
+    </SpeechBubbles>
+    <Modal id="c1s2_1">
+      <p>最判昭和59年1月20日判時1107号127頁〔顔真卿事件〕</p>
+    </Modal>
+    <img src="/assets/images/1-1-2.png" alt="" width="1558" height="752" />
+    <p>著作権法では「著作物」が保護されます。著作物とは、以下のように定義されています。</p>
+    <Point type="simple" title="2条1項1号">
+      思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
+    </Point>
+    <SpeechBubbles>
+      <Bubble speaker="小中" feLevel="2">
+        わたしのクラスの生徒の身長・体重一覧の表は、表現したものなので著作物ですか？
+      </Bubble>
+      <Bubble speaker="隅木" feLevel="2">いいえ、単なるデータは思想・感情ではないので、著作物にあたりません。</Bubble>
+      <Bubble speaker="大院" feLevel="2">料理のレシピには著作権がないって、よく聞くよ。</Bubble>
+      <Bubble speaker="隅木" feLevel="2">
+        表現したものでないといけないので、アイデア自体は著作物にはあたりません。頭の中で考えてただけでは保護されないんです。<br
+        />レシピというアイデアそのものは著作物ではありませんが、それが本とかWeb記事とかになっている場合に、その写真や文章が著作物になることがあるので、注意は必要です。
+      </Bubble>
+    </SpeechBubbles>
+    <Point>思想や感情を創作的に表現したものでないと「著作物」ではない</Point>
+    <ListArea id="ref27">
+      <p>著作権法上の著作物でないものの例</p>
+      <ul>
+        <li>
+          頭の中で考えただけのもの（アイデア）：小説のストーリーも考えただけでは保護されません。小説として表現されたものが保護されます。
+        </li>
+        <li>
+          データ、事実だけを記したもの：訃報、人事異動情報、各県の人口一覧などは、表現者の考えや気持ちを表現したものではないので、「思想又は感情」を表現したといえず、著作物になりません。
+        </li>
+        <li>
+          ありふれた表現やごく短い文章：「青い空」など誰でも使うようなフレーズは創作性がないと判断されることが多いです。
+        </li>
+      </ul>
+    </ListArea>
+    <p>著作物の例としては以下のようなものがあります（10条1項）</p>
+    <ImgCaption id="ref30">
+      <figcaption>【著作物の種類（10条1項）】</figcaption>
+      <table>
+        <thead>
+          <tr class="col-2">
+            <th>種類</th>
+            <th>例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="col-2">
+            <td>言語の著作物</td>
+            <td>講演、論文、レポート、作文、小説、脚本、詩歌、俳句、落語、漫才など</td>
+          </tr>
+          <tr class="col-2">
+            <td>音楽の著作物</td>
+            <td>曲、楽曲を伴う歌詞など</td>
+          </tr>
+          <tr class="col-2">
+            <td>舞踊、無言劇の著作物</td>
+            <td>日本舞踊、バレエ、ダンス、舞踏、パントマイムなどの振り付け</td>
+          </tr>
+          <tr class="col-2">
+            <td>美術の著作物</td>
+            <td>絵画、版画、彫刻、マンガ、書、舞台装置、生け花など（茶碗、壺、刀剣等の美術工芸品も含む）</td>
+          </tr>
+          <tr class="col-2">
+            <td>建築の著作物</td>
+            <td>宮殿、凱旋門、庭園、塔などの建築物（鑑賞性が必要）</td>
+          </tr>
+          <tr class="col-2">
+            <td>地図、図形の著作物</td>
+            <td>地図、学術的な図面、図表、設計図、立体模型、地球儀など</td>
+          </tr>
+          <tr class="col-2">
+            <td>映画の著作物</td>
+            <td
+              >劇場用映画、アニメ、ビデオ、YouTube動画、TikTok動画、ゲームソフトの映像部分などの「録画されている動く影像」</td
+            >
+          </tr>
+          <tr class="col-2">
+            <td>写真の著作物</td>
+            <td>肖像写真、風景写真、記録写真、広告写真など</td>
+          </tr>
+          <tr class="col-2">
+            <td>プログラムの著作物</td>
+            <td>オペレーティング・システム（OS）、アプリケーション・ソフト、家電製品用のプログラムなど</td>
+          </tr>
+        </tbody>
+      </table>
+    </ImgCaption>
+    <p id="ref35">このほかに次のような著作物もあります（11条、12条、12条の2）</p>
+    <ImgCaption>
+      <figcaption>【著作物の種類（11条、12条、12条の2）】</figcaption>
+      <table>
+        <thead>
+          <tr class="col-2">
+            <th>種類</th>
+            <th>例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="col-2">
+            <td>二次的著作物</td>
+            <td>上表の著作物を翻訳、編曲、変形、翻案し、作成した著作物</td>
+          </tr>
+          <tr class="col-2">
+            <td>編集著作物</td>
+            <td>百科事典、辞書、新聞、雑誌、詩集など</td>
+          </tr>
+          <tr class="col-2">
+            <td>データベースの著作物</td>
+            <td>コンピュータで検索可能な形態をとった百科事典、辞書など</td>
+          </tr>
+        </tbody>
+      </table>
+    </ImgCaption>
+    <p>
+      編集物は、素材の選択や配列に創作性があると、著作物となります。全体としても編集著作物として保護されますが、辞典や雑誌など中身の1つ1つの記事を利用する際には、個々の記事も著作物であるため、それぞれの著作権者の許諾が必要となります。
+    </p>
+    <p>
+      データベースの著作物は、集められた個々のデータに著作物性がなくても、データの選び方やデータを検索するための体系的な構成方法などに創作性があれば、著作物と認められます。
+    </p>
+    <SpeechBubbles>
+      <Bubble speaker="大院" feLevel="5">データは著作物じゃないのに、データベースは著作物なのか。</Bubble>
+      <Bubble speaker="隅木" feLevel="4">
+        例えば、他のデータベースでは調べられないような情報を検索できたり、同じ情報を検索するのでもキーワードの選定などに工夫があったりする場合に著作物性が認められることがあります。
+      </Bubble>
+    </SpeechBubbles>
+    <p>
+      以下のものは著作物にあたるものの、国民に周知し広く利用してもらう目的で作成されるので、許諾なく利用できます（13条）。
+    </p>
+    <ListArea id="ref10">
+      <p>許諾なく利用できる著作物の例</p>
+      <ul>
+        <li>憲法その他の法令</li>
+        <li>国や地方公共団体等の告示、訓令、通達など</li>
+        <li>裁判所の判決、決定、命令など</li>
+        <li>国、地方公共団体等が作成する上記の翻訳物や編集物</li>
+      </ul>
+    </ListArea>
+    <Quiz
+      title="では、ここでクイズです。下記のものは著作権法で保護される著作物でしょうか？"
+      list={[
+        { item: '（１）ファンタジー小説の設定' },
+        { item: '（２）親戚の子にせがまれて、メモ用紙にさらっと描いた猫の絵' },
+        { item: '（３）アニメのキャラクターの名前' },
+        { item: '（４）学生のレポートに書かれたグラフ' },
+      ]}
+    >
+      <QuizContent title="（１）ファンタジー小説の設定">
+        <Bubble speaker="小中" feLevel="2">小説は著作物だから、設定も著作物かな？</Bubble>
+        <Bubble speaker="隅木" feLevel="4">
+          いいえ、抽象的な設定だけでは著作物にはあたりません。例えば、最近、主人公が異世界に飛ばされて、そこで活躍するような小説、漫画、アニメがありますが、異世界に飛ばされるという程度の設定自体はアイデアの範囲であって著作権はないので、このような設定で新たに小説を書いても著作権侵害にはならないのです。
+        </Bubble>
+      </QuizContent>
+      <QuizContent title="（２）親戚の子にせがまれて、メモ用紙にさらっと描いた猫の絵">
+        <Bubble speaker="大院" feLevel="4">
+          メモ用紙に描いたようなものは、すぐ捨てるだろうし著作物じゃないんじゃないか？
+        </Bubble>
+        <Bubble speaker="隅木" feLevel="3">
+          いえ、いつ捨てるかは、著作権法上は問題ではなく、描いた時点で「表現されたもの」なので著作物となります<ModalTrigger
+            id="s2_1"
+          />。
+        </Bubble>
+      </QuizContent>
+      <Modal id="s2_1">
+        <p>
+          「表現」というと、何らかの物に固定されていなければいけないと思われるかもしれませんが、固定されることは著作物となるための要件ではありません。なお、映画の著作物に関しては固定されていることが要件になります。
+        </p>
+      </Modal>
+      <QuizContent title="（３）アニメのキャラクターの名前">
+        <Bubble speaker="小中" feLevel="1">これはきっと著作物ですよ！</Bubble>
+        <Bubble speaker="隅木" feLevel="4">
+          はずれです。これは著作物にはあたりません。小中さんのお名前も著作物にはなりません。色々な考え方がありえますが、「文芸、学術、美術又は音楽の範囲に属するもの」に当たらない、創作性がないといった整理になると思います。ただし、キャラクターの絵は著作物になります<ModalTrigger
+            id="s2_2"
+          />。
+        </Bubble>
+      </QuizContent>
+      <Modal id="s2_2">
+        <p>
+          キャラクターの絵との関係ではキャラクターの名前は、「著作物...の題号」（20条1項）として同一性保持権の対象にはなりえます。
+        </p>
+      </Modal>
+      <QuizContent title="（４）学生のレポートに書かれたグラフ">
+        <Bubble speaker="大院" feLevel="3">
+          グラフは著作物じゃないな。単なるデータは著作物じゃないし、データをグラフにしただけだったら、創作性はないんじゃないかな？
+        </Bubble>
+        <Bubble speaker="隅木" feLevel="2">
+          Excelなどで誰が描いても同じようなグラフになる場合は、創作性がなく、著作物にならない可能性が高いです。ですが、例えばビール消費量とかのグラフで、棒グラフをビールジョッキの絵にしているなど、表現上の工夫をしている場合は、創作性が認められて著作物になる可能性があります。
+        </Bubble>
+      </QuizContent>
+    </Quiz>
+  </Section>
+</Page>
