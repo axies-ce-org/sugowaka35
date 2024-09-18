@@ -23,7 +23,7 @@ const isSubCurrent = submenu?.find(item => item.href === pathname );
 <li
   class={
     twJoin(
-      (submenu && (isCurrent || isSubCurrent) && 'my-2 rounded-lg bg-orange-50 p-2'),
+      (submenu && (isCurrent || isSubCurrent) && 'my-2 bg-orange-50 p-2 md:rounded-lg'),
       className
     )
   }
@@ -37,8 +37,9 @@ const isSubCurrent = submenu?.find(item => item.href === pathname );
           (isCurrent || isSubCurrent)
             ? 'text-[0.8125rem]/normal'
             : '!py-3 text-[1.0625rem]/normal md:!py-2 md:text-base/normal')
-        : (isCurrent ? 'rounded-lg bg-orange-50 text-orange-600' : '')),
-        isSmall && '!py-2 !text-sm/normal !font-normal md:!py-1.5'
+        : (isCurrent ? 'bg-orange-50 text-orange-600 md:rounded-lg' : '')),
+        isSmall && '!py-2 !text-sm/normal font-normal md:!py-1.5',
+        isSmall && isCurrent && '!font-bold'
       )
     }
   >

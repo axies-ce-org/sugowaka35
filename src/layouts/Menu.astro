@@ -29,35 +29,6 @@ const { sidebar, isEN } = Astro.props;
       <MenuItem
         href={'/' + (isEN ? 'en/' : '') + 'introduction/'}
         title={isEN ? 'Introduction' : 'はじめに'}
-        submenu={isEN
-          ? [
-              {
-                title: 'Introduction',
-                href: '/en/introduction/#sec-01',
-              },
-              {
-                title: 'People who appear in this material',
-                href: '/en/introduction/#sec-02',
-              },
-              {
-                title: 'References to Provisions of Laws',
-                href: '/en/introduction/#sec-03',
-              },
-            ]
-          : [
-              {
-                title: 'はじめに',
-                href: '/introduction/#sec-01',
-              },
-              {
-                title: '本ウェブサイトに出てくるひとたち',
-                href: '/introduction/#sec-02',
-              },
-              {
-                title: '法律の条文の参照について',
-                href: '/introduction/#sec-03',
-              },
-            ]}
       />
       <MenuItem
         href={'/' + (isEN ? 'en/' : '') + 'basis/'}

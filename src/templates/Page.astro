@@ -2,21 +2,23 @@
 import Layout from './Default.astro';
 import Header from '../layouts/Header.astro';
 import Menu from '../layouts/Menu.astro';
+import { twMerge } from 'tailwind-merge';
 
 export interface Props {
-  title: string;
+  title?: string;
   description: string;
   ogType?: string;
   isEN?: boolean;
+  isTitleHidden?: boolean;
 }
 
-const { title, description, ogType, isEN } = Astro.props;
+const { title, description, ogType, isEN, isTitleHidden } = Astro.props;
 ---
 
 <Layout title={title} description={description} ogType={ogType} isEN={isEN} hasBorder>
   <div class="relative mx-auto max-w-[72.5rem] px-4 pb-20 md:px-10 md:pt-2">
     <Header isEN={isEN} />
-    <h1 class="mt-[1.6875rem] text-base font-bold text-stone-800 md:mt-[0.875rem]">{title}</h1>
+    <h1 class={twMerge("mt-[1.6875rem] text-base font-bold text-stone-800 md:mt-[0.875rem]", isTitleHidden && 'invisible h-0')}>{title}</h1>
     <div class="mt-6 flex items-start gap-7 md:mt-10 md:h-full lg:gap-10">
       <main class="grid w-[47.5rem] gap-6 md:gap-10">
         <slot />
