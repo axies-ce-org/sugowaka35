@@ -1,119 +1,62 @@
 ---
-import { twJoin } from 'tailwind-merge';
 import Section from '../../../components/Section.astro';
 import Page from '../../../templates/Page.astro';
 ---
 
 <Page
-  title="Epilogue"
+  title="Afterwords"
   description="This material, which explains copyright to teachers primarily teaching in educational institutions, includes a page for introducing our team and epilogue."
   isEN
 >
-  <Section number="01" title="Team">
-    <h3>Team for <span class="italic">Understanding Copyright in Classes</span></h3>
-    <ul class="!p-0">
-      {
-        [
-          {
-            src: '/assets/images/amano.png',
-            name: 'Yuki Amano',
-            title: 'Writing',
-            text: 'A member of the Copyright Task Force of the Academic and Educational Content Sharing and Distribution Subcommittee of the AXIES. She is a lecturer at Teikyo University, Learning Technology Development Office. Currently writing a series of articles on graphs that even a cat can understand. Lives with four cats and a dog.',
-          },
-          {
-            src: '/assets/images/kimura.png',
-            name: 'Kodai Kimura',
-            title: 'Supervision & Translation',
-            text: (
-              <>
-                An Attorney at law admitted in Japan, New York & Washington DC and a partner at Kobayashi & Yugeta Law
-                Office, Tokyo. He also focuses on explaining copyright in a way that is easy to understand for the
-                general public, including serializing Art Law in the web edition of Bijutsutecho, co-authoring{' '}
-                <span class="italic">A Book on Rights for Creators</span>, (Bone Digital, 2018), and supervising legal
-                work. He loves boxing (only to watch).
-              </>
-            ),
-          },
-          {
-            src: '/assets/images/sumiya.png',
-            name: 'Takahiro Sumiya',
-            title: 'Planning',
-            text: 'A member of the Copyright Task Force, Academic, and Educational Content Sharing and Distribution Subcommittee of the AXIES, as well as a member of the Forum of Those Related about Educational Use of Works (FY2021 and FY2022). A professor at Hiroshima University, Information Media Education and Research Center. He loves Star Wars and ramen.',
-          },
-          {
-            src: '/assets/images/sumida.png',
-            name: 'Ayaka Sumida',
-            title: 'Illustration',
-            text: 'Designer & Illustrator, KITERETZ inc. She works on a variety of designs, mainly web design, but also printed matter and advertisements. She loves cats, otters, and K-POP.',
-          },
-          {
-            src: '/assets/images/sato.png',
-            name: 'Masaki Sato',
-            title: 'Design & DTP',
-            text: (
-              <>
-                Graphic designer focusing on Alpha Design and book production. Author of{' '}
-                <span class="italic">Hajimete no Illustrator CC</span>, (Shuwa System). Design and DTP{' '}
-                <span class="italic">A Book on Rights for Creators, HTML Kaitai Shinsho</span>, (Bone Digital),{' '}
-                <span class="italic">Neo Dada no Gyakusetsu</span>, (Misuzu Shobo), etc. He loves motorcycles, cats, and
-                sake.
-              </>
-            ),
-          },
-          {
-            src: '/assets/images/koseki.png',
-            name: 'Kyo Koseki',
-            title: 'Editing',
-            text: (
-              <>
-                Writer and book editor for IT, Web, and design. As a writer, he is active mainly in corporate-owned
-                media. Major book editing credits include <span class="italic">A Book on Rights for Creators</span>,
-                (Bone Digital, 2018), and{' '}
-                <span class="italic">Oni Feedback: The Chikara of Design Grows by 'Dame-dashi'</span>, (MdN). He loves
-                sake but is trying to cut back to stay in good shape.
-              </>
-            ),
-          },
-        ].map(({ src, name, title, text }) => {
-          return (
-            <li
-              class={twJoin(
-                'grid list-none items-center gap-4 border-t border-stone-200 py-4 md:flex md:items-start md:py-5',
-                'first:border-none md:first:pt-0'
-              )}
-            >
-              <img
-                src={src}
-                alt={'Illustration of the' + name + "'s portrait."}
-                width="480"
-                height="480"
-                class="h-auto w-20"
-              />
-              <div>
-                <p class="font-bold">
-                  <span class="mr-4 text-orange-600">{title}</span>
-                  {name}
-                </p>
-                <p>{text}</p>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
-    <h3>Team for Understanding Copyright in Classes Web</h3>
-    <ul class="!p-0">
-      <li class="grid list-none items-center gap-4 pb-4 md:flex md:items-start md:pb-5">
-        <img src="/assets/images/kiteretz.png" alt="KITERETZ inc. Logo" width="480" height="480" class="h-auto w-20" />
-        <div>
-          <p class="font-bold"><span class="mr-4 text-orange-600">Website Design</span>KITERETZ inc.</p>
-          <p>
-            A web design company that handles web design, graphic design, logo design, and system development. The
-            company boasts a wealth of experience and always provides high-quality services incorporating the latest
-            technology. Cappuccino made by the office's DeLonghi fully automatic coffee machine is so delicious.
-          </p>
-        </div>
+  <Section number="02" title="This Project">
+    <p>
+      This material was designed primarily for teachers at educational institutions to explain what they need to know
+      when dealing with third-party copyrighted works in the classroom.
+    </p>
+    <p>
+      On the other hand, it is necessary to tell students and pupils that "this is a class, so you can reproduce it", or
+      "you must comply with the requirements for citation". Please explain the difference between class and private
+      life, such as, "since this is a class, you may reproduce an animated character and create a work of art, but if
+      you upload a picture of that work onto a social networking service, you will be violating a copyright".
+    </p>
+    <p>
+      In addition, please inform students that they are the authors of their writings, drawings, and photographs and
+      that copyrights apply to them.
+    </p>
+
+    <ul class="my-5 border-b border-stone-200 pb-5 md:my-6 md:pb-6">
+      <li>
+        Academic eXchange for Information Environment and Strategy (AXIES) will make <a
+          href="https://axies.jp/report/copyright_education/"
+          target="_blank"
+          >video materials
+        </a> available free of charge as copyright education materials for students.
+      </li>
+      <li>A PDF file of this material will also be available free of charge.</li>
+      <li>
+        Please use <a href="https://axies.jp/report/copyright_education/" target="_blank">this material</a> under the CC
+        license.
       </li>
     </ul>
+    <p>
+      <span class="block text-lg font-bold">Produced and published by AXIES</span>
+      Contact: sugowaka35[at]axies.jp<br />[change [at] to @].
+    </p>
+    <p>
+      This material has been produced with a grant from the Common Purpose Fund of the Society for the Administration of
+      Remuneration for Public Transmission for School Lessons (SARTRAS).
+    </p>
+    <img
+      src="/assets/images/SARTRAS_LOGO_4C_POSI_Josei.png"
+      alt="Logo of Sartras for common purpose projects and subsidized projects" width="468"
+      height="413"
+      class="w-[12rem]"
+    />
+    <p>
+      We are striving to improve the content of this material. Please send us your comments at the URL below. We
+      appreciate your cooperation.<a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block"
+        >https://forms.gle/a1XxvJU1xebuKaS26</a
+      >
+    </p>
   </Section>
 </Page>

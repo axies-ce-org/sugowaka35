@@ -176,64 +176,11 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem href={'/' + (isEN ? 'en/' : '') + 'quiz/'} title={isEN ? 'Quiz' : '著作権クイズ'} />
-      <MenuItem
-        href={'/' + (isEN ? 'en/' : '') + 'extra/'}
-        title={isEN ? 'References and Index' : '資料集・索引'}
-        submenu={isEN
-          ? [
-              {
-                title: 'Resources for learning about copyright',
-                href: '/en/extra/',
-              },
-              {
-                title: 'Index',
-                href: '/en/extra02/',
-              },
-            ]
-          : [
-              {
-                title: '著作権を知るための資料集',
-                href: '/extra',
-              },
-              {
-                title: '索引',
-                href: '/extra02',
-              },
-            ]}
-      />
-      <MenuItem
-        href={'/' + (isEN ? 'en/' : '') + 'afterwords/'}
-        title={isEN ? 'Epilogue' : 'おわりに'}
-        submenu={isEN
-          ? [
-              {
-                title: 'Team',
-                href: '/en/afterwords/',
-              },
-              {
-                title: 'This Project',
-                href: '/en/afterwords02/',
-              },
-              {
-                title: 'License',
-                href: '/en/afterwords03/',
-              },
-            ]
-          : [
-              {
-                title: '制作チーム紹介',
-                href: '/afterwords/',
-              },
-              {
-                title: 'おわりに',
-                href: '/afterwords02/',
-              },
-              {
-                title: 'ライセンス',
-                href: '/afterwords03/',
-              },
-            ]}
-      />
+      <MenuItem href={'/' + (isEN ? 'en/' : '') + 'references/'} title={isEN ? 'References' : '資料集'} />
+      <MenuItem href={'/' + (isEN ? 'en/' : '') + 'index/'} title={isEN ? 'Index' : '索引'} />
+      <MenuItem href={'/' + (isEN ? 'en/' : '') + 'team/'} title={isEN ? 'Production Team' : '制作チーム紹介'} />
+      <MenuItem href={'/' + (isEN ? 'en/' : '') + 'afterwords/'} title={isEN ? 'Afterwords' : 'おわりに'} />
+      <MenuItem href={'/' + (isEN ? 'en/' : '') + 'license/'} title={isEN ? 'License' : 'ライセンス'} />
     </ul>
   </nav>
 </div>
