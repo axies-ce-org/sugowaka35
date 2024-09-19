@@ -1,12 +1,11 @@
 ---
 import Section from '../../../components/Section.astro';
 import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
 import ListArea from '../../../components/ListArea.astro';
 import ImgCaption from '../../../components/ImgCaption.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
 import Page from '../../../templates/Page.astro';
 ---
 
@@ -24,15 +23,12 @@ import Page from '../../../templates/Page.astro';
     <h3 id="ref51">Guidelines for Article 35 under the Amended Copyright Act</h3>
     <p>
       The "Guidelines" are a summary of the operation of copyrighted works in the classroom at the Forum explained
-      earlier. This material provides an easy-to-understand explanation based on the Guidelines FY 2021, December 2020<ModalTrigger
-        id="c2s4_1"
-        isEN
-      />. It can be read in its entirety on the SARTRAS page<ModalTrigger id="c2s4_2" isEN />. You can also download the
+      earlier. This material provides an easy-to-understand explanation based on the Guidelines FY 2021, December 2020<Annotation num={1} />. It can be read in its entirety on the SARTRAS page<Annotation num={2} />. You can also download the
       PDF file. The Guidelines were first published in FY2020 and revised in FY2021. Discussions are still taking place
       in the Forum regarding the contents of this document, so it may be revised in the future. Be sure to always check
       for the latest version.
     </p>
-    <Modal id="c2s4_1" isEN>
+    <Point isMemo id="c2s4_1" num={1}>
       <p>
         SARTRAS, Guidelines for Article 35 under the Amended Copyright Act:<a
           href="https://sartras.or.jp/unyoshishin/"
@@ -42,13 +38,13 @@ import Page from '../../../templates/Page.astro';
           https://sartras.or.jp/unyoshishin/
         </a>
       </p>
-    </Modal>
-    <Modal id="c2s4_2" isEN>
+    </Point>
+    <Point isMemo id="c2s4_2" num={2}>
       <p>
         Guidelines for Article 35 under the Amended Copyright Act, FY 2021 Ed., Special Activities Supplement, November
         2021 is also available.
       </p>
-    </Modal>
+    </Point>
     <p>
       On this material, we simply call as the Guidelines. In addition, this material will be based on the 2021 version
       of the Guidelines.
@@ -118,11 +114,11 @@ import Page from '../../../templates/Page.astro';
         <li>
           Transmissions to the same premises (except those accessible from outside the premises) made through
           broadcasting equipment located on the same premises of the school or through a server, as in the case of
-          in-school broadcasts<ModalTrigger id="c2s4_3" isEN />.
+          in-school broadcasts<Annotation num={3} />.
         </li>
       </ul>
+      <Point isMemo id="c2s4_3" num={3}><p>Article 2(1)(vii-2), brackets.</p></Point>
     </ListArea>
-    <Modal id="c2s4_3" isEN><p>Article 2(1)(vii-2), brackets.</p></Modal>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="3">I have a class of about 30 students.</Bubble>
       <Bubble speaker="Sumiki" feLevel="2">
@@ -242,7 +238,7 @@ import Page from '../../../templates/Page.astro';
           </ul>
         </li>
         <li>
-          Special Activities in Elementary and Secondary Education<ModalTrigger id="c2s4_4" isEN />.
+          Special Activities in Elementary and Secondary Education<Annotation num={4} />.
           <ul>
             <li>Classroom and homeroom activities.</li>
             <li>Extracurricular activities.</li>
@@ -264,30 +260,26 @@ import Page from '../../../templates/Page.astro';
         <li>
           <span class="mr-1"
             >Public lectures sponsored by schools, universities, and other educational institutions</span
-          ><ModalTrigger id="c2s4_5" isEN />.
+          ><Annotation num={5} />.
         </li>
         <li>Certificate programs for working adults and others outside the university.</li>
         <li>Courses, lectures, etc. sponsored by social education facilities.</li>
       </ul>
+      <Point isMemo id="c2s4_4" num={4}><p>"Special Activities" as defined in the Courses of Study.</p></Point>
+      <Point isMemo id="c2s4_5" num={5}>
+        <p>
+          Projects to be undertaken by the company as its own business. Separate consideration is required for projects of
+          a considerable scale in light of income and expenditure budgets.
+        </p>
+      </Point>
     </ListArea>
-    <Modal id="c2s4_4" isEN><p>"Special Activities" as defined in the Courses of Study.</p></Modal>
-    <Modal id="c2s4_5" isEN>
-      <p>
-        Projects to be undertaken by the company as its own business. Separate consideration is required for projects of
-        a considerable scale in light of income and expenditure budgets.
-      </p>
-    </Modal>
     <ListArea>
       <p>Non-applicable examples</p>
       <ul>
         <li>School information sessions for prospective students, mock classes at open campuses, etc.</li>
         <li>Faculty and Staff Meetings.</li>
         <li>
-          Training, seminars, and information for faculty and staff conducted as <ModalTrigger
-            id="c2s4_6"
-            word="FD"
-            isEN
-          /> / <ModalTrigger id="c2s4_7" word="SD" isEN /> at universities.
+          Training, seminars, and information for faculty and staff conducted as <Annotation word="FD" /> / <Annotation word="SD" /> at universities.
         </li>
         <li>Extracurricular activities in higher education (club activities, etc.).</li>
         <li>Voluntary activities (for which no credit is granted).</li>
@@ -297,18 +289,18 @@ import Page from '../../../templates/Page.astro';
           held at schools and other educational institutions' facilities.
         </li>
       </ul>
+      <Point id="c2s4_6" word="FD (Faculty Development)">
+        <p>
+          Organizational efforts (e.g., training) by faculty members to improve and enhance course content and methods.
+        </p>
+      </Point>
+      <Point id="c2s4_7" word="SD (Staff Development)">
+        <p>
+          Organizational efforts (training, etc.) to improve the qualifications of staff members, including administrative
+          management and education/research support.
+        </p>
+      </Point>
     </ListArea>
-    <Modal id="c2s4_6" word="FD (Faculty Development)" isEN>
-      <p>
-        Organizational efforts (e.g., training) by faculty members to improve and enhance course content and methods.
-      </p>
-    </Modal>
-    <Modal id="c2s4_7" word="SD (Staff Development)" isEN>
-      <p>
-        Organizational efforts (training, etc.) to improve the qualifications of staff members, including administrative
-        management and education/research support.
-      </p>
-    </Modal>
     <SpeechBubbles>
       <Bubble speaker="Daiin" feLevel="4">
         Are primary and secondary club activities "classes" and college club activities not "classes"?
@@ -370,11 +362,11 @@ import Page from '../../../templates/Page.astro';
         <li>Public transmission to within one class. Any number of class members.</li>
         <li>
           Distributing copies of class materials to parents visiting classes and teachers participating in research
-          classes<ModalTrigger id="c2s4_8" isEN />.
+          classes<Annotation num={6} />.
         </li>
       </ul>
+      <Point isMemo id="c2s4_8" num={6}><p>P. 12 of the Guidelines.</p></Point>
     </ListArea>
-    <Modal id="c2s4_8" isEN><p>P. 12 of the Guidelines.</p></Modal>
     <ListArea>
       <p>When the extent is found not to be necessary:</p>
       <ul>
@@ -390,7 +382,7 @@ import Page from '../../../templates/Page.astro';
         </li>
       </ul>
     </ListArea>
-    <Point>Understand the definitions in the Guidelines to determine if Article 35 can apply.</Point>
+    <Point><p>Understand the definitions in the Guidelines to determine if Article 35 can apply.</p></Point>
 
     <h4>
       Cases in which the interests of the copyright owner would be unreasonably prejudiced (pp. 9-19 of the Guidelines)
@@ -453,15 +445,15 @@ import Page from '../../../templates/Page.astro';
       When reading a thesis in a college class or seminar, you will generally read the entire report. On the other hand,
       because the articles are specialized, their target readers are limited, so when reproducing or publicly
       transmitting them in class, it is necessary to carefully consider whether the interests of the copyright owner
-      will be unreasonably prejudiced (Chapter 3, Q14, Q15)<ModalTrigger id="c2s4_9" isEN />.
+      will be unreasonably prejudiced (Chapter 3, Q14, Q15)<Annotation num={7} />.
     </p>
-    <Modal id="c2s4_9" isEN>
+    <Point isMemo id="c2s4_9" num={7}>
       <p>
         If the article you need is available for free in a university-contracted e-journal, author's website, or
         institutional repository, provide the link to the student. Providing the link does not constitute reproduction
         or public transmission, so it is not a problem.
       </p>
-    </Modal>
+    </Point>
     <h4>Uses of Copyrighted Works</h4>
     <p>
       In the case of works sold to students and pupils, the application of Article 35's limitation of rights may have a
@@ -489,15 +481,15 @@ import Page from '../../../templates/Page.astro';
       Showing a recording of a movie or TV program in the classroom can be done without permission as a non-profit,
       free-of-charge showing (Article 38(1)). However, making a copy of the movie and distributing it to a certain
       number of students or making it available for viewing on demand at any time is likely to unreasonably prejudice
-      the interests of the copyright owner<ModalTrigger id="c2s4_10" isEN />.
+      the interests of the copyright owner<Annotation num={8} />.
     </p>
-    <Modal id="c2s4_10" isEN>
+    <Point isMemo id="c2s4_10" num={8}>
       <p>
         As for making available for later viewing not the video file itself but a recording of the class scene in which
         it is being viewed, there is no substitute for viewing the video file, so it is unlikely to unreasonably
         prejudice the copyright owner's interests.
       </p>
-    </Modal>
+    </Point>
     <h4 id="ref7">Manner of reproduction, public transmission, and public communication</h4>
     <p>
       The term "manner" is unfamiliar, but it means so much more than the manner of reproduction or public transmission.
@@ -512,14 +504,11 @@ import Page from '../../../templates/Page.astro';
       In the case of public transmissions, those who can receive the information should be limited to those who teach
       the class and those who receive the information. For example, even if the transmission of information to the world
       by students is a necessary activity for classes, the inclusion of copyrighted works covered by Article 35 in such
-      activities is likely to unreasonably prejudice the interests of copyright owners<ModalTrigger
-        id="c2s4_11"
-        isEN
-      />.
+      activities is likely to unreasonably prejudice the interests of copyright owners<Annotation num={9} />.
     </p>
-    <Modal id="c2s4_11" isEN>
+    <Point isMemo id="c2s4_11" num={9}>
       <p>Of course, if the "citation" in Article 32 can apply, there is no problem.</p>
-    </Modal>
+    </Point>
     <p>The basic concept is above. Examples are summarized below.</p>
     <ListArea>
       <p>
@@ -590,7 +579,7 @@ import Page from '../../../templates/Page.astro';
         <li>Although not directly covered in class, copies should be distributed as reference materials.</li>
       </ul>
     </ListArea>
-    <Point>Do not unreasonably prejudice the interests of copyright owners!</Point>
+    <Point><p>Do not unreasonably prejudice the interests of copyright owners!</p></Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="1">
         In short, Article 35 stipulates that <br /><span class="font-bold text-orange-600"

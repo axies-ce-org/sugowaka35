@@ -1,10 +1,9 @@
 ---
 import Section from '../../../components/Section.astro';
 import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
 import Page from '../../../templates/Page.astro';
 ---
 
@@ -22,11 +21,13 @@ import Page from '../../../templates/Page.astro';
     <h3>What is the Copyright Act?</h3>
     <h4>(Japanese) Copyright Act</h4>
     <p>Article 1 of the Copyright Act states the purpose of the Act.</p>
-    <Point type="simple" title="Article 1 (Purpose)">
-      The purpose of this Act is to provide for authors' rights and neighboring rights with respect to works, as well as
-      with respect to performances, phonograms, broadcasts, and cablecasts, and to ensure protection for the rights of
-      authors and other such persons while according attention to the fair exploitation of these cultural products, and
-      thereby to contribute to cultural development.
+    <Point hasNoTag title="Article 1 (Purpose)">
+      <p>
+        The purpose of this Act is to provide for authors' rights and neighboring rights with respect to works, as well as
+        with respect to performances, phonograms, broadcasts, and cablecasts, and to ensure protection for the rights of
+        authors and other such persons while according attention to the fair exploitation of these cultural products, and
+        thereby to contribute to cultural development.
+      </p>
     </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">
@@ -59,8 +60,10 @@ import Page from '../../../templates/Page.astro';
       </Bubble>
     </SpeechBubbles>
     <Point>
-      The purpose of the Copyright Act is to contribute to cultural development through the protection of the rights of
-      authors and the fair exploitation of copyrighted works.
+      <p>
+        The purpose of the Copyright Act is to contribute to cultural development through the protection of the rights of
+        authors and the fair exploitation of copyrighted works.
+      </p>
     </Point>
     <img src="/assets/images/1-1-1_en.png" alt="" width="1277" height="597" />
     <p>
@@ -83,11 +86,11 @@ import Page from '../../../templates/Page.astro';
         We want to keep things black and white if possible. There are many materials that teachers can refer to. One of
         them is titled the "<span class="font-bold text-orange-600"
           >Guidelines for Article 35 under the Amended Copyright Act</span
-        ><ModalTrigger id="s1_1" isEN />".
+        >".<Annotation num={1} />
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s1_1" isEN>
+    <Point isMemo num={1} id="s1_1">
       <p>Guidelines for Article 35 under the Amended Copyright Act are explained in detail in Chapter 2.</p>
-    </Modal>
+    </Point>
   </Section>
 </Page>

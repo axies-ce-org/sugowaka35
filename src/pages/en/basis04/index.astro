@@ -1,11 +1,10 @@
 ---
 import Section from '../../../components/Section.astro';
 import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
 import ListArea from '../../../components/ListArea.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
 import ImgCaption from '../../../components/ImgCaption.astro';
 import Page from '../../../templates/Page.astro';
 ---
@@ -38,7 +37,7 @@ import Page from '../../../templates/Page.astro';
       <Bubble speaker="Daiin" feLevel="2">And reports written by students?</Bubble>
       <Bubble speaker="Sumiki" feLevel="1">Yes.</Bubble>
     </SpeechBubbles>
-    <Point>When a copyrighted work is created, a copyright is automatically granted (Article 17(2)).</Point>
+    <Point><p>When a copyrighted work is created, a copyright is automatically granted (Article 17(2)).</p></Point>
     <p>
       In a broad sense, there are two types of copyrights: "moral rights," which protect the author's commitment to the
       copyrighted work, and "copyright (economic rights)", which protect the economic value. The following is an
@@ -127,11 +126,11 @@ import Page from '../../../templates/Page.astro';
         (modified, mutilated, etc.)" against the author's intention without permission.
       </Bubble>
       <Bubble speaker="Konaka" feLevel="2">
-        Can you crop a photo and use it, or change the text etc ... ?<ModalTrigger id="s4_1" isEN />
+        Can you crop a photo and use it, or change the text etc ... ?<Annotation num={1} />
       </Bubble>
       <Bubble speaker="Sumiki" feLevel="2">
         Yes. Please note that changing "," to ";" deleting a line break, and changing paragraph breaks or changing the
-        wording for consistency may also infringe the integrity right<ModalTrigger id="s4_2" isEN />.
+        wording for consistency may also infringe the integrity right<Annotation num={2} />.
       </Bubble>
       <Bubble speaker="Daiin" feLevel="5">
         Well, if something like that is wrong, it should be fixed. It's common for student theses to have
@@ -143,12 +142,12 @@ import Page from '../../../templates/Page.astro';
       </Bubble>
       <Bubble speaker="Daiin" feLevel="4">That's right.</Bubble>
     </SpeechBubbles>
-    <Modal id="s4_1" isEN>
+    <Point isMemo id="s4_1" num={1}>
       <p>Tokyo District Court, March 26, 1999, HANREI JIHO No. 1694, p. 142 [Dolphin Blue Case].</p>
-    </Modal>
-    <Modal id="s4_2" isEN>
+    </Point>
+    <Point isMemo id="s4_2" num={2}>
       <p>Tokyo High Court, December 19, 1991, HANREI JIHO No. 1422, p. 123 [Hosei University Prize Essay Case].</p>
-    </Modal>
+    </Point>
     <p>However, alterations are permitted in the following cases (Article 20(2)):</p>
     <ListArea>
       <ol>
@@ -180,31 +179,22 @@ import Page from '../../../templates/Page.astro';
       should check with the author.
     </p>
     <Point id="ref33-1">
-      There are three moral rights: (a) the publication right, (b) the attribution right, and (c) the integrity right!<ModalTrigger
-        id="s4_4"
-        isEN
-      />
+      <p>
+        There are three moral rights: (a) the publication right, (b) the attribution right, and (c) the integrity right!<Annotation num={3} />
+      </p>
     </Point>
-    <Modal id="s4_4" isEN>
+    <Point isMemo id="s4_4" num={3}>
       <p>
         "The exploitation of a work in a way that is prejudicial to the honor or reputation of the author" is deemed an
         infringement of the author's moral rights (Article 113(11)). Although not strictly defined as a right, this
         provision is sometimes called the "honor and reputation right" as a fourth right.
       </p>
-    </Modal>
+    </Point>
 
     <h3 id="ref4">Copyrights (Economic rights)</h3>
     <p>
-      Copyrights as economic rights include the following<ModalTrigger id="s4_5" isEN />:
+      Copyrights as economic rights include the following<Annotation num={4} />:
     </p>
-    <Modal id="s4_5" isEN>
-      <p>
-        Since it is difficult for a copyright owner to trace a user's act of perceiving or enjoyment of a work, such as
-        by viewing, listening to, or reading a work, these are not subject to copyright (see Kaoru Okamoto, <span
-          class="italic">The Concept of Copyright</span
-        >, Iwanami Shinsho, 2003, p. 160).
-      </p>
-    </Modal>
     <ListArea>
       <ul>
         <li>Reproduction Right (Article 21).</li>
@@ -220,13 +210,18 @@ import Page from '../../../templates/Page.astro';
         <li>Rights of the Original Author in Connection with the Exploitation of Derivative Works (Article 28).</li>
       </ul>
     </ListArea>
+    <Point isMemo id="s4_5" num={4}>
+      <p>
+        Since it is difficult for a copyright owner to trace a user's act of perceiving or enjoyment of a work, such as
+        by viewing, listening to, or reading a work, these are not subject to copyright (see Kaoru Okamoto, <span
+          class="italic">The Concept of Copyright</span
+        >, Iwanami Shinsho, 2003, p. 160).
+      </p>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">There are a lot of different rights.</Bubble>
       <Bubble speaker="Sumiki" feLevel="2">
-        Yes. Some people may find it a little difficult. Copyright is sometimes called a "bundle of rights"<ModalTrigger
-          id="s4_6"
-          isEN
-        />. First of all, it is good to understand that there are two major rights.
+        Yes. Some people may find it a little difficult. Copyright is sometimes called a "bundle of rights"<Annotation num={5} />. First of all, it is good to understand that there are two major rights.
       </Bubble>
       <Bubble speaker="Konaka" feLevel="1">Only two!</Bubble>
       <Bubble speaker="Sumiki" feLevel="2">
@@ -252,12 +247,12 @@ import Page from '../../../templates/Page.astro';
         sort of (1) the "right to copy".
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s4_6" isEN>
+    <Point isMemo id="s4_6" num={5}>
       <p>
         Taku Inoue, <span class="italic">Latest Copyright Introduction by SNS</span>, Seibundo-Shinkosha, 2022, p. 53,
         explains that there are many copyright rights by comparing them to grapes.
       </p>
-    </Modal>
+    </Point>
     <img src="/assets/images/1-4-1_en.png" alt="" width="1277" height="597" />
     <p id="ref13">
       As explained in Section 04 "What is Copyright?", a reproduction right is "the right not to be reproduced without
@@ -265,12 +260,22 @@ import Page from '../../../templates/Page.astro';
     </p>
     <p>
       For example, Masamoto Nasu, author of the <span class="italic">Zukkoke Sannin-Gumi (The funny trio)</span> series,
-      reportedly transferred (bequeathed) the copyrights of all his works to a literary organization in his will<ModalTrigger
-        id="s4_7"
-        isEN
-      />.
+      reportedly transferred (bequeathed) the copyrights of all his works to a literary organization in his will<Annotation num={6} />.
     </p>
-    <Modal id="s4_7" isEN>
+    <p>
+      "Adaptation" is a term unique to the Copyright Act, but it means the act of creating a derivative work by adapting
+      it or making it into a film<Annotation num={7} />.
+    </p>
+    <p>
+      The terms "public transmission right" and "right to make transmittable" may also be unfamiliar to you. The public
+      transmission right is the right to transmit a copyrighted work to the public (to an unspecified or specified
+      number of persons). For example, among public transmissions, automatic public transmission means putting the
+      copyrighted work on a website for a large number of people to view, or posting the copyrighted work on a social
+      networking service for a large number of people to see. Making transmittable means uploading a copyrighted work to
+      a server, etc. to make it available for automatic public transmission, regardless of whether it has been
+      transmitted or not<Annotation num={8} />.
+    </p>
+    <Point isMemo id="s4_7" num={6}>
       <p>
         Donation of all copyrights, "Zukkoke Sannin Gumi", Masamoto Nasu's Wish for Children's Literature, Mainichi
         Shimbun, October 5, 2022,<a
@@ -281,29 +286,16 @@ import Page from '../../../templates/Page.astro';
           https://mainichi.jp/articles/20221004/k00/00m/040/188000c
         </a>
       </p>
-    </Modal>
-    <p>
-      "Adaptation" is a term unique to the Copyright Act, but it means the act of creating a derivative work by adapting
-      it or making it into a film<ModalTrigger id="s4_8" isEN />.
-    </p>
-    <Modal id="s4_8" isEN>
+    </Point>
+    <Point isMemo id="s4_8" num={7}>
       <p>
         The act of creating a derivative work, including translation, arrangement, or transformation for the sake of
         convenience, is sometimes called an "adaptation".
       </p>
-    </Modal>
-    <p>
-      The terms "public transmission right" and "right to make transmittable" may also be unfamiliar to you. The public
-      transmission right is the right to transmit a copyrighted work to the public (to an unspecified or specified
-      number of persons). For example, among public transmissions, automatic public transmission means putting the
-      copyrighted work on a website for a large number of people to view, or posting the copyrighted work on a social
-      networking service for a large number of people to see. Making transmittable means uploading a copyrighted work to
-      a server, etc. to make it available for automatic public transmission, regardless of whether it has been
-      transmitted or not<ModalTrigger id="s4_9" isEN />.
-    </p>
-    <Modal id="s4_9" isEN>
+    </Point>
+    <Point isMemo id="s4_9" num={8}>
       <p>Article 23(1) brackets.</p>
-    </Modal>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">
         What makes "public communication" different from "public transmission"?
@@ -318,10 +310,7 @@ import Page from '../../../templates/Page.astro';
       </Bubble>
       <Bubble speaker="Sumiki" feLevel="3">
         By the way, the use of an ordinary household receiver to broadcast a copyrighted work does not constitute an
-        infringement of the public communication right, even if it is for profit or a fee<ModalTrigger
-          id="s4_10"
-          isEN
-        />.
+        infringement of the public communication right, even if it is for profit or a fee<Annotation num={9} />.
       </Bubble>
       <Bubble speaker="Daiin" feLevel="1">I haven't made any public communications.</Bubble>
       <Bubble speaker="Sumiki" feLevel="2">
@@ -332,10 +321,10 @@ import Page from '../../../templates/Page.astro';
         I didn't know that! I didn't know that such an act was subject to copyright too.
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s4_10" isEN>
+    <Point isMemo id="s4_10" num={9}>
       <p>The second sentence of Article 38(3).</p>
-    </Modal>
-    <Point>Copyright is the right not to do specific acts without permission.</Point>
+    </Point>
+    <Point><p>Copyright is the right not to do specific acts without permission.</p></Point>
 
     <h3 id="ref32">Neighboring rights</h3>
     <p>
@@ -343,25 +332,11 @@ import Page from '../../../templates/Page.astro';
       are automatically granted upon performance, sound fixation, broadcasting, or wire broadcasting, and do not require
       any registration (Articles 89(5) and 101(1)).
     </p>
-    <Point>Neighboring rights protect those who play an important role in the conveyance of copyrighted works.</Point>
+    <Point><p>Neighboring rights protect those who play an important role in the conveyance of copyrighted works.</p></Point>
     <p>The following are the owners of neighboring rights.</p>
     <p>
-      Please see the texts of CRIC and other sources to find out what rights you have for each of them<ModalTrigger
-        id="c4_11"
-        isEN
-      />.
+      Please see the texts of CRIC and other sources to find out what rights you have for each of them<Annotation num={10} />.
     </p>
-    <Modal id="c4_11" isEN>
-      <p>
-        IV. Author's rights and neighboring rights under the Japanese copyright law, Copyright System in Japan, CRIC:<a
-          href="https://www.cric.or.jp/english/csj/csj4.html"
-          target="_blank"
-          class="block"
-        >
-          https://www.cric.or.jp/english/csj/csj4.html
-        </a>
-      </p>
-    </Modal>
     <ListArea>
       <ul>
         <li>Performers: singers, actors, dancers, etc. who perform copyrighted works, etc.</li>
@@ -375,6 +350,17 @@ import Page from '../../../templates/Page.astro';
         </li>
       </ul>
     </ListArea>
+    <Point isMemo id="c4_11" num={10}>
+      <p>
+        IV. Author's rights and neighboring rights under the Japanese copyright law, Copyright System in Japan, CRIC:<a
+          href="https://www.cric.or.jp/english/csj/csj4.html"
+          target="_blank"
+          class="block"
+        >
+          https://www.cric.or.jp/english/csj/csj4.html
+        </a>
+      </p>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">
         Perhaps elementary school students imitating their idols and dancing are performers?
@@ -415,26 +401,24 @@ import Page from '../../../templates/Page.astro';
         </li>
       </ul>
     </ListArea>
-    <Point tag="column" title="Wartime extensions">
-      As for the copyright protection term, the rules add the protection term for copyrights that were not protected
-      during World War II, and for which the Allied nations and Allied nationals had copyrighted in Japan on December 7,
-      1941 (the day before the war began), and for which copyrights were acquired from December 8, 1941 (the day Japan
-      entered the war) to the day before the date the peace treaty came into effect for the Allied nations concerned
-      (e.g., April 27, 1952, for the United States). For example, in the case of the United States, the copyright was
-      acquired on April 27, 1952).
+    <Point isColumn title="Wartime extensions">
+      <p>
+        As for the copyright protection term, the rules add the protection term for copyrights that were not protected
+        during World War II, and for which the Allied nations and Allied nationals had copyrighted in Japan on December 7,
+        1941 (the day before the war began), and for which copyrights were acquired from December 8, 1941 (the day Japan
+        entered the war) to the day before the date the peace treaty came into effect for the Allied nations concerned
+        (e.g., April 27, 1952, for the United States). For example, in the case of the United States, the copyright was
+        acquired on April 27, 1952).
+      </p>
     </Point>
     <SpeechBubbles>
       <Bubble speaker="Daiin" feLevel="1">
-        Oh, I know this one ... the protection term used to be 50 years and now with the <ModalTrigger
-          id="s4_13"
-          word="TPP"
-          isEN
-        /> it's 70!
+        Oh, I know this one ... the protection term used to be 50 years and now with the <Annotation word="TPP" /> it's 70!
       </Bubble>
       <Bubble speaker="Sumiki" feLevel="4">That's right ...</Bubble>
       <Bubble speaker="Konaka" feLevel="2">
         My grandfather passed away about 10 years ago, so if there are any copyrighted works by him, they will be
-        protected for another 60 years<ModalTrigger id="s4_14" isEN />. I wonder if I'll still be alive ...
+        protected for another 60 years<Annotation num={11} />. I wonder if I'll still be alive ...
       </Bubble>
       <Bubble speaker="Sumiki" feLevel="4">
         Well, after 70 years, the grandchildren may not be alive, and more often than not, you may not know who the
@@ -451,49 +435,32 @@ import Page from '../../../templates/Page.astro';
         detail in Chapter 4.
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s4_13" word="TPP (Trans-Pacific Partnership Agreement)" isEN>
+    <Point id="s4_13" word="TPP (Trans-Pacific Partnership Agreement)">
       <p>
         Abbreviation for the Trans-Pacific Partnership Agreement, an economic partnership agreement signed on February
         4, 2016.
       </p>
-    </Modal>
-    <Modal id="s4_14" isEN>
+    </Point>
+    <Point isMemo id="s4_14" num={11}>
       <p>
         There is a caveat to Dr. Konaka's grandfather's story. <br />The end of the protection term is counted from
         January 1 of the year following the year of the author's death, not from the date of the author's death (Article
         57). Therefore, if the grandfather died on May 1, 2012, the protection term is counted from January 1, 2013,
         which means that the protection term will expire 70 years later, on December 31, 2082.
       </p>
-    </Modal>
+    </Point>
     <Point>
-      The protection term is basically from the time of the creation of the copyrighted work to 70 years after the
-      author's death.
+      <p>
+        The protection term is basically from the time of the creation of the copyrighted work to 70 years after the
+        author's death.
+      </p>
     </Point>
 
     <h3 id="ref26">Public Domain</h3>
     <p>
       Public domain means public ownership. It can be freely used by anyone without the permission of the copyright
-      owner<ModalTrigger id="s4_15" isEN />. The following fall under this category.
+      owner<Annotation num={12} />. The following fall under this category.
     </p>
-    <Modal id="s4_15" isEN>
-      <p>
-        To be precise, once in the public domain, anyone is free to perform acts that were the subject of copyright as
-        long as they do not infringe on the moral interests of the author (Supreme Court, January 20, 1984, HANREI JIHO
-        No. 1107, p. 127 [Ganshinkei Case]).
-      </p>
-      <p>
-        The protection term for moral rights after death is not limited and theoretically lasts forever. Therefore,
-        copyrighted works that have entered the public domain 70 years after the author's death are also theoretically
-        protected.
-      </p>
-      <p>
-        However, claims regarding moral rights after the author's death can only be made by the deceased author's
-        "spouse, children, parents, grandchildren, grandparents, or siblings", in other words, up to the second degree
-        of kinship (Article 116(1)). Therefore, if these persons die, there will be no claimant, meaning the end of the
-        protection term for moral rights after the author's death.
-        <br />See Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed., Yuhikaku, 2023, p. 672.
-      </p>
-    </Modal>
     <ListArea>
       <ul>
         <li>Copyrighted works whose protection term has expired.</li>
@@ -522,6 +489,25 @@ import Page from '../../../templates/Page.astro';
         No, no.<br />First, let's check the license requirements.
       </Bubble>
     </SpeechBubbles>
+    <Point isMemo id="s4_15" num={12}>
+      <p>
+        To be precise, once in the public domain, anyone is free to perform acts that were the subject of copyright as
+        long as they do not infringe on the moral interests of the author (Supreme Court, January 20, 1984, HANREI JIHO
+        No. 1107, p. 127 [Ganshinkei Case]).
+      </p>
+      <p>
+        The protection term for moral rights after death is not limited and theoretically lasts forever. Therefore,
+        copyrighted works that have entered the public domain 70 years after the author's death are also theoretically
+        protected.
+      </p>
+      <p>
+        However, claims regarding moral rights after the author's death can only be made by the deceased author's
+        "spouse, children, parents, grandchildren, grandparents, or siblings", in other words, up to the second degree
+        of kinship (Article 116(1)). Therefore, if these persons die, there will be no claimant, meaning the end of the
+        protection term for moral rights after the author's death.
+        <br />See Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed., Yuhikaku, 2023, p. 672.
+      </p>
+    </Point>
 
     <h3 id="ref38">License</h3>
     <p>
@@ -536,23 +522,13 @@ import Page from '../../../templates/Page.astro';
     <h4 id="ref39">Check the Terms of Use</h4>
     <p>One of the illustrations we have seen recently in various places is by "Irasutoya".</p>
     <p>
-      If you go to the website of "Irasutoya", you will find the "Terms of Use" page<ModalTrigger id="c4_16" isEN />.
+      If you go to the website of "Irasutoya", you will find the "Terms of Use" page<Annotation num={13} />.
     </p>
-    <Modal id="c4_16" isEN>
+    <Point hasNoTag>
       <p>
-        Irasutoya,<br />Terms of Use:<a href="https://www.irasutoya.com/p/terms.html" target="_blank" class="block">
-          https://www.irasutoya.com/p/terms.html
-        </a>
+        The materials distributed on this site may be used free of charge by individuals or corporations, commercial or
+        non-commercial, as long as they are within the scope of the terms of use.
       </p>
-      <p class="mt-3">
-        Frequently Asked Questions:<a href="https://www.irasutoya.com/p/faq.html" target="_blank" class="block">
-          https://www.irasutoya.com/p/faq.html
-        </a>
-      </p>
-    </Modal>
-    <Point type="simple">
-      The materials distributed on this site may be used free of charge by individuals or corporations, commercial or
-      non-commercial, as long as they are within the scope of the terms of use.
     </Point>
     <p>
       Do not think, 'Oh well, I get to use it for free!'. You should not be reassured that you can use the service for
@@ -568,10 +544,22 @@ import Page from '../../../templates/Page.astro';
       in them such as "About Use," "Terms of Use," and "License," so be sure to check them carefully before using them.
     </p>
     <p>
-      Google Maps, which you may be familiar with, also requires credit<ModalTrigger id="c4_17" isEN />. Please be aware
+      Google Maps, which you may be familiar with, also requires credit<Annotation num={14} />. Please be aware
       that removing the credit already displayed may constitute a breach of contract or an infringement of rights.
     </p>
-    <Modal id="c4_17" isEN>
+    <Point isMemo id="c4_16" num={13}>
+      <p>
+        Irasutoya,<br />Terms of Use:<a href="https://www.irasutoya.com/p/terms.html" target="_blank" class="block">
+          https://www.irasutoya.com/p/terms.html
+        </a>
+      </p>
+      <p class="mt-3">
+        Frequently Asked Questions:<a href="https://www.irasutoya.com/p/faq.html" target="_blank" class="block">
+          https://www.irasutoya.com/p/faq.html
+        </a>
+      </p>
+    </Point>
+    <Point isMemo id="c4_17" num={14}>
       <p>
         Google Maps, General guidelines:<a
           href="https://about.google/brand-resource-center/products-and-services/geo-guidelines/"
@@ -581,7 +569,7 @@ import Page from '../../../templates/Page.astro';
           https://about.google/brand-resource-center/products-and-services/geo-guidelines/
         </a>
       </p>
-    </Modal>
+    </Point>
 
     <h4 id="ref11">Creative Commons License</h4>
     <p>
@@ -648,12 +636,13 @@ import Page from '../../../templates/Page.astro';
       non-commercial". There are a total of six types.
     </p>
     <p>
-      There is also CC0, which indicates a waiver of rights. Works marked with CC0 are free to use<ModalTrigger
-        id="c4_18"
-        isEN
-      />.
+      There is also CC0, which indicates a waiver of rights. Works marked with CC0 are free to use<Annotation num={15} />.
     </p>
-    <Modal id="c4_18" isEN>
+    <p>
+      For more information, please visit the Creative Commons website<Annotation num={16} /><Annotation num={17} />.
+    </p>
+    <Point><p>Be sure to check the license!</p></Point>
+    <Point isMemo id="c4_18" num={15}>
       <p>
         About CC0 - "No Copyright":<a
           href="https://creativecommons.org/publicdomain/zero/1.0/"
@@ -663,29 +652,22 @@ import Page from '../../../templates/Page.astro';
           https://creativecommons.org/publicdomain/zero/1.0/
         </a>
       </p>
-    </Modal>
-    <p>
-      For more information, please visit the Creative Commons website<ModalTrigger id="c4_19" isEN /><ModalTrigger
-        id="c4_20"
-        isEN
-      />.
-    </p>
-    <Modal id="c4_19" isEN>
+    </Point>
+    <Point isMemo id="c4_19" num={16}>
       <p>
         Creative Commons:<a href="https://creativecommons.org/" target="_blank" class="block">
           https://creativecommons.org/
         </a>
       </p>
-    </Modal>
-    <Modal id="c4_20" isEN>
+    </Point>
+    <Point isMemo id="c4_20" num={17}>
       <p>
         In the Tokyo District Court, October 12, 2021 (2021 (wa) 5285) [Photo on Flickr Case], the court ruled that the
         defendant's use of a photo by the plaintiff (photographer) posted on Flickr under a Creative Commons License
         (BY-SA) on his website without giving credit to the author constituted an infringement of the public
         transmission right and the attribution right.
       </p>
-    </Modal>
-    <Point>Be sure to check the license!</Point>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">
         Even if you don't use CC, there are quite a few sites that require "credit" in their terms of use.
@@ -711,17 +693,8 @@ import Page from '../../../templates/Page.astro';
     </p>
     <p>
       To promote "fair exploitation", the Copyright Act stipulates situations in which copyrighted works may be used
-      without the permission of the copyright owner, and these are called "limitations of rights"<ModalTrigger
-        id="c4_21"
-        isEN
-      />. These provisions limit the rights of copyright owners and define the scope of fair exploitation.
+      without the permission of the copyright owner, and these are called "limitations of rights"<Annotation num={18} />. These provisions limit the rights of copyright owners and define the scope of fair exploitation.
     </p>
-    <Modal id="c4_21" isEN>
-      <p>
-        Note that the limitation of rights shall not be construed as affecting moral rights (Article 50), so
-        consideration must be given to moral rights.
-      </p>
-    </Modal>
     <p>
       There are many limitations of rights, but the following are a few that may be relevant to you, the reader of this
       material. If any of these apply to you, you may use the material without the permission of the copyright owner.
@@ -742,6 +715,12 @@ import Page from '../../../templates/Page.astro';
         </li>
       </ul>
     </ListArea>
+    <Point isMemo id="c4_21" num={18}>
+      <p>
+        Note that the limitation of rights shall not be construed as affecting moral rights (Article 50), so
+        consideration must be given to moral rights.
+      </p>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="1">
         Downloading a favorite image from a website and using it as wallpaper for your phone is a reproduction for
@@ -755,42 +734,36 @@ import Page from '../../../templates/Page.astro';
         What about handing out copies of newspaper articles at staff meetings?
       </Bubble>
       <Bubble speaker="Sumiki" feLevel="3">
-        Such a meeting is for business purposes, so it is not private. It is not a reproduction for private use<ModalTrigger
-          id="s4_21"
-          isEN
-        />.
+        Such a meeting is for business purposes, so it is not private. It is not a reproduction for private use<Annotation num={19} />.
       </Bubble>
       <Bubble speaker="Konaka" feLevel="2">What if it was a neighborhood association?</Bubble>
       <Bubble speaker="Sumiki" feLevel="2">
         It is also hard to describe such gatherings as "within the family" or "within a similar limited range", so it
-        does not apply to this group<ModalTrigger id="s4_22" isEN />.
+        does not apply to this group<Annotation num={20} />.
       </Bubble>
       <Bubble speaker="Daiin" feLevel="4">Well, there was a book scan service case or something like that ...</Bubble>
       <Bubble speaker="Sumiki" feLevel="3">
         In that case, a person who wanted to digitize a purchased paper book hired a service provider to scan it, but
-        the person who wanted to use the copy had to make the copy themselves to be covered by Article 30<ModalTrigger
-          id="s4_23"
-          isEN
-        />.
+        the person who wanted to use the copy had to make the copy themselves to be covered by Article 30<Annotation num={21} />.
       </Bubble>
       <Bubble speaker="Konaka" feLevel="2">Private reproduction does not mean you can reproduce too widely ...</Bubble>
-      <Modal id="s4_21" isEN>
-        <p>Tokyo District Court, July 22, 1977, Mutaireishu 9, 2, 534.</p>
-      </Modal>
-      <Modal id="s4_22" isEN>
-        <p>
-          Tokyo District Court, November 8, 2022 (2022 (wa) 2229) held that "for the scope of use of a work to be
-          considered 'within the limited scope of other similar uses', it is necessary to have at least a close and
-          closed relationship to the extent that it is equivalent to a family".
-        </p>
-      </Modal>
-      <Modal id="s4_23" isEN>
-        <p>
-          Intellectual Property High Court, October 22, 2014, HANREI JIHO No. 2246, p. 92 [Book Scan Service Provider
-          Case].
-        </p>
-      </Modal>
     </SpeechBubbles>
+    <Point isMemo id="s4_21" num={19}>
+      <p>Tokyo District Court, July 22, 1977, Mutaireishu 9, 2, 534.</p>
+    </Point>
+    <Point isMemo id="s4_22" num={20}>
+      <p>
+        Tokyo District Court, November 8, 2022 (2022 (wa) 2229) held that "for the scope of use of a work to be
+        considered 'within the limited scope of other similar uses', it is necessary to have at least a close and
+        closed relationship to the extent that it is equivalent to a family".
+      </p>
+    </Point>
+    <Point isMemo id="s4_23" num={21}>
+      <p>
+        Intellectual Property High Court, October 22, 2014, HANREI JIHO No. 2246, p. 92 [Book Scan Service Provider
+        Case].
+      </p>
+    </Point>
     <ListArea id="ref37">
       <p>Use of Incidental Works (Article 30-2)</p>
       <ul>
@@ -809,7 +782,7 @@ import Page from '../../../templates/Page.astro';
           Libraries may reproduce works of library materials as a not-for-profit enterprise in the following cases:
           <ul>
             <li>
-              When one copy of a part of a published work<ModalTrigger id="c4_23" isEN /> is provided per person upon
+              When one copy of a part of a published work<Annotation num={22} /> is provided per person upon
               request of the user.
             </li>
             <li>When necessary for the preservation of library materials.</li>
@@ -817,56 +790,50 @@ import Page from '../../../templates/Page.astro';
           </ul>
         </li>
       </ul>
+      <Point isMemo id="c4_23" num={22}>
+        <p>
+          As a general rule, "a portion" is understood to mean "up to half" of a work. For the operation of the National
+          Diet Library, please visit <span class="italic">Information about Copyright</span> of the National Diet Library.
+        </p>
+        <p class="mt-3">
+          Information about Copyright:<a
+            href="https://www.ndl.go.jp/en/copy/copyright/index.html"
+            target="_blank"
+            class="block"
+          >
+            https://www.ndl.go.jp/en/copy/copyright/index.html
+          </a>
+        </p>
+        <p class="mt-3">
+          In addition, under the 2021 amendment to the Copyright Act, the provision of copies of materials for publicity
+          by the state, etc., and other works specified by Cabinet Order as having special circumstances in which the
+          provision of copies of the entire work is deemed not to unreasonably prejudice the interests of the copyright
+          owner is covered in its entirety (Article 31(1)(i), bracketed).
+        </p>
+      </Point>
     </ListArea>
-    <Modal id="c4_23" isEN>
-      <p>
-        As a general rule, "a portion" is understood to mean "up to half" of a work. For the operation of the National
-        Diet Library, please visit <span class="italic">Information about Copyright</span> of the National Diet Library.
-      </p>
-      <p class="mt-3">
-        Information about Copyright:<a
-          href="https://www.ndl.go.jp/en/copy/copyright/index.html"
-          target="_blank"
-          class="block"
-        >
-          https://www.ndl.go.jp/en/copy/copyright/index.html
-        </a>
-      </p>
-      <p class="mt-3">
-        In addition, under the 2021 amendment to the Copyright Act, the provision of copies of materials for publicity
-        by the state, etc., and other works specified by Cabinet Order as having special circumstances in which the
-        provision of copies of the entire work is deemed not to unreasonably prejudice the interests of the copyright
-        owner is covered in its entirety (Article 31(1)(i), bracketed).
-      </p>
-    </Modal>
     <ListArea id="ref8">
       <p>Publication in textbooks, etc. (Article 33)</p>
       <ul>
         <li>May be published in textbooks to the extent necessary for school education.</li>
         <li>
-          Translation, arrangement, transformation, and adaptation OK for inclusion in textbooks<ModalTrigger
-            id="c4_24"
-            isEN
-          />.
+          Translation, arrangement, transformation, and adaptation OK for inclusion in textbooks<Annotation num={23} />.
         </li>
         <li>Requires notification and compensation to copyright owners.</li>
       </ul>
+      <Point isMemo id="c4_24" num={23}>
+        <p>
+          Changes in type or terminology or other alterations that are unavoidable for school education (Article 20
+          (2)(i)) do not constitute an infringement of the integrity right.
+        </p>
+      </Point>
     </ListArea>
-    <Modal id="c4_24" isEN>
-      <p>
-        Changes in type or terminology or other alterations that are unavoidable for school education (Article 20
-        (2)(i)) do not constitute an infringement of the integrity right.
-      </p>
-    </Modal>
     <ListArea id="ref17">
       <p>Reproduction, etc. as examination questions (Article 36)</p>
       <ul>
         <li>
           Reproduction and public transmission (excluding broadcasting and cable broadcasting) of works that have
-          already been published as examination or examination questions to the extent necessary for the examination<ModalTrigger
-            id="c4_26"
-            isEN
-          /><ModalTrigger id="c4_25" isEN />.
+          already been published as examination or examination questions to the extent necessary for the examination<Annotation num={24} /><Annotation num={25} />.
         </li>
         <li>OK for examinations done in an online format.</li>
         <li>However, if it would unreasonably prejudice the interests of the copyright owner, it is not acceptable.</li>
@@ -879,23 +846,23 @@ import Page from '../../../templates/Page.astro';
           copyright owner is required since Article 36 is not applicable.
         </li>
       </ul>
+      <Point isMemo id="c4_26" num={24}>
+        <p>
+          This provision was established because it is not appropriate to obtain permission from the copyright owner in
+          advance due to the nature of examinations.
+        </p>
+      </Point>
+      <Point isMemo id="c4_25" num={25}>
+        <p>
+          Although modification of questions that are necessary due to the nature of the question (e.g.,
+          fill-in-the-blanks questions) raises issues concerning the integrity right, modification is permissible to the
+          extent necessary as an unavoidable modification (Article 20(2)(iv)) (see Tatsuhiro Ueno, <span class="italic"
+            >Copyright Guide for Educators and Researchers</span
+          >, Yuhikaku, 2021, p. 148, and see also Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed.,
+          Yuhikaku, 2023, p. 441).
+        </p>
+      </Point>
     </ListArea>
-    <Modal id="c4_26" isEN>
-      <p>
-        This provision was established because it is not appropriate to obtain permission from the copyright owner in
-        advance due to the nature of examinations.
-      </p>
-    </Modal>
-    <Modal id="c4_25" isEN>
-      <p>
-        Although modification of questions that are necessary due to the nature of the question (e.g.,
-        fill-in-the-blanks questions) raises issues concerning the integrity right, modification is permissible to the
-        extent necessary as an unavoidable modification (Article 20(2)(iv)) (see Tatsuhiro Ueno, <span class="italic"
-          >Copyright Guide for Educators and Researchers</span
-        >, Yuhikaku, 2021, p. 148, and see also Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed.,
-        Yuhikaku, 2023, p. 441).
-      </p>
-    </Modal>
     <ListArea id="ref3">
       <p>Performances, etc. not for profit (Article 38)</p>
       <ul>
@@ -910,7 +877,7 @@ import Page from '../../../templates/Page.astro';
         </li>
       </ul>
     </ListArea>
-    <Point>Limitations of rights seek to promote fair exploitation by limiting the rights of authors.</Point>
+    <Point><p>Limitations of rights seek to promote fair exploitation by limiting the rights of authors.</p></Point>
     <img src="/assets/images/1-4-5_en.png" alt="" width="1277" height="597" />
     <p>
       The following two are particularly useful limitations of rights in the classroom and are discussed in detail in

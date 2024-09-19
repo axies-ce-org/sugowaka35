@@ -154,7 +154,7 @@
 }
 
 /* Micro Modal */
-@keyframes mmfadeIn {
+/* @keyframes mmfadeIn {
 	from {
 		opacity: 0;
 	}
@@ -213,4 +213,4 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
 	will-change: transform;
-}
+} */

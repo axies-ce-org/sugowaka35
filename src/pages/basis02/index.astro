@@ -1,13 +1,12 @@
 ---
 import Section from '../../components/Section.astro';
 import Point from '../../components/Point.astro';
+import Annotation from '../../components/Annotation.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
 import ListArea from '../../components/ListArea.astro';
 import Quiz from '../../components/Quiz.astro';
 import QuizContent from '../../components/QuizContent.astro';
-import Modal from '../../components/Modal.astro';
-import ModalTrigger from '../../components/ModalTrigger.astro';
 import ImgCaption from '../../components/ImgCaption.astro';
 import Page from '../../templates/Page.astro';
 ---
@@ -30,20 +29,18 @@ import Page from '../../templates/Page.astro';
       </Bubble>
       <Bubble speaker="大院" feLevel="4">でも、キャンバスに描かれた絵は盗まれたらわかるんじゃないか？</Bubble>
       <Bubble speaker="隅木" feLevel="2">
-        絵は確かに著作物ですが、「物」としての側面と「情報」としての側面があります。著作物というと「物」だと思うかもしれませんが、著作物は「情報」なんです。つまり、著作物（情報）が有体物（絵）に乗っかっているわけです<ModalTrigger
-          id="c1s2_1"
-        />。その絵で、勝手にポストカードなどのグッズを作られて売られてしまったら困りますよね。<br
+        絵は確かに著作物ですが、「物」としての側面と「情報」としての側面があります。著作物というと「物」だと思うかもしれませんが、著作物は「情報」なんです。つまり、著作物（情報）が有体物（絵）に乗っかっているわけです<Annotation num={1} />。その絵で、勝手にポストカードなどのグッズを作られて売られてしまったら困りますよね。<br
         />たとえ、正当に絵を買ったとしても、それは物としての権利、所有権をもらっただけです。もとの絵を描いた人の情報に対する権利は、そのまま描いた人に残っています。
       </Bubble>
       <Bubble speaker="大院" feLevel="1">なるほど、所有してるのとは別ってことだな。</Bubble>
     </SpeechBubbles>
-    <Modal id="c1s2_1">
+    <Point id="c1s2_1" num={1} isMemo>
       <p>最判昭和59年1月20日判時1107号127頁〔顔真卿事件〕</p>
-    </Modal>
+    </Point>
     <img src="/assets/images/1-1-2.png" alt="" width="1558" height="752" />
     <p>著作権法では「著作物」が保護されます。著作物とは、以下のように定義されています。</p>
-    <Point type="simple" title="2条1項1号">
-      思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。
+    <Point hasNoTag title="2条1項1号">
+      <p>思想又は感情を創作的に表現したものであつて、文芸、学術、美術又は音楽の範囲に属するものをいう。</p>
     </Point>
     <SpeechBubbles>
       <Bubble speaker="小中" feLevel="2">
@@ -56,7 +53,7 @@ import Page from '../../templates/Page.astro';
         />レシピというアイデアそのものは著作物ではありませんが、それが本とかWeb記事とかになっている場合に、その写真や文章が著作物になることがあるので、注意は必要です。
       </Bubble>
     </SpeechBubbles>
-    <Point>思想や感情を創作的に表現したものでないと「著作物」ではない</Point>
+    <Point><p>思想や感情を創作的に表現したものでないと「著作物」ではない</p></Point>
     <ListArea id="ref27">
       <p>著作権法上の著作物でないものの例</p>
       <ul>
@@ -193,29 +190,15 @@ import Page from '../../templates/Page.astro';
           メモ用紙に描いたようなものは、すぐ捨てるだろうし著作物じゃないんじゃないか？
         </Bubble>
         <Bubble speaker="隅木" feLevel="3">
-          いえ、いつ捨てるかは、著作権法上は問題ではなく、描いた時点で「表現されたもの」なので著作物となります<ModalTrigger
-            id="s2_1"
-          />。
+          いえ、いつ捨てるかは、著作権法上は問題ではなく、描いた時点で「表現されたもの」なので著作物となります<Annotation num={2} />。
         </Bubble>
       </QuizContent>
-      <Modal id="s2_1">
-        <p>
-          「表現」というと、何らかの物に固定されていなければいけないと思われるかもしれませんが、固定されることは著作物となるための要件ではありません。なお、映画の著作物に関しては固定されていることが要件になります。
-        </p>
-      </Modal>
       <QuizContent title="（３）アニメのキャラクターの名前">
         <Bubble speaker="小中" feLevel="1">これはきっと著作物ですよ！</Bubble>
         <Bubble speaker="隅木" feLevel="4">
-          はずれです。これは著作物にはあたりません。小中さんのお名前も著作物にはなりません。色々な考え方がありえますが、「文芸、学術、美術又は音楽の範囲に属するもの」に当たらない、創作性がないといった整理になると思います。ただし、キャラクターの絵は著作物になります<ModalTrigger
-            id="s2_2"
-          />。
+          はずれです。これは著作物にはあたりません。小中さんのお名前も著作物にはなりません。色々な考え方がありえますが、「文芸、学術、美術又は音楽の範囲に属するもの」に当たらない、創作性がないといった整理になると思います。ただし、キャラクターの絵は著作物になります<Annotation num={3} />。
         </Bubble>
       </QuizContent>
-      <Modal id="s2_2">
-        <p>
-          キャラクターの絵との関係ではキャラクターの名前は、「著作物...の題号」（20条1項）として同一性保持権の対象にはなりえます。
-        </p>
-      </Modal>
       <QuizContent title="（４）学生のレポートに書かれたグラフ">
         <Bubble speaker="大院" feLevel="3">
           グラフは著作物じゃないな。単なるデータは著作物じゃないし、データをグラフにしただけだったら、創作性はないんじゃないかな？
@@ -225,5 +208,15 @@ import Page from '../../templates/Page.astro';
         </Bubble>
       </QuizContent>
     </Quiz>
+    <Point id="s2_1" num={2} isMemo>
+      <p>
+        「表現」というと、何らかの物に固定されていなければいけないと思われるかもしれませんが、固定されることは著作物となるための要件ではありません。なお、映画の著作物に関しては固定されていることが要件になります。
+      </p>
+    </Point>
+    <Point id="s2_2" num={3} isMemo>
+      <p>
+        キャラクターの絵との関係ではキャラクターの名前は、「著作物...の題号」（20条1項）として同一性保持権の対象にはなりえます。
+      </p>
+    </Point>
   </Section>
 </Page>

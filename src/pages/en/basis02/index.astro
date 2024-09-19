@@ -1,13 +1,12 @@
 ---
 import Section from '../../../components/Section.astro';
 import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
 import ListArea from '../../../components/ListArea.astro';
 import Quiz from '../../../components/Quiz.astro';
 import QuizContent from '../../../components/QuizContent.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
 import ImgCaption from '../../../components/ImgCaption.astro';
 import Page from '../../../templates/Page.astro';
 ---
@@ -37,21 +36,23 @@ import Page from '../../../templates/Page.astro';
         A painting is indeed a copyrighted work, but it has two aspects: one as a "tangible object" and the other as
         "information". You may think of a copyrighted work as a "tangible object", but a copyrighted work is
         "information". In other words, the copyrighted work (information) is superimposed on the tangible object
-        (painting)<ModalTrigger id="c1s2_1" isEN />. It would be a problem if someone made and sold postcards or other
+        (painting)<Annotation num={1} />. It would be a problem if someone made and sold postcards or other
         goods using the painting without permission, wouldn't it?<br />Even if you buy a painting, you are simply
         receiving the rights to the tangible object, the physical ownership (title). The rights to the information
         (copyright) of the person who originally painted the painting remain with the person who painted it.
       </Bubble>
       <Bubble speaker="Daiin" feLevel="1">I see, so it's not the same as physical ownership.</Bubble>
     </SpeechBubbles>
-    <Modal id="c1s2_1" isEN>
+    <Point isMemo num={1} id="c1s2_1">
       <p>Supreme Court, January 20, 1984, HANREI JIHO No. 1107, p. 127 [Ganshinkei Case].</p>
-    </Modal>
+    </Point>
     <img src="/assets/images/1-1-2_en.png" alt="" width="1277" height="596" />
     <p>The Copyright Act protects "copyrighted works". A copyrighted work is defined as follows:</p>
-    <Point type="simple" title="Article 2(1)(i)">
-      "a creatively produced expression of thoughts or sentiments that falls within the literary, academic, artistic, or
-      musical domain"
+    <Point hasNoTag title="Article 2(1)(i)">
+      <p>
+        "a creatively produced expression of thoughts or sentiments that falls within the literary, academic, artistic, or
+        musical domain"
+      </p>
     </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">
@@ -68,7 +69,7 @@ import Page from '../../../templates/Page.astro';
         turned into a book or a web article, the pictures and text may be copyrighted, so you should be careful.
       </Bubble>
     </SpeechBubbles>
-    <Point>A work is not a "copyrighted work" unless it is a creative expression of thoughts or sentiments.</Point>
+    <Point><p>A work is not a "copyrighted work" unless it is a creative expression of thoughts or sentiments.</p></Point>
     <ListArea id="ref27">
       <p>Examples of works that are not copyrighted works under the Copyright Act:</p>
       <ul>
@@ -231,32 +232,17 @@ import Page from '../../../templates/Page.astro';
         </Bubble>
         <Bubble speaker="Sumiki" feLevel="3">
           No, it does not matter under the Copyright Act when you throw it away, it is a copyrighted work because it was
-          a "creative expression" at the time it was drawn<ModalTrigger id="s2_1" isEN />.
+          a "creative expression" at the time it was drawn<Annotation num={2} />.
         </Bubble>
       </QuizContent>
-      <Modal id="s2_1" isEN>
-        <p>
-          The word "expression" may sound like it has to be fixed on some object, but being fixed is not a requirement
-          for a copyrighted work. For cinematographic works, it is a requirement that the copyrighted work be fixed.
-        </p>
-      </Modal>
       <QuizContent title="(3) Names of cartoon characters">
         <Bubble speaker="Konaka" feLevel="1">This is surely a copyrighted work!</Bubble>
         <Bubble speaker="Sumiki" feLevel="4">
           Nice try. This is not a copyrighted work. Konaka's name is not a copyrighted work either. There are various
           opinions on it, but I think it can be categorized as not being "within the literary, academic, artistic, or
-          musical domain" or not having creativity. However, a picture of a character is a copyrighted work<ModalTrigger
-            id="s2_2"
-            isEN
-          />.
+          musical domain" or not having creativity. However, a picture of a character is a copyrighted work<Annotation num={3} />.
         </Bubble>
       </QuizContent>
-      <Modal id="s2_2" isEN>
-        <p>
-          Concerning a picture of a character, the name can be subject to the integrity right as "the title of the work"
-          (Article 20(1)).
-        </p>
-      </Modal>
       <QuizContent title="(4) Graphs in student reports">
         <Bubble speaker="Daiin" feLevel="3">
           I don't think a graph is a copyrighted work. Mere data isn't a copyrighted work, and if it were just a graph
@@ -270,5 +256,17 @@ import Page from '../../../templates/Page.astro';
         </Bubble>
       </QuizContent>
     </Quiz>
+    <Point isMemo id="s2_1" num={2}>
+      <p>
+        The word "expression" may sound like it has to be fixed on some object, but being fixed is not a requirement
+        for a copyrighted work. For cinematographic works, it is a requirement that the copyrighted work be fixed.
+      </p>
+    </Point>
+    <Point isMemo id="s2_2" num={3}>
+      <p>
+        Concerning a picture of a character, the name can be subject to the integrity right as "the title of the work"
+        (Article 20(1)).
+      </p>
+    </Point>
   </Section>
 </Page>

@@ -1,4 +1,4 @@
-import MicroModal from 'micromodal';
+// import MicroModal from 'micromodal';
 
 // サイドバー ハイライト
 const headings = document.querySelectorAll('.js-section-top');
@@ -72,7 +72,7 @@ window.addEventListener('resize', function () {
 });
 
 // モーダル
-MicroModal.init({
-  awaitOpenAnimation: true,
-  awaitCloseAnimation: true,
-});
+// MicroModal.init({
+//   awaitOpenAnimation: true,
+//   awaitCloseAnimation: true,
+// });

@@ -1,12 +1,11 @@
 ---
 import Section from '../../../components/Section.astro';
 import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
 import ListArea from '../../../components/ListArea.astro';
 import ImgCaption from '../../../components/ImgCaption.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
 import Page from '../../../templates/Page.astro';
 ---
 
@@ -39,19 +38,21 @@ import Page from '../../../templates/Page.astro';
     <p>The Article reads as follows.</p>
 
     <Point
-      type="simple"
+      hasNoTag
       title="Article 35 (Reproduction in Schools and Other Educational Institutions; Related Matters)"
       id="ref24"
     >
-      <span class="mr-[1rem] text-orange-600">(1)</span>A person in charge of teaching or a person taking classes at a
-      school or other educational institution (except one founded for commercial purposes) may reproduce a work that has
-      been made public or transmit that work to the public (including making that work available for transmission, if it
-      is to be transmitted to the public via automatic public transmission; hereinafter the same applies in this
-      Article), or publicly communicate a work that has been made public and is transmitted to the public through a
-      receiver to the extent that is found to be necessary if the purpose of doing so is exploitation in the course of
-      those classes; provided, however, that this does not apply if the action would unreasonably prejudice the
-      interests of the copyright owner in light of the nature and purpose of the work, the number of copies that would
-      be made, and the circumstances of its reproduction, public transmission, or transmission.
+      <p>
+        <span class="mr-[1rem] text-orange-600">(1)</span>A person in charge of teaching or a person taking classes at a
+        school or other educational institution (except one founded for commercial purposes) may reproduce a work that has
+        been made public or transmit that work to the public (including making that work available for transmission, if it
+        is to be transmitted to the public via automatic public transmission; hereinafter the same applies in this
+        Article), or publicly communicate a work that has been made public and is transmitted to the public through a
+        receiver to the extent that is found to be necessary if the purpose of doing so is exploitation in the course of
+        those classes; provided, however, that this does not apply if the action would unreasonably prejudice the
+        interests of the copyright owner in light of the nature and purpose of the work, the number of copies that would
+        be made, and the circumstances of its reproduction, public transmission, or transmission.
+      </p>
     </Point>
 
     <SpeechBubbles>
@@ -101,18 +102,12 @@ import Page from '../../../templates/Page.astro';
             <li>
               A class in which it is assumed that at least the teacher and students are present at the main site and the
               students are present at a remote secondary site, and the class is simultaneously relayed to a remote site
-              using a teleconferencing system, etc<ModalTrigger id="c2s3_1" isEN />.
+              using a teleconferencing system, etc<Annotation num={1} />.
             </li>
           </ul>
         </li>
       </ul>
     </ListArea>
-    <Modal id="c2s3_1" isEN>
-      <p>
-        Ryo Shimanami, Tatsuhiro Ueno, and Hisayoshi Yokoyama, <span class="italic">Copyright Law in Japan</span>, 3rd
-        ed., Yuhikaku, 2021, p. 198.
-      </p>
-    </Modal>
     <ListArea id="ref22">
       <p>When permission was needed.</p>
       <ul>
@@ -129,6 +124,12 @@ import Page from '../../../templates/Page.astro';
         <li>Public communication such as projecting the screen of a website onto a screen with a projector.</li>
       </ul>
     </ListArea>
+    <Point isMemo id="c2s3_1" num={1}>
+      <p>
+        Ryo Shimanami, Tatsuhiro Ueno, and Hisayoshi Yokoyama, <span class="italic">Copyright Law in Japan</span>, 3rd
+        ed., Yuhikaku, 2021, p. 198.
+      </p>
+    </Point>
     <p>
       Under the amended Article 35, public transmission for teaching and the aforementioned public transmission may be
       conducted without permission if compensation is paid. The table below summarizes what can now be done for each
@@ -141,18 +142,8 @@ import Page from '../../../templates/Page.astro';
     </p>
     <p>
       This is because the use that could be made free of charge before the 2018 amended Copyright Act will continue to
-      be made free of charge, leaving use that can be made free of charge for public transmission after the amendment<ModalTrigger
-        id="c2s3_2"
-        isEN
-      />.
+      be made free of charge, leaving use that can be made free of charge for public transmission after the amendment<Annotation num={2} />.
     </p>
-    <Modal id="c2s3_2" isEN>
-      <p>
-        The terms "public transmission" and "public communication" are explained in "Section 04 What is Copyright?". The
-        definitions of terms and specific examples in the Guidelines are explained in "Section 04: Guidelines for
-        Article 35 of the Amended Copyright Act" below.
-      </p>
-    </Modal>
     <ImgCaption id="ref15">
       <figcaption>[Permission for public transmission]</figcaption>
       <table class="text-3.25/tight md:text-sm/tight [&_td]:break-all [&_th]:break-all">
@@ -238,14 +229,18 @@ import Page from '../../../templates/Page.astro';
         ‡: Distribution via printouts, USB memory stick, AirDrop, or other closed communication within the classroom.
       </p>
     </ImgCaption>
+    <Point isMemo id="c2s3_2" num={2}>
+      <p>
+        The terms "public transmission" and "public communication" are explained in "Section 04 What is Copyright?". The
+        definitions of terms and specific examples in the Guidelines are explained in "Section 04: Guidelines for
+        Article 35 of the Amended Copyright Act" below.
+      </p>
+    </Point>
     <p>
-      The Agency for Cultural Affairs<ModalTrigger id="c2s3_3" isEN />, states that this material uses the term "remote
+      The Agency for Cultural Affairs<Annotation num={3} />, states that this material uses the term "remote
       joint classes, etc." because "remote joint classes" includes two types of classes. The term "remote joint classes,
       etc." includes "simultaneous relay joint classes" and "simultaneous relay remote classes".
     </p>
-    <Modal id="c2s3_3" isEN>
-      <p>Guidelines, p. 25.</p>
-    </Modal>
     <p>
       The difference is whether or not there is a faculty member at the secondary site. In other words, a "simultaneous
       relay joint class" is a type of class in which multiple venues, each with faculty members and students, are
@@ -264,8 +259,13 @@ import Page from '../../../templates/Page.astro';
       />
     </ImgCaption>
     <Point>
-      Paying compensation has increased the number of situations in which public transmissions can take place without
-      permission!
+      <p>
+        Paying compensation has increased the number of situations in which public transmissions can take place without
+        permission!
+      </p>
+    </Point>
+    <Point isMemo id="c2s3_3" num={3}>
+      <p>Guidelines, p. 25.</p>
     </Point>
     <p id="ref2">
       Compensation should be paid to the copyright owners of copyrighted works that have been publicly transmitted, but
@@ -279,13 +279,13 @@ import Page from '../../../templates/Page.astro';
     </p>
     <p>
       The organization that collects, manages, and distributes this compensation is called SARTRAS (Society for the
-      Administration of Remuneration for Public Transmission for School Lessons)<ModalTrigger id="c2s3_4" isEN />.
+      Administration of Remuneration for Public Transmission for School Lessons)<Annotation num={4} />.
     </p>
-    <Modal id="c2s3_4" isEN>
+    <Point isMemo id="c2s3_4" num={4}>
       <p>
         SARTRAS<a href="https://sartras.or.jp/en/" target="_blank" class="block">https://sartras.or.jp/en/</a>
       </p>
-    </Modal>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Daiin" feLevel="5">
         When you collect money from all over the country like that, what will it be used for?
@@ -293,7 +293,7 @@ import Page from '../../../templates/Page.astro';
       <Bubble speaker="Sumiki" feLevel="2">
         Please do not be angry. We are sure that you will write a paper or book, and if your work is used in a public
         transmission in class, the money will be distributed to you from the compensation collected<span class="mr-0.5"
-          ><ModalTrigger id="c2s3_5" isEN /></span
+          ><Annotation num={5} /></span
         >.
       </Bubble>
       <Bubble speaker="Daiin" feLevel="4">What? Can I get money?</Bubble>
@@ -302,19 +302,26 @@ import Page from '../../../templates/Page.astro';
       </Bubble>
       <Bubble speaker="Daiin" feLevel="1">What the heck, I'll just have to do it then.</Bubble>
     </SpeechBubbles>
-    <Modal id="c2s3_5" isEN>
+    <Point isMemo id="c2s3_5" num={5}>
       <p>
         SARTRAS distribution page:<a href="https://sartras.or.jp/bunpai/" target="_blank" class="block">
           https://sartras.or.jp/bunpai/
         </a>
       </p>
-    </Modal>
+    </Point>
     <p id="ref29">
       When Article 35 was amended, a meeting was set up to bring together the rights owners and the educational
       institutions to discuss how Article 35 should be implemented. This is called the "Forum of Those Related about
-      Educational Use of Works" ("Forum")<ModalTrigger id="c2s3_6" isEN />.
+      Educational Use of Works" ("Forum")<Annotation num={6} />.
     </p>
-    <Modal id="c2s3_6" isEN>
+    <p>
+      As explained in "Chapter 1, Section 01 What is the Copyright Act?", it is difficult to find a balance between the
+      protection of rights and fair exploitation, so it was decided that a common understanding should be determined by
+      sharing opinions between the parties.
+    </p>
+    <p>Legal experts also participate as members and provide advice on legal perspectives.</p>
+    <img src="/assets/images/2-3-1_en.png" alt="" width="1277" height="597" />
+    <Point isMemo id="c2s3_6" num={6}>
       <p>
         Forum of Those Related about Educational Use of Works:<a
           href="https://forum.sartras.or.jp/"
@@ -324,13 +331,6 @@ import Page from '../../../templates/Page.astro';
           https://forum.sartras.or.jp/
         </a>
       </p>
-    </Modal>
-    <p>
-      As explained in "Chapter 1, Section 01 What is the Copyright Act?", it is difficult to find a balance between the
-      protection of rights and fair exploitation, so it was decided that a common understanding should be determined by
-      sharing opinions between the parties.
-    </p>
-    <p>Legal experts also participate as members and provide advice on legal perspectives.</p>
-    <img src="/assets/images/2-3-1_en.png" alt="" width="1277" height="597" />
+    </Point>
   </Section>
 </Page>

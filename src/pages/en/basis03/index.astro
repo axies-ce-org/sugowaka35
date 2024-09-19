@@ -1,11 +1,10 @@
 ---
 import Section from '../../../components/Section.astro';
 import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
 import ListArea from '../../../components/ListArea.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
 import Page from '../../../templates/Page.astro';
 ---
 
@@ -22,7 +21,7 @@ import Page from '../../../templates/Page.astro';
   >
     <h3 id="ref50">Definition of author</h3>
     <p>Article 2(1)(ii) of the Copyright Act defines an author.</p>
-    <Point type="simple" title="Article 2(1)(ii)">Author means a person who creates a work.</Point>
+    <Point hasNoTag title="Article 2(1)(ii)"><p>Author means a person who creates a work.</p></Point>
     <p>We learned in the previous section what copyrighted works are. The person who creates them is the "author".</p>
     <p>
       It is not only professional creators who are authors. If a kindergarten or elementary school student draws a
@@ -31,8 +30,10 @@ import Page from '../../../templates/Page.astro';
       the subcontractor who created the copyrighted work is the author.
     </p>
     <Point>
-      The author is the creator of the copyrighted work. It does not matter if such a person is a professional or
-      amateur, child or adult!
+      <p>
+        The author is the creator of the copyrighted work. It does not matter if such a person is a professional or
+        amateur, child or adult!
+      </p>
     </Point>
     <SpeechBubbles>
       <Bubble speaker="Konaka" feLevel="2">
@@ -88,18 +89,8 @@ import Page from '../../../templates/Page.astro';
       final approval of the employer, it is considered to be "created at the employer's initiative”. In addition, even
       if an employee comes up with an idea and creates the copyrighted work without the approval of the employer, if the
       copyrighted work is created in the course of duty as far as it is assumed to be based on the job description, it
-      is considered to have been "created at the employee's initiative"<ModalTrigger id="05" isEN />.
+      is considered to have been "created at the employee's initiative"<Annotation num={1} />.
     </p>
-    <Modal id="05" isEN>
-      <p>
-        The requirement of "the initiative of the corporation, etc." is satisfied if there is an employment relationship
-        between the corporation, etc., and the employee, and the employee is performing the prescribed duty under the
-        business plan of the corporation, etc. or a contract concluded by the corporation, etc. with a third party, etc.
-        even without specific instructions or consent from the corporation, etc. as long as the creation of the work is
-        scheduled or expected in the performance of the duty of the employee (Intellectual Property High Court, August
-        4, 2010, HANREI TIMES No. 1344, p. 226 [Kitami Institute of Technology Case]).
-      </p>
-    </Modal>
     <p>
       For requirement (2), it is generally someone who has an employment relationship. This could be an employee of a
       company or a staff member of a university. Temporary staff may fall under requirement (2) since they are not
@@ -123,6 +114,16 @@ import Page from '../../../templates/Page.astro';
       In the case of corporate work, a corporation, etc. becomes the "author" and "copyright owner" (Articles 15 and
       17(1)).
     </p>
+    <Point isMemo id="05" num={1}>
+      <p>
+        The requirement of "the initiative of the corporation, etc." is satisfied if there is an employment relationship
+        between the corporation, etc., and the employee, and the employee is performing the prescribed duty under the
+        business plan of the corporation, etc. or a contract concluded by the corporation, etc. with a third party, etc.
+        even without specific instructions or consent from the corporation, etc. as long as the creation of the work is
+        scheduled or expected in the performance of the duty of the employee (Intellectual Property High Court, August
+        4, 2010, HANREI TIMES No. 1344, p. 226 [Kitami Institute of Technology Case]).
+      </p>
+    </Point>
     <SpeechBubbles>
       <Bubble speaker="Daiin" feLevel="5">
         Are the slides I made for a class at the university considered corporate work?
@@ -137,16 +138,10 @@ import Page from '../../../templates/Page.astro';
     </SpeechBubbles>
     <h4 id="ref9">When more than one person is the author (co-authors)</h4>
     <p>
-      There are times when more than one person may create a copyrighted work<ModalTrigger id="07" isEN />. For example,
+      There are times when more than one person may create a copyrighted work<Annotation num={2} />. For example,
       several people may create a single painting on a canvas. Such a work is called a "joint work" (Article 2(1)(xii)).
       The copyright in a joint work is shared by all co-authors.
     </p>
-    <Modal id="07" isEN>
-      <p>
-        Article 2(1)(xii) defines a joint work as "a work created by two or more persons whose contributions to the work
-        cannot be separated so as to allow each part of the work to be used independently".
-      </p>
-    </Modal>
     <p>
       Other examples include when a copyright is assigned, or when the original copyright owner dies and the copyright
       is inherited by two of the owner's children.
@@ -168,5 +163,11 @@ import Page from '../../../templates/Page.astro';
       considerably greater than A's, and it could not be said that A would be threatened financially or that his
       scholarly achievements would be diminished if he was not allowed to reprint or translate the book.
     </p>
+    <Point isMemo id="07" num={2}>
+      <p>
+        Article 2(1)(xii) defines a joint work as "a work created by two or more persons whose contributions to the work
+        cannot be separated so as to allow each part of the work to be used independently".
+      </p>
+    </Point>
   </Section>
 </Page>

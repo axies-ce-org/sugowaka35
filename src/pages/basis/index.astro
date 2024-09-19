@@ -3,9 +3,8 @@ import Section from '../../components/Section.astro';
 import Point from '../../components/Point.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
-import Modal from '../../components/Modal.astro';
-import ModalTrigger from '../../components/ModalTrigger.astro';
 import Page from '../../templates/Page.astro';
+import Annotation from '../../components/Annotation.astro';
 ---
 
 <Page
@@ -21,8 +20,8 @@ import Page from '../../templates/Page.astro';
     <h3>著作権法とは</h3>
     <h4>著作権法</h4>
     <p>著作権については「著作権法」で定めています。著作権法の第1条に、法律の目的が書いてあります。</p>
-    <Point type="simple" title="第1条（目的）">
-      この法律は、著作物並びに実演、レコード、放送及び有線放送に関し著作者の権利及びこれに隣接する権利を定め、これらの文化的所産の公正な利用に留意しつつ、著作者等の権利の保護を図り、もつて文化の発展に寄与することを目的とする。
+    <Point hasNoTag title="第1条（目的）">
+      <p>この法律は、著作物並びに実演、レコード、放送及び有線放送に関し著作者の権利及びこれに隣接する権利を定め、これらの文化的所産の公正な利用に留意しつつ、著作者等の権利の保護を図り、もつて文化の発展に寄与することを目的とする。</p>
     </Point>
     <SpeechBubbles>
       <Bubble speaker="小中" feLevel="2">著作権法って著作物をつくった人の権利を守る法律なんですよね。</Bubble>
@@ -41,7 +40,7 @@ import Page from '../../templates/Page.astro';
         なるほど。色々な表現が生まれることで豊かな社会になっていく、という考え方なんですね。日々多くの人が著作物を創っていて、登録の手続も必要ないから、たくさんの著作物が生まれやすくなる制度になっているんですね。
       </Bubble>
     </SpeechBubbles>
-    <Point>著作権法の目的は著作者の権利の保護と著作物の公正な利用をもって文化の発展に寄与すること。</Point>
+    <Point><p>著作権法の目的は著作者の権利の保護と著作物の公正な利用をもって文化の発展に寄与すること。</p></Point>
     <img src="/assets/images/1-1-1.png" alt="" width="1446" height="898" />
     <p>
       著作権法では、「著作物とはどういうものか」「著作権とはどういう権利か（作者の保護）」「どういう場合に著作権が制限されるのか（公正な利用とはなにか）」を決めています。
@@ -57,11 +56,11 @@ import Page from '../../templates/Page.astro';
       <Bubble speaker="隅木" feLevel="2">
         白黒つけられるところはつけておきたいですよね。先生方が参考にできるものはいろいろあります。この本の副題にある「<span
           class="font-bold text-orange-600">改正著作権法第35条運用指針</span
-        ><ModalTrigger id="s1_1" />」もそのうちの1つです。
+        ><Annotation num={1} />」もそのうちの1つです。
       </Bubble>
     </SpeechBubbles>
-    <Modal id="s1_1">
+    <Point id="s1_1" num={1} isMemo>
       <p>「改正著作権法第35条運用指針」については2章で詳しく説明します。</p>
-    </Modal>
+    </Point>
   </Section>
 </Page>

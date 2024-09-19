@@ -2,8 +2,8 @@
 import Section from '../../components/Section.astro';
 import SpeechBubbles from '../../components/SpeechBubbles.astro';
 import Bubble from '../../components/Bubble.astro';
-import Modal from '../../components/Modal.astro';
-import ModalTrigger from '../../components/ModalTrigger.astro';
+import Point from '../../components/Point.astro';
+import Annotation from '../../components/Annotation.astro';
 import Page from '../../templates/Page.astro';
 import Quiz from '../../components/Quiz.astro';
 ---
@@ -47,13 +47,11 @@ import Quiz from '../../components/Quiz.astro';
           />それは作成に参加した教員がそれぞれの授業で使っていいのか？その第三者からの許諾はいるのか？
         </Bubble>
         <Bubble speaker="隅木" feLevel="2">
-          第三者の著作物が一部含まれていても、引用の条件をみたしていれば利用できるので、第三者からの許諾は必要ありません。また、みんなで1つの教材を作成しており、共同著作物になりそうですが、当然それぞれの教員の授業で利用することが合意されているでしょうから、それぞれの授業で複製したり、オンライン授業で公衆送信したりしても問題ありません<ModalTrigger
-            id="c3_1"
-          />。
+          第三者の著作物が一部含まれていても、引用の条件をみたしていれば利用できるので、第三者からの許諾は必要ありません。また、みんなで1つの教材を作成しており、共同著作物になりそうですが、当然それぞれの教員の授業で利用することが合意されているでしょうから、それぞれの授業で複製したり、オンライン授業で公衆送信したりしても問題ありません<Annotation num={1} />。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_1"><p>65条2項</p></Modal>
+    <Point isMemo num={1} id="c3_1"><p>65条2項</p></Point>
 
     <Quiz title="著作物を複製して他の教員に提供しても大丈夫？" number="3" level="both">
       <SpeechBubbles>
@@ -67,11 +65,11 @@ import Quiz from '../../components/Quiz.astro';
           じゃ、その先生に小中先生が本を無償で貸してあげて、借りた先生が自分でコピーしたらいいわけだ。
         </Bubble>
         <Bubble speaker="隅木" feLevel="1">
-          それなら大丈夫です<ModalTrigger id="c3_2" />。
+          それなら大丈夫です<Annotation num={2} />。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_2"><p>38条4項</p></Modal>
+    <Point isMemo num={2} id="c3_2"><p>38条4項</p></Point>
 
     <Quiz title="卒業した学生の作文やレポートを授業で紹介したい。" number="4" level="both">
       <SpeechBubbles>
@@ -82,13 +80,11 @@ import Quiz from '../../components/Quiz.astro';
           おれも去年の授業の学生の優秀なレポートを、今年の授業でクラスのみんなに配って見せたい。
         </Bubble>
         <Bubble speaker="隅木" feLevel="4">
-          学生や生徒さんが、宿題や課題として、先生に提出しただけの著作物は「公表」しているとは言えません。35条が適用できるのは公表された著作物のみなので、おふたりの場合はどちらも著作権者（著作者）の許諾が必要です<ModalTrigger
-            id="c3_3"
-          />。公表権（18条1項）や氏名表示権（19条1項）への配慮も必要になります。
+          学生や生徒さんが、宿題や課題として、先生に提出しただけの著作物は「公表」しているとは言えません。35条が適用できるのは公表された著作物のみなので、おふたりの場合はどちらも著作権者（著作者）の許諾が必要です<Annotation num={3} />。公表権（18条1項）や氏名表示権（19条1項）への配慮も必要になります。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_3"><p>18歳未満の未成年者の場合には親権者の許諾が必要になります（民法4条、5条1項本文）。</p></Modal>
+    <Point isMemo num={3} id="c3_3"><p>18歳未満の未成年者の場合には親権者の許諾が必要になります（民法4条、5条1項本文）。</p></Point>
 
     <Quiz title="違法な著作物を授業で紹介しても大丈夫？" number="5" level="high">
       <SpeechBubbles>
@@ -96,17 +92,15 @@ import Quiz from '../../components/Quiz.astro';
           授業でどんな違法の例があるか見せたいんだよな。有名人の画像を加工してSNSでアップしてるとか。違法なものの著作権ってどう扱ったらいいんだ？
         </Bubble>
         <Bubble speaker="隅木" feLevel="2">
-          著作権は元の写真を撮った人にありますし、有名人の肖像権やパブリシティ権の問題もありますが、先生がその画像がどう違法なのかということをちゃんと説明することで主従関係など引用の条件をみたせば、適法な引用として利用することができます<ModalTrigger
-            id="c3_4"
-          />。
+          著作権は元の写真を撮った人にありますし、有名人の肖像権やパブリシティ権の問題もありますが、先生がその画像がどう違法なのかということをちゃんと説明することで主従関係など引用の条件をみたせば、適法な引用として利用することができます<Annotation num={4} />。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_4">
+    <Point isMemo num={4} id="c3_4">
       <p>
         引用の要件としては、適法に入手した情報源からの採録でなければいけないことは求められていません。上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）180頁参照。
       </p>
-    </Modal>
+    </Point>
 
     <Quiz title="授業で映画を上映できる？" number="6" level="both">
       <SpeechBubbles>
@@ -114,16 +108,14 @@ import Quiz from '../../components/Quiz.astro';
           わたしはNetflixを契約してるんですけど、その中に動物のドキュメンタリー映画があって、授業で見せたいのですけど大丈夫ですか？
         </Bubble>
         <Bubble speaker="隅木" feLevel="2">
-          小中先生がプロジェクタを使ってスクリーンに投影するような場合は「公の伝達」にあたり、35条を適用できると思います。と、言いたいところなのですが、Netflixの利用規約（4.2）を読むと、「お客様のご世帯以外の方と共有することはできません。（中略）お客様は公の場での上映のために当サービスを利用しないことに同意します」と書いてあるんですね<ModalTrigger
-            id="c3_5"
-          />。<br /><br
+          小中先生がプロジェクタを使ってスクリーンに投影するような場合は「公の伝達」にあたり、35条を適用できると思います。と、言いたいところなのですが、Netflixの利用規約（4.2）を読むと、「お客様のご世帯以外の方と共有することはできません。（中略）お客様は公の場での上映のために当サービスを利用しないことに同意します」と書いてあるんですね<Annotation num={5} />。<br /><br
           />このように、法律では権利制限規定があるけれど、契約で制限をしようとすることをオーバーライド問題といって、契約での制限を有効とすべきかは専門家でも意見の分かれるところです。<br
           /><br />現在、フォーラムでも検討中であり、現時点では利用規約違反のリスクがあり難しいと言わざるを得ません。<br
           />ただ、Netflixの定めるルールでも、一部の教育的なオリジナルドキュメンタリー作品は教育を目的とした上映を1回のみしてもよいとされています。適宜、最新の利用規約を確認するようにしましょう。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_5">
+    <Point isMemo num={5} id="c3_5">
       <p>
         Netflix利用規約<a href="https://help.netflix.com/legal/termsofuse" target="_blank" class="block">
           https://help.netflix.com/legal/termsofuse
@@ -138,7 +130,7 @@ import Quiz from '../../components/Quiz.astro';
           https://help.netflix.com/ja/node/57695
         </a>
       </p>
-    </Modal>
+    </Point>
 
     <Quiz title="読み聞かせの動画をインターネット上に公開しても大丈夫？" number="7" level="low">
       <SpeechBubbles>
@@ -161,17 +153,15 @@ import Quiz from '../../components/Quiz.astro';
         </Bubble>
         <Bubble speaker="小中" feLevel="3">その曲を、学校の音楽会で演奏していいですか？</Bubble>
         <Bubble speaker="隅木" feLevel="4">
-          学校の音楽会は、非営利・無償の演奏会なので、38条1項の権利制限を適用できると思うかもしれません。しかし、38条1項は著作物をそのまま利用する場合に適用され、編曲（27条）するときには適用されません（47条の6第1項参照）。そのため、著作権者の許諾が必要になります<ModalTrigger
-            id="c3_ensokai"
-          />。
+          学校の音楽会は、非営利・無償の演奏会なので、38条1項の権利制限を適用できると思うかもしれません。しかし、38条1項は著作物をそのまま利用する場合に適用され、編曲（27条）するときには適用されません（47条の6第1項参照）。そのため、著作権者の許諾が必要になります<Annotation num={6} />。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_ensokai">
+    <Point isMemo num={6} id="c3_ensokai">
       <p>
         例えば、ごく単純な楽器編成の変更は、新たな創作性を加えておらず、著作権法上の「編曲」に該当しないこともありうると考えられます。その場合は38条1項の条件をみたせば、公に演奏することが可能で、同一性保持権の侵害にも当たらないと解釈する余地もあるでしょう。
       </p>
-    </Modal>
+    </Point>
 
     <Quiz title="給食の時間に録画したテレビ番組を流したい。" number="9" level="low">
       <SpeechBubbles>
@@ -179,13 +169,11 @@ import Quiz from '../../components/Quiz.astro';
           給食の時間中に、わたしが録画した教育番組を教室のテレビで流したいんですけど、大丈夫でしょうか？
         </Bubble>
         <Bubble speaker="隅木" feLevel="2">
-          給食は、学習指導要領で規定している「特別活動」になるので、「授業」にあたります。授業の目的で行った録画は「複製」で35条1項を適用できます。テレビで流すことは非営利・無償の上映で38条1項を適用できます<ModalTrigger
-            id="c3_7"
-          />。
+          給食は、学習指導要領で規定している「特別活動」になるので、「授業」にあたります。授業の目的で行った録画は「複製」で35条1項を適用できます。テレビで流すことは非営利・無償の上映で38条1項を適用できます<Annotation num={7} />。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_7"><p>上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）118頁参照。</p></Modal>
+    <Point isMemo num={7} id="c3_7"><p>上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）118頁参照。</p></Point>
 
     <Quiz title="海外の著作物を授業で扱う場合に注意する点は？" number="10" level="both">
       <SpeechBubbles>
@@ -193,9 +181,7 @@ import Quiz from '../../components/Quiz.astro';
           英語の授業で、学生に海外の小説を翻訳させたいらしいんだよ。海外の著作物はどうしたらいいんだ？
         </Bubble>
         <Bubble speaker="隅木" feLevel="2">
-          海外の著作物については、著作権は「ベルヌ条約」、「万国著作権条約」、「TRIPS協定」などの条約に日本も加入しており、世界の大半の国の著作物を保護する義務があります<ModalTrigger
-            id="c3_8"
-          />。
+          海外の著作物については、著作権は「ベルヌ条約」、「万国著作権条約」、「TRIPS協定」などの条約に日本も加入しており、世界の大半の国の著作物を保護する義務があります<Annotation num={8} />。
         </Bubble>
         <Bubble speaker="大院" feLevel="5">外国の法律とかしらねーし！</Bubble>
         <Bubble speaker="隅木" feLevel="1">
@@ -205,51 +191,41 @@ import Quiz from '../../components/Quiz.astro';
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_8"><p>著作隣接権についても様々な条約により条約上保護義務を負っています。</p></Modal>
+    <Point isMemo num={8} id="c3_8"><p>著作隣接権についても様々な条約により条約上保護義務を負っています。</p></Point>
 
     <Quiz title="ビブリオバトルを行う場合に注意するポイントとは？" number="11" level="high">
       <SpeechBubbles>
         <Bubble speaker="大院" feLevel="4">
-          学祭で学生が<ModalTrigger
-            id="c3_9"
-            word="ビブリオバトル"
-          />をやりたいらしいんだよ。著作権法上の問題があるかな？
+          学祭で学生が<Annotation word="ビブリオバトル" />をやりたいらしいんだよ。著作権法上の問題があるかな？
         </Bubble>
         <Bubble speaker="隅木" feLevel="2">
-          大学の学祭は、運用指針の「授業」の定義からすると「授業」にあたらないので、35条は適用できないですね。内容を数分で紹介するのは、要約が「翻案（27条）<ModalTrigger
-            id="c3_10"
-          />」、プレゼンが口述（24条）に該当する可能性があります。<br
-          />「翻案」にあたるかは、そのプレゼンでどの程度本の内容を話しているかによるので判断が難しいのですが、著作物の表現上の本質的特徴を直接感得できない場合には、「翻案」にあたらず、著作権者から許諾を得ることは必要ありません<ModalTrigger
-            id="c3_11"
-          />。これは、ケース・バイ・ケースの検討が必要になります。
+          大学の学祭は、運用指針の「授業」の定義からすると「授業」にあたらないので、35条は適用できないですね。内容を数分で紹介するのは、要約が「翻案（27条）<Annotation num={9} />」、プレゼンが口述（24条）に該当する可能性があります。<br
+          />「翻案」にあたるかは、そのプレゼンでどの程度本の内容を話しているかによるので判断が難しいのですが、著作物の表現上の本質的特徴を直接感得できない場合には、「翻案」にあたらず、著作権者から許諾を得ることは必要ありません<Annotation num={10} />。これは、ケース・バイ・ケースの検討が必要になります。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_9" word="ビブリオバトル">
+    <Point id="c3_9" word="ビブリオバトル">
       <p>
         参加者が「面白い」と思う本の内容を5分間で紹介して、どの本を一番読みたくなったかを参加者勢員の投票で決めるもの。<br
         />ビブリオバトル公式サイト」<a href="https://www.bibliobattle.jp/" target="_blank" class="block">
           https://www.bibliobattle.jp/
         </a>
       </p>
-    </Modal>
-    <Modal id="c3_10">
+    </Point>
+    <Point isMemo num={9} id="c3_10">
       <p>
         「授業」の定義は、「2章 section04
         改正著作権法第35条運用指針『35条が適用される「授業」』」の箇所をご参照ください。
       </p>
-    </Modal>
-    <Modal id="c3_11">
+    </Point>
+    <Point isMemo num={10} id="c3_11">
       <p>最判平成13年6月28日判時1754号144頁〔江差追分事件〕</p>
-    </Modal>
+    </Point>
 
     <Quiz title="TAが去年のテスト問題を学生に配布したい。" number="12" level="high">
       <SpeechBubbles>
         <Bubble speaker="大院" feLevel="4">
-          <ModalTrigger
-            id="c3_12"
-            word="TA"
-          />が自分が去年受けたテスト問題をみんなに配布したいらしいけど、どうなのかな？
+          <Annotation word="TA" />が自分が去年受けたテスト問題をみんなに配布したいらしいけど、どうなのかな？
         </Bubble>
         <Bubble speaker="隅木" feLevel="4">
           それは複数の授業の過去のテスト問題をまとめて配布するということですか？
@@ -263,9 +239,9 @@ import Quiz from '../../components/Quiz.astro';
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_12" word="TA（Teaching Assistant）">
+    <Point id="c3_12" word="TA（Teaching Assistant）">
       <p>授業の補助をおこなう学生のこと。</p>
-    </Modal>
+    </Point>
 
     <Quiz title="本登録していない学生は「授業を受ける者」に該当する？" number="13" level="high">
       <SpeechBubbles>
@@ -329,26 +305,22 @@ import Quiz from '../../components/Quiz.astro';
           基本的には、第三者の著作物が入った教材をLMSで公衆送信できるのは、その授業の期間のみとされています。該当する教材は、期間がすぎたら削除するか、学生がアクセスできないように設定を変更する必要があります。<br
           />この授業期間がいつからいつまでなのかの判断が難しいのですが、大学の場合は、成績や単位認定などの評価が終わるまでは授業期間と考えてもよさそうです。<br
           /><br
-          />また、「〇〇演習１」「〇〇演習２」のように段階的に履修することが前提になっている授業で、２の授業期間も１の教材を閲覧可能とするのは、「授業の過程」としてよいように思います<ModalTrigger
-            id="c3_13"
-          />。<br
+          />また、「〇〇演習１」「〇〇演習２」のように段階的に履修することが前提になっている授業で、２の授業期間も１の教材を閲覧可能とするのは、「授業の過程」としてよいように思います<Annotation num={11} />。<br
           />予習や復習も「授業の過程」とすることは運用指針に記載されており、「〇〇演習１」と「〇〇演習２」で内容的にも関連性があるのであれば、「〇〇演習１」の教材は、復習に準じるものと考えられるからです。<br
           />また、「2章 section04
-          改正著作権法第35条運用指針」の終わりで説明したように、履修期間外も継続して教材利用をすることについて、<ModalTrigger
-            id="c3_14"
-            word="SARTRASライセンス"
+          改正著作権法第35条運用指針」の終わりで説明したように、履修期間外も継続して教材利用をすることについて、<Annotation word="SARTRASライセンス"
           />の対象とできるよう検討されています。
         </Bubble>
       </SpeechBubbles>
     </Quiz>
-    <Modal id="c3_13">
+    <Point isMemo num={11} id="c3_13">
       <p>上野達弘編『教育現場と研究者のための著作権ガイド』（有斐閣、2021）55頁参照。</p>
-    </Modal>
-    <Modal id="c3_14" word="SARTRASライセンス">
+    </Point>
+    <Point id="c3_14" word="SARTRASライセンス">
       <p>
         2022年11月現在、35条と補償金でもカバーできない著作物の利用について、許諾なくおこなえるようSARTRASライセンス制度が検討されています。<br
         />これは別途ライセンス料金を払って、補償金の範囲を超えた複製や公衆送信等ができるようにするものです。その利用範囲や形態については検討中です。
       </p>
-    </Modal>
+    </Point>
   </Section>
 </Page>
