@@ -12,11 +12,17 @@ const { speaker, feLevel } = Astro.props;
 <div class="flex gap-[1.1875rem] md:gap-7">
   <figure class="w-9 min-w-[2.25rem] text-center md:w-12 md:min-w-[3rem]">
     <img
-      src={speaker === '小中' || speaker === 'Konaka'
-        ? '/assets/images/konaka-fe' + feLevel + '.png'
-        : speaker === '隅木' || speaker === 'Sumiki'
-          ? '/assets/images/sumiki-fe' + feLevel + '.png'
-          : '/assets/images/daiin-fe' + feLevel + '.png'}
+      src={
+        '/assets/images/' +
+        (
+          speaker === '小中' || speaker === 'Konaka'
+          ? 'konaka-fe'
+          : speaker === '隅木' || speaker === 'Sumiki'
+          ? 'sumiki-fe'
+          : 'daiin-fe'
+        )
+        + feLevel + '.png'
+      }
       alt=""
       width="480"
       height="480"
@@ -24,11 +30,13 @@ const { speaker, feLevel } = Astro.props;
     <figcaption class="text-[0.6875rem]/relaxed font-bold">{speaker}</figcaption>
   </figure>
   <div
-    class={twJoin(
-      'relative grow rounded-lg bg-white p-2 md:p-4',
-      'before:absolute before:left-[-0.9375rem] before:top-4 before:block before:border-y-[6px] before:border-r-[15px] before:border-y-transparent before:border-r-white md:before:-left-5 md:before:border-y-8 md:before:border-r-[20px]',
-    )}
+    class={
+      twJoin(
+        'relative grow rounded-lg bg-white p-2 md:p-4',
+        'before:absolute before:left-[-0.9375rem] before:top-4 before:block before:border-y-[6px] before:border-r-[15px] before:border-y-transparent before:border-r-white md:before:-left-5 md:before:border-y-8 md:before:border-r-[20px]',
+      )
+    }
   >
-    <slot />
+    <p><slot /></p>
   </div>
 </div>
