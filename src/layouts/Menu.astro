@@ -11,31 +11,27 @@ const { sidebar, isEN } = Astro.props;
 
 <div
   id="js-nav"
-  class={
-    twJoin(
-      'fixed inset-0 z-10 translate-x-full opacity-0 transition-[opacity_transform] duration-300',
-      'print:hidden',
-      'md:sticky md:bottom-0 md:left-auto md:right-0 md:top-[3.875rem] md:block md:max-h-[100vh-2.5rem] md:translate-x-0 md:opacity-100 md:transition-none',
-      sidebar === 'none' && 'md:hidden',
-    )
-  }
+  class={twJoin(
+    'fixed inset-0 z-10 translate-x-full opacity-0 transition-[opacity_transform] duration-300',
+    'print:hidden',
+    'md:sticky md:bottom-0 md:left-auto md:right-0 md:top-[3.875rem] md:block md:max-h-[100vh-2.5rem] md:translate-x-0 md:opacity-100 md:transition-none',
+    sidebar === 'none' && 'md:hidden',
+  )}
 >
   <nav
-    class={
-      twJoin(
-        'z-20 min-h-screen w-full bg-white px-4 pb-6 pt-14',
-        'md:min-h-0 md:w-60 md:rounded-2xl md:p-4',
-        'lg:w-[17.5rem]',
-      )
-    }
+    class={twJoin(
+      'z-20 min-h-screen w-full bg-white px-4 pb-6 pt-14',
+      'md:min-h-0 md:w-60 md:rounded-2xl md:p-4',
+      'lg:w-[17.5rem]',
+    )}
   >
     <ul class="text-stone-800 md:flex md:flex-col">
       <MenuItem
-        href={(isEN ? '/en' : '') + '/introduction/'}
+        href={(isEN ? '/en/' : '/') + 'introduction/'}
         title={isEN ? 'Introduction' : 'はじめに'}
       />
       <MenuItem
-        href={(isEN ? '/en' : '') + '/basis/'}
+        href={(isEN ? '/en/' : '/') + 'basis/'}
         title={isEN ? 'Copyright Basics' : '著作権の基礎'}
         submenu={isEN
           ? [
@@ -76,7 +72,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={(isEN ? '/en' : '') + '/copyright/'}
+        href={(isEN ? '/en/' : '/') + 'copyright/'}
         title={isEN ? 'Copyright in Classes' : '授業における著作権'}
         submenu={isEN
           ? [
@@ -117,7 +113,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={(isEN ? '/en' : '') + '/use/'}
+        href={(isEN ? '/en/' : '/') + 'use/'}
         title={isEN ? 'Q&A on the Use of Copyrighted Works in the Classroom' : '授業における著作物利用Q&A'}
         submenu={isEN
           ? [
@@ -134,7 +130,7 @@ const { sidebar, isEN } = Astro.props;
             ]}
       />
       <MenuItem
-        href={(isEN ? '/en' : '') + '/permission/'}
+        href={(isEN ? '/en/' : '/') + 'permission/'}
         title={isEN ? 'How to Obtain Permission' : '許諾の取り方'}
         submenu={isEN
           ? [
@@ -150,12 +146,12 @@ const { sidebar, isEN } = Astro.props;
               },
             ]}
       />
-      <MenuItem href={(isEN ? '/en' : '') + '/quiz/'} title={isEN ? 'Quiz' : '著作権クイズ'} />
-      <MenuItem href={(isEN ? '/en' : '') + '/references/'} title={isEN ? 'References' : '資料集'} className="mt-2" isSmall />
-      <MenuItem href={(isEN ? '/en' : '') + '/index/'} title={isEN ? 'Index' : '索引'} isSmall />
-      <MenuItem href={(isEN ? '/en' : '') + '/team/'} title={isEN ? 'Production Team' : '制作チーム紹介'} isSmall />
-      <MenuItem href={(isEN ? '/en' : '') + '/afterwords/'} title={isEN ? 'This Project' : 'おわりに'} isSmall />
-      <MenuItem href={(isEN ? '/en' : '') + '/license/'} title={isEN ? 'License' : 'ライセンス'} isSmall />
+      <MenuItem href={(isEN ? '/en/' : '/') + 'quiz/'} title={isEN ? 'Quiz' : '著作権クイズ'} />
+      <MenuItem href={(isEN ? '/en/' : '/') + 'references/'} title={isEN ? 'References' : '資料集'} className="mt-2" isSmall />
+      <MenuItem href={(isEN ? '/en/' : '/') + 'index/'} title={isEN ? 'Index' : '索引'} isSmall />
+      <MenuItem href={(isEN ? '/en/' : '/') + 'team/'} title={isEN ? 'Production Team' : '制作チーム紹介'} isSmall />
+      <MenuItem href={(isEN ? '/en/' : '/') + 'afterwords/'} title={isEN ? 'This Project' : 'おわりに'} isSmall />
+      <MenuItem href={(isEN ? '/en/' : '/') + 'license/'} title={isEN ? 'License' : 'ライセンス'} isSmall />
     </ul>
   </nav>
 </div>
