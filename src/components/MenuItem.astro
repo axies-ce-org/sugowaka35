@@ -3,19 +3,22 @@ import { twJoin } from 'tailwind-merge';
 import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {
+  isEN?: boolean
   href: string;
-  title: string;
+  titleEN: string;
+  titleJP: string;
   className?: string;
   submenu?: {
-    title: string;
+    titleEN: string;
+    titleJP: string;
     href: string;
   }[];
   isSmall?: boolean
 }
 
-const { href, title, className, submenu, isSmall } = Astro.props;
+const { isEN, href, titleEN, titleJP, className, submenu, isSmall } = Astro.props;
 
-const pathname = Astro.url.pathname
+const pathname = Astro.url.pathname.replace(/^\/en/, '')
 const isCurrent = href === pathname;
 const isSubCurrent = submenu?.find(item => item.href === pathname );
 ---
@@ -27,7 +30,7 @@ const isSubCurrent = submenu?.find(item => item.href === pathname );
   )}
 >
   <a
-    href={href}
+    href={isEN ? ('/en' + href) : href}
     class={twJoin(
       'group relative flex items-center gap-2.5 py-2 pl-2 font-bold transition-colors hover:text-orange-600',
       (submenu ? (
@@ -39,7 +42,7 @@ const isSubCurrent = submenu?.find(item => item.href === pathname );
       isSmall && isCurrent && '!font-bold'
     )}
   >
-    <p>{title}</p>
+    <p>{isEN ? titleEN : titleJP }</p>
     <img
       src="/assets/images/chevron-right.svg"
       width="16"
@@ -54,18 +57,18 @@ const isSubCurrent = submenu?.find(item => item.href === pathname );
   {submenu &&
     (isCurrent || isSubCurrent) && (
       <ul class="md:pb-1">
-        {submenu.map(({ title, href }) => {
+        {submenu.map(({ titleEN, titleJP, href }) => {
           return (
             <li class='relative'>
               <a
-                href={href}
+                href={isEN ? ('/en' + href) : href}
                 class={twJoin(
                   'group/sub flex py-2 text-base/[1.75] font-normal transition-colors hover:text-orange-600 md:py-1.5 md:text-sm/[1.75]',
                   'before:mx-[0.71875rem] before:mt-[0.59375rem] before:block before:h-[0.5625rem] before:min-h-[0.5625rem] before:w-[0.5625rem] before:min-w-[0.5625rem] before:rounded-full before:border before:border-white before:bg-stone-500 md:before:mt-[0.484375rem]',
                   href === pathname && '!font-bold text-orange-600 before:!bg-orange-600'
                 )}
               >
-                <p class="flex-1">{title}</p>
+                <p class="flex-1">{isEN ? titleEN : titleJP }</p>
                 <img
                   src="/assets/images/chevron-right.svg"
                   width="16"

@@ -15,7 +15,7 @@ const currentSlug = Astro.url.pathname;
   {
     img !== 'none' && (
       <header class="absolute left-0 top-0 z-10 flex h-[3.6875rem] items-center px-4 pb-1.5 md:top-1 md:mx-auto md:mt-[2.6875rem] md:h-11 md:px-10 md:pb-0">
-        <a href={(isEN ? '/en/' : '/')} class="inline-block w-[13.625rem] font-bold md:w-[21.25rem]">
+        <a href={isEN ? '/en/' : '/'} class="inline-block w-[13.625rem] font-bold md:w-[21.25rem]">
           <img
             src={'/assets/images/logo' + (isEN ? '_en' : '') + '.svg'}
             alt={

@@ -7,7 +7,7 @@ const { isEN } = Astro.props;
 ---
 
 <footer class="flex flex-col items-center gap-4 bg-orange-300 px-4 pb-7 pt-6 md:flex-row md:justify-between md:p-10">
-  <a href={(isEN ? '/en/' : '/')}>
+  <a href={isEN ? '/en/' : '/'}>
     <img
       src={'/assets/images/logo' + (isEN ? '_en' : '') + '.svg'}
       width="997"
