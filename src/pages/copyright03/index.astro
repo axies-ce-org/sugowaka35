@@ -52,8 +52,7 @@ import Page from '../../templates/Page.astro';
     <p>
       著作権法はよく改正されるのですが、2018年には35条とそれに関する箇所の改正があり、大きな制度変更がありました【旧35条と改正35条】。具体的には補償金制度が導入されたのです。
     </p>
-    <ImgCaption>
-      <figcaption>【旧35条と改正35条】</figcaption>
+    <ImgCaption caption="【旧35条と改正35条】">
       <img
         src="/assets/images/copyright-04.png"
         alt="旧35条の第1項。要件を満たせば、授業目的の複製は無許可で可。旧35条の第2項。遠隔合同授業等の場合、授業目的の公衆送信は無許可で可。改正35条の第1項。要件を満たせば、授業目的の複製・公衆送信・公の伝達は無許可で可。改正35条の第2項。改正35条の第1項で言及されている公衆送信を行う場合は、「教育機関の設置者」が補償金を著作権者に支払う。改正35条の第3項。遠隔合同授業等の場合、授業目的の公衆送信は補償金不要。"
@@ -106,87 +105,88 @@ import Page from '../../templates/Page.astro';
     <p>
       これは、2018年の著作権法改正前に無償でできた利用については引き続き無償にするため、改正後の公衆送信にも無償でできる利用が残されたためです<Annotation num={2} />。
     </p>
-    <ImgCaption id="ref15">
-      <figcaption>【公衆送信の許諾】</figcaption>
-      <table class="text-3.25/tight md:text-sm/tight">
-        <thead>
-          <tr>
-            <th rowspan="2">授業形態</th>
-            <th rowspan="2" class="max-w-[5.75rem] md:max-w-[7rem]">授業時間内の参加場所</th>
-            <th>資料配布※2</th>
-            <th>公の伝達</th>
-            <th colspan="2">資料公衆送信</th>
-            <th colspan="2">授業映像公衆送信</th>
-          </tr>
-          <tr>
-            <th>教室内</th>
-            <th class="max-w-[5.75rem] md:max-w-[7rem]">教室内</th>
-            <th>授業時間内</th>
-            <th>授業時間外</th>
-            <th>同時中継</th>
-            <th>録画</th>
-          </tr>
-        </thead>
+    <div id="ref15" class="img-caption grid gap-1 md:gap-1.5">
+      <ImgCaption caption="【公衆送信の許諾】">
+        <table class="text-3.25/tight md:text-sm/tight">
+          <thead>
+            <tr>
+              <th rowspan="2">授業形態</th>
+              <th rowspan="2" class="max-w-[5.75rem] md:max-w-[7rem]">授業時間内の参加場所</th>
+              <th>資料配布※2</th>
+              <th>公の伝達</th>
+              <th colspan="2">資料公衆送信</th>
+              <th colspan="2">授業映像公衆送信</th>
+            </tr>
+            <tr>
+              <th>教室内</th>
+              <th class="max-w-[5.75rem] md:max-w-[7rem]">教室内</th>
+              <th>授業時間内</th>
+              <th>授業時間外</th>
+              <th>同時中継</th>
+              <th>録画</th>
+            </tr>
+          </thead>
 
-        <tbody class="text-center">
-          <tr class="!bg-orange-100">
-            <td class="text-left">従来教室授業</td>
-            <td>対面</td>
-            <td>◎</td>
-            <td>○※1</td>
-            <td>○</td>
-            <td>○</td>
-            <td>-</td>
-            <td>○</td>
-          </tr>
-          <tr class="!bg-white">
-            <td rowspan="2" class="text-left">遠隔合同授業等</td>
-            <td>対面</td>
-            <td>◎</td>
-            <td>○※1</td>
-            <td>○</td>
-            <td>○</td>
-            <td>-</td>
-            <td>○</td>
-          </tr>
-          <tr>
-            <td>遠隔</td>
-            <td>-</td>
-            <td>-</td>
-            <td>◎</td>
-            <td>○</td>
-            <td>◎</td>
-            <td>○</td>
-          </tr>
-          <tr>
-            <td class="text-left">スタジオ型授業</td>
-            <td>遠隔</td>
-            <td>-</td>
-            <td>-</td>
-            <td>○</td>
-            <td>○</td>
-            <td>○</td>
-            <td>○</td>
-          </tr>
-          <tr>
-            <td class="text-left">オンデマンド型授業</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>○</td>
-            <td>-</td>
-            <td>○</td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody class="text-center">
+            <tr class="!bg-orange-100">
+              <td class="text-left">従来教室授業</td>
+              <td>対面</td>
+              <td>◎</td>
+              <td>○※1</td>
+              <td>○</td>
+              <td>○</td>
+              <td>-</td>
+              <td>○</td>
+            </tr>
+            <tr class="!bg-white">
+              <td rowspan="2" class="text-left">遠隔合同授業等</td>
+              <td>対面</td>
+              <td>◎</td>
+              <td>○※1</td>
+              <td>○</td>
+              <td>○</td>
+              <td>-</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td>遠隔</td>
+              <td>-</td>
+              <td>-</td>
+              <td>◎</td>
+              <td>○</td>
+              <td>◎</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td class="text-left">スタジオ型授業</td>
+              <td>遠隔</td>
+              <td>-</td>
+              <td>-</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td class="text-left">オンデマンド型授業</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>○</td>
+              <td>-</td>
+              <td>○</td>
+            </tr>
+          </tbody>
+        </table>
+      </ImgCaption>
       <p class="text-3.25/normal md:text-sm/normal">
         ◎：改正前から許諾なく無償でOK　◯：改正後補償金支払いにより許諾なくOK（※1は補償金不要）
       </p>
       <p class="text-3.25/normal md:text-sm/normal">
         ※2 プリントやUSBメモリでの配布、AirDropなど教室内で閉じた通信による配布
       </p>
-    </ImgCaption>
+    </div>
     <Point isMemo num={2} id="c2s3_2">
       <p>
         「公衆送信」と「公の伝達」の用語について、「1章 section04
@@ -200,8 +200,7 @@ import Page from '../../templates/Page.astro';
     <p>
       この違いは、副会場に教員がいるか否かです。つまり、「同時中継合同授業」は、それぞれに教員と学生がいる複数の会場を双方向通信できる形で繋いで行うタイプの授業を言います。これに対して、「同時中継遠隔授業」は、教員と生徒がいる主会場の教室で行われている授業をリアルタイム配信し、自宅などの副会場で生徒だけでも受講できるようにしたものです【遠隔授業形態の分類】。
     </p>
-    <ImgCaption>
-      <figcaption>【遠隔授業形態の分類】</figcaption>
+    <ImgCaption caption="【遠隔授業形態の分類】">
       <img
         src="/assets/images/copyright-05.png"
         alt="同時中継合同授業では、教員と生徒がいる主会場で行われている授業を、それぞれに教員と学生がいる副会場と双方向通信できる形で行う。同時中継遠隔授業では、教員と生徒がいる主会場で行われている授業をリアルタイム配信し、自宅などの副会場で生徒だけでも受講できる形で行う。スタジオ型授業では、生徒のいない主会場で教員が行う授業をリアルタイム配信し、自宅などの副会場で生徒だけでも受講できる形で行う。オンデマンド型授業では、あらかじめ収録された授業をサーバから配信し、自宅などの副会場で生徒だけでも受講できる形で行う。"

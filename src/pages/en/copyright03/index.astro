@@ -77,8 +77,7 @@ import Page from '../../../templates/Page.astro';
       The Copyright Act is often amended, and in 2018 there was a major amendment to Article 35 and the sections related
       to it [former Article 35 and amended Article 35]. Specifically, a compensation system was introduced.
     </p>
-    <ImgCaption>
-      <figcaption>[Former Article 35 and amended Article 35]</figcaption>
+    <ImgCaption caption="[Former Article 35 and amended Article 35]">
       <img
         src="/assets/images/copyright-04_en.png"
         alt="Under the former Article 35, Paragraph 1, reproduction for class purposes is allowed without permission if the requirements are met. Under the former Article 35, Paragraph 2, public transmission for class purposes, such as in remote joint classes, is permitted without permission. Under the Amended Article 35, Paragraph 1, if the requirements are met, reproduction, public transmission, and public communication for class purposes are allowed without permission. Under the Amended Article 35, Paragraph 2, when public transmission referred to in Paragraph 1 of the Amended Article 35 is conducted, 'a person that establishes an educational institution' must pay compensation to the copyright owner. Under the Amended Article 35, Paragraph 3, for remote joint classes and similar situations, public transmission for class purposes does not require compensation."
@@ -144,80 +143,81 @@ import Page from '../../../templates/Page.astro';
       This is because the use that could be made free of charge before the 2018 amended Copyright Act will continue to
       be made free of charge, leaving use that can be made free of charge for public transmission after the amendment<Annotation num={2} />.
     </p>
-    <ImgCaption id="ref15">
-      <figcaption>[Permission for public transmission]</figcaption>
-      <table class="text-3.25/tight md:text-sm/tight [&_td]:break-all [&_th]:break-all">
-        <thead>
-          <tr>
-            <th rowspan="2">Type of class</th>
-            <th rowspan="2" class="max-w-[5.75rem] md:max-w-[5rem]">Where students participate in class</th>
-            <th class="max-w-[5.75rem] md:max-w-[5rem]">Distribution of learning materials‡</th>
-            <th class="max-w-[5.75rem] break-words md:max-w-[5rem]">Public communication</th>
-            <th colspan="2">Public transmission of mataerials</th>
-            <th colspan="2">Public transmission of classes</th>
-          </tr>
-          <tr>
-            <th>In classroom</th>
-            <th class="max-w-[5.75rem] break-words md:max-w-[5rem]">In classroom</th>
-            <th>in class time</th>
-            <th>out of class time</th>
-            <th>Live</th>
-            <th>Archived</th>
-          </tr>
-        </thead>
+    <div id="ref15" class="img-caption grid gap-1 md:gap-1.5">
+      <ImgCaption caption="[Permission for public transmission]">
+        <table class="text-3.25/tight md:text-sm/tight [&_td]:break-all [&_th]:break-all">
+          <thead>
+            <tr>
+              <th rowspan="2">Type of class</th>
+              <th rowspan="2" class="max-w-[5.75rem] md:max-w-[5rem]">Where students participate in class</th>
+              <th class="max-w-[5.75rem] md:max-w-[5rem]">Distribution of learning materials‡</th>
+              <th class="max-w-[5.75rem] break-words md:max-w-[5rem]">Public communication</th>
+              <th colspan="2">Public transmission of mataerials</th>
+              <th colspan="2">Public transmission of classes</th>
+            </tr>
+            <tr>
+              <th>In classroom</th>
+              <th class="max-w-[5.75rem] break-words md:max-w-[5rem]">In classroom</th>
+              <th>in class time</th>
+              <th>out of class time</th>
+              <th>Live</th>
+              <th>Archived</th>
+            </tr>
+          </thead>
 
-        <tbody class="text-center">
-          <tr class="!bg-orange-100">
-            <td class="text-left">Traditional classes</td>
-            <td>Classroom</td>
-            <td>◎</td>
-            <td>○†</td>
-            <td>○</td>
-            <td>○</td>
-            <td>-</td>
-            <td>○</td>
-          </tr>
-          <tr class="!bg-white">
-            <td rowspan="2" class="text-left">Remote join classes</td>
-            <td>Classroom</td>
-            <td>◎</td>
-            <td>○†</td>
-            <td>○</td>
-            <td>○</td>
-            <td>-</td>
-            <td>○</td>
-          </tr>
-          <tr>
-            <td>Remote</td>
-            <td>-</td>
-            <td>-</td>
-            <td>◎</td>
-            <td>○</td>
-            <td>◎</td>
-            <td>○</td>
-          </tr>
-          <tr>
-            <td class="text-left">Studio classes</td>
-            <td>Remote</td>
-            <td>-</td>
-            <td>-</td>
-            <td>○</td>
-            <td>○</td>
-            <td>○</td>
-            <td>○</td>
-          </tr>
-          <tr>
-            <td class="text-left">On-demand classes</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>○</td>
-            <td>-</td>
-            <td>○</td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody class="text-center">
+            <tr class="!bg-orange-100">
+              <td class="text-left">Traditional classes</td>
+              <td>Classroom</td>
+              <td>◎</td>
+              <td>○†</td>
+              <td>○</td>
+              <td>○</td>
+              <td>-</td>
+              <td>○</td>
+            </tr>
+            <tr class="!bg-white">
+              <td rowspan="2" class="text-left">Remote join classes</td>
+              <td>Classroom</td>
+              <td>◎</td>
+              <td>○†</td>
+              <td>○</td>
+              <td>○</td>
+              <td>-</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td>Remote</td>
+              <td>-</td>
+              <td>-</td>
+              <td>◎</td>
+              <td>○</td>
+              <td>◎</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td class="text-left">Studio classes</td>
+              <td>Remote</td>
+              <td>-</td>
+              <td>-</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td class="text-left">On-demand classes</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>○</td>
+              <td>-</td>
+              <td>○</td>
+            </tr>
+          </tbody>
+        </table>
+      </ImgCaption>
       <p class="text-3.25/normal md:text-sm/normal">
         ◎: Since the former Article 35, it is allowed without permission and without compensation.
       </p>
@@ -228,7 +228,7 @@ import Page from '../../../templates/Page.astro';
       <p class="text-3.25/normal md:text-sm/normal">
         ‡: Distribution via printouts, USB memory stick, AirDrop, or other closed communication within the classroom.
       </p>
-    </ImgCaption>
+    </div>
     <Point isMemo id="c2s3_2" num={2}>
       <p>
         The terms "public transmission" and "public communication" are explained in "Section 04 What is Copyright?". The
@@ -249,8 +249,7 @@ import Page from '../../../templates/Page.astro';
       in real-time, and the students can take the class alone at a secondary venue such as their homes [Classification
       of Remote Class Types].
     </p>
-    <ImgCaption>
-      <figcaption>[Classification of Distance Learning Forms]</figcaption>
+    <ImgCaption caption="[Classification of Distance Learning Forms]">
       <img
         src="/assets/images/copyright-05_en.png"
         alt="In a simultaneously broadcast joint class, a class being held at the main site with faculty and students is conducted in a form that allows two-way communication with a secondary site with faculty and students at each site. In a simultaneously broadcast remote class, a class being held at the main venue with faculty and students is distributed in real time and can be attended by students alone at a secondary venue, such as their homes. In studio-style classes, classes are delivered in real-time by teachers at the main venue without students, and students can take the classes at a secondary venue such as their homes. In the on-demand model, classes are recorded in advance and distributed from a server, and can be taken by students alone at a secondary venue such as their homes."
