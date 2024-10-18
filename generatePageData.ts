@@ -34,7 +34,7 @@ const extractPageData = (htmlFilePath: string): Omit<PageData, 'pageDir'> => {
   return { title: title.trim(), paragraphs: paragraphs.map((p) => p.trim()) };
 };
 
-const generatePageData = (lang: string): void => {
+const generatePageData = (lang = 'ja'): void => {
   const parentDir = lang === 'ja' ? 'static' : 'static/en';
   const pageDirs = getPageDirs(parentDir);
 
@@ -46,11 +46,12 @@ const generatePageData = (lang: string): void => {
 
   // Generate pagedata.json for static and public
   ['static', 'public'].forEach((dir) => {
-    const outputFileName = path.join(dir, `pagedata${'-' + lang}.json`);
+    const outputFileName = path.join(dir, `pagedata-${lang}.json`);
     fs.writeFileSync(outputFileName, JSON.stringify(pageData, null, 2));
     console.log(`${outputFileName} is generated`);
   });
 };
 
-generatePageData('ja');
-generatePageData('en');
+['ja', 'en'].forEach((lang) => {
+  generatePageData(lang);
+});
