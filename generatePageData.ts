@@ -5,7 +5,7 @@ import { loadBuffer } from 'cheerio';
 type PageData = {
   pageDir: string;
   title: string;
-  paragraphs: string[];
+  contents: string[];
 };
 
 const getPageDirs = (parentDir: string): string[] => {
@@ -26,12 +26,12 @@ const extractPageData = (htmlFilePath: string): Omit<PageData, 'pageDir'> => {
   }
 
   const htmlContent = fs.readFileSync(htmlFilePath);
-  const { title, paragraphs } = loadBuffer(htmlContent).extract({
+  const { title, contents } = loadBuffer(htmlContent).extract({
     title: 'h2',
-    paragraphs: ['section p:not([data-search-ignore])'],
+    contents: ['.section-content:not([data-search-ignore])'],
   });
 
-  return { title: title.trim(), paragraphs: paragraphs.map((p) => p.trim()) };
+  return { title: title.trim(), contents: contents.map((c) => c.trim()) };
 };
 
 const generatePageData = (lang = 'ja'): void => {
