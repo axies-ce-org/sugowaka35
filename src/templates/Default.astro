@@ -45,6 +45,7 @@ const siteDescription = isEN
     <link rel="apple-touch-icon" sizes="192x192" href={Astro.site + '/cropped-favicon-192x192.png'} />
     <meta name="msapplication-TileImage" content={Astro.site + '/cropped-favicon-270x270.png'} />
     <script src="../scripts/index.ts"></script>
+    <script src="../scripts/search/index.ts"></script>
   </head>
   <body
     class={twJoin(
@@ -54,6 +55,5 @@ const siteDescription = isEN
   >
     <slot />
     <Footer isEN={isEN} />
-    <script src="../scripts/sitesearch.ts"></script>
   </body>
 </html>
