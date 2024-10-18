@@ -59,9 +59,9 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
         resultBlock.querySelector('ul').insertAdjacentHTML(
           'beforeend',
           `<li class="border-t border-orange-300">
-          <a class="p-2 block hover:bg-orange-300" href="${siteUrl}/${
-            isEN ? 'en' : ''
-          }/${pageDir}/?${params.toString()}">${spannedSentence}</a>
+          <a class="p-2 block hover:bg-orange-300" href="${siteUrl}${
+            isEN ? '/en/' : '/'
+          }${pageDir}/?${params.toString()}">${spannedSentence}</a>
         </li>`,
         );
       });
