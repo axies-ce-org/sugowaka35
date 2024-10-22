@@ -1,0 +1,55 @@
+---
+import { twJoin } from 'tailwind-merge';
+---
+
+<div
+  class={twJoin(
+    'js-search-area fixed inset-x-0 bottom-0 z-10 grid gap-4 border-t-4 border-orange-400 bg-white p-4 text-stone-700',
+    'md:p-6',
+    'translate-y-[calc(100%+1rem)] transition-transform duration-300',
+    '[&.is-active]:translate-y-0'
+  )}
+>
+  <div class="mx-auto grid w-full max-w-[67.5rem]">
+    <div class="flex flex-col gap-2 md:flex-row md:gap-5">
+      <div class="flex items-center gap-0.5 font-bold">
+        <div class="h-5 w-5">
+          <img src="/assets/images/search.svg" alt="" class="h-[1.125rem] w-[1.125rem]" />
+        </div>
+        <span>サイト内検索</span>
+      </div>
+      <form class="js-search-form flex flex-1 gap-2 text-base">
+        <input
+          disabled
+          type="text"
+          class="w-full max-w-[26.5rem] flex-1 appearance-none rounded-[0.25rem] border border-stone-400 px-2 py-1 md:rounded-lg"
+        />
+        <button
+          disabled
+          type="submit"
+          class="shrink-0 rounded-[0.25rem] bg-orange-600 px-4 py-1 text-[0.9375rem] font-bold text-white disabled:cursor-not-allowed disabled:opacity-50 md:rounded-lg"
+          >検索</button
+        >
+      </form>
+    </div>
+    <div
+      class={twJoin(
+        'js-search-result invisible grid max-h-[8.75rem] gap-3 overflow-y-auto rounded-lg bg-stone-100 md:max-h-[6.5rem]',
+        '[&.is-active]:visible [&.is-active]:mt-4 [&.is-active]:p-4 [&.is-active]:opacity-100 md:[&.is-active]:mt-6',
+        '[&>div+div]:mt-4 [&>div]:text-base [&>div]:font-bold',
+        '[&_li]:border-t [&_li]:border-stone-300',
+        '[&_a]:block [&_a]:py-3 hover:[&_a]:bg-stone-200',
+        '[&_span]:text-orange-600'
+      )}
+      tabindex="-1"
+    >
+    </div>
+  </div>
+  <button
+    class="js-close-trigger-search absolute -top-4 right-4 grid h-10 w-10 place-content-center rounded-full bg-orange-600"
+  >
+    <img src="/assets/images/close.svg" alt="" class="h-4 w-4" />
+    <span class="sr-only">閉じる</span>
+  </button>
+</div>
+<div class="js-search-overlay invisible fixed inset-0 [&.is-active]:visible"></div>

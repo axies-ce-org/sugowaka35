@@ -2,7 +2,7 @@
 import { twJoin } from 'tailwind-merge';
 import '../styles/index.css';
 import Footer from '../layouts/Footer.astro';
-
+import SearchArea from '../components/SearchArea.astro';
 export interface Props {
   title?: string;
   description?: string;
@@ -55,5 +55,6 @@ const siteDescription = isEN
   >
     <slot />
     <Footer isEN={isEN} />
+    <SearchArea />
   </body>
 </html>
