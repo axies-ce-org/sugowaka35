@@ -1,0 +1,252 @@
+---
+import Section from '../../../components/Section.astro';
+import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
+import SpeechBubbles from '../../../components/SpeechBubbles.astro';
+import Bubble from '../../../components/Bubble.astro';
+import ListArea from '../../../components/ListArea.astro';
+import ImgCaption from '../../../components/ImgCaption.astro';
+import Page from '../../../templates/Page.astro';
+---
+
+<Page
+  chapterNum={2}
+  title="Copyright in Classes"
+  description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page explains the legal rules and processes, citations, and reproductions when handling copyrighted works in classes."
+  isEN
+>
+  <Section
+    number="02"
+    title="Citation (Article 32(1))"
+    description={'This section explains "Citation" under the Copyright Act. There are many requirements regarding "Citation", and there are many explanations, but please try your best to read them.'}
+  >
+    <h3>What is a citation?</h3>
+    <SpeechBubbles>
+      <Bubble speaker="Sumiki" feLevel="2">What do you think of when you hear the word "citation"?</Bubble>
+      <Bubble speaker="Daiin" feLevel="2">
+        If it's used or pulled from somewhere else, is it a citation? Is it a reprint?
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">Like a summary or something?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        "Citation" in the broadest sense means different things to different people. What is explained here is only a
+        "citation" under the Copyright Act. Please note that the term "citation" used in a broader sense has a different
+        meaning.
+      </Bubble>
+    </SpeechBubbles>
+    <p>Article 32(1) of the Copyright Act states:</p>
+    <Point hasNoTag title="Article 32 (Citation)">
+      <p>
+        <span class="mr-[1rem] text-orange-600">(1)</span>A published work may be quoted and used. In this case, the
+        citation shall conform with fair practice and within the scope justifiable for news reporting, criticism,
+        research, and other citations.
+      </p>
+    </Point>
+    <p>
+      To use a copyrighted work as a citation under Article 32(1), <span class="font-bold text-orange-600"
+        >all of the following requirements must be met</span
+      >:
+    </p>
+    <ListArea>
+      <ul>
+        <li>A published work.</li>
+        <li>
+          A "citation".
+          <ul>
+            <li>Distinctiveness: the cited part must be clear (e.g., brackets, separator lines, etc.).</li>
+            <li>
+              Master-subject relationship: the text is the "master" and the cited part is the "subject" in both quantity
+              and quality.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Use by citation is consistent with "fair practice" and "within the legitimate scope for the citation"<Annotation num={1} />.
+          <ul>
+            <li>
+              It should not cause significant financial damage to the copyright owner, such as adversely affecting the
+              sale of the copyrighted work, and the question is whether the portion of the entire work that is cited and
+              used is reasonable in scope.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Indicate the source<Annotation num={2} />.
+        </li>
+        <li>
+          The cited part must not have been altered<Annotation num={3} />.
+        </li>
+      </ul>
+      <Point isMemo id="c2s2_1" num={1}>
+        <p>
+          The purpose, method, and manner of the use of another person's work, the type and nature of the work to be used,
+          and the existence or non-existence and degree of influence on the copyright owner of the work in question should
+          be comprehensively considered. Tokyo District Court, February 21, 2018 (2016 (wa) 37339) [Okinawa Urizun no Ame
+          Case].
+        </p>
+      </Point>
+      <Point isMemo id="c2s2_2" num={2}>
+        <p>
+          To be precise, the indication of the source (Article 48(1)(i)) is not a requirement for citation, but a court
+          considers it in determining whether it conforms to "fair practice" (Intellectual Property High Court, August 23,
+          2018 (2016 (ne) 10023) [Okinawa Urizun no Ame Case]). In any case, it is important to understand that the source
+          must be indicated.
+        </p>
+      </Point>
+      <Point isMemo id="c2s2_3" num={3}>
+        <p>
+          Although not strictly a requirement for citation, we also add that the cited part has not been altered because
+          of the need to consider the integrity right.
+        </p>
+      </Point>
+    </ListArea>
+    <SpeechBubbles>
+      <Bubble speaker="Daiin" feLevel="5">
+        What does it mean that "it must be a citation" is among the requirements for applying a citation?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        You want to reproduce a third party's work for some purpose<Annotation num={4} />. At that time, it
+        must be clear which part of your work is being reproduced (distinctiveness), and your work must be qualitatively
+        and quantitatively the "master" (master-subject relationship). These are the minimum requirements for a
+        "citation" rather than a mere reprint [difference between citation and reprint].
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">
+        I see. So, if it is a "citation," and all the other requirements, such as the source indication, are met, then
+        Article 32 can apply.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        Your understanding is correct<Annotation num={5} />.
+      </Bubble>
+    </SpeechBubbles>
+    <Point isMemo id="c2s2_4" num={4}>
+      <p>
+        There is no definition of "reprint" in the Copyright Act. According to Nobuhiro Nakayama, <span class="italic"
+          >Copyright Law</span
+        >, 4th ed., Yuhikaku, 2023, p. 428, "Reprint means publishing a work in whole or in part as is. The citation is
+        also a type of reprint".
+      </p>
+    </Point>
+    <Point isMemo id="c2s2_5" num={5}>
+      <p>
+        There are various opinions on understanding the requirements for citation, especially regarding distinctiveness
+        and the master-subject relationship. Regardless of the understanding, as long as these requirements are met, it
+        will be a legitimate citation.
+      </p>
+    </Point>
+    <ImgCaption caption="[The difference between citation and reprint.]">
+      <img
+        src="/assets/images/copyright-02_en.png"
+        alt=`If the copyrighted work is a text, a "Citation" must indicate the reproduced portion and the quantity of your writing should be greater and the main focus. For reproduction without permission, the text from others (references) is more predominant than your writing, and the reproduced sections are not indicated.`
+        width="1360"
+        height="896"
+      />
+    </ImgCaption>
+
+    <Point isColumn>
+      <p>
+        There is also an opinion that the necessity of citation is a requirement. For example, Moriyuki Kato, <span
+          class="italic">Commentary on the Copyright Act</span
+        > 7th revised ed., CRIC, 2021, p. 302, and the Tokyo District Court, February 9, 2011, pointed out that the lack
+        of necessity of citation is one circumstance that is consistent with "fair practice" and does not fall "within the
+        legitimate scope" for citation. However, the prevailing view is that the necessity of citation is not required
+        (Nobuhiro Nakayama,
+        <span class="italic">Copyright Law</span>, 4th ed., Yuhikaku, 2023, p. 421).
+      </p>
+    </Point>
+
+    <SpeechBubbles>
+      <Bubble speaker="Sumiki" feLevel="2">
+        It is often not a legitimate scope for citation to include illustrations for liveliness because the margins of
+        prints, slides, etc. are blank. However, if you need to study or critique a certain character, you can cite and
+        use a picture of that character.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">If it was a study of Pikachu, you could use Pikachu's picture.</Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        You need to fulfill all the requirements for citation, so it does not mean that you can use any picture of
+        Pikachu if you are researching Pikachu.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">What is the source ... ?</Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">Haha, the usual way to say it is "show the source".</Bubble>
+      <Bubble speaker="Daiin" feLevel="5">
+        If it's a sentence, it has to be written as is, right? Even if there are typos in the original text?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="3">
+        The cited part should be written as it is. If there are typos or omissions in the original, it is best to write
+        "as is" or something similar. Translated citations are allowed under the Copyright Act<Annotation num={6} />.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="3">
+        What should I do with images and such? Do I crop a portion of the image with the minimum necessary or use it in
+        its original form without alteration?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        The basic rule is to use the image as is. However, if you wish to refer to a part of the image with particular
+        attention, you must indicate that it is a part of the image and make it clear that it is a citation [example of
+        citing an image]<Annotation num={7} />.
+      </Bubble>
+    </SpeechBubbles>
+    <Point isMemo id="c2s2_6" num={6}>
+      <p>
+        While translation citations (Article 47-6(1)(ii)) are permitted under the Copyright Act, a summary citation is
+        not permitted under the Copyright Act and is left to interpretation (a court permitted summary citation, see
+        Tokyo District Court, October 30, 1998, HANREI TIMES No. 991, p. 240 (Blood Type and Personality in Social
+        History Case)).
+      </p>
+    </Point>
+    <Point isMemo id="c2s2_7" num={7}>
+      <p>
+        Nobuhiro Nakayama, <span class="italic">Copyright Law</span>, 4th ed., Yuhikaku, 2023, p. 428, states, "In the
+        citation, the issue of the integrity right inevitably arises unless the citation is full, but as long as a
+        partial citation is the norm and the citation is legal, the author is unlikely to be misled as to its connection
+        with the work. As long as the citation is lawful, there is little risk that the author will be misled as to the
+        connection with the work. The court concluded that the integrity right is not infringed.
+      </p>
+    </Point>
+    <ImgCaption caption="[Sample image citation]">
+      <img
+        src="/assets/images/copyright-03_en.png"
+        alt="When using an enlarged section of a roof from a photograph of an entire building to explain the architecture, the original photograph of the entire building should be published with the source and photographer credited. Arrows should extend from the original image to the enlarged image of the roof, clearly indicating that it is a citation."
+        width="1360"
+        height="1521"
+      />
+    </ImgCaption>
+    <SpeechBubbles>
+      <Bubble speaker="Daiin" feLevel="4">
+        What should I do with a video? I know you said not to alter it, but don't you want to mention just a particular
+        scene?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        For videos, it is possible to cut out the part of the video to be cited to the extent necessary or to use screen
+        captures. Again, the citation must be clear and meet all requirements for citation.
+      </Bubble>
+      <Bubble speaker="Konaka" feLevel="2">
+        The extent of using only what is needed is well understood, but what is the master-subject relationship like?
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="4">
+        In the case of text, the part you are writing must be more than the cited part. In the case of images, if the
+        image is used in such a way that it has the main meaning, it does not count as a citation. For example, a
+        half-page spread in an art book is a high-quality image.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="5">
+        In many cases, a slide page can only contain the image and a little explanatory text. Then the image will
+        inevitably be larger.
+      </Bubble>
+      <Bubble speaker="Sumiki" feLevel="2">
+        I think you are usually using slides when you are giving a presentation, so you are explaining verbatim. If you
+        do so, your content together with the teacher's explanation would be the "master" content, and the image would
+        be the "subject" content, then I think you can apply the citation.<br />However, if only this slide material is
+        distributed, the teacher's verbal explanation will be lost, and when the entire slide is image-centered and
+        one's explanation part is thin in both volume and content, the master-subject relationship may be NG<Annotation num={8} />.
+      </Bubble>
+      <Bubble speaker="Daiin" feLevel="4">Hmmm, harsh ...</Bubble>
+    </SpeechBubbles>
+    <Point><p>"Citation" under the Copyright Act must meet all requirements.</p></Point>
+    <Point isMemo id="c2s2_8" num={8}>
+      <p>
+        The quantity of the master-subject relationship is not formally determined. For example, it was held that it is
+        not appropriate to compare the number of works cited with that of the cited work by taking only the pages where
+        the work is cited in a book (Tokyo High Court, April 25, 2000, HANREI JIHO No. 1724, p. 124 [Datsu Gomanizumu
+        Sengen Case]).
+      </p>
+    </Point>
+    <img src="/assets/images/2-1-2_en.png" alt="" width="1277" height="597" />
+  </Section>
+</Page>

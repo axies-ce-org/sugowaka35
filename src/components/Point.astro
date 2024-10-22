@@ -1,25 +1,28 @@
 ---
 type Props = {
-  type?: string;
+  hasNoTag?: boolean;
   title?: string;
   id?: string;
-  tag?: string;
-  titleStyle?: string;
+  word?: string;
+  num?: number;
+  isColumn?: boolean
+  isMemo?: boolean
 };
 
-const { type, title, id, tag, titleStyle } = Astro.props;
+const { hasNoTag, title, id, word, num, isColumn, isMemo } = Astro.props;
 ---
 
 <div id={id} class="point">
   {
-    type !== 'simple' && (
-      <div class="ml-3 inline-block rounded-t-lg bg-orange-600 px-4 py-0.5 text-sm/normal font-medium uppercase text-white md:ml-4 md:px-4 md:py-1 md:text-base">
-        {tag === 'column' ? 'Column' : 'Point'}
-      </div>
+    hasNoTag ? undefined  : (
+      <p class="ml-3 inline-block rounded-t-lg bg-orange-600 px-4 py-0.5 text-sm/normal font-medium uppercase text-white md:ml-4 md:px-4 md:py-1 md:text-base">
+        {isColumn ? 'Column' : (isMemo ? 'Memo' : (word ? 'Word' : 'Point'))}{num && <> ＊{num}</>}
+      </p>
     )
   }
   <div class="rounded-2xl bg-stone-100 p-3 md:p-4">
-    {title && <p class={titleStyle !== 'normal' && 'mb-0.5 text-base/relaxed font-bold text-orange-600'}>{title}</p>}
+    {title && <p class='mb-0.5 text-base/relaxed font-bold text-orange-600'>{title}</p>}
+    {word && <p class='mb-2 border-b border-orange-500 pb-1 font-bold text-orange-600'>{word}</p>}
     <slot />
   </div>
 </div>

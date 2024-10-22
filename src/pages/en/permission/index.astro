@@ -4,12 +4,13 @@ import SpeechBubbles from '../../../components/SpeechBubbles.astro';
 import Bubble from '../../../components/Bubble.astro';
 import ListArea from '../../../components/ListArea.astro';
 import ImgCaption from '../../../components/ImgCaption.astro';
-import Modal from '../../../components/Modal.astro';
-import ModalTrigger from '../../../components/ModalTrigger.astro';
+import Point from '../../../components/Point.astro';
+import Annotation from '../../../components/Annotation.astro';
 import Page from '../../../templates/Page.astro';
 ---
 
 <Page
+  chapterNum={4}
   title="How to Obtain Permission"
   description="This material provides explanations about copyright primarily for teachers teaching at educational institutions. This page explains how to obtain permission for using copyrights."
   isEN
@@ -69,12 +70,20 @@ import Page from '../../../templates/Page.astro';
     <h4>Step 2: Find out if there is any contact information</h4>
     <p>Many copyright owners offer contact information for licenses.</p>
     <p>
-      First, check the CRIC, Copyright System in Japan page to see if there is any contact information<ModalTrigger
-        id="c4s1_1"
-        isEN
-      />.
+      First, check the CRIC, Copyright System in Japan page to see if there is any contact information<Annotation num={1} />.
     </p>
-    <Modal id="c4s1_1" isEN>
+    <p>
+      For example, music copyrights are often managed by a management society, JASRAC or NexTone, but sometimes they are
+      not.
+    </p>
+    <p>
+      So, first, let's search JASRAC's database to see if there are any songs you want to use<Annotation num={2} />. If you can't find the music you are looking for through JASRAC, check NexTone's database<Annotation num={3}/>.
+    </p>
+    <p>
+      For example, a search of the Official Hige Dandism music in the database reveals that it is managed by NexTone
+      rather than JASRAC. In this case, you need to apply to NexTone for permission.
+    </p>
+    <Point isMemo id="c4s1_1" num={1}>
       <p>
         Overview of the Copyright System:<a
           href="https://www.bunka.go.jp/english/policy/copyright/system/"
@@ -93,48 +102,28 @@ import Page from '../../../templates/Page.astro';
           https://www.cric.or.jp/english/csj/csj7.html
         </a>
       </p>
-    </Modal>
-    <p>
-      For example, music copyrights are often managed by a management society, JASRAC or NexTone, but sometimes they are
-      not.
-    </p>
-    <p>
-      So, first, let's search JASRAC's database to see if there are any songs you want to use<ModalTrigger
-        id="c4s1_2"
-        isEN
-      />. If you can't find the music you are looking for through JASRAC, check NexTone's database<ModalTrigger
-        id="c4s1_3"
-        isEN
-      />.
-    </p>
-    <Modal id="c4s1_2" isEN>
+    </Point>
+    <Point isMemo id="c4s1_2" num={2}>
       <p>
         J-WID, the database for JASRAC works:<a href="https://www2.jasrac.or.jp/eJwid/" target="_blank" class="block">
           https://www2.jasrac.or.jp/eJwid/
         </a>
       </p>
-    </Modal>
-    <Modal id="c4s1_3" isEN>
+    </Point>
+    <Point isMemo id="c4s1_3" num={3}>
       <p>
         NexTone Work Search Database:<a href="https://search.nex-tone.co.jp/" target="_blank" class="block">
           https://search.nex-tone.co.jp/
         </a>
       </p>
-    </Modal>
-    <p>
-      For example, a search of the Official Hige Dandism music in the database reveals that it is managed by NexTone
-      rather than JASRAC. In this case, you need to apply to NexTone for permission.
-    </p>
+    </Point>
 
     <h4>Step 3: Make a permission request</h4>
     <p>
       If there is a point of contact, apply for a license through the point of contact. Many points of contact are web
-      forms. Check the fees, as there may be fees involved; JASRAC and NexTone offer fee calculation simulations<ModalTrigger
-        id="c4s1_4"
-        isEN
-      /><ModalTrigger id="c4s1_5" isEN />.
+      forms. Check the fees, as there may be fees involved; JASRAC and NexTone offer fee calculation simulations<Annotation num={4} /><Annotation num={5} />.
     </p>
-    <Modal id="c4s1_4" isEN>
+    <Point isMemo id="c4s1_4" num={4}>
       <p>
         JASRAC, Royalty Calculation Simulation:<a
           href="https://www.jasrac.or.jp/info/create/calculation/simulation.html"
@@ -144,14 +133,14 @@ import Page from '../../../templates/Page.astro';
           https://www.jasrac.or.jp/info/create/calculation/simulation.html
         </a>
       </p>
-    </Modal>
-    <Modal id="c4s1_5" isEN>
+    </Point>
+    <Point isMemo id="c4s1_5" num={5}>
       <p>
         NexTone, Usage Fee Simulation:<a href="https://sim.nex-tone.co.jp/" target="_blank" class="block">
           https://sim.nex-tone.co.jp/
         </a>
       </p>
-    </Modal>
+    </Point>
     <p>
       If a calculation simulation is not available, read the Rental Fee Rules and Regulations or obtain an estimate.
     </p>
@@ -159,8 +148,7 @@ import Page from '../../../templates/Page.astro';
       If there is no point of contact, contact the author or copyright owner directly to obtain permission [Flow of
       Permission].
     </p>
-    <ImgCaption>
-      <figcaption>[Flow of licensing]</figcaption>
+    <ImgCaption caption="[Flow of licensing]">
       <img
         src="/assets/images/permission-01_en.png"
         alt="First, confirm the author/copyright owner. Then, identify the point of contact for that copyright owner and request permission. If the copyright owner is unknown, seek a ruling."
@@ -197,19 +185,21 @@ import Page from '../../../templates/Page.astro';
     <p>
       The Copyright Act provides for the use of copyrighted works with a compulsory license by the Commissioner of the
       Agency for Cultural Affairs and payment of compensation (the compulsory license system if the copyright owner is
-      unknown) (Article 67). The same adjudication system applies to cases if the owner of neighboring rights is unknown<ModalTrigger
-        id="c4s1_6"
-        isEN
-      />.
+      unknown) (Article 67). The same adjudication system applies to cases if the owner of neighboring rights is unknown<Annotation num={6} />.
     </p>
-    <Modal id="c4s1_6" isEN><p>Articles 67 and 103(1) of the Copyright Act</p></Modal>
     <p>
-      Copyrighted works whose copyright owners are unknown are called "orphan works<ModalTrigger id="c4s1_7" isEN />."
+      Copyrighted works whose copyright owners are unknown are called "orphan works<Annotation num={7} />."
       The Orphan Works Demonstration Project Executive Committee, consisting of rights owners' organizations, etc., has
       published a "Guide for Preparation of Application Forms for Ruling on Works of Unknown Copyright owners, etc."
       Please refer to this guide.
     </p>
-    <Modal id="c4s1_7" isEN>
+    <p>
+      To apply, compensation is required in addition to the cost of advertising for the right owner's search (usually
+      8,250 yen) and the adjudication application fee (usually 6,900 yen). For the amount of compensation, please refer
+      to the Agency for Cultural Affairs' simulation system for the amount of compensation for adjudication<Annotation num={8} />.
+    </p>
+    <Point isMemo id="c4s1_6" num={6}><p>Articles 67 and 103(1) of the Copyright Act</p></Point>
+    <Point isMemo id="c4s1_7" num={7}>
       <p>
         Orphan Works Demonstration Project Executive Committee:<a
           href="https://jrrc.or.jp/orphanworks/about/committee/"
@@ -228,22 +218,14 @@ import Page from '../../../templates/Page.astro';
           https://jrrc.or.jp/orphanworks/about/saitei_guide2021/
         </a>
       </p>
-    </Modal>
-    <p>
-      To apply, compensation is required in addition to the cost of advertising for the right owner's search (usually
-      8,250 yen) and the adjudication application fee (usually 6,900 yen). For the amount of compensation, please refer
-      to the Agency for Cultural Affairs' simulation system for the amount of compensation for adjudication<ModalTrigger
-        id="c4s1_9"
-        isEN
-      />.
-    </p>
-    <Modal id="c4s1_9" isEN>
+    </Point>
+    <Point isMemo id="c4s1_9" num={8}>
       <p>
         Agency for Cultural Affairs, Simulation System for the Amount of Compensation in the Case of Unknown Copyright
         owner:<a href="https://www.bunka.go.jp/saiteisimulation/" target="_blank" class="block">
           https://www.bunka.go.jp/saiteisimulation/
         </a>
       </p>
-    </Modal>
+    </Point>
   </Section>
 </Page>

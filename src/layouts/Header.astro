@@ -15,7 +15,7 @@ const currentSlug = Astro.url.pathname;
   {
     img !== 'none' && (
       <header class="absolute left-0 top-0 z-10 flex h-[3.6875rem] items-center px-4 pb-1.5 md:top-1 md:mx-auto md:mt-[2.6875rem] md:h-11 md:px-10 md:pb-0">
-        <a href={'/' + (isEN ? 'en/' : '')} class="inline-block w-[13.625rem] font-bold md:w-[21.25rem]">
+        <a href={isEN ? '/en/' : '/'} class="inline-block w-[13.625rem] font-bold md:w-[21.25rem]">
           <img
             src={'/assets/images/logo' + (isEN ? '_en' : '') + '.svg'}
             alt={
@@ -46,7 +46,7 @@ const currentSlug = Astro.url.pathname;
         )}
         aria-label="English"
       >
-        En<span class="hidden md:inline">glish</span>
+        En<span class="sr-only md:not-sr-only md:inline">glish</span>
       </a>
       <a
         href={isEN ? currentSlug.replace('/en', '') : ''}
@@ -56,7 +56,7 @@ const currentSlug = Astro.url.pathname;
         )}
         aria-label="Japanese"
       >
-        Ja<span class="hidden md:inline">panese</span>
+        Ja<span class="sr-only md:not-sr-only md:inline">panese</span>
       </a>
     </div>
     <button
@@ -64,12 +64,20 @@ const currentSlug = Astro.url.pathname;
       id="js-hamburger"
       class="relative top-0.5 flex flex-col gap-1.5 transition-colors duration-200 md:hidden"
     >
-      <span class="hamburger flex w-6 flex-col gap-1">
-        <span class="h-px w-full bg-black transition-transform duration-300"></span>
-        <span class="h-px w-full bg-black transition-transform duration-300"></span>
-        <span class="h-px w-full bg-black transition-transform duration-300"></span>
+      <span class={twJoin(
+        "hamburger flex w-6 flex-col gap-1",
+        "[&_span]:h-px [&_span]:w-full [&_span]:bg-black [&_span]:transition-transform [&_span]:duration-300"
+      )}>
+        <span></span>
+        <span></span>
+        <span></span>
       </span>
-      <span class={twJoin('lowercase', isEN ? '-ml-px scale-90 text-[0.5625rem]/none' : 'text-[0.625rem]/none')}
+      <span class={twJoin(
+        'lowercase',
+        isEN
+          ? '-ml-px scale-90 text-[0.5625rem]/none'
+          : 'text-[0.625rem]/none'
+      )}
         >{isEN ? 'Menu' : '目次'}</span
       >
     </button>

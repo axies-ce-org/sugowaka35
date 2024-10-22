@@ -39,8 +39,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 2,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#sec-01',
-      label: 'すごわか：1−01',
+      href: '/basis/',
+      label: 'すごわか：1-01',
     },
   },
   {
@@ -71,7 +71,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#sec-02',
+      href: '/basis02/',
       label: 'すごわか：1-02',
     },
   },
@@ -94,7 +94,7 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 2,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#sec-03',
+      href: '/basis03/',
       label: 'すごわか：1-03',
     },
   },
@@ -118,8 +118,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 1,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#sec-03',
-      label: 'すごわか：1−03',
+      href: '/basis03/',
+      label: 'すごわか：1-03',
     },
   },
   {
@@ -141,8 +141,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#sec-04',
-      label: 'すごわか：1−04',
+      href: '/basis04/',
+      label: 'すごわか：1-04',
     },
   },
   {
@@ -195,8 +195,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 2,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#sec-04',
-      label: 'すごわか：1−04',
+      href: '/basis04/',
+      label: 'すごわか：1-04',
     },
   },
   {
@@ -216,8 +216,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/basis/#ref23',
-      label: 'すごわか：1−04保護期間の箇所',
+      href: '/basis04/#ref23',
+      label: 'すごわか：1-04保護期間の箇所',
     },
   },
   {
@@ -258,8 +258,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/copyright/#sec-02',
-      label: 'すごわか：2−02',
+      href: '/copyright02/',
+      label: 'すごわか：2-02',
     },
   },
   {
@@ -274,8 +274,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 4,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/copyright/#sec-03',
-      label: 'すごわか：2−03',
+      href: '/copyright03/',
+      label: 'すごわか：2-03',
     },
   },
   {
@@ -293,8 +293,8 @@ const questions: Question[] = [
     ],
     correctAnswerNumber: 3,
     reference: {
-      href: 'https://copyright-edu.axies.jp/sugowaka35/copyright/#sec-04',
-      label: 'すごわか：2−04',
+      href: '/copyright04/',
+      label: 'すごわか：2-04',
     },
   },
   {

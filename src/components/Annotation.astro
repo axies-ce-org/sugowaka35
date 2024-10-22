@@ -1,0 +1,10 @@
+---
+type Props = {
+  num?: number;
+  word?: string;
+};
+
+const { num, word } = Astro.props;
+---
+
+<>{word && <span class="underline underline-offset-2">{word}</span>}<sup class="whitespace-nowrap font-medium text-gray-500">＊{num}</sup></>
