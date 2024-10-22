@@ -1,3 +1,4 @@
+import { toggleSearchArea } from './searchArea';
 import { fetchPageData, resetResult, insertResult } from './displayResult';
 import { highlightSearchWord, getTextNodes, scrollToSearchWord } from './highlightResult';
 
@@ -8,6 +9,31 @@ type PageData = {
 };
 
 (async () => {
+  /**
+   * Toggle search area
+   */
+  const searchArea = document.querySelector<HTMLDivElement>('.js-search-area');
+  const trigger = document.querySelector<HTMLButtonElement>('.js-search-trigger');
+  const closeTrigger = document.querySelector<HTMLButtonElement>('.js-close-trigger-search');
+  const overlay = document.querySelector<HTMLDivElement>('.js-search-overlay');
+
+  [trigger, closeTrigger, overlay].forEach((element) => {
+    element.addEventListener('click', () => toggleSearchArea(searchArea));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const isActive = searchArea.classList.contains('is-active');
+    if (isActive && e.key === 'Escape') toggleSearchArea(searchArea);
+  });
+
+  // toggle search area when press command(ctrl)+k
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      toggleSearchArea(searchArea);
+    }
+  });
+
   /**
    * Display search result
    */
