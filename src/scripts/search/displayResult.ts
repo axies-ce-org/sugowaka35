@@ -24,8 +24,7 @@ export const fetchPageData = async () => {
 
 export const resetResult = (resultBlock: HTMLDivElement) => {
   resultBlock.innerHTML = '';
-  resultBlock.classList.add('invisible');
-  resultBlock.classList.remove('pt-4');
+  resultBlock.classList.remove('is-active');
 };
 
 export const insertResult = (pageData: PageData[], searchWord: string, resultBlock: HTMLDivElement) => {
@@ -34,8 +33,7 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
 
   let hasResult = false;
 
-  resultBlock.classList.remove('invisible');
-  resultBlock.classList.add('pt-4');
+  resultBlock.classList.add('is-active');
 
   pageData.forEach(({ title, pageDir, contents }) => {
     const matchSentences = [];
@@ -46,22 +44,20 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
     if (matchSentences.length > 0) {
       hasResult = true;
       resultBlock.insertAdjacentHTML('afterbegin', '<ul></ul>');
-      resultBlock.insertAdjacentHTML('afterbegin', `<div class="text-lg font-bold [*+&]:mt-4">${title}</div>`);
+      resultBlock.insertAdjacentHTML('afterbegin', `<div>${title}</div>`);
 
       matchSentences.forEach((matchSentence, index) => {
         const params = new URLSearchParams(location.search);
         const spannedSentence = matchSentence.replaceAll(
           new RegExp(`(${searchWord})`, 'gi'),
-          `<span class="js-hit font-bold text-orange-600 bg-yellow-100">$1</span>`,
+          `<span class="js-hit">$1</span>`,
         );
         params.set('s', searchWord);
         params.set('i', index.toString());
         resultBlock.querySelector('ul').insertAdjacentHTML(
           'beforeend',
-          `<li class="border-t border-orange-300">
-          <a class="p-2 block hover:bg-orange-300" href="${siteUrl}${
-            isEN ? '/en/' : '/'
-          }${pageDir}/?${params.toString()}">${spannedSentence}</a>
+          `<li>
+          <a href="${siteUrl}${isEN ? '/en/' : '/'}${pageDir}/?${params.toString()}">${spannedSentence}</a>
         </li>`,
         );
       });
