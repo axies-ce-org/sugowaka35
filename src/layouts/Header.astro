@@ -38,6 +38,8 @@ const currentSlug = Astro.url.pathname;
     )}
   >
     <button
+      aria-expanded="false"
+      aria-controls="search-area"
       class="js-search-trigger flex items-center gap-1.5 rounded-2xl bg-white px-2 py-1 text-[0.6875rem]/normal font-bold text-gray-600 hover:text-orange-600 md:px-4"
     >
       <img src="/assets/images/search.svg" alt="" class="h-4 w-4" />

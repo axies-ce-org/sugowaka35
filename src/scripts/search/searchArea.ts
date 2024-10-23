@@ -1,11 +1,13 @@
-export const toggleSearchArea = (searchArea: HTMLElement) => {
-  const input = searchArea.querySelector<HTMLInputElement>('input');
-  const overlay = searchArea.nextElementSibling;
+export const setSearchTriggerState = (trigger: HTMLButtonElement, isActive: boolean) => {
+  trigger.setAttribute('aria-expanded', isActive.toString());
+};
 
-  searchArea.classList.toggle('is-active');
-  overlay.classList.toggle('is-active');
+export const setSearchAreaState = (searchArea: HTMLDivElement, isActive: boolean) => {
+  searchArea.setAttribute('aria-hidden', (!isActive).toString());
+  searchArea.nextElementSibling.setAttribute('aria-hidden', (!isActive).toString());
 
-  if (searchArea.classList.contains('is-active')) {
+  if (isActive) {
+    const input = searchArea.querySelector<HTMLInputElement>('input');
     input.focus();
   }
 };
