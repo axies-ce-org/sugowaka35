@@ -1,4 +1,9 @@
-import { setSearchAreaState, setSearchTriggerState } from './searchArea';
+import {
+  setSearchAreaState,
+  setSearchAreaTopPosition,
+  setSearchAreaWidthValue,
+  setSearchTriggerState,
+} from './searchArea';
 import { fetchPageData, resetResult, insertResult } from './displayResult';
 import { highlightSearchWord, getTextNodes, scrollToSearchWord } from './highlightResult';
 
@@ -30,6 +35,11 @@ type PageData = {
     setSearchTriggerState(trigger, false);
   };
 
+  const resizeObserver = new ResizeObserver(() => {
+    setSearchAreaWidthValue(searchArea);
+  });
+  resizeObserver.observe(document.documentElement);
+
   [trigger, closeTrigger, overlay].forEach((element) => {
     element?.addEventListener('click', toggleSearchArea);
   });
@@ -42,6 +52,9 @@ type PageData = {
       toggleSearchArea();
     }
   });
+
+  setSearchAreaTopPosition();
+  window.addEventListener('scroll', setSearchAreaTopPosition);
 
   /**
    * Display search result
