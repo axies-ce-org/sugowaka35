@@ -22,3 +22,12 @@ window.addEventListener('resize', function () {
     nav.classList.remove('active');
   }
 });
+
+/**
+ * Get the scrollbar width and set it as a CSS variable
+ */
+const resizeObserver = new ResizeObserver(() => {
+  document.body.style.setProperty('--scrollbar-width', window.innerWidth - document.documentElement.clientWidth + 'px');
+});
+
+resizeObserver.observe(document.documentElement);
