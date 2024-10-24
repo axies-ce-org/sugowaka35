@@ -92,14 +92,14 @@ type PageData = {
   /**
    * Highlight search word
    */
-  const mainElement = document.querySelector('main');
+  const sectionContent = document.querySelector('.section-content');
   const params = new URL(document.location.href).searchParams;
   const searchParam = params.get('s');
   const indexParam = Number(params.get('i'));
 
   // Get text nodes recursively
   const textNodes: Node[] = [];
-  getTextNodes(mainElement, textNodes);
+  getTextNodes(sectionContent, textNodes);
 
   textNodes.forEach((textNode) => {
     highlightSearchWord(textNode, searchParam);

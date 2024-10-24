@@ -19,29 +19,28 @@ const getPageDirs = (parentDir: string): string[] => {
   });
 };
 
-const extractPageData = (htmlFilePath: string): Omit<PageData, 'pageDir'> => {
+const extractPageData = (htmlFilePath: string, pageDir: string): PageData => {
   if (!fs.existsSync(htmlFilePath)) {
     console.warn(`File not found: ${htmlFilePath}`);
     return null;
   }
 
-  const htmlContent = fs.readFileSync(htmlFilePath);
-  const { title, contents } = loadBuffer(htmlContent).extract({
+  const fileBuffer = fs.readFileSync(htmlFilePath);
+  const { title, contents } = loadBuffer(fileBuffer).extract({
     title: 'h2',
-    contents: ['.section-content:not([data-search-ignore])'],
+    contents: ['.section-content:not([data-search-ignore]) p'],
   });
 
-  return { title: title.trim(), contents: contents.map((c) => c.trim()) };
+  return { pageDir, title: title.trim(), contents: contents.map((c) => c.trim()) };
 };
 
-const generatePageData = (lang = 'ja'): void => {
+const writePageData = (lang = 'ja'): void => {
   const parentDir = lang === 'ja' ? 'static' : 'static/en';
   const pageDirs = getPageDirs(parentDir);
 
   const pageData = pageDirs.map((pageDir) => {
     const htmlFilePath = path.join(parentDir, pageDir, 'index.html');
-    const result = extractPageData(htmlFilePath);
-    return result ? { pageDir, ...result } : null;
+    return extractPageData(htmlFilePath, pageDir);
   });
 
   // Generate pagedata.json for static and public
@@ -53,5 +52,5 @@ const generatePageData = (lang = 'ja'): void => {
 };
 
 ['ja', 'en'].forEach((lang) => {
-  generatePageData(lang);
+  writePageData(lang);
 });

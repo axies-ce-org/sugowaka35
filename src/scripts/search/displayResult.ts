@@ -4,6 +4,9 @@ type PageData = {
   contents: string[];
 };
 
+const siteUrl = import.meta.env.PROD ? import.meta.env.PUBLIC_SITE_URL ?? import.meta.env.SITE : '';
+const isEN = document.documentElement.lang === 'en';
+
 const getMatches = (text: string, searchWord: string) => {
   const matches = text.match(new RegExp(`[^。！？\\n]*${searchWord}[^。！？\\n]*[。！？]?`, 'gi')) ?? [];
   return matches.map((match) => match.trim());
@@ -16,8 +19,6 @@ export const fetchPageData = async () => {
    * For more information, refer to:
    * https://docs.astro.build/en/guides/environment-variables/#using-the-cli
    */
-  const siteUrl = import.meta.env.PROD ? import.meta.env.PUBLIC_SITE_URL ?? import.meta.env.SITE : '';
-  const isEN = document.documentElement.lang === 'en';
   const response = await fetch(`${siteUrl}/pagedata-${isEN ? 'en' : 'ja'}.json`);
   return await response.json();
 };
@@ -28,9 +29,6 @@ export const resetResult = (resultBlock: HTMLDivElement) => {
 };
 
 export const insertResult = (pageData: PageData[], searchWord: string, resultBlock: HTMLDivElement) => {
-  const siteUrl = import.meta.env.PROD ? import.meta.env.PUBLIC_SITE_URL ?? import.meta.env.SITE : '';
-  const isEN = document.documentElement.lang === 'en';
-
   let hasResult = false;
 
   resultBlock.classList.add('is-active');
@@ -47,7 +45,7 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
       resultBlock.insertAdjacentHTML('afterbegin', `<div>${title}</div>`);
 
       matchSentences.forEach((matchSentence, index) => {
-        const params = new URLSearchParams(location.search);
+        const params = new URLSearchParams();
         const spannedSentence = matchSentence.replaceAll(
           new RegExp(`(${searchWord})`, 'gi'),
           `<span class="js-hit">$1</span>`,
