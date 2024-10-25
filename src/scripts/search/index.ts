@@ -5,7 +5,7 @@ import {
   setSearchTriggerState,
 } from './searchArea';
 import { fetchPageData, resetResult, insertResult } from './displayResult';
-import { highlightSearchWord, getTextNodes, scrollToSearchWord } from './highlightResult';
+import { highlightSearchWord, getAllTextNodes, scrollToSearchWord } from './highlightResult';
 
 type PageData = {
   title: string;
@@ -93,13 +93,11 @@ type PageData = {
    * Highlight search word
    */
   const sectionContent = document.querySelector('.section-content');
-  const params = new URL(document.location.href).searchParams;
+  const params = new URLSearchParams(window.location.search);
   const searchParam = params.get('s');
   const indexParam = Number(params.get('i'));
 
-  // Get text nodes recursively
-  const textNodes: Node[] = [];
-  getTextNodes(sectionContent, textNodes);
+  const textNodes = getAllTextNodes(sectionContent);
 
   textNodes.forEach((textNode) => {
     highlightSearchWord(textNode, searchParam);
