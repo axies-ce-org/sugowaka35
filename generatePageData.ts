@@ -9,7 +9,19 @@ type PageData = {
 };
 
 const getPageDirs = (parentDir: string): string[] => {
-  const excludePaths = ['_astro', 'assets', 'extra', 'quiz', 'en'];
+  const excludePaths = [
+    '_astro',
+    'assets',
+    'afterwords',
+    'extra',
+    'index',
+    'introduction',
+    'license',
+    'quiz',
+    'references',
+    'team',
+    'en',
+  ];
   const allPaths = fs.readdirSync(parentDir);
   const validPaths = allPaths.filter((pathName) => !excludePaths.includes(pathName));
 
@@ -28,7 +40,7 @@ const extractPageData = (htmlFilePath: string, pageDir: string): PageData => {
   const fileBuffer = fs.readFileSync(htmlFilePath);
   const { title, contents } = loadBuffer(fileBuffer).extract({
     title: 'h2',
-    contents: ['.section-content:not([data-search-ignore]) p'],
+    contents: ['.section-content > *:not([data-search-ignore])'],
   });
 
   return { pageDir, title: title.trim(), contents: contents.map((c) => c.trim()) };
