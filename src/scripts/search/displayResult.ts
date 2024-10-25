@@ -51,7 +51,7 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
           `<span class="js-hit">$1</span>`,
         );
         params.set('s', searchWord);
-        params.set('i', index.toString());
+        params.set('i', (index + 1).toString());
         resultBlock.querySelector('ul').insertAdjacentHTML(
           'beforeend',
           `<li>
