@@ -63,6 +63,9 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
   });
 
   if (!hasResult) {
-    resultBlock.insertAdjacentHTML('afterbegin', '<p class="js-no-result">検索結果が見つかりませんでした。</p>');
+    resultBlock.insertAdjacentHTML(
+      'afterbegin',
+      `<p class="js-no-result">${isEN ? 'No results found.' : '検索結果が見つかりませんでした。'}</p>`,
+    );
   }
 };
