@@ -15,6 +15,11 @@ export const setSearchAreaState = (searchArea: HTMLDivElement, isActive: boolean
   if (isActive) {
     const input = searchArea.querySelector<HTMLInputElement>('input');
     input.focus();
+
+    if (input.value) {
+      const button = input.nextElementSibling as HTMLButtonElement;
+      button.disabled = false;
+    }
   }
 };
 
