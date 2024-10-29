@@ -41,13 +41,14 @@ const { isEN } = Astro.props;
     </div>
     <div
       class={twJoin(
-        'js-search-result invisible grid max-h-[8.75rem] gap-3 overflow-y-auto overscroll-contain rounded-lg bg-stone-100 [word-break:break-word]',
-        'md:max-h-[6.5rem]',
-        'xl:max-h-[calc(100svh-var(--search-area-top)-10.75rem)] xl:bg-transparent',
+        'js-search-result invisible grid max-h-[8.75rem] scroll-pt-4 gap-3 overflow-y-auto overscroll-contain rounded-lg bg-stone-100 [word-break:break-word]',
+        'md:max-h-[30svh]',
+        'xl:max-h-[calc(100svh-var(--search-area-top)-10.75rem)] xl:scroll-pt-0 xl:rounded-none xl:bg-transparent',
         '[&.is-active]:visible [&.is-active]:mt-4 [&.is-active]:p-4 [&.is-active]:opacity-100 md:[&.is-active]:mt-6',
-        '[&>div+div]:mt-4 [&>div]:text-base [&>div]:font-bold',
-        '[&_li]:border-t [&_li]:border-stone-300',
-        '[&_a]:block [&_a]:py-3 hover:[&_a]:bg-stone-100 focus-visible:[&_a]:bg-stone-100',
+        '[&>div>div]:font-bold [&>div]:grid [&>div]:gap-3',
+        '[&_li.is-searched]:bg-orange-100 [&_li]:border-t [&_li]:border-stone-300',
+        '[&_a]:block [&_a]:py-3 hover:[&_a]:bg-stone-200 focus-visible:[&_a]:bg-stone-200',
+        'xl:hover:[&_a]:bg-stone-100 xl:focus-visible:[&_a]:bg-stone-100',
         '[&_span]:text-orange-600',
         'xl:[&.is-active]:mt-8 xl:[&.is-active]:p-0 xl:[&.is-active]:pr-2'
       )}
