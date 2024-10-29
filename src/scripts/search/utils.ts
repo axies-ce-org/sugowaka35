@@ -3,5 +3,5 @@ export const createSentenceRegex = (searchWord: string): RegExp => {
 };
 
 export const createWordRegex = (searchWord: string): RegExp => {
-  return new RegExp(`(${searchWord})`, 'gi');
+  return new RegExp(`(?<!<[^>]*)(${searchWord})(?![^<]*>)`, 'gi');
 };
