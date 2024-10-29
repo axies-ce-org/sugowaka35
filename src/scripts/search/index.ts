@@ -5,7 +5,7 @@ import {
   setSearchTriggerState,
 } from './searchArea';
 import { fetchPageData, resetResult, insertResult } from './displayResult';
-import { highlightSearchWord, getAllTextNodes, scrollToSearchWord } from './highlightResult';
+import { highlightSearchWord, highlightResult, getAllTextNodes, scrollToSearchWord } from './highlightResult';
 
 type PageData = {
   title: string;
@@ -76,6 +76,11 @@ type PageData = {
     submitButton.disabled = false;
     insertResult(pageData, searchParam, resultBlock);
     openSearchArea();
+
+    // Wait for the result to be displayed
+    setTimeout(() => {
+      highlightResult();
+    }, 200);
   } else {
     submitButton.disabled = true;
     resetResult(resultBlock);

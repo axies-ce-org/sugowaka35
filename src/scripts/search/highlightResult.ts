@@ -47,3 +47,21 @@ export const scrollToSearchWord = (indexParam: number): void => {
     }
   });
 };
+
+export const highlightResult = (): void => {
+  const searchIndex = Number(new URLSearchParams(window.location.search).get('i'));
+  if (!searchIndex) return;
+
+  const path = window.location.pathname.replace(/^\/|\/$/g, '');
+  const container = document.querySelector<HTMLElement>(`[data-page-dir="${path}"]`);
+  if (!container) return;
+
+  const targetResult = container.querySelectorAll('li')[searchIndex - 1];
+  if (!targetResult) return;
+
+  targetResult.classList.add('is-searched');
+  targetResult.scrollIntoView({
+    behavior: 'instant',
+    block: 'start',
+  });
+};
