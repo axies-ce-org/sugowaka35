@@ -1,3 +1,5 @@
+import { createSentenceRegex, createWordRegex } from './utils';
+
 type PageData = {
   title: string;
   pageDir: string;
@@ -8,7 +10,7 @@ const siteUrl = import.meta.env.PROD ? import.meta.env.PUBLIC_SITE_URL ?? import
 const isEN = document.documentElement.lang === 'en';
 
 const getMatches = (text: string, searchWord: string) => {
-  const matches = text.match(new RegExp(`[^。！？\\n]*${searchWord}[^。！？\\n]*[。！？]?`, 'gi')) ?? [];
+  const matches = text.match(createSentenceRegex(searchWord)) ?? [];
   return matches.map((match) => match.trim());
 };
 
@@ -46,10 +48,7 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
 
       matchSentences.forEach((matchSentence, index) => {
         const params = new URLSearchParams();
-        const spannedSentence = matchSentence.replaceAll(
-          new RegExp(`(${searchWord})`, 'gi'),
-          `<span class="js-hit">$1</span>`,
-        );
+        const spannedSentence = matchSentence.replaceAll(createWordRegex(searchWord), `<span class="js-hit">$1</span>`);
         params.set('s', searchWord);
         params.set('i', (index + 1).toString());
         resultBlock.querySelector('ul').insertAdjacentHTML(

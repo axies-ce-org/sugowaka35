@@ -1,12 +1,11 @@
+import { createSentenceRegex, createWordRegex } from './utils';
+
 export const highlightSearchWord = (textNode: Node, searchWord: string): void => {
   if (textNode.textContent.trim() === '') return;
 
-  const sentenceRegex = new RegExp(`[^。！？\\n]*${searchWord}[^。！？\\n]*[。！？]?`, 'gi');
-  const wordRegex = new RegExp(`(${searchWord})`, 'gi');
-
   const processedSentence = textNode.textContent
-    .replace(sentenceRegex, '<span>$&</span>')
-    .replace(wordRegex, '<span class="js-hit text-orange-600 bg-yellow-100">$1</span>');
+    .replace(createSentenceRegex(searchWord), '<span>$&</span>')
+    .replace(createWordRegex(searchWord), '<span class="js-hit text-orange-600 bg-yellow-100">$1</span>');
 
   const fragment = document.createRange().createContextualFragment(processedSentence);
 
