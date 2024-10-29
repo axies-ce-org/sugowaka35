@@ -29,6 +29,7 @@ const { isEN } = Astro.props;
         <input
           disabled
           type="text"
+          aria-label={isEN ? 'Enter your search terms' : '検索したい内容を入力してください'}
           class="w-full max-w-[26.5rem] flex-1 appearance-none rounded border border-stone-400 px-2 py-1 md:rounded-lg xl:rounded"
         />
         <button
