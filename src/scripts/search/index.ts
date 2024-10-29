@@ -14,19 +14,36 @@ type PageData = {
 };
 
 (async () => {
+  const form = document.querySelector<HTMLFormElement>('.js-search-form');
+  const input = form.querySelector<HTMLInputElement>('input');
+  const submitButton = form.querySelector<HTMLButtonElement>('button');
+  const trigger = document.querySelector<HTMLButtonElement>('.js-search-trigger');
+  const closeTrigger = document.querySelector<HTMLButtonElement>('.js-close-trigger-search');
+  const resultBlock = document.querySelector<HTMLDivElement>('.js-search-result');
+  const searchArea = document.querySelector<HTMLDivElement>('.js-search-area');
+  const overlay = document.querySelector<HTMLDivElement>('.js-search-overlay');
+  const sectionContent = document.querySelector('.section-content');
+
+  const searchParam = new URLSearchParams(window.location.search).get('s');
+  const indexParam = Number(new URLSearchParams(window.location.search).get('i'));
+
+  const pageData: PageData[] = await fetchPageData();
+
   /**
    * Toggle search area
    */
-  const trigger = document.querySelector<HTMLButtonElement>('.js-search-trigger');
-  const closeTrigger = document.querySelector<HTMLButtonElement>('.js-close-trigger-search');
-  const searchArea = document.querySelector<HTMLDivElement>('.js-search-area');
-  const overlay = document.querySelector<HTMLDivElement>('.js-search-overlay');
   let isActive = false;
 
   const toggleSearchArea = () => {
     isActive = !isActive;
     setSearchAreaState(searchArea, isActive);
     setSearchTriggerState(trigger, isActive);
+  };
+
+  const openSearchArea = () => {
+    isActive = true;
+    setSearchAreaState(searchArea, true);
+    setSearchTriggerState(trigger, true);
   };
 
   const closeSearchArea = () => {
@@ -53,22 +70,24 @@ type PageData = {
     }
   });
 
+  // If there is a search parameter, display search results
+  if (searchParam) {
+    input.value = searchParam;
+    submitButton.disabled = false;
+    insertResult(pageData, searchParam, resultBlock);
+    openSearchArea();
+  } else {
+    submitButton.disabled = true;
+    resetResult(resultBlock);
+  }
+
+  // Set the position of the search area
   setSearchAreaTopPosition();
   window.addEventListener('scroll', setSearchAreaTopPosition);
 
   /**
    * Display search result
    */
-  const resultBlock = document.querySelector<HTMLDivElement>('.js-search-result');
-  const form = document.querySelector<HTMLFormElement>('.js-search-form');
-  const input = form.querySelector<HTMLInputElement>('input');
-  const submitButton = form.querySelector<HTMLButtonElement>('button');
-
-  const pageData: PageData[] = await fetchPageData();
-
-  input.disabled = false;
-  resetResult(resultBlock);
-
   input.addEventListener('input', (e) => {
     if (!(e.currentTarget instanceof HTMLInputElement)) return;
 
@@ -92,13 +111,7 @@ type PageData = {
   /**
    * Highlight search word
    */
-  const sectionContent = document.querySelector('.section-content');
-  const params = new URLSearchParams(window.location.search);
-  const searchParam = params.get('s');
-  const indexParam = Number(params.get('i'));
-
   const textNodes = getAllTextNodes(sectionContent);
-
   textNodes.forEach((textNode) => {
     highlightSearchWord(textNode, searchParam);
   });
