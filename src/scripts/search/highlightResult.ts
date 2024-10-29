@@ -52,8 +52,11 @@ export const highlightResult = (): void => {
   const searchIndex = Number(new URLSearchParams(window.location.search).get('i'));
   if (!searchIndex) return;
 
-  const path = window.location.pathname.replace(/^\/|\/$/g, '');
-  const container = document.querySelector<HTMLElement>(`[data-page-dir="${path}"]`);
+  const paths = window.location.pathname
+    .replace(/^\/|\/$/g, '')
+    .split('/')
+    .filter((path) => path !== '');
+  const container = document.querySelector<HTMLElement>(`[data-page-dir="${paths.at(-1)}"]`);
   if (!container) return;
 
   const targetResult = container.querySelectorAll('li')[searchIndex - 1];
