@@ -43,15 +43,18 @@ export const insertResult = (pageData: PageData[], searchWord: string, resultBlo
 
     if (matchSentences.length > 0) {
       hasResult = true;
-      resultBlock.insertAdjacentHTML('afterbegin', '<ul></ul>');
-      resultBlock.insertAdjacentHTML('afterbegin', `<div>${title}</div>`);
+      const container = document.createElement('div');
+      container.dataset.pageDir = pageDir;
+      container.insertAdjacentHTML('afterbegin', '<ul></ul>');
+      container.insertAdjacentHTML('afterbegin', `<div>${title}</div>`);
+      resultBlock.appendChild(container);
 
       matchSentences.forEach((matchSentence, index) => {
         const params = new URLSearchParams();
         const spannedSentence = matchSentence.replaceAll(createWordRegex(searchWord), `<span class="js-hit">$1</span>`);
         params.set('s', searchWord);
         params.set('i', (index + 1).toString());
-        resultBlock.querySelector('ul').insertAdjacentHTML(
+        container.querySelector('ul').insertAdjacentHTML(
           'beforeend',
           `<li>
           <a href="${siteUrl}${isEN ? '/en/' : '/'}${pageDir}/?${params.toString()}">${spannedSentence}</a>
