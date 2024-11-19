@@ -2,7 +2,7 @@
 import { twJoin } from 'tailwind-merge';
 import '../styles/index.css';
 import Footer from '../layouts/Footer.astro';
-
+import SearchArea from '../components/SearchArea.astro';
 export interface Props {
   title?: string;
   description?: string;
@@ -21,7 +21,7 @@ const siteDescription = isEN
   : 'このサイトは、主に教育機関で授業をされている先生を対象に著作権について説明しています。SARTRAS（授業目的公衆送信補償金等管理協会）の共通目的基金の助成を受けて、AXIES（大学ICT推進協議会）が制作しています。';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={isEN ? 'en' : 'ja'} class="scroll-pt-10 scroll-smooth" dir="ltr">
   <head>
     <meta charset="UTF-8" />
@@ -45,6 +45,7 @@ const siteDescription = isEN
     <link rel="apple-touch-icon" sizes="192x192" href={Astro.site + '/cropped-favicon-192x192.png'} />
     <meta name="msapplication-TileImage" content={Astro.site + '/cropped-favicon-270x270.png'} />
     <script src="../scripts/index.ts"></script>
+    <script src="../scripts/search/index.ts"></script>
   </head>
   <body
     class={twJoin(
@@ -54,5 +55,6 @@ const siteDescription = isEN
   >
     <slot />
     <Footer isEN={isEN} />
+    <SearchArea isEN={isEN} />
   </body>
 </html>

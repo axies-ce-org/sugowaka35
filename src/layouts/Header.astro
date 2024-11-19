@@ -14,8 +14,8 @@ const currentSlug = Astro.url.pathname;
 <>
   {
     img !== 'none' && (
-      <header class="absolute left-0 top-0 z-10 flex h-[3.6875rem] items-center px-4 pb-1.5 md:top-1 md:mx-auto md:mt-[2.6875rem] md:h-11 md:px-10 md:pb-0">
-        <a href={'/' + (isEN ? 'en/' : '')} class="inline-block w-[13.625rem] font-bold md:w-[21.25rem]">
+      <header class="absolute left-0 top-0 z-10 flex h-[3.6875rem] w-[calc(100%-9rem)] items-center px-4 pb-1.5 md:top-1 md:mx-auto md:mt-[2.6875rem] md:h-11 md:px-10 md:pb-0">
+        <a href={isEN ? '/en/' : '/'} class="inline-block max-w-[13.625rem] font-bold md:w-[21.25rem] md:max-w-none">
           <img
             src={'/assets/images/logo' + (isEN ? '_en' : '') + '.svg'}
             alt={
@@ -32,31 +32,39 @@ const currentSlug = Astro.url.pathname;
   }
   <div
     class={twJoin(
-      'sticky z-20 ml-auto flex w-fit items-center justify-end gap-4',
+      'sticky z-20 ml-auto flex w-fit items-center justify-end gap-1.5',
       'md:max-w-[72.5rem]',
-      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0',
+      img !== 'none' ? 'top-[1.03125rem] md:top-4 md:mt-[2.9375rem]' : 'mt-0'
     )}
   >
+    <button
+      aria-expanded="false"
+      aria-controls="search-area"
+      class="js-search-trigger flex items-center gap-1.5 rounded-2xl bg-white px-2 py-1 text-[0.6875rem]/normal font-bold text-gray-600 hover:text-orange-600 md:px-4"
+    >
+      <img src="/assets/images/search.svg" alt="" class="size-4" />
+      <span class="sr-only text-sm md:not-sr-only">{isEN ? 'Search' : 'サイト内検索'}</span>
+    </button>
     <div class="flex items-center rounded-2xl bg-white p-1 text-[0.6875rem]/normal font-bold md:text-xs/normal">
       <a
         href={isEN ? '' : '/en' + currentSlug}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'bg-orange-600 text-white' : 'text-gray-600 hover:text-orange-600',
+          isEN ? 'bg-orange-600 text-white' : 'text-gray-600 hover:text-orange-600'
         )}
         aria-label="English"
       >
-        En<span class="hidden md:inline">glish</span>
+        En<span class="sr-only md:not-sr-only md:inline">glish</span>
       </a>
       <a
         href={isEN ? currentSlug.replace('/en', '') : ''}
         class={twJoin(
           'block rounded-2xl px-2 uppercase md:py-0.5',
-          isEN ? 'text-gray-600 hover:text-orange-600' : 'bg-orange-600 text-white',
+          isEN ? 'text-gray-600 hover:text-orange-600' : 'bg-orange-600 text-white'
         )}
         aria-label="Japanese"
       >
-        Ja<span class="hidden md:inline">panese</span>
+        Ja<span class="sr-only md:not-sr-only md:inline">panese</span>
       </a>
     </div>
     <button
@@ -64,10 +72,15 @@ const currentSlug = Astro.url.pathname;
       id="js-hamburger"
       class="relative top-0.5 flex flex-col gap-1.5 transition-colors duration-200 md:hidden"
     >
-      <span class="hamburger flex w-6 flex-col gap-1">
-        <span class="h-px w-full bg-black transition-transform duration-300"></span>
-        <span class="h-px w-full bg-black transition-transform duration-300"></span>
-        <span class="h-px w-full bg-black transition-transform duration-300"></span>
+      <span
+        class={twJoin(
+          'hamburger flex w-6 flex-col gap-1',
+          '[&_span]:h-px [&_span]:w-full [&_span]:bg-black [&_span]:transition-transform [&_span]:duration-300'
+        )}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </span>
       <span class={twJoin('lowercase', isEN ? '-ml-px scale-90 text-[0.5625rem]/none' : 'text-[0.625rem]/none')}
         >{isEN ? 'Menu' : '目次'}</span

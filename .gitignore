@@ -2,6 +2,7 @@
 static/
 dist/
 .output/
+pagedata-*.json
 
 # dependencies
 node_modules/

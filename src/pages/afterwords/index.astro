@@ -1,101 +1,14 @@
 ---
-import { twJoin } from 'tailwind-merge';
 import Section from '../../components/Section.astro';
 import Page from '../../templates/Page.astro';
 ---
 
 <Page
   title="おわりに"
-  description="主に教育機関で授業をされている先生を対象に著作権について説明している当ウェブサイトの、制作チーム紹介とあとがきのページです。"
+  description="主に教育機関で授業をされている先生を対象に著作権について説明している当ウェブサイトの、あとがきのページです。"
+  isTitleHidden
 >
-  <Section number="01" title="制作チーム紹介">
-    <h3><span class="block text-base">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業」制作チーム</h3>
-    <ul class="!p-0">
-      {
-        [
-          {
-            src: '/assets/images/amano.png',
-            name: '天野 由貴（あまの ゆき）',
-            title: '執筆',
-            text: '大学ICT推進協議会学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。帝京大学 ラーニングテクノロジー開発室 講師。ねこでもわかるグラフシリーズ連載中。ねこ4匹と暮らしている。',
-          },
-          {
-            src: '/assets/images/kimura.png',
-            name: '木村 剛大（きむら こうだい）',
-            title: '監修',
-            text: '弁護士（日本・ニューヨーク州・ワシントン DC）、小林・弓削田法律事務所パートナー。ウェブ版美術手帖での連載「アートと法/Art Law」、「アートと法の基礎知識」、『クリエイターのための権利の本〔改訂版〕』（ボーンデジタル、2023）の共著、法律監修など著作権を一般にも分かりやすく解説することにも力を入れている。ボクシング好き（みるのだけ）。',
-          },
-          {
-            src: '/assets/images/sumiya.png',
-            name: '隅谷 孝洋（すみや たかひろ）',
-            title: '企画',
-            text: '大学ICT推進協議会 学術・教育コンテンツ 共有流通部会 著作権タスクフォースメンバー。著作物の教育利用に関する関係者フォーラム委員（2021、2022年度）。広島大学情報メディア教育研究センター教授。Star Warsとラーメンが好き。',
-          },
-          {
-            src: '/assets/images/sumida.png',
-            name: '角田 綾佳（すみだ あやか）',
-            title: 'イラスト',
-            text: '株式会社キテレツ、デザイナー＆イラストレーター。ウェブデザインを中心に、印刷物や広告などさまざまなデザインを手がける。ねことラッコとK-POPが大好き。',
-          },
-          {
-            src: '/assets/images/sato.png',
-            name: '佐藤 理樹（さとう まさき）',
-            title: 'デザイン・DTP',
-            text: 'アルファデザイン、書籍制作中心のグラフィックデザイナー。著書『はじめてのIllustrator CC』（秀和システム）。デザイン・DTP『クリエイターのための権利の本〔改訂版〕』、『HTML解体新書』（ボーンデジタル）、『ネオ・ダダの逆説』（みすず書房）など。バイクとねこと日本酒好き。',
-          },
-          {
-            src: '/assets/images/koseki.png',
-            name: '小関 匡（こせき きょう）',
-            title: '編集',
-            text: 'IT、Web、デザイン系のライター兼書籍編集者。ライターとしては、企業のオウンドメディアを中心に活動中。主な書籍編集実績『クリエイターのための権利の本〔改訂版〕』（ボーンデジタル）『鬼フィードバック デザインのチカラは“ダメ出し"で育つ』（MdN）他。日本酒好きなれど、ダイエットのため節酒中。',
-          },
-        ].map(({ src, name, title, text }) => {
-          return (
-            <li
-              class={twJoin(
-                'grid list-none items-center gap-4 border-t border-stone-200 py-4 md:flex md:items-start md:py-5',
-                'first:border-none md:first:pt-0'
-              )}
-            >
-              <img
-                src={src}
-                alt={name + 'の似顔絵イラスト'}
-                width="480"
-                height="480"
-                class="h-auto w-20"
-              />
-              <div>
-                <p class="font-bold">
-                  <span class="mr-4 text-orange-600">{title}</span>
-                  {name}
-                </p>
-                <p>{text}</p>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
-    <h3><span class="block text-base">〜先生にぜひ読んでほしい〜</span>「すごくわかる 著作権と授業Web」制作チーム</h3>
-    <ul class="!p-0">
-      <li class="grid list-none items-center gap-4 pb-4 md:flex md:items-start md:pb-5">
-        <img
-          src="/assets/images/kiteretz.png"
-          alt="株式会社キテレツのロゴ"
-          width="480"
-          height="480"
-          class="h-auto w-20"
-        />
-        <div>
-          <p class="font-bold"><span class="mr-4 text-orange-600">Webサイト制作</span>株式会社キテレツ</p>
-          <p>
-            ウェブ制作を中心に、グラフィックデザインやロゴデザイン、システム開発などを手がける制作会社。豊富な実績を誇り、常に最新の技術を取り入れたクオリティの高いサービスを提供しています。オフィスのデロンギ全自動コーヒーマシンが作るカプチーノが美味しい。
-          </p>
-        </div>
-      </li>
-    </ul>
-  </Section>
-  <Section number="02" title="おわりに">
+  <Section number="02" title="おわりに" hasNoChapter>
     <p>
       このサイトでは、教育機関の先生方を対象として、主に授業で第三者の著作物を扱う際に必要な知識について説明しました。
     </p>
@@ -141,13 +54,5 @@ import Page from '../../templates/Page.astro';
       <a href="https://forms.gle/a1XxvJU1xebuKaS26" target="_blank" class="block">https://forms.gle/a1XxvJU1xebuKaS26</a
       >
     </p>
-  </Section>
-  <Section number="03" title="ライセンス">
-    <p>
-      このサイトは、<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">
-        クリエイティブ・コモンズ 表示 4.0 国際ライセンス（CC BY 4.0）
-      </a>の下に提供されています。
-    </p>
-    <p>利用の際には「すごくわかる著作権と授業Web/AXIES/CC BY 4.0」のようにクレジットを表記してください。</p>
   </Section>
 </Page>

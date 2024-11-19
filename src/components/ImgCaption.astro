@@ -1,11 +1,13 @@
 ---
 type Props = {
   id?: string;
+  caption: string;
 };
 
-const { id } = Astro.props;
+const { id, caption } = Astro.props;
 ---
 
 <figure id={id} class="img-caption grid gap-1 md:gap-1.5">
+  <figcaption>{caption}</figcaption>
   <slot />
 </figure>
